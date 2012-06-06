@@ -37,8 +37,10 @@ group :test, :development do
   gem "guard-rails", ">= 0.0.3"
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-rspec", ">= 0.4.3"
-  gem "ruby-debug19"
+  gem "debugger"
 
+  gem "ffaker"
+  gem "awesome_print"
   gem "haml-rails", ">= 0.3.4"
   gem "rspec-rails", ">= 2.10.1"
   gem "database_cleaner", ">= 0.7.2"
