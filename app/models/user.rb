@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  include Mongoid::Timestamps
   extend Rolify
   rolify
   # Include default devise modules. Others available are:
