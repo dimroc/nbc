@@ -1,9 +1,14 @@
-namespace :blocks do
-  desc "Generate blocks of a particular width for a particular region"
-  task :generate, [:block_width, :width, :height] => :environment do |t, args|
-    args.with_defaults(block_width: 5, width: 100, height: 100)
+namespace :regions do
+  desc "Generate a region of blocks"
+  task :generate, [:name, :width, :height] => :environment do |t, args|
+    args.with_defaults(width: 30, height: 30)
     puts "Generating blocks with arguments: #{args.inspect}"
-    BlockGenerator.generate(args.region, args.block_width, args.width, args.height)
+    region = RegionGenerator.generate(args.name, args.width, args.height)
+    if region.valid?
+      puts "Created region #{region.name}"
+    else
+      puts "Errors: #{region.errors}"
+    end
   end
 
   desc "Generate blocks that represent New York City"
