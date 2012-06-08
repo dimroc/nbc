@@ -4,6 +4,7 @@ HOST_OS = RbConfig::CONFIG['host_os']
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.5'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,8 +25,6 @@ gem 'jquery-rails'
 
 gem "haml", ">= 3.1.6"
 
-gem "bson_ext", ">= 1.6.2"
-gem "mongoid", ">= 2.4.10"
 gem "sendgrid"
 gem "devise", ">= 2.1.0"
 gem "cancan", ">= 1.6.7"
@@ -33,6 +32,7 @@ gem "rolify", ">= 3.1.0"
 gem "simple_form"
 
 group :test, :development do
+  gem "guard", ">= 0.6.2"
   gem "guard-bundler", ">= 0.1.3"
   gem "guard-rails", ">= 0.0.3"
   gem "guard-livereload", ">= 0.3.0"
@@ -43,11 +43,10 @@ group :test, :development do
   gem "awesome_print"
   gem "haml-rails", ">= 0.3.4"
   gem "rspec-rails", ">= 2.10.1"
+  gem "shoulda-matchers"
   gem "database_cleaner", ">= 0.7.2"
-  gem "mongoid-rspec", ">= 1.4.4"
   gem "factory_girl_rails", ">= 3.3.0"
   gem "email_spec", ">= 1.2.1"
-  gem "guard", ">= 0.6.2"
 
   case HOST_OS
     when /darwin/i
