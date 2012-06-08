@@ -1,9 +1,8 @@
 require 'spec_helper'
 
 describe Ability do
-  subject { Ability.new(user) }
+  subject { Ability.new(users(:standard_user)) }
   describe "User" do
-    let(:user) { FactoryGirl.create(:user) }
     it { should be_able_to(:manage, Block.new) }
   end
 end

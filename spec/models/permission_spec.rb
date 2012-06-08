@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe Permission do
-  let(:user) { FactoryGirl.create(:user) }
-  let(:ability) { Ability.new(user) }
+  let(:ability) { Ability.new(users(:standard_user)) }
   before do
     class MockPermission < Permission
       def grant_bogus_permissions
