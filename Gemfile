@@ -22,6 +22,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem "fuubar"
   gem "guard", ">= 0.6.2"
   gem "guard-bundler", ">= 0.1.3"
   gem "guard-rails", ">= 0.0.3"
