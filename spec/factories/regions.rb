@@ -1,7 +1,5 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :region do
-    name "MyString"
+    name { Faker::AddressUS.state }
   end
 end

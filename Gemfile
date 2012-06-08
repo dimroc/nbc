@@ -37,6 +37,7 @@ group :test, :development do
   gem "shoulda-matchers"
   gem "database_cleaner", ">= 0.7.2"
   gem "factory_girl_rails", ">= 3.3.0"
+  gem "fixture_builder"
   gem "email_spec", ">= 1.2.1"
 
   case HOST_OS
