@@ -14,11 +14,12 @@
 class App extends Spine.Controller
   constructor: ->
     super
-    
+
     # Initialize controllers:
     #  @append(@items = new App.Items)
     #  ...
-    
-    Spine.Route.setup()    
+
+    @append(@regions = new App.Regions)
+    Spine.Route.setup()
 
 window.App = App
