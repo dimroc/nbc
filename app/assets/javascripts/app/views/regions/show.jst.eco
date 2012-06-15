@@ -1,0 +1,5 @@
+<h1>Show Region</h1>
+
+<a data-type="edit">Edit</a> <a data-type="back">Back</a>
+
+<p>Name: <%= @name %></p>

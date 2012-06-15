@@ -13,6 +13,8 @@ gem "cancan", ">= 1.6.7"
 gem "rolify", ">= 3.1.0"
 gem "simple_form"
 gem "thin-rails"
+gem "spine-rails"
+gem "eco"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -1,0 +1,5 @@
+#app {
+  .stack > *:not(.active) {
+    display: none;
+  }
+}

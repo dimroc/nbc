@@ -1,0 +1,11 @@
+<h1>Listing Regions</h1>
+
+<% for region in @regions: %>
+  <div class="item" data-id="<%= region.id %>">
+    <a data-type="show"><%= region.name %></a>
+    <a data-type="edit">Edit</a> 
+    <a data-type="destroy">Destroy</a>
+  </div>
+<% end %>
+
+<p><a data-type="new">New Region</a></p>

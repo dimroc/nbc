@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 9
-  email: sabryna_bayer@beieroconner.us
-  encrypted_password: $2a$10$9sHpMLmeuu5Q9rJO71EqP.uG6R2usD8QFrwAoEioUpV3H8dYT0n2q
+  id: 11
+  email: oswald.bashirian@koelpin.com
+  encrypted_password: $2a$04$spWgQ7ZUZN3TpamDnNjZCeS4HwCcgBnzlOHWnUYkC/H6Xu6eLroTy
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
