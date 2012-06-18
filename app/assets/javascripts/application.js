@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require jquery_helpers
 //= require app
 //= require_tree .

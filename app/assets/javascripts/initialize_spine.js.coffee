@@ -1,2 +1,2 @@
 $ ->
-  new App el: $('#app')
+  new App(el: $('#spine')) if $("#spine").exists()
