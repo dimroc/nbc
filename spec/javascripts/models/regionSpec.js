@@ -3,8 +3,8 @@ describe("region", function() {
     initializeSpine();
   });
 
-  describe("name", function() {
-    it("have a name field", function() {
+  describe("of new york city", function() {
+    it("to have the proper name field", function() {
       expect(App.Region.first().name).toBe("New York City");
     });
   });
