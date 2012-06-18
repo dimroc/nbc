@@ -42,6 +42,7 @@ group :test, :development do
   gem "factory_girl_rails", ">= 3.3.0"
   gem "fixture_builder"
   gem "email_spec", ">= 1.2.1"
+  gem "jasmine"
 
   case HOST_OS
     when /darwin/i
