@@ -85,6 +85,7 @@ GEM
     fixture_builder (0.3.3)
       activerecord (>= 2)
       activesupport (>= 2)
+    friendly_id (4.0.7)
     fuubar (1.0.0)
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
@@ -255,6 +256,7 @@ DEPENDENCIES
   factory_girl_rails (>= 3.3.0)
   ffaker
   fixture_builder
+  friendly_id
   fuubar
   growl
   guard (>= 0.6.2)

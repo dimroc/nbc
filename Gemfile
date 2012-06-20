@@ -15,6 +15,7 @@ gem "simple_form"
 gem "thin-rails"
 gem "spine-rails"
 gem "eco"
+gem "friendly_id"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

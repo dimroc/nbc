@@ -1,16 +1,4 @@
 <h1>Listing Regions</h1>
-
-<!--
-      .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
--->
-
 <div class="well">
   <ul class="nav nav-list">
     <% for region in @regions: %>

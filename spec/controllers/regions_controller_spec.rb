@@ -24,12 +24,13 @@ describe RegionsController do
   describe ".update" do
     let(:nyc) { regions(:nyc) }
     let(:params) { { region: nyc.attributes } }
+    let(:new_name) { "New and Improved York City" }
 
     it "should update the region" do
-      nyc.name = "New and Improved York City"
+      nyc.name = new_name
       post :update, params.merge(id: nyc.id)
       region_json = JSON.parse response.body
-      region_json.should equal_json_of nyc
+      region_json["name"].should == new_name
     end
   end
 

@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 11
-  email: oswald.bashirian@koelpin.com
-  encrypted_password: $2a$04$spWgQ7ZUZN3TpamDnNjZCeS4HwCcgBnzlOHWnUYkC/H6Xu6eLroTy
+  id: 1
+  email: elsie.kuhn@tillmanaufderhar.name
+  encrypted_password: $2a$04$.QC5aNdC6PMIn1onEk1oj.VtXc2sq8fV.FHpCwKKeBiN1wHxOS8YG
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
