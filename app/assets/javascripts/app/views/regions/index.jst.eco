@@ -2,7 +2,7 @@
 <div class="well">
   <ul class="nav nav-list">
     <% for region in @regions: %>
-      <li class="row-fluid" data-id="<%= region.id %>">
+      <li class="row-fluid" data-slug="<%= region.slug %>">
         <a class="span2" data-type="show"><%= region.name %></a>
         <a class="span2" data-type="edit">Edit</a>
         <a class="span2" data-type="destroy">Destroy</a>

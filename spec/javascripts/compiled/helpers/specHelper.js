@@ -9,6 +9,8 @@
     _base.Regions = {};
   }
 
+  window.Fixtures = jasmine.Fixtures;
+
   beforeEach(function() {
     jasmine.Clock.useMock();
     return jasmine.Ajax.useMock();
@@ -26,7 +28,7 @@
     request = mostRecentAjaxRequest();
     return request.response({
       status: 200,
-      responseText: jasmine.Fixtures.Regions.nyc
+      responseText: JSON.stringify(Fixtures.Regions.all)
     });
   };
 

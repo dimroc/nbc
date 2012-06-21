@@ -19,7 +19,7 @@ class App extends Spine.Controller
     #  @append(@items = new App.Items)
     #  ...
 
-    @append(@regions = new App.Regions)
+    @append(@regions = new App.RegionsController)
     Spine.Route.setup()
 
 window.App = App

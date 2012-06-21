@@ -3,6 +3,8 @@
 jasmine.Fixtures ?= {}
 jasmine.Fixtures.Regions ?= {}
 
+window.Fixtures = jasmine.Fixtures
+
 beforeEach ->
   jasmine.Clock.useMock();
   jasmine.Ajax.useMock();
@@ -15,7 +17,7 @@ window.initializeSpine = ->
   request = mostRecentAjaxRequest()
   request.response({
     status: 200,
-    responseText: jasmine.Fixtures.Regions.nyc
+    responseText: JSON.stringify Fixtures.Regions.all
   })
 
 window.loadHtmlFixture = (fixture) ->

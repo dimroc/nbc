@@ -2,19 +2,19 @@ $ = jQuery.sub()
 Region = App.Region
 
 $.fn.item = ->
-  elementID   = $(@).data('id')
-  elementID or= $(@).parents('[data-id]').data('id')
-  Region.find(elementID)
+  elementID   = $(@).data('slug')
+  elementID or= $(@).parents('[data-slug]').data('slug')
+  Region.findByAttribute("slug", elementID)
 
 class New extends Spine.Controller
   events:
     'click [data-type=back]': 'back'
     'submit form': 'submit'
-    
+
   constructor: ->
     super
     @active @render
-    
+
   render: ->
     @html @view('regions/new')
 
@@ -30,16 +30,16 @@ class Edit extends Spine.Controller
   events:
     'click [data-type=back]': 'back'
     'submit form': 'submit'
-  
+
   constructor: ->
     super
     @active (params) ->
       @change(params.id)
-      
-  change: (id) ->
-    @item = Region.find(id)
+
+  change: (slug) ->
+    @item = Region.findByAttribute("slug", slug)
     @render()
-    
+
   render: ->
     @html @view('regions/edit')(@item)
 
@@ -59,17 +59,17 @@ class Show extends Spine.Controller
   constructor: ->
     super
     @active (params) ->
-      @change(params.id)
+      @change(params.slug)
 
-  change: (id) ->
-    @item = Region.find(id)
+  change: (slug) ->
+    @item = Region.findByAttribute("slug", slug)
     @render()
 
   render: ->
     @html @view('regions/show')(@item)
 
   edit: ->
-    @navigate '/regions', @item.id, 'edit'
+    @navigate '/regions', @item.slug, 'edit'
 
   back: ->
     @navigate '/regions'
@@ -85,38 +85,38 @@ class Index extends Spine.Controller
     super
     Region.bind 'refresh change', @render
     Region.fetch()
-    
+
   render: =>
     regions = Region.all()
     @html @view('regions/index')(regions: regions)
-    
+
   edit: (e) ->
     item = $(e.target).item()
-    @navigate '/regions', item.id, 'edit'
-    
+    @navigate '/regions', item.slug, 'edit'
+
   destroy: (e) ->
     item = $(e.target).item()
     item.destroy() if confirm('Sure?')
-    
+
   show: (e) ->
     item = $(e.target).item()
-    @navigate '/regions', item.id
-    
+    @navigate '/regions', item.slug
+
   new: ->
     @navigate '/regions/new'
-    
-class App.Regions extends Spine.Stack
+
+class App.RegionsController extends Spine.Stack
   controllers:
     index: Index
     edit:  Edit
     show:  Show
     new:   New
-    
+
   routes:
     '/regions/new':      'new'
     '/regions/:id/edit': 'edit'
     '/regions/:id':      'show'
     '/regions':          'index'
-    
+
   default: 'index'
   className: 'stack regions'
