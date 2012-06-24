@@ -1,12 +1,8 @@
 (function() {
-  var _base, _ref, _ref1;
+  var _ref;
 
   if ((_ref = jasmine.Fixtures) == null) {
     jasmine.Fixtures = {};
-  }
-
-  if ((_ref1 = (_base = jasmine.Fixtures).Regions) == null) {
-    _base.Regions = {};
   }
 
   window.Fixtures = jasmine.Fixtures;
@@ -28,7 +24,7 @@
     request = mostRecentAjaxRequest();
     return request.response({
       status: 200,
-      responseText: JSON.stringify(Fixtures.Regions.all)
+      responseText: JSON.stringify(Fixtures.regions)
     });
   };
 

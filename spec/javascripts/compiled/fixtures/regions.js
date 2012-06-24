@@ -1,19 +1,13 @@
 (function() {
-  var Regions;
 
-  $.extend(Fixtures.Regions, {
-    nyc: {
-      "created_at": "2012-06-08T01:55:58Z",
-      "id": 1,
+  Fixtures.regions = [
+    {
+      "created_at": "2012-06-21T22:59:25Z",
+      "id": 2,
       "name": "New York City",
-      "updated_at": "2012-06-08T01:55:58Z"
+      "slug": "new-york-city",
+      "updated_at": "2012-06-21T22:59:25Z"
     }
-  });
-
-  Regions = Fixtures.Regions;
-
-  $.extend(Fixtures.Regions, {
-    all: [Regions.nyc]
-  });
+  ];
 
 }).call(this);

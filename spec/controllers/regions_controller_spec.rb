@@ -4,11 +4,13 @@ describe RegionsController do
   describe ".index" do
     let(:nyc) { regions(:nyc) }
 
-    it "should return all regions in json" do
+    it "should return all regions in json", jasmine_fixture: true do
       get :index
       regions_json = JSON.parse response.body
       regions_json.count.should == Region.count
       regions_json[0].should equal_json_of nyc
+
+      save_fixture(response.body, "regions")
     end
   end
 
@@ -38,7 +40,10 @@ describe RegionsController do
     subject { JSON.parse response.body }
     let(:nyc) { regions(:nyc) }
     before { get :show, id: nyc.id }
-    it { should equal_json_of nyc }
+    it "should show nyc", jasmine_fixture: true do
+      subject.should equal_json_of nyc
+      save_fixture response.body, "nyc"
+    end
   end
 
   describe ".destroy" do
