@@ -1,6 +1,6 @@
-guard 'coffeescript', 
-  :input => 'spec/javascripts', 
-  :output => 'spec/javascripts/compiled', 
+guard 'coffeescript',
+  :input => 'spec/javascripts',
+  :output => 'spec/javascripts/compiled',
   :all_on_start => true,
   :error_to_js => true
 

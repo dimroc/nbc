@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find spec/javascripts/compiled -name *.js | ack -v mock-ajax | xargs rm

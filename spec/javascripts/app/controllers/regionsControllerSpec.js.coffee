@@ -1,9 +1,11 @@
 describe "regionsController", ->
   regionsController = null
-  nyc = Fixtures.Regions.nyc
+  nyc = null
+
   beforeEach ->
     initializeSpine()
     regionsController = new App.RegionsController()
+    nyc = Fixtures.nyc
 
   describe "with spine initialized", ->
     describe "show", ->

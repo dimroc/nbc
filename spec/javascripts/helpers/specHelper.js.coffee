@@ -1,8 +1,6 @@
 # Instantiate test namespaces
 
 jasmine.Fixtures ?= {}
-jasmine.Fixtures.Regions ?= {}
-
 window.Fixtures = jasmine.Fixtures
 
 beforeEach ->
@@ -17,7 +15,7 @@ window.initializeSpine = ->
   request = mostRecentAjaxRequest()
   request.response({
     status: 200,
-    responseText: JSON.stringify Fixtures.Regions.all
+    responseText: JSON.stringify Fixtures.regions
   })
 
 window.loadHtmlFixture = (fixture) ->

@@ -3,10 +3,11 @@
   describe("regionsController", function() {
     var nyc, regionsController;
     regionsController = null;
-    nyc = Fixtures.Regions.nyc;
+    nyc = null;
     beforeEach(function() {
       initializeSpine();
-      return regionsController = new App.RegionsController();
+      regionsController = new App.RegionsController();
+      return nyc = Fixtures.nyc;
     });
     return describe("with spine initialized", function() {
       return describe("show", function() {
