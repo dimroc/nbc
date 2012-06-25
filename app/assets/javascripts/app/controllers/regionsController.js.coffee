@@ -59,7 +59,7 @@ class Show extends Spine.Controller
   constructor: ->
     super
     @active (params) ->
-      @change(params.slug)
+      @change(params.id)
 
   change: (slug) ->
     @item = Region.findByAttribute("slug", slug)
