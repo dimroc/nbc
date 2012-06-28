@@ -97,12 +97,12 @@ GEM
     guard-coffeescript (1.0.0)
       coffee-script (>= 2.2.0)
       guard (>= 1.1.0)
+    guard-ctags-bundler (0.1.0)
+      guard (>= 1.0.0)
     guard-livereload (1.0.0)
       em-websocket (>= 0.2.0)
       guard (>= 1.1.0)
       multi_json (~> 1.0)
-    guard-shell (0.5.1)
-      guard (>= 1.1.0)
     haml (3.1.6)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -261,8 +261,8 @@ DEPENDENCIES
   growl
   guard (>= 0.6.2)
   guard-coffeescript
+  guard-ctags-bundler
   guard-livereload (>= 0.3.0)
-  guard-shell
   haml (>= 3.1.6)
   haml-rails (>= 0.3.4)
   jasmine
