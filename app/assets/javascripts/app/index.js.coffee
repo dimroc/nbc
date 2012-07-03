@@ -21,5 +21,6 @@ class App extends Spine.Controller
 
     @append(@regions = new App.RegionsController)
     Spine.Route.setup()
+    App.instance = @
 
 window.App = App
