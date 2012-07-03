@@ -24,7 +24,7 @@ class New extends Spine.Controller
   submit: (e) ->
     e.preventDefault()
     region = Region.fromForm(e.target).save()
-    @navigate '/regions', region.id if region
+    @navigate '/regions', region.slug if region
 
 class Edit extends Spine.Controller
   events:
