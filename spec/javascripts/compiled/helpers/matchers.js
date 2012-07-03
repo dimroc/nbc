@@ -2,10 +2,20 @@
 
   beforeEach(function() {
     return this.addMatchers({
-      toBePlaying: function(expectedSong) {
-        var player;
-        player = this.actual;
-        return player.currentlyPlayingSong === expectedSong && player.isPlaying;
+      toIncludeText: function(expectedText) {
+        var text;
+        if (Helpers.getTypeName(this.actual) === "String") {
+          text = this.actual;
+        } else {
+          text = this.actual.text();
+        }
+        return _.str.include(text, expectedText);
+      },
+      toBeAnAction: function() {
+        Helpers.getTypeName(this.actual.isActive) === "Function";
+        Helpers.getTypeName(this.actual.render) === "Function";
+        Helpers.getTypeName(this.actual.activate) === "Function";
+        return Helpers.getTypeName(this.actual.deactivate) === "Function";
       }
     });
   });
