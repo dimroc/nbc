@@ -1,14 +1,17 @@
 # Instantiate test namespaces
 
 jasmine.Fixtures ?= {}
+jasmine.Factories ?= {}
+
 window.Fixtures = jasmine.Fixtures
+window.Factories = jasmine.Factories
 
 beforeEach ->
-  jasmine.Clock.useMock();
-  jasmine.Ajax.useMock();
+  jasmine.Clock.useMock()
+  jasmine.Ajax.useMock()
 
 afterEach ->
-  $("#jasmine_content").html('');
+  $("#jasmine_content").html('')
 
 window.initializeSpine = ->
   new App { el: $('#jasmine_content') }

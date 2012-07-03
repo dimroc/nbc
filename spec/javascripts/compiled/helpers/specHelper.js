@@ -1,11 +1,17 @@
 (function() {
-  var _ref;
+  var _ref, _ref1;
 
   if ((_ref = jasmine.Fixtures) == null) {
     jasmine.Fixtures = {};
   }
 
+  if ((_ref1 = jasmine.Factories) == null) {
+    jasmine.Factories = {};
+  }
+
   window.Fixtures = jasmine.Fixtures;
+
+  window.Factories = jasmine.Factories;
 
   beforeEach(function() {
     jasmine.Clock.useMock();
