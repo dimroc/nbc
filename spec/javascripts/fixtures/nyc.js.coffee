@@ -1,8 +1,8 @@
 Fixtures.nyc =
 {
-  "created_at": "2012-06-21T22:59:25Z",
-  "id": 2,
+  "created_at": "2012-06-25T12:53:09Z",
+  "id": 4,
   "name": "New York City",
   "slug": "new-york-city",
-  "updated_at": "2012-06-21T22:59:25Z"
+  "updated_at": "2012-06-25T12:53:09Z"
 }

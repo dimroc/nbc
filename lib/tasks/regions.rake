@@ -1,10 +1,11 @@
 namespace :regions do
   desc "Generate a region of blocks"
   task :generate, [:name, :width, :height] => :environment do |t, args|
-    args.with_defaults(width: 30, height: 30)
+    args.with_defaults(width: 20, height: 20)
     puts "Generating blocks with arguments: #{args.inspect}"
-    region = RegionGenerator.generate(args.name, args.width, args.height)
-    if region.valid?
+
+    region = FactoryGirl.build(:region, name: args.name, width: args.width.to_i, height: args.height.to_i)
+    if region.save
       puts "Created region #{region.name}"
     else
       puts "Errors: #{region.errors}"

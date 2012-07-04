@@ -19,7 +19,9 @@ class App extends Spine.Controller
     #  @append(@items = new App.Items)
     #  ...
 
-    @append(@regions = new App.RegionsController)
+    Spine.Log.log("Initializing Application...")
+    @append(@regionsController = new App.RegionsController)
     Spine.Route.setup()
+    App.instance = @
 
 window.App = App

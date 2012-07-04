@@ -29,7 +29,7 @@ group :test, :development do
   gem "guard", ">= 0.6.2"
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-coffeescript"
-  gem "guard-shell"
+  gem "guard-ctags-bundler"
 
   gem "debugger"
 

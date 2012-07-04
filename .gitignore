@@ -14,5 +14,7 @@
 /log/*.log
 /tmp
 
-# Ignore tags folders
-/doc
+# Ignore tags
+tags
+gems.tags
+.DS_Store
