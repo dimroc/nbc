@@ -32,6 +32,7 @@ group :test, :development do
   gem "guard-ctags-bundler"
 
   gem "debugger"
+  gem "pry"
 
   gem "fuubar"
   gem "ffaker"
