@@ -6,7 +6,7 @@
       name: "Factored Region"
     }, options);
     factored_region.slug = _.str.dasherize(factored_region.name.toLowerCase());
-    return factored_region;
+    return new App.Region(factored_region);
   };
 
 }).call(this);
