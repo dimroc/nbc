@@ -17,7 +17,7 @@ describe "regionsController", ->
     describe "show", ->
       it "should render the region", ->
         showAction = regionsController.show.active(id: nyc.slug)
-        expect(showAction.$("p").text()).toIncludeText(nyc.name)
+        expect(showAction.$("p").text()).toContain(nyc.name)
 
     describe "new", ->
       it "should render the region form", ->
@@ -27,9 +27,9 @@ describe "regionsController", ->
     describe "edit", ->
       it "should render the region form", ->
         editAction = regionsController.edit.active(id: nyc.slug)
-        expect(editAction.$("input[name=name]").val()).toIncludeText("New York City")
+        expect(editAction.$("input[name=name]").val()).toContain("New York City")
 
     describe "index", ->
       it "should render a list of regions", ->
         indexAction = regionsController.index.active()
-        expect(indexAction.el.text()).toIncludeText("New York City")
+        expect(indexAction.el.text()).toContain("New York City")
