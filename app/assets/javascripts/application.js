@@ -17,5 +17,6 @@
 //= require underscore.string
 //= require helpers
 //= require jquery_helpers
+//= require Three
 //= require app
 //= require_tree .
