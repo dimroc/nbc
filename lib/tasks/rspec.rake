@@ -1,9 +1,16 @@
 begin
   require 'rspec/core/rake_task'
 
-  namespace :spec do
+  namespace :jasmine do
     desc "Run examples that generate fixtures for use in Jasmine"
-    RSpec::Core::RakeTask.new(:generate_jasmine_fixtures) do |task|
+    task :generate_fixtures do
+      ENV['GENERATE_JASMINE_FIXTURES'] = "true"
+      Rake::Task["spec:jasmine_fixtures"].invoke
+    end
+  end
+
+  namespace :spec do
+    RSpec::Core::RakeTask.new(:jasmine_fixtures) do |task|
       task.pattern = "./spec/{controllers,views}/**/*_spec.rb"
       task.rspec_opts = "-t jasmine_fixture"
     end

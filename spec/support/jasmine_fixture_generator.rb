@@ -1,5 +1,7 @@
 module JasmineFixtureGenerator
   def save_fixture(json, name)
+    return unless ENV['GENERATE_JASMINE_FIXTURES']
+
     fixture_path = Rails.root.join('spec', 'javascripts', 'fixtures')
     FileUtils.mkdir_p(fixture_path)
 
