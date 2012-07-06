@@ -1,5 +1,5 @@
 (function() {
-  var _ref, _ref1;
+  var teardownSpine, _ref, _ref1;
 
   if ((_ref = jasmine.Fixtures) == null) {
     jasmine.Fixtures = {};
@@ -19,8 +19,15 @@
   });
 
   afterEach(function() {
+    teardownSpine();
     return $("#jasmine_content").html('');
   });
+
+  teardownSpine = function() {
+    App.Region.destroyAll();
+    App.Block.destroyAll();
+    return delete App.instance;
+  };
 
   window.initializeSpine = function() {
     var request;

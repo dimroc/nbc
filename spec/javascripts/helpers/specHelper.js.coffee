@@ -11,7 +11,13 @@ beforeEach ->
   jasmine.Ajax.useMock()
 
 afterEach ->
+  teardownSpine()
   $("#jasmine_content").html('')
+
+teardownSpine = ->
+  App.Region.destroyAll()
+  App.Block.destroyAll()
+  delete App.instance
 
 window.initializeSpine = ->
   new App { el: $('#jasmine_content') }

@@ -22,7 +22,7 @@
           showAction = regionsController.show.active({
             id: nyc.slug
           });
-          return expect(showAction.$("p").text()).toIncludeText(nyc.name);
+          return expect(showAction.$("p").text()).toContain(nyc.name);
         });
       });
       describe("new", function() {
@@ -38,14 +38,14 @@
           editAction = regionsController.edit.active({
             id: nyc.slug
           });
-          return expect(editAction.$("input[name=name]").val()).toIncludeText("New York City");
+          return expect(editAction.$("input[name=name]").val()).toContain("New York City");
         });
       });
       return describe("index", function() {
         return it("should render a list of regions", function() {
           var indexAction;
           indexAction = regionsController.index.active();
-          return expect(indexAction.el.text()).toIncludeText("New York City");
+          return expect(indexAction.el.text()).toContain("New York City");
         });
       });
     });
