@@ -18,5 +18,7 @@
 //= require helpers
 //= require jquery_helpers
 //= require Three
+//= require tquery
+//= require tquery-extras
 //= require app
 //= require_tree .
