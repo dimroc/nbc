@@ -1,5 +1,5 @@
 class App.Block extends App.Model
-  @configure 'Block'
+  @configure 'Block', 'id', 'region_id', 'top', 'left'
   @extend Spine.Model.Ajax
 
   @belongsTo "region", "App.Region"
