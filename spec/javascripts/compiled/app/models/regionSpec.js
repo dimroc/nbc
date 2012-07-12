@@ -42,14 +42,10 @@
         return nyc = new App.Region(Fixtures.nyc);
       });
       it("should retrieve only the region's blocks", function() {
-        var callback, regioned_blocks, successResponse;
-        successResponse = {
-          status: 200,
-          responseText: JSON.stringify(Fixtures.nyc_blocks)
-        };
+        var callback, regioned_blocks;
         callback = jasmine.createSpy();
         nyc.fetchBlocks(callback);
-        mostRecentAjaxRequest().response(successResponse);
+        mostRecentAjaxRequest().response(Factories.nycBlocksResponse());
         expect(callback).toHaveBeenCalledWith(nyc);
         regioned_blocks = nyc.blocks().select(function(block) {
           return block.region_id === nyc.id;
