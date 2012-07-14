@@ -45,7 +45,7 @@ window.Graphics = class Graphics
     @render()
     if @destroyed
       cancelAnimationFrame
-      console.warn("Animating after destruction...")
+      console.debug("Animating after destruction...")
     else
       requestAnimationFrame(@animate)
 
