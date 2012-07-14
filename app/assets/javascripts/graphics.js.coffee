@@ -2,7 +2,7 @@ window.Graphics ?= {}
 
 window.Graphics = class Graphics
   @DEFAULT_OPTIONS: {
-    width: 800
+    width: 1000
     height: 600
   }
 
@@ -16,17 +16,25 @@ window.Graphics = class Graphics
     @camera.position.z = 1000
     @scene.add( @camera )
 
-    # Create renderer
-    @renderer = new THREE.CanvasRenderer()
+    @renderer = new THREE.WebGLRenderer()
     @renderer.setSize( options.width, options.height )
+
+  destroy: ->
+    console.debug("Destroying graphics...")
+    @destroyed = true
+    cancelAnimationFrame
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
     @
 
   animate: =>
-    requestAnimationFrame( => @animate )
     @render()
+    if @destroyed
+      cancelAnimationFrame
+      console.warn("Animating after destruction...")
+    else
+      requestAnimationFrame(@animate)
 
   render: ->
     @scene.children.forEach (child)->
@@ -34,7 +42,6 @@ window.Graphics = class Graphics
         child.rotation.x += 0.01
         child.rotation.y += 0.02
 
-    console.log("Rendering scene...")
     @renderer.render( @scene, @camera )
     @
 
