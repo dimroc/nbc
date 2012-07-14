@@ -9,6 +9,9 @@ window.Graphics = class Graphics
   constructor: (options)->
     options = $.extend(true, Graphics.DEFAULT_OPTIONS, options)
 
+    if ( ! Detector.webgl )
+      Detector.addGetWebGLMessage()
+
     @scene = new THREE.Scene()
 
     # Create camera
