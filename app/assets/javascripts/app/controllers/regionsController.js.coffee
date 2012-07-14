@@ -70,9 +70,11 @@ class Show extends Spine.Controller
   render: ->
     output = @html @view('regions/show')(@item)
 
-    _.each(@item.blocks().all(), (block)=> @graphics.addCube(block))
-    @graphics.attachToDom(output)
-    @graphics.animate()
+    _.each(@item.blocks().all(), (block) =>
+      @world.add(Graphics.createBlockMesh(block)))
+
+    @world.attachToDom(output)
+    @world.animate()
     output
 
   edit: ->
@@ -83,13 +85,13 @@ class Show extends Spine.Controller
 
   activate: ->
     super
-    @graphics = Graphics.create()
+    @world = Graphics.createWorld()
 
   deactivate: ->
     super
-    if @graphics
-      @graphics.destroy()
-      delete @graphics
+    if @world
+      @world.destroy()
+      delete @world
 
     @el.empty()
 
