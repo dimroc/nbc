@@ -8,4 +8,12 @@
     };
   };
 
+  Factories.regionsResponse = function() {
+    var successResponse;
+    return successResponse = {
+      status: 200,
+      responseText: JSON.stringify(Fixtures.regions)
+    };
+  };
+
 }).call(this);
