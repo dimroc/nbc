@@ -20,6 +20,7 @@
 
   afterEach(function() {
     teardownSpine();
+    clearAjaxRequests();
     return $("#jasmine_content").html('');
   });
 

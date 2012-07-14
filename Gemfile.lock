@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/maccman/spine-rails.git
+  revision: c7b884484768caf1027a606f803653e8402f4b96
+  specs:
+    spine-rails (0.1.0)
+      rails (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,8 +223,6 @@ GEM
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     slop (2.4.4)
-    spine-rails (0.1.0)
-      rails (>= 3.1.0)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -284,7 +289,7 @@ DEPENDENCIES
   sendgrid
   shoulda-matchers
   simple_form
-  spine-rails
+  spine-rails!
   therubyracer
   thin-rails
   twitter-bootstrap-rails (>= 2.0.3)

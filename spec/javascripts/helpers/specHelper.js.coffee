@@ -12,6 +12,7 @@ beforeEach ->
 
 afterEach ->
   teardownSpine()
+  clearAjaxRequests()
   $("#jasmine_content").html('')
 
 teardownSpine = ->

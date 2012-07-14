@@ -62,17 +62,36 @@ class Show extends Spine.Controller
       @change(params.id)
 
   change: (slug) ->
-    @item = Region.findByAttribute("slug", slug)
-    @render()
+    Region.findOrFetch(slug, (region) =>
+      @item = region
+      @item.fetchBlocks => @render()
+    )
 
   render: ->
-    @html @view('regions/show')(@item)
+    output = @html @view('regions/show')(@item)
+
+    _.each(@item.blocks().all(), (block)=> @graphics.addCube(block))
+    @graphics.attachToDom(output)
+    @graphics.animate()
+    output
 
   edit: ->
     @navigate '/regions', @item.slug, 'edit'
 
   back: ->
     @navigate '/regions'
+
+  activate: ->
+    super
+    @graphics = Graphics.create()
+
+  deactivate: ->
+    super
+    if @graphics
+      @graphics.destroy()
+      delete @graphics
+
+    @el.empty()
 
 class Index extends Spine.Controller
   events:

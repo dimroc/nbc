@@ -35,6 +35,35 @@
         return expect(App.Region).toValidatePresenceOf("slug");
       });
     });
+    describe(".findOrFetch", function() {
+      describe("when not already fetched", function() {
+        return it("should fetch via AJAX", function() {
+          var retrieved_region;
+          retrieved_region = null;
+          App.Region.findOrFetch("new-york-city", function(region) {
+            return retrieved_region = region;
+          });
+          expect(mostRecentAjaxRequest()).not.toBe(null);
+          mostRecentAjaxRequest().response(Factories.regionsResponse());
+          return expect(retrieved_region.name).toEqual("New York City");
+        });
+      });
+      return describe("when already fetched", function() {
+        beforeEach(function() {
+          App.Region.refresh(Fixtures.regions);
+          return expect(_.isEmpty(ajaxRequests)).toBe(true);
+        });
+        return it("should not retrieve via AJAX", function() {
+          var retrieved_region;
+          retrieved_region = null;
+          App.Region.findOrFetch("new-york-city", function(region) {
+            return retrieved_region = region;
+          });
+          expect(mostRecentAjaxRequest()).toBe(null);
+          return expect(retrieved_region.name).toEqual("New York City");
+        });
+      });
+    });
     return describe("#fetchBlocks", function() {
       var nyc;
       nyc = null;
@@ -42,14 +71,10 @@
         return nyc = new App.Region(Fixtures.nyc);
       });
       it("should retrieve only the region's blocks", function() {
-        var callback, regioned_blocks, successResponse;
-        successResponse = {
-          status: 200,
-          responseText: JSON.stringify(Fixtures.nyc_blocks)
-        };
+        var callback, regioned_blocks;
         callback = jasmine.createSpy();
         nyc.fetchBlocks(callback);
-        mostRecentAjaxRequest().response(successResponse);
+        mostRecentAjaxRequest().response(Factories.nycBlocksResponse());
         expect(callback).toHaveBeenCalledWith(nyc);
         regioned_blocks = nyc.blocks().select(function(block) {
           return block.region_id === nyc.id;
@@ -60,14 +85,14 @@
       return describe("on failure", function() {
         return it("should log the error", function() {
           var errorResponse;
-          spyOn(Spine.Log, "log").andCallThrough();
+          spyOn(console, "warn").andCallThrough();
           errorResponse = {
             status: 400,
             responseText: "Error Schmerror"
           };
           nyc.fetchBlocks();
           mostRecentAjaxRequest().response(errorResponse);
-          return expect(Spine.Log.log).toHaveBeenCalled();
+          return expect(console.warn).toHaveBeenCalled();
         });
       });
     });
