@@ -62,8 +62,11 @@ class Show extends Spine.Controller
       @change(params.id)
 
   change: (slug) ->
-    @item = Region.findByAttribute("slug", slug)
-    @render()
+    Region.findOrFetch(slug, (region) =>
+      @item = region
+      @item.fetchBlocks =>
+        @render()
+    )
 
   render: ->
     @html @view('regions/show')(@item)
