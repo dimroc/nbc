@@ -17,7 +17,7 @@ describe "regionsController", ->
     describe "show", ->
       it "should render the region", ->
         graphicsSpy = jasmine.createSpyObj("graphics", ["addCube", "attachToDom", "animate"])
-        regionsController.show.graphics = graphicsSpy # stub out graphics
+        spyOn(Graphics, "create").andReturn(graphicsSpy)
 
         showAction = regionsController.show.active(id: nyc.slug)
 

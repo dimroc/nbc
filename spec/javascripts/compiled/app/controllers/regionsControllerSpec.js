@@ -20,7 +20,7 @@
         return it("should render the region", function() {
           var graphicsSpy, showAction;
           graphicsSpy = jasmine.createSpyObj("graphics", ["addCube", "attachToDom", "animate"]);
-          regionsController.show.graphics = graphicsSpy;
+          spyOn(Graphics, "create").andReturn(graphicsSpy);
           showAction = regionsController.show.active({
             id: nyc.slug
           });

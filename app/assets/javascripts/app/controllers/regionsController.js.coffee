@@ -83,7 +83,7 @@ class Show extends Spine.Controller
 
   activate: ->
     super
-    @graphics = new Graphics()
+    @graphics = Graphics.create()
 
   deactivate: ->
     super

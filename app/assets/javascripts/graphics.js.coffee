@@ -6,12 +6,16 @@ window.Graphics = class Graphics
     height: 600
   }
 
+  @create: (options) ->
+    new Graphics(options)
+
   constructor: (options)->
     options = $.extend(true, Graphics.DEFAULT_OPTIONS, options)
 
     if ( ! Detector.webgl )
       Detector.addGetWebGLMessage()
 
+    console.debug("Creating graphics...")
     @scene = new THREE.Scene()
 
     # Create camera
