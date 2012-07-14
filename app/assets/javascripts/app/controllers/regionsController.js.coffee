@@ -58,6 +58,7 @@ class Show extends Spine.Controller
 
   constructor: ->
     super
+    @graphics = new Graphics()
     @active (params) ->
       @change(params.id)
 
@@ -65,11 +66,15 @@ class Show extends Spine.Controller
     Region.findOrFetch(slug, (region) =>
       @item = region
       @item.fetchBlocks =>
+        _.each(@item.blocks().all(), (block)=> @graphics.addCube(block))
+        @graphics.animate()
         @render()
     )
 
   render: ->
-    @html @view('regions/show')(@item)
+    output = @html @view('regions/show')(@item)
+    @graphics.attachToDom(output)
+    output
 
   edit: ->
     @navigate '/regions', @item.slug, 'edit'

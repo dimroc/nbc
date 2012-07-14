@@ -5,7 +5,7 @@ describe "regionsController", ->
   beforeEach ->
     initializeSpine()
     regionsController = App.instance.regionsController
-    nyc = Fixtures.nyc
+    nyc = App.Region.findByAttribute("slug", "new-york-city")
 
   it "should have the correct actions", ->
     expect(regionsController.show).toBeAnAction()
@@ -16,7 +16,16 @@ describe "regionsController", ->
   describe "with the action", ->
     describe "show", ->
       it "should render the region", ->
+        graphicsSpy = jasmine.createSpyObj("graphics", ["addCube", "attachToDom", "animate"])
+        regionsController.show.graphics = graphicsSpy # stub out graphics
+
         showAction = regionsController.show.active(id: nyc.slug)
+
+        mostRecentAjaxRequest().response(Factories.nycBlocksResponse())
+
+        expect(graphicsSpy.addCube.callCount).toBe(nyc.blocks().all().length)
+        expect(graphicsSpy.attachToDom).toHaveBeenCalled()
+        expect(graphicsSpy.animate).toHaveBeenCalled()
         expect(showAction.$("p").text()).toContain(nyc.name)
 
     describe "new", ->

@@ -7,7 +7,7 @@
     beforeEach(function() {
       initializeSpine();
       regionsController = App.instance.regionsController;
-      return nyc = Fixtures.nyc;
+      return nyc = App.Region.findByAttribute("slug", "new-york-city");
     });
     it("should have the correct actions", function() {
       expect(regionsController.show).toBeAnAction();
@@ -18,10 +18,16 @@
     return describe("with the action", function() {
       describe("show", function() {
         return it("should render the region", function() {
-          var showAction;
+          var graphicsSpy, showAction;
+          graphicsSpy = jasmine.createSpyObj("graphics", ["addCube", "attachToDom", "animate"]);
+          regionsController.show.graphics = graphicsSpy;
           showAction = regionsController.show.active({
             id: nyc.slug
           });
+          mostRecentAjaxRequest().response(Factories.nycBlocksResponse());
+          expect(graphicsSpy.addCube.callCount).toBe(nyc.blocks().all().length);
+          expect(graphicsSpy.attachToDom).toHaveBeenCalled();
+          expect(graphicsSpy.animate).toHaveBeenCalled();
           return expect(showAction.$("p").text()).toContain(nyc.name);
         });
       });

@@ -18,5 +18,6 @@
 //= require helpers
 //= require jquery_helpers
 //= require Three
+//= require graphics
 //= require app
 //= require_tree .
