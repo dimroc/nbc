@@ -7,7 +7,8 @@
         graphic = new Graphics();
         expect(graphic.scene).toBeDefined();
         expect(graphic.renderer).toBeDefined();
-        return expect(graphic.camera).toBeDefined();
+        expect(graphic.camera).toBeDefined();
+        return graphic.destroy();
       });
     });
     return describe("when constructed", function() {
@@ -15,6 +16,9 @@
       graphic = null;
       beforeEach(function() {
         return graphic = new Graphics();
+      });
+      afterEach(function() {
+        return graphic.destroy();
       });
       describe("#attachToDom", function() {
         return it("should append a canvas element", function() {

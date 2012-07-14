@@ -5,11 +5,15 @@ describe "Graphics", ->
       expect(graphic.scene).toBeDefined()
       expect(graphic.renderer).toBeDefined()
       expect(graphic.camera).toBeDefined()
+      graphic.destroy()
 
   describe "when constructed", ->
     graphic = null
     beforeEach ->
       graphic = new Graphics()
+
+    afterEach ->
+      graphic.destroy()
 
     describe "#attachToDom", ->
       it "should append a canvas element", ->
