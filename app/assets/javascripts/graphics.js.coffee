@@ -22,9 +22,15 @@ window.Graphics = class Graphics
     @renderer = new THREE.WebGLRenderer()
     @renderer.setSize( options.width, options.height )
 
+    if Env.development
+      @stats = new Stats()
+      document.body.appendChild(@stats.domElement)
+
   destroy: ->
     console.debug("Destroying graphics...")
+
     @destroyed = true
+    $(@stats.domElement).remove() if @stats
     cancelAnimationFrame
 
   attachToDom: (domElement)->
@@ -46,6 +52,7 @@ window.Graphics = class Graphics
         child.rotation.y += 0.02
 
     @renderer.render( @scene, @camera )
+    @stats.update() if @stats
     @
 
   addCube: (block)->
