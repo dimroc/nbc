@@ -11,16 +11,19 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require environment
+//
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require jquery.easing
 //= require underscore
 //= require underscore.string
+//
+//= require twitter/bootstrap
 //= require helpers
 //= require jquery_helpers
 //= require Three
 //= require Detector
 //= require Stats
-//= require graphics
+//
 //= require app
 //= require_tree .

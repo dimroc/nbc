@@ -17,18 +17,28 @@
     });
     return describe("with the action", function() {
       describe("show", function() {
+        var world;
+        world = null;
+        beforeEach(function() {
+          return world = new App.World();
+        });
+        afterEach(function() {
+          return world.destroy();
+        });
         return it("should render the region", function() {
-          var graphicsSpy, showAction;
-          graphicsSpy = jasmine.createSpyObj("graphics", ["addCube", "attachToDom", "animate"]);
-          spyOn(Graphics, "create").andReturn(graphicsSpy);
+          var showAction;
+          spyOn(world, "add").andCallThrough();
+          spyOn(world, "attachToDom").andCallThrough();
+          spyOn(world, "animate").andCallThrough();
+          spyOn(App, "World").andReturn(world);
           showAction = regionsController.show.active({
             id: nyc.slug
           });
           mostRecentAjaxRequest().response(Factories.nycBlocksResponse());
-          expect(graphicsSpy.addCube.callCount).toBe(nyc.blocks().all().length);
-          expect(graphicsSpy.attachToDom).toHaveBeenCalled();
-          expect(graphicsSpy.animate).toHaveBeenCalled();
-          return expect(showAction.$("p").text()).toContain(nyc.name);
+          expect(world.add.callCount).toBe(nyc.blocks().all().length);
+          expect(world.attachToDom).toHaveBeenCalled();
+          expect(world.animate).toHaveBeenCalled();
+          return expect(showAction.$("h1").text()).toContain(nyc.name);
         });
       });
       describe("new", function() {

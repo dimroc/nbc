@@ -15,18 +15,27 @@ describe "regionsController", ->
 
   describe "with the action", ->
     describe "show", ->
+      world = null
+      beforeEach ->
+        world = new App.World()
+
+      afterEach ->
+        world.destroy()
+
       it "should render the region", ->
-        graphicsSpy = jasmine.createSpyObj("graphics", ["addCube", "attachToDom", "animate"])
-        spyOn(Graphics, "create").andReturn(graphicsSpy)
+        spyOn(world, "add").andCallThrough()
+        spyOn(world, "attachToDom").andCallThrough()
+        spyOn(world, "animate").andCallThrough()
+        spyOn(App, "World").andReturn(world)
 
         showAction = regionsController.show.active(id: nyc.slug)
 
         mostRecentAjaxRequest().response(Factories.nycBlocksResponse())
 
-        expect(graphicsSpy.addCube.callCount).toBe(nyc.blocks().all().length)
-        expect(graphicsSpy.attachToDom).toHaveBeenCalled()
-        expect(graphicsSpy.animate).toHaveBeenCalled()
-        expect(showAction.$("p").text()).toContain(nyc.name)
+        expect(world.add.callCount).toBe(nyc.blocks().all().length)
+        expect(world.attachToDom).toHaveBeenCalled()
+        expect(world.animate).toHaveBeenCalled()
+        expect(showAction.$("h1").text()).toContain(nyc.name)
 
     describe "new", ->
       it "should render the region form", ->
