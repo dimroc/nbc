@@ -38,7 +38,7 @@
           expect(world.add.callCount).toBe(nyc.blocks().all().length);
           expect(world.attachToDom).toHaveBeenCalled();
           expect(world.animate).toHaveBeenCalled();
-          return expect(showAction.$("p").text()).toContain(nyc.name);
+          return expect(showAction.$("h1").text()).toContain(nyc.name);
         });
       });
       describe("new", function() {

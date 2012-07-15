@@ -1,7 +1,11 @@
+window.Graphics.worlds = []
+
+
 window.Graphics.World = class World
   @DEFAULT_OPTIONS: {
-    width: 1000
-    height: 600
+    fov: 90
+    width: 940
+    height: 400
   }
 
   @create: (options) ->
@@ -16,17 +20,25 @@ window.Graphics.World = class World
     console.debug("Creating world...")
     @scene = new THREE.Scene()
 
-    # Create camera
-    @camera = new THREE.PerspectiveCamera( 75, options.width / options.height, 1, 10000 )
-    @camera.position.z = 1000
+    @camera = createCamera(options)
     @scene.add( @camera )
 
-    @renderer = new THREE.WebGLRenderer()
-    @renderer.setSize( options.width, options.height )
+    @renderer = createRenderer(options)
+
+    @ambientLight = createAmbientLight(options)
+    @scene.add(@ambientLight)
+
+    @directionalLight = createDirectionalLight(
+      _.extend({}, options, {position: @camera.position})
+    )
+
+    @scene.add(@directionalLight)
 
     if Env.development
       @stats = new Stats()
       document.body.appendChild(@stats.domElement)
+
+    Graphics.worlds.push(@)
 
   destroy: ->
     console.debug("Destroying world...")
@@ -34,13 +46,14 @@ window.Graphics.World = class World
     @destroyed = true
     $(@stats.domElement).remove() if @stats
     cancelAnimationFrame
+    Graphics.worlds = _(Graphics.worlds).reject (world) => world == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
     @
 
-  animate: =>
-    @_render()
+  animate: (elapsedTicks)=>
+    render(@)
     if @destroyed
       cancelAnimationFrame
       console.debug("Animating after destruction...")
@@ -54,12 +67,32 @@ window.Graphics.World = class World
   meshes: ->
     _.select(@scene.children, (child) -> return child.geometry)
 
-  # Privates
+# privates
 
-  _render: ->
-    @scene.children.forEach (child) ->
-      child.animate() if child.animate
+createCamera = (options) ->
+  camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 10000 )
+  camera.position.z = 1000
+  camera.position.x = 1600
+  camera.position.y = -600
+  camera
 
-    @renderer.render( @scene, @camera )
-    @stats.update() if @stats
-    @
+createRenderer = (options) ->
+  renderer = new THREE.WebGLRenderer({antialias: true})
+  renderer.setSize( options.width, options.height )
+  renderer
+
+createDirectionalLight = (options) ->
+  # White directional light at half intensity shining from the top.
+  directionalLight = new THREE.DirectionalLight( 0xffffff, 0.7 )
+  directionalLight.position.set(options.position.x, options.position.y, options.position.z)
+  directionalLight
+
+createAmbientLight = (options) ->
+  light = new THREE.AmbientLight( 0x333333 )
+
+render = (world) ->
+  world.scene.children.forEach (child) ->
+    child.animate() if child.animate
+
+  world.renderer.render( world.scene, world.camera )
+  world.stats.update() if world.stats

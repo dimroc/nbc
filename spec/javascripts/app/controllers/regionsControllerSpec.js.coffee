@@ -35,7 +35,7 @@ describe "regionsController", ->
         expect(world.add.callCount).toBe(nyc.blocks().all().length)
         expect(world.attachToDom).toHaveBeenCalled()
         expect(world.animate).toHaveBeenCalled()
-        expect(showAction.$("p").text()).toContain(nyc.name)
+        expect(showAction.$("h1").text()).toContain(nyc.name)
 
     describe "new", ->
       it "should render the region form", ->
