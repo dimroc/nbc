@@ -25,7 +25,5 @@
 //= require Detector
 //= require Stats
 //
-//= require graphics/graphics
-//= require_tree ./graphics
 //= require app
 //= require_tree .

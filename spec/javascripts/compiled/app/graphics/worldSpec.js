@@ -4,7 +4,7 @@
     describe("#constructor", function() {
       return it("should create the camera, scene, and renderer", function() {
         var world;
-        world = new Graphics.World();
+        world = new App.World();
         expect(world.scene).toBeDefined();
         expect(world.renderer).toBeDefined();
         expect(world.camera).toBeDefined();
@@ -15,7 +15,7 @@
       var world;
       world = null;
       beforeEach(function() {
-        return world = new Graphics.World();
+        return world = new App.World();
       });
       afterEach(function() {
         return world.destroy();
@@ -39,7 +39,7 @@
       return describe("#animate", function() {
         return it("should animate its children", function() {
           var blockMesh;
-          blockMesh = Graphics.createBlockMesh(Fixtures.nyc_blocks[0]);
+          blockMesh = new App.BlockMesh(Fixtures.nyc_blocks[0]);
           spyOn(blockMesh, "animate").andCallThrough();
           world.add(blockMesh);
           world.animate();

@@ -17,7 +17,7 @@ describe "regionsController", ->
     describe "show", ->
       world = null
       beforeEach ->
-        world = Graphics.createWorld()
+        world = new App.World()
 
       afterEach ->
         world.destroy()
@@ -26,7 +26,7 @@ describe "regionsController", ->
         spyOn(world, "add").andCallThrough()
         spyOn(world, "attachToDom").andCallThrough()
         spyOn(world, "animate").andCallThrough()
-        spyOn(Graphics, "createWorld").andReturn(world)
+        spyOn(App, "World").andReturn(world)
 
         showAction = regionsController.show.active(id: nyc.slug)
 

@@ -20,7 +20,7 @@
         var world;
         world = null;
         beforeEach(function() {
-          return world = Graphics.createWorld();
+          return world = new App.World();
         });
         afterEach(function() {
           return world.destroy();
@@ -30,7 +30,7 @@
           spyOn(world, "add").andCallThrough();
           spyOn(world, "attachToDom").andCallThrough();
           spyOn(world, "animate").andCallThrough();
-          spyOn(Graphics, "createWorld").andReturn(world);
+          spyOn(App, "World").andReturn(world);
           showAction = regionsController.show.active({
             id: nyc.slug
           });

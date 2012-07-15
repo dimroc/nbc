@@ -1,9 +1,8 @@
-window.Graphics.worlds = []
+App.worlds = []
 
-
-window.Graphics.World = class World
+class App.World
   @DEFAULT_OPTIONS: {
-    fov: 90
+    fov: 45
     width: 940
     height: 400
   }
@@ -38,7 +37,7 @@ window.Graphics.World = class World
       @stats = new Stats()
       document.body.appendChild(@stats.domElement)
 
-    Graphics.worlds.push(@)
+    App.worlds.push(@)
 
   destroy: ->
     console.debug("Destroying world...")
@@ -46,7 +45,7 @@ window.Graphics.World = class World
     @destroyed = true
     $(@stats.domElement).remove() if @stats
     cancelAnimationFrame
-    Graphics.worlds = _(Graphics.worlds).reject (world) => world == @
+    App.worlds = _(App.worlds).reject (world) => world == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
@@ -71,9 +70,9 @@ window.Graphics.World = class World
 
 createCamera = (options) ->
   camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 10000 )
-  camera.position.z = 1000
-  camera.position.x = 1600
-  camera.position.y = -600
+  camera.position.z = 2000
+  camera.position.x = 500
+  camera.position.y = -500
   camera
 
 createRenderer = (options) ->

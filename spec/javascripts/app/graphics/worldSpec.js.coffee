@@ -1,7 +1,7 @@
 describe "World", ->
   describe "#constructor", ->
     it "should create the camera, scene, and renderer", ->
-      world = new Graphics.World()
+      world = new App.World()
       expect(world.scene).toBeDefined()
       expect(world.renderer).toBeDefined()
       expect(world.camera).toBeDefined()
@@ -10,7 +10,7 @@ describe "World", ->
   describe "when constructed", ->
     world = null
     beforeEach ->
-      world = new Graphics.World()
+      world = new App.World()
 
     afterEach ->
       world.destroy()
@@ -29,7 +29,7 @@ describe "World", ->
 
     describe "#animate", ->
       it "should animate its children", ->
-        blockMesh = Graphics.createBlockMesh(Fixtures.nyc_blocks[0])
+        blockMesh = new App.BlockMesh(Fixtures.nyc_blocks[0])
         spyOn(blockMesh, "animate").andCallThrough()
         world.add(blockMesh)
         world.animate()
