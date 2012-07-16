@@ -205,4 +205,3 @@ if (typeof Prototype != 'undefined' && Ajax && Ajax.Request) {
     return this.transport.response(responseOptions);
   };
 }
-what the

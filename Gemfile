@@ -45,6 +45,7 @@ group :test, :development do
   gem "fixture_builder"
   gem "email_spec", ">= 1.2.1"
   gem "jasmine"
+  gem "jasminerice", git: "git://github.com/bradphelan/jasminerice.git"
 
   case HOST_OS
     when /darwin/i

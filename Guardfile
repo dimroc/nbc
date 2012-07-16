@@ -1,9 +1,3 @@
-guard 'coffeescript',
-  :input => 'spec/javascripts',
-  :output => 'spec/javascripts/compiled',
-  :all_on_start => true,
-  :error_to_js => true
-
 guard 'livereload' do
   watch(%r{app/views/.+\.(erb|haml|slim)})
   watch(%r{app/helpers/.+\.rb})

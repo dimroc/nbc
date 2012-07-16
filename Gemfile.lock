@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/bradphelan/jasminerice.git
+  revision: abeb984f9120f7064b206bdf7ec69fb2ded94b4e
+  specs:
+    jasminerice (0.0.9)
+      coffee-rails
+      haml
+
+GIT
   remote: git://github.com/maccman/spine-rails.git
   revision: c7b884484768caf1027a606f803653e8402f4b96
   specs:
@@ -278,6 +286,7 @@ DEPENDENCIES
   haml (>= 3.1.6)
   haml-rails (>= 0.3.4)
   jasmine
+  jasminerice!
   jquery-rails
   pg
   pry
