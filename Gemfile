@@ -25,7 +25,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test, :development do
+group :test, :development, :postgis do
   gem "guard", ">= 0.6.2"
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-coffeescript"
