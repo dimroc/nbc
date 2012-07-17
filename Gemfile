@@ -30,6 +30,7 @@ group :test, :development do
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-coffeescript"
   gem "guard-ctags-bundler"
+  gem "guard-rails", git: "git://github.com/johnbintz/guard-rails.git"
 
   gem "debugger"
   gem "pry"

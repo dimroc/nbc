@@ -1,10 +1,14 @@
 GIT
   remote: git://github.com/bradphelan/jasminerice.git
   revision: abeb984f9120f7064b206bdf7ec69fb2ded94b4e
+  remote: git://github.com/johnbintz/guard-rails.git
+  revision: 4d3fb9dfcc57aa96cf86c3a758645e80a96c8aa1
   specs:
     jasminerice (0.0.9)
       coffee-rails
       haml
+    guard-rails (0.1.0)
+      guard (>= 0.2.2)
 
 GIT
   remote: git://github.com/maccman/spine-rails.git
@@ -283,6 +287,7 @@ DEPENDENCIES
   guard-coffeescript
   guard-ctags-bundler
   guard-livereload (>= 0.3.0)
+  guard-rails!
   haml (>= 3.1.6)
   haml-rails (>= 0.3.4)
   jasmine
