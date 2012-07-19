@@ -40,6 +40,7 @@ group :test, :development, :postgis do
   gem "awesome_print"
   gem "haml-rails", ">= 0.3.4"
   gem "rspec-rails", ">= 2.10.1"
+  gem "capybara"
   gem "shoulda-matchers"
   gem "database_cleaner", ">= 0.7.2"
   gem "factory_girl_rails", ">= 3.3.0"

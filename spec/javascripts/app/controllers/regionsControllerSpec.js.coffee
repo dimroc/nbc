@@ -40,7 +40,7 @@ describe "regionsController", ->
     describe "new", ->
       it "should render the region form", ->
         newAction = regionsController.new.active()
-        expect(newAction.$("input[name=name]")).toExist()
+        expect(newAction.$("input[name=name]").length).toBe(1)
 
     describe "edit", ->
       it "should render the region form", ->
