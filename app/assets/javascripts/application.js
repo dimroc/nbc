@@ -22,6 +22,7 @@
 //= require helpers
 //= require jquery_helpers
 //= require Three
+//= require Tween
 //= require Detector
 //= require Stats
 //
