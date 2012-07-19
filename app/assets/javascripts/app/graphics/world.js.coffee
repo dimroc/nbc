@@ -3,8 +3,8 @@ App.worlds = []
 class App.World
   @DEFAULT_OPTIONS: {
     fov: 45
-    width: 940
-    height: 400
+    width: 1280
+    height: 720
   }
 
   @create: (options) ->
