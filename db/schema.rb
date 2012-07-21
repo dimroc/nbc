@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120620001536) do
+ActiveRecord::Schema.define(:version => 20120721215833) do
 
   create_table "blocks", :force => true do |t|
     t.integer  "region_id"
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(:version => 20120620001536) do
 
   create_table "regions", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
     t.string   "slug"
+    t.spatial  "geometry",   :limit => {:srid=>0, :type=>"geometry"}
   end
 
   add_index "regions", ["slug"], :name => "index_regions_on_slug", :unique => true
