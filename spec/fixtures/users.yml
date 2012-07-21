@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 5
-  email: anthony.hermann@swaniawski.uk
-  encrypted_password: $2a$04$yBrz9UDu8agN9quK9Nv/7ecO2SfpNyLblfbNbmBRIXoWW9go2eiEa
+  id: 2
+  email: hilbert@kiehn.name
+  encrypted_password: $2a$04$TOTwsktj3F8NUV.A45kK4u4RRPtUd3V5c5vCJrlMSMQA0wTQt2hB2
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

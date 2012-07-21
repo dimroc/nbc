@@ -43,4 +43,36 @@ describe Region do
     it { should validate_presence_of :name }
     it { should validate_presence_of :slug }
   end
+
+  describe ".from_shapefile" do
+    describe "generated square" do
+      let(:shapefile) { "tmp/from_shapefile_spec" }
+      let(:block_length) { 1 }
+
+      before do
+        ShapefileHelper.generate_rectangle shapefile, 9, 9
+      end
+
+      it "should generate the region with the appropriate blocks" do
+        region = Region.from_shapefile("bogus", shapefile, block_length)
+        region.blocks.size.should == 64
+        region.bounding_box.should ==
+          Cartesian::BoundingBox.create_from_points(
+            Cartesian::preferred_factory().point(0, 0),
+            Cartesian::preferred_factory().point(9, 9))
+        region.should be_valid
+      end
+    end
+
+    describe "square with hole from uDig" do
+      let(:shapefile) { "spec/fixtures/holed_square/holed_square" }
+      let(:block_length) { 1 }
+
+      it "should only generate squares that are in the geometry" do
+        region = Region.from_shapefile("bogus", shapefile, block_length)
+        region.blocks.size.should_not == region.bounding_box.steps(block_length)
+        region.should be_valid
+      end
+    end
+  end
 end

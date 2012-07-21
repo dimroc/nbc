@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721215833) do
+ActiveRecord::Schema.define(:version => 20120722174206) do
 
   create_table "blocks", :force => true do |t|
     t.integer  "region_id"
     t.integer  "left"
     t.integer  "top"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.spatial  "point",      :limit => {:srid=>0, :type=>"point"}
   end
 
   create_table "regions", :force => true do |t|

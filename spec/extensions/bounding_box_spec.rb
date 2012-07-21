@@ -11,16 +11,26 @@ describe RGeo::Cartesian::BoundingBox do
     let(:increment) { 1 }
     it "should generate yield a point for ever step" do
       steps = []
-      bb.step(increment) do |point|
+      positions = []
+      bb.step(increment) do |point, step_x, step_y|
         steps << point
+        positions << [step_x, step_y]
       end
 
+      positions.count.should == positions.uniq.count
       steps.count.should == 100
       (0..10).each do |x|
         (0..10).each do |y|
           steps.select { |s| s.x == x && s.y == y }.count == 1
         end
       end
+    end
+  end
+
+  describe "#steps" do
+    let (:increment) { 1 }
+    it "should return the number of steps to walk the area of the bb" do
+      bb.steps(increment).should == 100
     end
   end
 end

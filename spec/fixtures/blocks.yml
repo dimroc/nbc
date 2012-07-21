@@ -1,876 +1,1001 @@
 ---
 blocks_001:
-  id: 222
-  region_id: 5
+  id: 101
+  region_id: 2
   left: 0
   top: 0
-  created_at: 2012-07-04 22:36:22.519480000 Z
-  updated_at: 2012-07-04 22:36:22.519480000 Z
+  created_at: 2012-07-22 17:47:55.239829000 Z
+  updated_at: 2012-07-22 17:47:55.239829000 Z
+  point: 
 blocks_002:
-  id: 223
-  region_id: 5
+  id: 102
+  region_id: 2
   left: 0
   top: 1
-  created_at: 2012-07-04 22:36:22.520868000 Z
-  updated_at: 2012-07-04 22:36:22.520868000 Z
+  created_at: 2012-07-22 17:47:55.241124000 Z
+  updated_at: 2012-07-22 17:47:55.241124000 Z
+  point: 
 blocks_003:
-  id: 224
-  region_id: 5
+  id: 103
+  region_id: 2
   left: 0
   top: 2
-  created_at: 2012-07-04 22:36:22.521507000 Z
-  updated_at: 2012-07-04 22:36:22.521507000 Z
+  created_at: 2012-07-22 17:47:55.241779000 Z
+  updated_at: 2012-07-22 17:47:55.241779000 Z
+  point: 
 blocks_004:
-  id: 225
-  region_id: 5
+  id: 104
+  region_id: 2
   left: 0
   top: 3
-  created_at: 2012-07-04 22:36:22.522124000 Z
-  updated_at: 2012-07-04 22:36:22.522124000 Z
+  created_at: 2012-07-22 17:47:55.242416000 Z
+  updated_at: 2012-07-22 17:47:55.242416000 Z
+  point: 
 blocks_005:
-  id: 226
-  region_id: 5
+  id: 105
+  region_id: 2
   left: 0
   top: 4
-  created_at: 2012-07-04 22:36:22.522730000 Z
-  updated_at: 2012-07-04 22:36:22.522730000 Z
+  created_at: 2012-07-22 17:47:55.243133000 Z
+  updated_at: 2012-07-22 17:47:55.243133000 Z
+  point: 
 blocks_006:
-  id: 227
-  region_id: 5
+  id: 106
+  region_id: 2
   left: 0
   top: 5
-  created_at: 2012-07-04 22:36:22.523348000 Z
-  updated_at: 2012-07-04 22:36:22.523348000 Z
+  created_at: 2012-07-22 17:47:55.243764000 Z
+  updated_at: 2012-07-22 17:47:55.243764000 Z
+  point: 
 blocks_007:
-  id: 228
-  region_id: 5
+  id: 107
+  region_id: 2
   left: 0
   top: 6
-  created_at: 2012-07-04 22:36:22.523946000 Z
-  updated_at: 2012-07-04 22:36:22.523946000 Z
+  created_at: 2012-07-22 17:47:55.244400000 Z
+  updated_at: 2012-07-22 17:47:55.244400000 Z
+  point: 
 blocks_008:
-  id: 229
-  region_id: 5
+  id: 108
+  region_id: 2
   left: 0
   top: 7
-  created_at: 2012-07-04 22:36:22.524548000 Z
-  updated_at: 2012-07-04 22:36:22.524548000 Z
+  created_at: 2012-07-22 17:47:55.245025000 Z
+  updated_at: 2012-07-22 17:47:55.245025000 Z
+  point: 
 blocks_009:
-  id: 230
-  region_id: 5
+  id: 109
+  region_id: 2
   left: 0
   top: 8
-  created_at: 2012-07-04 22:36:22.525152000 Z
-  updated_at: 2012-07-04 22:36:22.525152000 Z
+  created_at: 2012-07-22 17:47:55.245646000 Z
+  updated_at: 2012-07-22 17:47:55.245646000 Z
+  point: 
 blocks_010:
-  id: 231
-  region_id: 5
+  id: 110
+  region_id: 2
   left: 0
   top: 9
-  created_at: 2012-07-04 22:36:22.525751000 Z
-  updated_at: 2012-07-04 22:36:22.525751000 Z
+  created_at: 2012-07-22 17:47:55.246263000 Z
+  updated_at: 2012-07-22 17:47:55.246263000 Z
+  point: 
 blocks_011:
-  id: 232
-  region_id: 5
+  id: 111
+  region_id: 2
   left: 1
   top: 0
-  created_at: 2012-07-04 22:36:22.526340000 Z
-  updated_at: 2012-07-04 22:36:22.526340000 Z
+  created_at: 2012-07-22 17:47:55.246881000 Z
+  updated_at: 2012-07-22 17:47:55.246881000 Z
+  point: 
 blocks_012:
-  id: 233
-  region_id: 5
+  id: 112
+  region_id: 2
   left: 1
   top: 1
-  created_at: 2012-07-04 22:36:22.526946000 Z
-  updated_at: 2012-07-04 22:36:22.526946000 Z
+  created_at: 2012-07-22 17:47:55.247526000 Z
+  updated_at: 2012-07-22 17:47:55.247526000 Z
+  point: 
 blocks_013:
-  id: 234
-  region_id: 5
+  id: 113
+  region_id: 2
   left: 1
   top: 2
-  created_at: 2012-07-04 22:36:22.527535000 Z
-  updated_at: 2012-07-04 22:36:22.527535000 Z
+  created_at: 2012-07-22 17:47:55.248145000 Z
+  updated_at: 2012-07-22 17:47:55.248145000 Z
+  point: 
 blocks_014:
-  id: 235
-  region_id: 5
+  id: 114
+  region_id: 2
   left: 1
   top: 3
-  created_at: 2012-07-04 22:36:22.528129000 Z
-  updated_at: 2012-07-04 22:36:22.528129000 Z
+  created_at: 2012-07-22 17:47:55.248754000 Z
+  updated_at: 2012-07-22 17:47:55.248754000 Z
+  point: 
 blocks_015:
-  id: 236
-  region_id: 5
+  id: 115
+  region_id: 2
   left: 1
   top: 4
-  created_at: 2012-07-04 22:36:22.528717000 Z
-  updated_at: 2012-07-04 22:36:22.528717000 Z
+  created_at: 2012-07-22 17:47:55.249360000 Z
+  updated_at: 2012-07-22 17:47:55.249360000 Z
+  point: 
 blocks_016:
-  id: 237
-  region_id: 5
+  id: 116
+  region_id: 2
   left: 1
   top: 5
-  created_at: 2012-07-04 22:36:22.529312000 Z
-  updated_at: 2012-07-04 22:36:22.529312000 Z
+  created_at: 2012-07-22 17:47:55.249971000 Z
+  updated_at: 2012-07-22 17:47:55.249971000 Z
+  point: 
 blocks_017:
-  id: 238
-  region_id: 5
+  id: 117
+  region_id: 2
   left: 1
   top: 6
-  created_at: 2012-07-04 22:36:22.529904000 Z
-  updated_at: 2012-07-04 22:36:22.529904000 Z
+  created_at: 2012-07-22 17:47:55.250582000 Z
+  updated_at: 2012-07-22 17:47:55.250582000 Z
+  point: 
 blocks_018:
-  id: 239
-  region_id: 5
+  id: 118
+  region_id: 2
   left: 1
   top: 7
-  created_at: 2012-07-04 22:36:22.530490000 Z
-  updated_at: 2012-07-04 22:36:22.530490000 Z
+  created_at: 2012-07-22 17:47:55.251193000 Z
+  updated_at: 2012-07-22 17:47:55.251193000 Z
+  point: 
 blocks_019:
-  id: 240
-  region_id: 5
+  id: 119
+  region_id: 2
   left: 1
   top: 8
-  created_at: 2012-07-04 22:36:22.531096000 Z
-  updated_at: 2012-07-04 22:36:22.531096000 Z
+  created_at: 2012-07-22 17:47:55.251797000 Z
+  updated_at: 2012-07-22 17:47:55.251797000 Z
+  point: 
 blocks_020:
-  id: 241
-  region_id: 5
+  id: 120
+  region_id: 2
   left: 1
   top: 9
-  created_at: 2012-07-04 22:36:22.531700000 Z
-  updated_at: 2012-07-04 22:36:22.531700000 Z
+  created_at: 2012-07-22 17:47:55.252406000 Z
+  updated_at: 2012-07-22 17:47:55.252406000 Z
+  point: 
 blocks_021:
-  id: 242
-  region_id: 5
+  id: 121
+  region_id: 2
   left: 2
   top: 0
-  created_at: 2012-07-04 22:36:22.532384000 Z
-  updated_at: 2012-07-04 22:36:22.532384000 Z
+  created_at: 2012-07-22 17:47:55.253062000 Z
+  updated_at: 2012-07-22 17:47:55.253062000 Z
+  point: 
 blocks_022:
-  id: 243
-  region_id: 5
+  id: 122
+  region_id: 2
   left: 2
   top: 1
-  created_at: 2012-07-04 22:36:22.532933000 Z
-  updated_at: 2012-07-04 22:36:22.532933000 Z
+  created_at: 2012-07-22 17:47:55.253691000 Z
+  updated_at: 2012-07-22 17:47:55.253691000 Z
+  point: 
 blocks_023:
-  id: 244
-  region_id: 5
+  id: 123
+  region_id: 2
   left: 2
   top: 2
-  created_at: 2012-07-04 22:36:22.533476000 Z
-  updated_at: 2012-07-04 22:36:22.533476000 Z
+  created_at: 2012-07-22 17:47:55.254361000 Z
+  updated_at: 2012-07-22 17:47:55.254361000 Z
+  point: 
 blocks_024:
-  id: 245
-  region_id: 5
+  id: 124
+  region_id: 2
   left: 2
   top: 3
-  created_at: 2012-07-04 22:36:22.534013000 Z
-  updated_at: 2012-07-04 22:36:22.534013000 Z
+  created_at: 2012-07-22 17:47:55.255029000 Z
+  updated_at: 2012-07-22 17:47:55.255029000 Z
+  point: 
 blocks_025:
-  id: 246
-  region_id: 5
+  id: 125
+  region_id: 2
   left: 2
   top: 4
-  created_at: 2012-07-04 22:36:22.534561000 Z
-  updated_at: 2012-07-04 22:36:22.534561000 Z
+  created_at: 2012-07-22 17:47:55.255683000 Z
+  updated_at: 2012-07-22 17:47:55.255683000 Z
+  point: 
 blocks_026:
-  id: 247
-  region_id: 5
+  id: 126
+  region_id: 2
   left: 2
   top: 5
-  created_at: 2012-07-04 22:36:22.535120000 Z
-  updated_at: 2012-07-04 22:36:22.535120000 Z
+  created_at: 2012-07-22 17:47:55.256342000 Z
+  updated_at: 2012-07-22 17:47:55.256342000 Z
+  point: 
 blocks_027:
-  id: 248
-  region_id: 5
+  id: 127
+  region_id: 2
   left: 2
   top: 6
-  created_at: 2012-07-04 22:36:22.535671000 Z
-  updated_at: 2012-07-04 22:36:22.535671000 Z
+  created_at: 2012-07-22 17:47:55.256994000 Z
+  updated_at: 2012-07-22 17:47:55.256994000 Z
+  point: 
 blocks_028:
-  id: 249
-  region_id: 5
+  id: 128
+  region_id: 2
   left: 2
   top: 7
-  created_at: 2012-07-04 22:36:22.536231000 Z
-  updated_at: 2012-07-04 22:36:22.536231000 Z
+  created_at: 2012-07-22 17:47:55.257648000 Z
+  updated_at: 2012-07-22 17:47:55.257648000 Z
+  point: 
 blocks_029:
-  id: 250
-  region_id: 5
+  id: 129
+  region_id: 2
   left: 2
   top: 8
-  created_at: 2012-07-04 22:36:22.536806000 Z
-  updated_at: 2012-07-04 22:36:22.536806000 Z
+  created_at: 2012-07-22 17:47:55.258280000 Z
+  updated_at: 2012-07-22 17:47:55.258280000 Z
+  point: 
 blocks_030:
-  id: 251
-  region_id: 5
+  id: 130
+  region_id: 2
   left: 2
   top: 9
-  created_at: 2012-07-04 22:36:22.537443000 Z
-  updated_at: 2012-07-04 22:36:22.537443000 Z
+  created_at: 2012-07-22 17:47:55.258905000 Z
+  updated_at: 2012-07-22 17:47:55.258905000 Z
+  point: 
 blocks_031:
-  id: 252
-  region_id: 5
+  id: 131
+  region_id: 2
   left: 3
   top: 0
-  created_at: 2012-07-04 22:36:22.538076000 Z
-  updated_at: 2012-07-04 22:36:22.538076000 Z
+  created_at: 2012-07-22 17:47:55.259514000 Z
+  updated_at: 2012-07-22 17:47:55.259514000 Z
+  point: 
 blocks_032:
-  id: 253
-  region_id: 5
+  id: 132
+  region_id: 2
   left: 3
   top: 1
-  created_at: 2012-07-04 22:36:22.538716000 Z
-  updated_at: 2012-07-04 22:36:22.538716000 Z
+  created_at: 2012-07-22 17:47:55.260125000 Z
+  updated_at: 2012-07-22 17:47:55.260125000 Z
+  point: 
 blocks_033:
-  id: 254
-  region_id: 5
+  id: 133
+  region_id: 2
   left: 3
   top: 2
-  created_at: 2012-07-04 22:36:22.539359000 Z
-  updated_at: 2012-07-04 22:36:22.539359000 Z
+  created_at: 2012-07-22 17:47:55.260735000 Z
+  updated_at: 2012-07-22 17:47:55.260735000 Z
+  point: 
 blocks_034:
-  id: 255
-  region_id: 5
+  id: 134
+  region_id: 2
   left: 3
   top: 3
-  created_at: 2012-07-04 22:36:22.539976000 Z
-  updated_at: 2012-07-04 22:36:22.539976000 Z
+  created_at: 2012-07-22 17:47:55.261350000 Z
+  updated_at: 2012-07-22 17:47:55.261350000 Z
+  point: 
 blocks_035:
-  id: 256
-  region_id: 5
+  id: 135
+  region_id: 2
   left: 3
   top: 4
-  created_at: 2012-07-04 22:36:22.540580000 Z
-  updated_at: 2012-07-04 22:36:22.540580000 Z
+  created_at: 2012-07-22 17:47:55.261961000 Z
+  updated_at: 2012-07-22 17:47:55.261961000 Z
+  point: 
 blocks_036:
-  id: 257
-  region_id: 5
+  id: 136
+  region_id: 2
   left: 3
   top: 5
-  created_at: 2012-07-04 22:36:22.541180000 Z
-  updated_at: 2012-07-04 22:36:22.541180000 Z
+  created_at: 2012-07-22 17:47:55.262568000 Z
+  updated_at: 2012-07-22 17:47:55.262568000 Z
+  point: 
 blocks_037:
-  id: 258
-  region_id: 5
+  id: 137
+  region_id: 2
   left: 3
   top: 6
-  created_at: 2012-07-04 22:36:22.541774000 Z
-  updated_at: 2012-07-04 22:36:22.541774000 Z
+  created_at: 2012-07-22 17:47:55.263190000 Z
+  updated_at: 2012-07-22 17:47:55.263190000 Z
+  point: 
 blocks_038:
-  id: 259
-  region_id: 5
+  id: 138
+  region_id: 2
   left: 3
   top: 7
-  created_at: 2012-07-04 22:36:22.542376000 Z
-  updated_at: 2012-07-04 22:36:22.542376000 Z
+  created_at: 2012-07-22 17:47:55.264001000 Z
+  updated_at: 2012-07-22 17:47:55.264001000 Z
+  point: 
 blocks_039:
-  id: 260
-  region_id: 5
+  id: 139
+  region_id: 2
   left: 3
   top: 8
-  created_at: 2012-07-04 22:36:22.542994000 Z
-  updated_at: 2012-07-04 22:36:22.542994000 Z
+  created_at: 2012-07-22 17:47:55.264632000 Z
+  updated_at: 2012-07-22 17:47:55.264632000 Z
+  point: 
 blocks_040:
-  id: 261
-  region_id: 5
+  id: 140
+  region_id: 2
   left: 3
   top: 9
-  created_at: 2012-07-04 22:36:22.543600000 Z
-  updated_at: 2012-07-04 22:36:22.543600000 Z
+  created_at: 2012-07-22 17:47:55.265254000 Z
+  updated_at: 2012-07-22 17:47:55.265254000 Z
+  point: 
 blocks_041:
-  id: 262
-  region_id: 5
+  id: 141
+  region_id: 2
   left: 4
   top: 0
-  created_at: 2012-07-04 22:36:22.544190000 Z
-  updated_at: 2012-07-04 22:36:22.544190000 Z
+  created_at: 2012-07-22 17:47:55.265909000 Z
+  updated_at: 2012-07-22 17:47:55.265909000 Z
+  point: 
 blocks_042:
-  id: 263
-  region_id: 5
+  id: 142
+  region_id: 2
   left: 4
   top: 1
-  created_at: 2012-07-04 22:36:22.544785000 Z
-  updated_at: 2012-07-04 22:36:22.544785000 Z
+  created_at: 2012-07-22 17:47:55.266554000 Z
+  updated_at: 2012-07-22 17:47:55.266554000 Z
+  point: 
 blocks_043:
-  id: 264
-  region_id: 5
+  id: 143
+  region_id: 2
   left: 4
   top: 2
-  created_at: 2012-07-04 22:36:22.545380000 Z
-  updated_at: 2012-07-04 22:36:22.545380000 Z
+  created_at: 2012-07-22 17:47:55.267175000 Z
+  updated_at: 2012-07-22 17:47:55.267175000 Z
+  point: 
 blocks_044:
-  id: 265
-  region_id: 5
+  id: 144
+  region_id: 2
   left: 4
   top: 3
-  created_at: 2012-07-04 22:36:22.545984000 Z
-  updated_at: 2012-07-04 22:36:22.545984000 Z
+  created_at: 2012-07-22 17:47:55.267807000 Z
+  updated_at: 2012-07-22 17:47:55.267807000 Z
+  point: 
 blocks_045:
-  id: 266
-  region_id: 5
+  id: 145
+  region_id: 2
   left: 4
   top: 4
-  created_at: 2012-07-04 22:36:22.546581000 Z
-  updated_at: 2012-07-04 22:36:22.546581000 Z
+  created_at: 2012-07-22 17:47:55.268425000 Z
+  updated_at: 2012-07-22 17:47:55.268425000 Z
+  point: 
 blocks_046:
-  id: 267
-  region_id: 5
+  id: 146
+  region_id: 2
   left: 4
   top: 5
-  created_at: 2012-07-04 22:36:22.547185000 Z
-  updated_at: 2012-07-04 22:36:22.547185000 Z
+  created_at: 2012-07-22 17:47:55.269050000 Z
+  updated_at: 2012-07-22 17:47:55.269050000 Z
+  point: 
 blocks_047:
-  id: 268
-  region_id: 5
+  id: 147
+  region_id: 2
   left: 4
   top: 6
-  created_at: 2012-07-04 22:36:22.547782000 Z
-  updated_at: 2012-07-04 22:36:22.547782000 Z
+  created_at: 2012-07-22 17:47:55.269665000 Z
+  updated_at: 2012-07-22 17:47:55.269665000 Z
+  point: 
 blocks_048:
-  id: 269
-  region_id: 5
+  id: 148
+  region_id: 2
   left: 4
   top: 7
-  created_at: 2012-07-04 22:36:22.548374000 Z
-  updated_at: 2012-07-04 22:36:22.548374000 Z
+  created_at: 2012-07-22 17:47:55.270288000 Z
+  updated_at: 2012-07-22 17:47:55.270288000 Z
+  point: 
 blocks_049:
-  id: 270
-  region_id: 5
+  id: 149
+  region_id: 2
   left: 4
   top: 8
-  created_at: 2012-07-04 22:36:22.548986000 Z
-  updated_at: 2012-07-04 22:36:22.548986000 Z
+  created_at: 2012-07-22 17:47:55.270917000 Z
+  updated_at: 2012-07-22 17:47:55.270917000 Z
+  point: 
 blocks_050:
-  id: 271
-  region_id: 5
+  id: 150
+  region_id: 2
   left: 4
   top: 9
-  created_at: 2012-07-04 22:36:22.549575000 Z
-  updated_at: 2012-07-04 22:36:22.549575000 Z
+  created_at: 2012-07-22 17:47:55.271538000 Z
+  updated_at: 2012-07-22 17:47:55.271538000 Z
+  point: 
 blocks_051:
-  id: 272
-  region_id: 5
+  id: 151
+  region_id: 2
   left: 5
   top: 0
-  created_at: 2012-07-04 22:36:22.550177000 Z
-  updated_at: 2012-07-04 22:36:22.550177000 Z
+  created_at: 2012-07-22 17:47:55.272152000 Z
+  updated_at: 2012-07-22 17:47:55.272152000 Z
+  point: 
 blocks_052:
-  id: 273
-  region_id: 5
+  id: 152
+  region_id: 2
   left: 5
   top: 1
-  created_at: 2012-07-04 22:36:22.550771000 Z
-  updated_at: 2012-07-04 22:36:22.550771000 Z
+  created_at: 2012-07-22 17:47:55.272765000 Z
+  updated_at: 2012-07-22 17:47:55.272765000 Z
+  point: 
 blocks_053:
-  id: 274
-  region_id: 5
+  id: 153
+  region_id: 2
   left: 5
   top: 2
-  created_at: 2012-07-04 22:36:22.551364000 Z
-  updated_at: 2012-07-04 22:36:22.551364000 Z
+  created_at: 2012-07-22 17:47:55.273376000 Z
+  updated_at: 2012-07-22 17:47:55.273376000 Z
+  point: 
 blocks_054:
-  id: 275
-  region_id: 5
+  id: 154
+  region_id: 2
   left: 5
   top: 3
-  created_at: 2012-07-04 22:36:22.551967000 Z
-  updated_at: 2012-07-04 22:36:22.551967000 Z
+  created_at: 2012-07-22 17:47:55.273982000 Z
+  updated_at: 2012-07-22 17:47:55.273982000 Z
+  point: 
 blocks_055:
-  id: 276
-  region_id: 5
+  id: 155
+  region_id: 2
   left: 5
   top: 4
-  created_at: 2012-07-04 22:36:22.552597000 Z
-  updated_at: 2012-07-04 22:36:22.552597000 Z
+  created_at: 2012-07-22 17:47:55.274624000 Z
+  updated_at: 2012-07-22 17:47:55.274624000 Z
+  point: 
 blocks_056:
-  id: 277
-  region_id: 5
+  id: 156
+  region_id: 2
   left: 5
   top: 5
-  created_at: 2012-07-04 22:36:22.553169000 Z
-  updated_at: 2012-07-04 22:36:22.553169000 Z
+  created_at: 2012-07-22 17:47:55.275228000 Z
+  updated_at: 2012-07-22 17:47:55.275228000 Z
+  point: 
 blocks_057:
-  id: 278
-  region_id: 5
+  id: 157
+  region_id: 2
   left: 5
   top: 6
-  created_at: 2012-07-04 22:36:22.553711000 Z
-  updated_at: 2012-07-04 22:36:22.553711000 Z
+  created_at: 2012-07-22 17:47:55.275789000 Z
+  updated_at: 2012-07-22 17:47:55.275789000 Z
+  point: 
 blocks_058:
-  id: 279
-  region_id: 5
+  id: 158
+  region_id: 2
   left: 5
   top: 7
-  created_at: 2012-07-04 22:36:22.554305000 Z
-  updated_at: 2012-07-04 22:36:22.554305000 Z
+  created_at: 2012-07-22 17:47:55.276405000 Z
+  updated_at: 2012-07-22 17:47:55.276405000 Z
+  point: 
 blocks_059:
-  id: 280
-  region_id: 5
+  id: 159
+  region_id: 2
   left: 5
   top: 8
-  created_at: 2012-07-04 22:36:22.554882000 Z
-  updated_at: 2012-07-04 22:36:22.554882000 Z
+  created_at: 2012-07-22 17:47:55.277020000 Z
+  updated_at: 2012-07-22 17:47:55.277020000 Z
+  point: 
 blocks_060:
-  id: 281
-  region_id: 5
+  id: 160
+  region_id: 2
   left: 5
   top: 9
-  created_at: 2012-07-04 22:36:22.555519000 Z
-  updated_at: 2012-07-04 22:36:22.555519000 Z
+  created_at: 2012-07-22 17:47:55.277638000 Z
+  updated_at: 2012-07-22 17:47:55.277638000 Z
+  point: 
 blocks_061:
-  id: 282
-  region_id: 5
+  id: 161
+  region_id: 2
   left: 6
   top: 0
-  created_at: 2012-07-04 22:36:22.556149000 Z
-  updated_at: 2012-07-04 22:36:22.556149000 Z
+  created_at: 2012-07-22 17:47:55.278274000 Z
+  updated_at: 2012-07-22 17:47:55.278274000 Z
+  point: 
 blocks_062:
-  id: 283
-  region_id: 5
+  id: 162
+  region_id: 2
   left: 6
   top: 1
-  created_at: 2012-07-04 22:36:22.556787000 Z
-  updated_at: 2012-07-04 22:36:22.556787000 Z
+  created_at: 2012-07-22 17:47:55.278881000 Z
+  updated_at: 2012-07-22 17:47:55.278881000 Z
+  point: 
 blocks_063:
-  id: 284
-  region_id: 5
+  id: 163
+  region_id: 2
   left: 6
   top: 2
-  created_at: 2012-07-04 22:36:22.557419000 Z
-  updated_at: 2012-07-04 22:36:22.557419000 Z
+  created_at: 2012-07-22 17:47:55.279488000 Z
+  updated_at: 2012-07-22 17:47:55.279488000 Z
+  point: 
 blocks_064:
-  id: 285
-  region_id: 5
+  id: 164
+  region_id: 2
   left: 6
   top: 3
-  created_at: 2012-07-04 22:36:22.558020000 Z
-  updated_at: 2012-07-04 22:36:22.558020000 Z
+  created_at: 2012-07-22 17:47:55.280123000 Z
+  updated_at: 2012-07-22 17:47:55.280123000 Z
+  point: 
 blocks_065:
-  id: 286
-  region_id: 5
+  id: 165
+  region_id: 2
   left: 6
   top: 4
-  created_at: 2012-07-04 22:36:22.558613000 Z
-  updated_at: 2012-07-04 22:36:22.558613000 Z
+  created_at: 2012-07-22 17:47:55.280777000 Z
+  updated_at: 2012-07-22 17:47:55.280777000 Z
+  point: 
 blocks_066:
-  id: 287
-  region_id: 5
+  id: 166
+  region_id: 2
   left: 6
   top: 5
-  created_at: 2012-07-04 22:36:22.559207000 Z
-  updated_at: 2012-07-04 22:36:22.559207000 Z
+  created_at: 2012-07-22 17:47:55.281393000 Z
+  updated_at: 2012-07-22 17:47:55.281393000 Z
+  point: 
 blocks_067:
-  id: 288
-  region_id: 5
+  id: 167
+  region_id: 2
   left: 6
   top: 6
-  created_at: 2012-07-04 22:36:22.559798000 Z
-  updated_at: 2012-07-04 22:36:22.559798000 Z
+  created_at: 2012-07-22 17:47:55.282001000 Z
+  updated_at: 2012-07-22 17:47:55.282001000 Z
+  point: 
 blocks_068:
-  id: 289
-  region_id: 5
+  id: 168
+  region_id: 2
   left: 6
   top: 7
-  created_at: 2012-07-04 22:36:22.560387000 Z
-  updated_at: 2012-07-04 22:36:22.560387000 Z
+  created_at: 2012-07-22 17:47:55.282617000 Z
+  updated_at: 2012-07-22 17:47:55.282617000 Z
+  point: 
 blocks_069:
-  id: 290
-  region_id: 5
+  id: 169
+  region_id: 2
   left: 6
   top: 8
-  created_at: 2012-07-04 22:36:22.560999000 Z
-  updated_at: 2012-07-04 22:36:22.560999000 Z
+  created_at: 2012-07-22 17:47:55.283271000 Z
+  updated_at: 2012-07-22 17:47:55.283271000 Z
+  point: 
 blocks_070:
-  id: 291
-  region_id: 5
+  id: 170
+  region_id: 2
   left: 6
   top: 9
-  created_at: 2012-07-04 22:36:22.561590000 Z
-  updated_at: 2012-07-04 22:36:22.561590000 Z
+  created_at: 2012-07-22 17:47:55.283903000 Z
+  updated_at: 2012-07-22 17:47:55.283903000 Z
+  point: 
 blocks_071:
-  id: 292
-  region_id: 5
+  id: 171
+  region_id: 2
   left: 7
   top: 0
-  created_at: 2012-07-04 22:36:22.562184000 Z
-  updated_at: 2012-07-04 22:36:22.562184000 Z
+  created_at: 2012-07-22 17:47:55.284559000 Z
+  updated_at: 2012-07-22 17:47:55.284559000 Z
+  point: 
 blocks_072:
-  id: 293
-  region_id: 5
+  id: 172
+  region_id: 2
   left: 7
   top: 1
-  created_at: 2012-07-04 22:36:22.562774000 Z
-  updated_at: 2012-07-04 22:36:22.562774000 Z
+  created_at: 2012-07-22 17:47:55.285211000 Z
+  updated_at: 2012-07-22 17:47:55.285211000 Z
+  point: 
 blocks_073:
-  id: 294
-  region_id: 5
+  id: 173
+  region_id: 2
   left: 7
   top: 2
-  created_at: 2012-07-04 22:36:22.563373000 Z
-  updated_at: 2012-07-04 22:36:22.563373000 Z
+  created_at: 2012-07-22 17:47:55.285855000 Z
+  updated_at: 2012-07-22 17:47:55.285855000 Z
+  point: 
 blocks_074:
-  id: 295
-  region_id: 5
+  id: 174
+  region_id: 2
   left: 7
   top: 3
-  created_at: 2012-07-04 22:36:22.563963000 Z
-  updated_at: 2012-07-04 22:36:22.563963000 Z
+  created_at: 2012-07-22 17:47:55.286472000 Z
+  updated_at: 2012-07-22 17:47:55.286472000 Z
+  point: 
 blocks_075:
-  id: 296
-  region_id: 5
+  id: 175
+  region_id: 2
   left: 7
   top: 4
-  created_at: 2012-07-04 22:36:22.564553000 Z
-  updated_at: 2012-07-04 22:36:22.564553000 Z
+  created_at: 2012-07-22 17:47:55.287094000 Z
+  updated_at: 2012-07-22 17:47:55.287094000 Z
+  point: 
 blocks_076:
-  id: 297
-  region_id: 5
+  id: 176
+  region_id: 2
   left: 7
   top: 5
-  created_at: 2012-07-04 22:36:22.565148000 Z
-  updated_at: 2012-07-04 22:36:22.565148000 Z
+  created_at: 2012-07-22 17:47:55.287714000 Z
+  updated_at: 2012-07-22 17:47:55.287714000 Z
+  point: 
 blocks_077:
-  id: 298
-  region_id: 5
+  id: 177
+  region_id: 2
   left: 7
   top: 6
-  created_at: 2012-07-04 22:36:22.565737000 Z
-  updated_at: 2012-07-04 22:36:22.565737000 Z
+  created_at: 2012-07-22 17:47:55.288377000 Z
+  updated_at: 2012-07-22 17:47:55.288377000 Z
+  point: 
 blocks_078:
-  id: 299
-  region_id: 5
+  id: 178
+  region_id: 2
   left: 7
   top: 7
-  created_at: 2012-07-04 22:36:22.566328000 Z
-  updated_at: 2012-07-04 22:36:22.566328000 Z
+  created_at: 2012-07-22 17:47:55.289003000 Z
+  updated_at: 2012-07-22 17:47:55.289003000 Z
+  point: 
 blocks_079:
-  id: 300
-  region_id: 5
+  id: 179
+  region_id: 2
   left: 7
   top: 8
-  created_at: 2012-07-04 22:36:22.566933000 Z
-  updated_at: 2012-07-04 22:36:22.566933000 Z
+  created_at: 2012-07-22 17:47:55.289623000 Z
+  updated_at: 2012-07-22 17:47:55.289623000 Z
+  point: 
 blocks_080:
-  id: 301
-  region_id: 5
+  id: 180
+  region_id: 2
   left: 7
   top: 9
-  created_at: 2012-07-04 22:36:22.567529000 Z
-  updated_at: 2012-07-04 22:36:22.567529000 Z
+  created_at: 2012-07-22 17:47:55.290240000 Z
+  updated_at: 2012-07-22 17:47:55.290240000 Z
+  point: 
 blocks_081:
-  id: 302
-  region_id: 5
+  id: 181
+  region_id: 2
   left: 8
   top: 0
-  created_at: 2012-07-04 22:36:22.568126000 Z
-  updated_at: 2012-07-04 22:36:22.568126000 Z
+  created_at: 2012-07-22 17:47:55.290856000 Z
+  updated_at: 2012-07-22 17:47:55.290856000 Z
+  point: 
 blocks_082:
-  id: 303
-  region_id: 5
+  id: 182
+  region_id: 2
   left: 8
   top: 1
-  created_at: 2012-07-04 22:36:22.568723000 Z
-  updated_at: 2012-07-04 22:36:22.568723000 Z
+  created_at: 2012-07-22 17:47:55.291477000 Z
+  updated_at: 2012-07-22 17:47:55.291477000 Z
+  point: 
 blocks_083:
-  id: 304
-  region_id: 5
+  id: 183
+  region_id: 2
   left: 8
   top: 2
-  created_at: 2012-07-04 22:36:22.569319000 Z
-  updated_at: 2012-07-04 22:36:22.569319000 Z
+  created_at: 2012-07-22 17:47:55.292106000 Z
+  updated_at: 2012-07-22 17:47:55.292106000 Z
+  point: 
 blocks_084:
-  id: 305
-  region_id: 5
+  id: 184
+  region_id: 2
   left: 8
   top: 3
-  created_at: 2012-07-04 22:36:22.569922000 Z
-  updated_at: 2012-07-04 22:36:22.569922000 Z
+  created_at: 2012-07-22 17:47:55.292714000 Z
+  updated_at: 2012-07-22 17:47:55.292714000 Z
+  point: 
 blocks_085:
-  id: 306
-  region_id: 5
+  id: 185
+  region_id: 2
   left: 8
   top: 4
-  created_at: 2012-07-04 22:36:22.570503000 Z
-  updated_at: 2012-07-04 22:36:22.570503000 Z
+  created_at: 2012-07-22 17:47:55.293381000 Z
+  updated_at: 2012-07-22 17:47:55.293381000 Z
+  point: 
 blocks_086:
-  id: 307
-  region_id: 5
+  id: 186
+  region_id: 2
   left: 8
   top: 5
-  created_at: 2012-07-04 22:36:22.571101000 Z
-  updated_at: 2012-07-04 22:36:22.571101000 Z
+  created_at: 2012-07-22 17:47:55.293974000 Z
+  updated_at: 2012-07-22 17:47:55.293974000 Z
+  point: 
 blocks_087:
-  id: 308
-  region_id: 5
+  id: 187
+  region_id: 2
   left: 8
   top: 6
-  created_at: 2012-07-04 22:36:22.571688000 Z
-  updated_at: 2012-07-04 22:36:22.571688000 Z
+  created_at: 2012-07-22 17:47:55.294551000 Z
+  updated_at: 2012-07-22 17:47:55.294551000 Z
+  point: 
 blocks_088:
-  id: 309
-  region_id: 5
+  id: 188
+  region_id: 2
   left: 8
   top: 7
-  created_at: 2012-07-04 22:36:22.572277000 Z
-  updated_at: 2012-07-04 22:36:22.572277000 Z
+  created_at: 2012-07-22 17:47:55.295175000 Z
+  updated_at: 2012-07-22 17:47:55.295175000 Z
+  point: 
 blocks_089:
-  id: 310
-  region_id: 5
+  id: 189
+  region_id: 2
   left: 8
   top: 8
-  created_at: 2012-07-04 22:36:22.572921000 Z
-  updated_at: 2012-07-04 22:36:22.572921000 Z
+  created_at: 2012-07-22 17:47:55.295857000 Z
+  updated_at: 2012-07-22 17:47:55.295857000 Z
+  point: 
 blocks_090:
-  id: 311
-  region_id: 5
+  id: 190
+  region_id: 2
   left: 8
   top: 9
-  created_at: 2012-07-04 22:36:22.573466000 Z
-  updated_at: 2012-07-04 22:36:22.573466000 Z
+  created_at: 2012-07-22 17:47:55.296479000 Z
+  updated_at: 2012-07-22 17:47:55.296479000 Z
+  point: 
 blocks_091:
-  id: 312
-  region_id: 5
+  id: 191
+  region_id: 2
   left: 9
   top: 0
-  created_at: 2012-07-04 22:36:22.574012000 Z
-  updated_at: 2012-07-04 22:36:22.574012000 Z
+  created_at: 2012-07-22 17:47:55.297100000 Z
+  updated_at: 2012-07-22 17:47:55.297100000 Z
+  point: 
 blocks_092:
-  id: 313
-  region_id: 5
+  id: 192
+  region_id: 2
   left: 9
   top: 1
-  created_at: 2012-07-04 22:36:22.574551000 Z
-  updated_at: 2012-07-04 22:36:22.574551000 Z
+  created_at: 2012-07-22 17:47:55.297785000 Z
+  updated_at: 2012-07-22 17:47:55.297785000 Z
+  point: 
 blocks_093:
-  id: 314
-  region_id: 5
+  id: 193
+  region_id: 2
   left: 9
   top: 2
-  created_at: 2012-07-04 22:36:22.575087000 Z
-  updated_at: 2012-07-04 22:36:22.575087000 Z
+  created_at: 2012-07-22 17:47:55.298485000 Z
+  updated_at: 2012-07-22 17:47:55.298485000 Z
+  point: 
 blocks_094:
-  id: 315
-  region_id: 5
+  id: 194
+  region_id: 2
   left: 9
   top: 3
-  created_at: 2012-07-04 22:36:22.576182000 Z
-  updated_at: 2012-07-04 22:36:22.576182000 Z
+  created_at: 2012-07-22 17:47:55.299259000 Z
+  updated_at: 2012-07-22 17:47:55.299259000 Z
+  point: 
 blocks_095:
-  id: 316
-  region_id: 5
+  id: 195
+  region_id: 2
   left: 9
   top: 4
-  created_at: 2012-07-04 22:36:22.576880000 Z
-  updated_at: 2012-07-04 22:36:22.576880000 Z
+  created_at: 2012-07-22 17:47:55.299959000 Z
+  updated_at: 2012-07-22 17:47:55.299959000 Z
+  point: 
 blocks_096:
-  id: 317
-  region_id: 5
+  id: 196
+  region_id: 2
   left: 9
   top: 5
-  created_at: 2012-07-04 22:36:22.577585000 Z
-  updated_at: 2012-07-04 22:36:22.577585000 Z
+  created_at: 2012-07-22 17:47:55.300596000 Z
+  updated_at: 2012-07-22 17:47:55.300596000 Z
+  point: 
 blocks_097:
-  id: 318
-  region_id: 5
+  id: 197
+  region_id: 2
   left: 9
   top: 6
-  created_at: 2012-07-04 22:36:22.578214000 Z
-  updated_at: 2012-07-04 22:36:22.578214000 Z
+  created_at: 2012-07-22 17:47:55.301225000 Z
+  updated_at: 2012-07-22 17:47:55.301225000 Z
+  point: 
 blocks_098:
-  id: 319
-  region_id: 5
+  id: 198
+  region_id: 2
   left: 9
   top: 7
-  created_at: 2012-07-04 22:36:22.578820000 Z
-  updated_at: 2012-07-04 22:36:22.578820000 Z
+  created_at: 2012-07-22 17:47:55.301860000 Z
+  updated_at: 2012-07-22 17:47:55.301860000 Z
+  point: 
 blocks_099:
-  id: 320
-  region_id: 5
+  id: 199
+  region_id: 2
   left: 9
   top: 8
-  created_at: 2012-07-04 22:36:22.579430000 Z
-  updated_at: 2012-07-04 22:36:22.579430000 Z
+  created_at: 2012-07-22 17:47:55.302478000 Z
+  updated_at: 2012-07-22 17:47:55.302478000 Z
+  point: 
 blocks_100:
-  id: 321
-  region_id: 5
+  id: 200
+  region_id: 2
   left: 9
   top: 9
-  created_at: 2012-07-04 22:36:22.580062000 Z
-  updated_at: 2012-07-04 22:36:22.580062000 Z
+  created_at: 2012-07-22 17:47:55.303098000 Z
+  updated_at: 2012-07-22 17:47:55.303098000 Z
+  point: 
 blocks_101:
-  id: 322
-  region_id: 6
+  id: 201
+  region_id: 3
   left: 0
   top: 0
-  created_at: 2012-07-04 22:36:22.589275000 Z
-  updated_at: 2012-07-04 22:36:22.589275000 Z
+  created_at: 2012-07-22 17:47:55.330766000 Z
+  updated_at: 2012-07-22 17:47:55.330766000 Z
+  point: 
 blocks_102:
-  id: 323
-  region_id: 6
+  id: 202
+  region_id: 3
   left: 0
   top: 1
-  created_at: 2012-07-04 22:36:22.590112000 Z
-  updated_at: 2012-07-04 22:36:22.590112000 Z
+  created_at: 2012-07-22 17:47:55.331476000 Z
+  updated_at: 2012-07-22 17:47:55.331476000 Z
+  point: 
 blocks_103:
-  id: 324
-  region_id: 6
+  id: 203
+  region_id: 3
   left: 0
   top: 2
-  created_at: 2012-07-04 22:36:22.590769000 Z
-  updated_at: 2012-07-04 22:36:22.590769000 Z
+  created_at: 2012-07-22 17:47:55.332094000 Z
+  updated_at: 2012-07-22 17:47:55.332094000 Z
+  point: 
 blocks_104:
-  id: 325
-  region_id: 6
+  id: 204
+  region_id: 3
   left: 0
   top: 3
-  created_at: 2012-07-04 22:36:22.591423000 Z
-  updated_at: 2012-07-04 22:36:22.591423000 Z
+  created_at: 2012-07-22 17:47:55.332708000 Z
+  updated_at: 2012-07-22 17:47:55.332708000 Z
+  point: 
 blocks_105:
-  id: 326
-  region_id: 6
+  id: 205
+  region_id: 3
   left: 0
   top: 4
-  created_at: 2012-07-04 22:36:22.592070000 Z
-  updated_at: 2012-07-04 22:36:22.592070000 Z
+  created_at: 2012-07-22 17:47:55.333323000 Z
+  updated_at: 2012-07-22 17:47:55.333323000 Z
+  point: 
 blocks_106:
-  id: 327
-  region_id: 6
+  id: 206
+  region_id: 3
   left: 1
   top: 0
-  created_at: 2012-07-04 22:36:22.592709000 Z
-  updated_at: 2012-07-04 22:36:22.592709000 Z
+  created_at: 2012-07-22 17:47:55.333933000 Z
+  updated_at: 2012-07-22 17:47:55.333933000 Z
+  point: 
 blocks_107:
-  id: 328
-  region_id: 6
+  id: 207
+  region_id: 3
   left: 1
   top: 1
-  created_at: 2012-07-04 22:36:22.593367000 Z
-  updated_at: 2012-07-04 22:36:22.593367000 Z
+  created_at: 2012-07-22 17:47:55.334541000 Z
+  updated_at: 2012-07-22 17:47:55.334541000 Z
+  point: 
 blocks_108:
-  id: 329
-  region_id: 6
+  id: 208
+  region_id: 3
   left: 1
   top: 2
-  created_at: 2012-07-04 22:36:22.593994000 Z
-  updated_at: 2012-07-04 22:36:22.593994000 Z
+  created_at: 2012-07-22 17:47:55.335166000 Z
+  updated_at: 2012-07-22 17:47:55.335166000 Z
+  point: 
 blocks_109:
-  id: 330
-  region_id: 6
+  id: 209
+  region_id: 3
   left: 1
   top: 3
-  created_at: 2012-07-04 22:36:22.594645000 Z
-  updated_at: 2012-07-04 22:36:22.594645000 Z
+  created_at: 2012-07-22 17:47:55.335782000 Z
+  updated_at: 2012-07-22 17:47:55.335782000 Z
+  point: 
 blocks_110:
-  id: 331
-  region_id: 6
+  id: 210
+  region_id: 3
   left: 1
   top: 4
-  created_at: 2012-07-04 22:36:22.595259000 Z
-  updated_at: 2012-07-04 22:36:22.595259000 Z
+  created_at: 2012-07-22 17:47:55.337222000 Z
+  updated_at: 2012-07-22 17:47:55.337222000 Z
+  point: 
 blocks_111:
-  id: 332
-  region_id: 6
+  id: 211
+  region_id: 3
   left: 2
   top: 0
-  created_at: 2012-07-04 22:36:22.595877000 Z
-  updated_at: 2012-07-04 22:36:22.595877000 Z
+  created_at: 2012-07-22 17:47:55.339170000 Z
+  updated_at: 2012-07-22 17:47:55.339170000 Z
+  point: 
 blocks_112:
-  id: 333
-  region_id: 6
+  id: 212
+  region_id: 3
   left: 2
   top: 1
-  created_at: 2012-07-04 22:36:22.596523000 Z
-  updated_at: 2012-07-04 22:36:22.596523000 Z
+  created_at: 2012-07-22 17:47:55.340220000 Z
+  updated_at: 2012-07-22 17:47:55.340220000 Z
+  point: 
 blocks_113:
-  id: 334
-  region_id: 6
+  id: 213
+  region_id: 3
   left: 2
   top: 2
-  created_at: 2012-07-04 22:36:22.597221000 Z
-  updated_at: 2012-07-04 22:36:22.597221000 Z
+  created_at: 2012-07-22 17:47:55.340937000 Z
+  updated_at: 2012-07-22 17:47:55.340937000 Z
+  point: 
 blocks_114:
-  id: 335
-  region_id: 6
+  id: 214
+  region_id: 3
   left: 2
   top: 3
-  created_at: 2012-07-04 22:36:22.597860000 Z
-  updated_at: 2012-07-04 22:36:22.597860000 Z
+  created_at: 2012-07-22 17:47:55.341590000 Z
+  updated_at: 2012-07-22 17:47:55.341590000 Z
+  point: 
 blocks_115:
-  id: 336
-  region_id: 6
+  id: 215
+  region_id: 3
   left: 2
   top: 4
-  created_at: 2012-07-04 22:36:22.598496000 Z
-  updated_at: 2012-07-04 22:36:22.598496000 Z
+  created_at: 2012-07-22 17:47:55.342228000 Z
+  updated_at: 2012-07-22 17:47:55.342228000 Z
+  point: 
 blocks_116:
-  id: 337
-  region_id: 6
+  id: 216
+  region_id: 3
   left: 3
   top: 0
-  created_at: 2012-07-04 22:36:22.599139000 Z
-  updated_at: 2012-07-04 22:36:22.599139000 Z
+  created_at: 2012-07-22 17:47:55.342860000 Z
+  updated_at: 2012-07-22 17:47:55.342860000 Z
+  point: 
 blocks_117:
-  id: 338
-  region_id: 6
+  id: 217
+  region_id: 3
   left: 3
   top: 1
-  created_at: 2012-07-04 22:36:22.599760000 Z
-  updated_at: 2012-07-04 22:36:22.599760000 Z
+  created_at: 2012-07-22 17:47:55.343481000 Z
+  updated_at: 2012-07-22 17:47:55.343481000 Z
+  point: 
 blocks_118:
-  id: 339
-  region_id: 6
+  id: 218
+  region_id: 3
   left: 3
   top: 2
-  created_at: 2012-07-04 22:36:22.600361000 Z
-  updated_at: 2012-07-04 22:36:22.600361000 Z
+  created_at: 2012-07-22 17:47:55.344115000 Z
+  updated_at: 2012-07-22 17:47:55.344115000 Z
+  point: 
 blocks_119:
-  id: 340
-  region_id: 6
+  id: 219
+  region_id: 3
   left: 3
   top: 3
-  created_at: 2012-07-04 22:36:22.601042000 Z
-  updated_at: 2012-07-04 22:36:22.601042000 Z
+  created_at: 2012-07-22 17:47:55.344839000 Z
+  updated_at: 2012-07-22 17:47:55.344839000 Z
+  point: 
 blocks_120:
-  id: 341
-  region_id: 6
+  id: 220
+  region_id: 3
   left: 3
   top: 4
-  created_at: 2012-07-04 22:36:22.601640000 Z
-  updated_at: 2012-07-04 22:36:22.601640000 Z
+  created_at: 2012-07-22 17:47:55.345479000 Z
+  updated_at: 2012-07-22 17:47:55.345479000 Z
+  point: 
 blocks_121:
-  id: 342
-  region_id: 6
+  id: 221
+  region_id: 3
   left: 4
   top: 0
-  created_at: 2012-07-04 22:36:22.602275000 Z
-  updated_at: 2012-07-04 22:36:22.602275000 Z
+  created_at: 2012-07-22 17:47:55.346099000 Z
+  updated_at: 2012-07-22 17:47:55.346099000 Z
+  point: 
 blocks_122:
-  id: 343
-  region_id: 6
+  id: 222
+  region_id: 3
   left: 4
   top: 1
-  created_at: 2012-07-04 22:36:22.602950000 Z
-  updated_at: 2012-07-04 22:36:22.602950000 Z
+  created_at: 2012-07-22 17:47:55.346725000 Z
+  updated_at: 2012-07-22 17:47:55.346725000 Z
+  point: 
 blocks_123:
-  id: 344
-  region_id: 6
+  id: 223
+  region_id: 3
   left: 4
   top: 2
-  created_at: 2012-07-04 22:36:22.603548000 Z
-  updated_at: 2012-07-04 22:36:22.603548000 Z
+  created_at: 2012-07-22 17:47:55.347377000 Z
+  updated_at: 2012-07-22 17:47:55.347377000 Z
+  point: 
 blocks_124:
-  id: 345
-  region_id: 6
+  id: 224
+  region_id: 3
   left: 4
   top: 3
-  created_at: 2012-07-04 22:36:22.604192000 Z
-  updated_at: 2012-07-04 22:36:22.604192000 Z
+  created_at: 2012-07-22 17:47:55.348003000 Z
+  updated_at: 2012-07-22 17:47:55.348003000 Z
+  point: 
 blocks_125:
-  id: 346
-  region_id: 6
+  id: 225
+  region_id: 3
   left: 4
   top: 4
-  created_at: 2012-07-04 22:36:22.604809000 Z
-  updated_at: 2012-07-04 22:36:22.604809000 Z
+  created_at: 2012-07-22 17:47:55.348630000 Z
+  updated_at: 2012-07-22 17:47:55.348630000 Z
+  point: 

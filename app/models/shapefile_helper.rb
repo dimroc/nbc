@@ -6,13 +6,13 @@ class ShapefileHelper
   extend GeoRuby::Shp4r
 
   class << self
-    def generate(shapefile="tmp/generated_shapefile")
+    def generate_rectangle(shapefile="tmp/generated_shapefile", width = 9, height = 9)
       shpfile = ShpFile.create(shapefile,
                                ShpType::POLYGON,
                                [Dbf::Field.new("Name","C",10)])
 
       shpfile.transaction do |tr|
-        polygon = Polygon.from_coordinates([[[0,0],[0,10],[10,10],[10,0]]])
+        polygon = Polygon.from_coordinates([[[0,0],[0,height],[width,height],[width,0]]])
         tr.add(ShpRecord.new(polygon, "Name" => "Generated Square"))
       end
 

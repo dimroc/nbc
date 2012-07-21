@@ -1,13 +1,15 @@
 ---
 nyc:
-  id: 5
+  id: 2
   name: New York City
-  created_at: 2012-07-04 22:36:22.516468000 Z
-  updated_at: 2012-07-04 22:36:22.516468000 Z
+  created_at: 2012-07-22 17:47:55.236517000 Z
+  updated_at: 2012-07-22 17:47:55.236517000 Z
   slug: new-york-city
+  geometry: 
 middle_earth:
-  id: 6
+  id: 3
   name: Middle Earth
-  created_at: 2012-07-04 22:36:22.588272000 Z
-  updated_at: 2012-07-04 22:36:22.588272000 Z
+  created_at: 2012-07-22 17:47:55.329797000 Z
+  updated_at: 2012-07-22 17:47:55.329797000 Z
   slug: middle-earth
+  geometry: 
