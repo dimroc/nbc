@@ -18,12 +18,12 @@ namespace :postgis do
     # Import the shape file
     # When running ignore the following errors:
     # ERROR:  column not found in geometry_columns table
-    # ERROR:  table "nyc_geography" does not exist
+    # ERROR:  table "nyc_geometry" does not exist
 
-    args.with_defaults(database_name: gis_database_name, shapefile: "public/shapefiles/nyc/regions")
+    args.with_defaults(database_name: gis_database_name, shapefile: "lib/assets/shapefiles/nyc/regions")
 
     puts "Importing #{args.shapefile} to #{args.database_name}..."
 
-    `shp2pgsql -d #{args.shapefile} nyc_geography | psql -d #{args.database_name}`
+    `shp2pgsql -d #{args.shapefile} nyc_geometry | psql -d #{args.database_name}`
   end
 end
