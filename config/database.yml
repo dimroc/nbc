@@ -1,38 +1,23 @@
-# PostgreSQL. Versions 8.2 and up are supported.
-#
-# Install the pg driver:
-#   gem install pg
-# On Mac OS X with macports:
-#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
-# On Windows:
-#   gem install pg
-#       Choose the win32 build.
-#       Install PostgreSQL and put its /bin directory on your path.
-#
-# Configure Using Gemfile
-# gem 'pg'
-#
 development:
-  adapter: postgresql
+  adapter: postgis
   encoding: unicode
   database: new-block-city_development
   pool: 5
-
-postgis:
-  adapter: postgresql
-  encoding: unicode
-  database: new-block-city_postgis
-  pool: 5
+  postgis_extension: true
+  schema_search_path: public,postgis
 
 test:
-  adapter: postgresql
+  adapter: postgis
   encoding: unicode
   database: new-block-city_test
   pool: 5
+  postgis_extension: true
+  schema_search_path: public,postgis
 
 production:
-  adapter: postgresql
+  adapter: postgis
   encoding: unicode
   database: new-block-city_production
   pool: 5
-
+  postgis_extension: true
+  schema_search_path: public,postgis

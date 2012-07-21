@@ -17,6 +17,11 @@ gem "spine-rails", git: "git://github.com/maccman/spine-rails.git"
 gem "eco"
 gem "friendly_id"
 
+gem 'activerecord-postgis-adapter'
+gem 'rgeo'
+gem 'rgeo-shapefile'
+gem 'georuby'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -25,7 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test, :development, :postgis do
+group :test, :development do
   gem "guard", ">= 0.6.2"
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-coffeescript"

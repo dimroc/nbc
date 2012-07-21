@@ -44,6 +44,9 @@ GEM
       activesupport (= 3.2.5)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-postgis-adapter (0.4.3)
+      pg (>= 0.11.0)
+      rgeo-activerecord (~> 0.4.5)
     activeresource (3.2.5)
       activemodel (= 3.2.5)
       activesupport (= 3.2.5)
@@ -77,6 +80,7 @@ GEM
     commonjs (0.2.6)
     daemons (1.1.8)
     database_cleaner (0.8.0)
+    dbf (1.7.5)
     debugger (1.1.4)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
@@ -120,6 +124,7 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
       ruby-progressbar (~> 0.0.10)
+    georuby (1.9.7)
     growl (1.0.3)
     guard (1.1.1)
       listen (>= 0.4.2)
@@ -209,6 +214,14 @@ GEM
       ffi (>= 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
+    rgeo (0.3.14)
+    rgeo-activerecord (0.4.5)
+      activerecord (>= 3.0.3)
+      arel (>= 2.0.6)
+      rgeo (>= 0.3.10)
+    rgeo-shapefile (0.2.3)
+      dbf (>= 1.7.0)
+      rgeo (>= 0.3.3)
     rolify (3.1.0)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
@@ -282,6 +295,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgis-adapter
   awesome_print
   cancan (>= 1.6.7)
   capybara
@@ -296,6 +310,7 @@ DEPENDENCIES
   fixture_builder
   friendly_id
   fuubar
+  georuby
   growl
   guard (>= 0.6.2)
   guard-coffeescript
@@ -311,6 +326,8 @@ DEPENDENCIES
   pry
   rails (= 3.2.5)
   rb-fsevent
+  rgeo
+  rgeo-shapefile
   rolify (>= 3.1.0)
   rspec-rails (>= 2.10.1)
   sass-rails (~> 3.2.3)
