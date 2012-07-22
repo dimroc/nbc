@@ -70,9 +70,9 @@ class App.World
 
 createCamera = (options) ->
   camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 10000 )
-  camera.position.z = 2000
-  camera.position.x = 500
-  camera.position.y = -500
+  camera.position.z = 8000
+  camera.position.x = 5000
+  camera.position.y = 2000
   camera
 
 createRenderer = (options) ->

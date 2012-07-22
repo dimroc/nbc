@@ -17,7 +17,13 @@ namespace :regions do
     task :nyc => :environment do
       puts "Creating new york city..."
       shapefile = "lib/assets/shapefiles/nyc/regions"
-      Region.from_shapefile("New York City", shapefile, 400).save!
+      Region.from_shapefile("New York City", shapefile, 1500).save!
+    end
+
+    desc "Delete any nyc entry and regenerate"
+    task :recreate_nyc => :environment do
+      Region.find_by_slug("new-york-city").try(:destroy)
+      Rake::Task["regions:generate:nyc"].invoke
     end
   end
 end

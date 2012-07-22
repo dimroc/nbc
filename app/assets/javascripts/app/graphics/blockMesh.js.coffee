@@ -9,7 +9,7 @@ class App.BlockMesh extends THREE.Mesh
 
     super(geometry, material)
     @position.x = (WIDTH + GUTTER_LENGTH) * block.left
-    @position.y = (HEIGHT + GUTTER_LENGTH) * -block.top
+    @position.y = (HEIGHT + GUTTER_LENGTH) * block.bottom
 
   animate: ->
     @rotation.y += 0.02

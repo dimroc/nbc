@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 2
-  email: hilbert@kiehn.name
-  encrypted_password: $2a$04$TOTwsktj3F8NUV.A45kK4u4RRPtUd3V5c5vCJrlMSMQA0wTQt2hB2
+  id: 1
+  email: arvid_stanton@marvinzemlak.name
+  encrypted_password: $2a$04$RObe5OzUYbHPEwo1ASiw2ed11FIalYG2pOgtDJcTcWsPOtJ9H5Riy
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

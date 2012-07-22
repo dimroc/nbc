@@ -10,8 +10,8 @@ describe Region do
           region.blocks.count.should == expected_count
 
           (0..width).each do |left|
-            (0..height).each do |top|
-              region.blocks.any? { |block| block.left == left && block.top == top }
+            (0..height).each do |bottom|
+              region.blocks.any? { |block| block.left == left && block.bottom == bottom }
             end
           end
         end

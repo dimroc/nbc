@@ -9,8 +9,8 @@ FactoryGirl.define do
 
     after(:build) do |region, evaluator|
       (0...evaluator.width).each do |left|
-        (0...evaluator.height).each do |top|
-          region.blocks << Block.new(left: left, top: top)
+        (0...evaluator.height).each do |bottom|
+          region.blocks.build(left: left, bottom: bottom)
         end
       end
     end

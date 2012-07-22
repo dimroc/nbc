@@ -3,7 +3,7 @@ class Region < ActiveRecord::Base
 
   friendly_id :name, use: :slugged
 
-  has_many :blocks
+  has_many :blocks, dependent: :destroy
 
   after_save :update_bounding_box
 
@@ -28,7 +28,7 @@ class Region < ActiveRecord::Base
       # Generate all blocks that are present in the geometry
       region.bounding_box.step(block_length) do |point, step_x, step_y|
         if region.geometry.contains? point
-          region.blocks.build(left: step_x, top: step_y, point: point)
+          region.blocks.build(left: step_x, bottom: step_y, point: point)
         end
       end
 
