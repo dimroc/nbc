@@ -45,16 +45,16 @@ describe Region do
   end
 
   describe ".from_shapefile" do
+    let(:region) { Region.from_shapefile("bogus", shapefile, block_length) }
+    let(:block_length) { 1 }
+
     describe "generated square" do
       let(:shapefile) { "tmp/from_shapefile_spec" }
-      let(:block_length) { 1 }
-
       before do
         ShapefileHelper.generate_rectangle shapefile, 9, 9
       end
 
       it "should generate the region with the appropriate blocks" do
-        region = Region.from_shapefile("bogus", shapefile, block_length)
         region.blocks.size.should == 64
         region.bounding_box.should ==
           Cartesian::BoundingBox.create_from_points(
@@ -66,11 +66,20 @@ describe Region do
 
     describe "square with hole from uDig" do
       let(:shapefile) { "spec/fixtures/holed_square/holed_square" }
-      let(:block_length) { 1 }
 
       it "should only generate squares that are in the geometry" do
-        region = Region.from_shapefile("bogus", shapefile, block_length)
         region.blocks.size.should_not == region.bounding_box.steps(block_length)
+        region.should be_valid
+      end
+    end
+
+    describe "new york city shape file" do
+      let(:shapefile) { "spec/fixtures/nyc/nyc" }
+      let(:block_length) { 1000 }
+
+      it "should generate blocks for every borough" do
+        # Primarily used to test drive and debug block creation
+        region.blocks.size.should_not == 0
         region.should be_valid
       end
     end
