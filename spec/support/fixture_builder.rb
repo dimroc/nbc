@@ -14,7 +14,7 @@ FixtureBuilder.configure do |fbuilder|
     @nyc.save!
 
     @miami =
-      World.build_from_shapefile("spec/fixtures/holed_square/holed_square")
+      World.build_from_shapefile("lib/assets/shapefiles/holed_square/region")
     @miami.name = "Miami"
     @miami.save!
   end

@@ -28,8 +28,8 @@ describe World do
     end
 
     describe "square with hole from uDig" do
-      let(:world) { World.build_from_shapefile(shapefile, "Name" => "name") }
-      let(:shapefile) { "spec/fixtures/holed_square/holed_square" }
+      let(:world) { World.build_from_shapefile(shapefile) }
+      let(:shapefile) { "lib/assets/shapefiles/holed_square/region" }
 
       it "should generate geometries from the shapefile" do
         world.regions.size.should == 1

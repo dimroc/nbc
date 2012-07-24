@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 23
-  email: jovan@schinner.uk
-  encrypted_password: $2a$04$cUqLmqYxKz6J2hJqePjMC.NEaal7CRugZEwsDz8H2k.8qr7o8ZV9.
+  id: 24
+  email: desiree_prohaska@bergnaumrodriguez.info
+  encrypted_password: $2a$04$Jby6KuG2kxJYI/IngkaJMOJn0araqg.Rydv2u74AJmc7DQFw4a3.u
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
