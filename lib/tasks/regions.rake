@@ -17,7 +17,7 @@ namespace :regions do
     task :nyc => :environment do
       puts "Creating new york city..."
       shapefile = "lib/assets/shapefiles/nyc/regions"
-      Region.from_shapefile("New York City", shapefile, 1500).save!
+      Region.from_shapefile("New York City", shapefile, 400).save!
     end
 
     desc "Delete any nyc entry and regenerate"

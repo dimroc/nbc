@@ -5,8 +5,17 @@ FixtureBuilder.configure do |fbuilder|
     # Users
     fbuilder.name(:standard_user, FactoryGirl.create(:user))
 
-    # Regions
-    fbuilder.name(:nyc, FactoryGirl.create(:region, name: "New York City"))
-    fbuilder.name(:middle_earth, FactoryGirl.create(:region, name: "Middle Earth", width: 5, height: 5))
+    # Worlds
+    @nyc =
+      World.build_from_shapefile(
+        "lib/assets/shapefiles/nyc/region",
+        "BoroName" => "name")
+    @nyc.name = "NYC"
+    @nyc.save!
+
+    @miami =
+      World.build_from_shapefile("spec/fixtures/holed_square/holed_square")
+    @miami.name = "Miami"
+    @miami.save!
   end
 end

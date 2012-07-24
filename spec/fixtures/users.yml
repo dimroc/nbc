@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 1
-  email: arvid_stanton@marvinzemlak.name
-  encrypted_password: $2a$04$RObe5OzUYbHPEwo1ASiw2ed11FIalYG2pOgtDJcTcWsPOtJ9H5Riy
+  id: 23
+  email: jovan@schinner.uk
+  encrypted_password: $2a$04$cUqLmqYxKz6J2hJqePjMC.NEaal7CRugZEwsDz8H2k.8qr7o8ZV9.
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
