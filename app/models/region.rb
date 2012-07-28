@@ -6,18 +6,18 @@ class Region < ActiveRecord::Base
   belongs_to :world
   has_many :blocks, dependent: :destroy
 
-  after_save :update_bounding_box
-
   validates_presence_of :name
   validates_presence_of :slug
 
-  def bounding_box
-    @bounding_box ||= update_bounding_box
+  def generate_blocks(block_length)
+    blocks.clear
+    generated_bounding_box.step(block_length) do |point, x, y|
+      blocks.build(left: x, bottom: y, point: point) if geometry.contains? point
+    end if geometry && block_length
+    blocks
   end
 
-  private
-
-  def update_bounding_box
-    @bounding_box = Cartesian::BoundingBox.create_from_geometry(geometry) if geometry
+  def generated_bounding_box
+    Cartesian::BoundingBox.create_from_geometry(geometry) if geometry
   end
 end

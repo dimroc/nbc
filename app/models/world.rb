@@ -37,5 +37,10 @@ class World < ActiveRecord::Base
     end
   end
 
-
+  def generate_blocks(block_length)
+    regions.each do |region|
+      region.generate_blocks(block_length)
+    end
+    regions.flat_map(&:blocks)
+  end
 end

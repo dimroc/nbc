@@ -16,7 +16,7 @@ describe World do
 
       it "should generate the region with the geometry" do
         region = world.regions.first
-        region.bounding_box.should ==
+        region.generated_bounding_box.should ==
           Cartesian::BoundingBox.create_from_points(
             Cartesian::preferred_factory().point(0, 0),
             Cartesian::preferred_factory().point(9, 9))
@@ -50,6 +50,25 @@ describe World do
 
         world.name = "bogus"
         world.should be_valid
+      end
+    end
+  end
+
+  describe "#generate_blocks" do
+    context "for generated geometry" do
+      let(:region1) { FactoryGirl.build(:region_with_geometry) }
+      let(:region2) { FactoryGirl.build(:region_with_geometry) }
+      it "should create blocks for every region" do
+        world = FactoryGirl.build(:world)
+        world.regions << region1
+        world.regions << region2
+        world.generate_blocks(1)
+
+        region1.blocks.size.should > 0
+        region1.blocks.size.should == region2.blocks.size
+        world.save.should == true
+        region1.should be_persisted
+        region2.should be_persisted
       end
     end
   end

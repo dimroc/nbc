@@ -11,11 +11,13 @@ FixtureBuilder.configure do |fbuilder|
         "lib/assets/shapefiles/nyc/region",
         "BoroName" => "name")
     @nyc.name = "NYC"
+    @nyc.generate_blocks(8000)
     @nyc.save!
 
     @miami =
       World.build_from_shapefile("lib/assets/shapefiles/holed_square/region")
     @miami.name = "Miami"
+    @miami.generate_blocks(2)
     @miami.save!
   end
 end

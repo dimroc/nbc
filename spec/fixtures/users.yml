@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 24
-  email: desiree_prohaska@bergnaumrodriguez.info
-  encrypted_password: $2a$04$Jby6KuG2kxJYI/IngkaJMOJn0araqg.Rydv2u74AJmc7DQFw4a3.u
+  id: 2
+  email: shemar_hessel@king.info
+  encrypted_password: $2a$10$aPeOEr2sy4gat/Kfmc3k4eRuAGwnumuK7AtKDaLB4UG5bYR2CuQd2
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
