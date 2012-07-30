@@ -9,6 +9,10 @@ class Region < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :slug
 
+  def as_json(options={})
+    super({ except: :geometry, include: [:blocks] }.merge(options))
+  end
+
   def generate_blocks(block_length)
     blocks.clear
     generated_bounding_box.step(block_length) do |point, x, y|

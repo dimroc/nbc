@@ -18,6 +18,21 @@ describe Region do
     it { should validate_presence_of :slug }
   end
 
+  describe "#as_json" do
+    subject { region.as_json.with_indifferent_access }
+    let(:region) { FactoryGirl.build(:region_with_geometry) }
+    it "should not have geometry" do
+      subject[:geometry].should be_nil
+    end
+
+    context "with blocks generated" do
+      before { region.generate_blocks(1) }
+      it "should include blocks" do
+        subject[:blocks].should have(64).items
+      end
+    end
+  end
+
   describe "#generate_blocks" do
     let(:region) { FactoryGirl.build(:region_with_geometry, width: width, height: height) }
     let(:width) { 9 }
