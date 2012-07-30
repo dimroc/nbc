@@ -21,7 +21,7 @@ namespace :world do
     desc "Generate blocks that represent New York City"
     task :nyc => :environment do
       puts "Creating new york city..."
-      shapefile = "lib/assets/shapefiles/nyc/regions"
+      shapefile = "lib/assets/shapefiles/nyc/region"
       world = World.build_from_shapefile(shapefile, "BoroName" => "name")
       world.name = "New York City"
       world.generate_blocks(10000)
