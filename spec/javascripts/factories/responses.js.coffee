@@ -1,9 +1,11 @@
-Factories.nycBlocksResponse = ->
-  successResponse =
+Factories.nycRegionsResponse = ->
     status: 200,
-    responseText: JSON.stringify Fixtures.nyc_blocks
+    responseText: JSON.stringify Fixtures.nyc
 
-Factories.regionsResponse = ->
-  successResponse =
+Factories.worldsResponse = ->
     status: 200,
-    responseText: JSON.stringify Fixtures.regions
+    responseText: JSON.stringify Fixtures.worlds
+
+Factories.errorResponse = ->
+    status: 400,
+    responseText: "Error Schmerror"

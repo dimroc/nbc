@@ -1,25 +1,4 @@
 describe "region", ->
-  describe "Factories", ->
-    factored_region = null
-    beforeEach ->
-      factored_region = Factories.region({name: "Region Name"})
-
-    it "should create a valid region", ->
-      expect(factored_region.name).toEqual("Region Name")
-      expect(factored_region.slug).toEqual("region-name")
-      expect(factored_region.validate()).toBeUndefined()
-
-  describe "Fixtures", ->
-    describe "new york city", ->
-      nyc = null
-      beforeEach ->
-        nyc = new App.Region(Fixtures.nyc)
-
-      it "should have the proper name field", ->
-        expect(nyc.name).toBe("New York City")
-        expect(nyc.validate()).toBeUndefined()
-        expect(nyc.save()).not.toBeFalsy()
-
   describe "Validations", ->
     it "should validate the presence of attributes", ->
       expect(App.Region).toValidatePresenceOf("name")
