@@ -1,6 +1,6 @@
-App.worlds = []
+App.worldRenderers = []
 
-class App.World
+class App.WorldRenderer
   @DEFAULT_OPTIONS: {
     fov: 45
     width: 1280
@@ -8,15 +8,15 @@ class App.World
   }
 
   @create: (options) ->
-    new World(options)
+    new WorldRenderer(options)
 
   constructor: (options)->
-    options = $.extend(true, World.DEFAULT_OPTIONS, options)
+    options = $.extend(true, WorldRenderer.DEFAULT_OPTIONS, options)
 
     if ( ! Detector.webgl )
       Detector.addGetWebGLMessage()
 
-    console.debug("Creating world...")
+    console.debug("Creating worldRenderer...")
     @scene = new THREE.Scene()
 
     @camera = createCamera(options)
@@ -37,15 +37,15 @@ class App.World
       @stats = new Stats()
       document.body.appendChild(@stats.domElement)
 
-    App.worlds.push(@)
+    App.worldRenderers.push(@)
 
   destroy: ->
-    console.debug("Destroying world...")
+    console.debug("Destroying worldRenderer...")
 
     @destroyed = true
     $(@stats.domElement).remove() if @stats
     cancelAnimationFrame
-    App.worlds = _(App.worlds).reject (world) => world == @
+    App.worldRenderers = _(App.worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
@@ -89,9 +89,9 @@ createDirectionalLight = (options) ->
 createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
 
-render = (world) ->
-  world.scene.children.forEach (child) ->
+render = (worldRenderer) ->
+  worldRenderer.scene.children.forEach (child) ->
     child.animate() if child.animate
 
-  world.renderer.render( world.scene, world.camera )
-  world.stats.update() if world.stats
+  worldRenderer.renderer.render( worldRenderer.scene, worldRenderer.camera )
+  worldRenderer.stats.update() if worldRenderer.stats

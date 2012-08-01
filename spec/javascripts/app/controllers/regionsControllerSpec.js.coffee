@@ -15,26 +15,26 @@ describe "regionsController", ->
 
   describe "with the action", ->
     describe "show", ->
-      world = null
+      worldRenderer = null
       beforeEach ->
-        world = new App.World()
+        worldRenderer = new App.WorldRenderer()
 
       afterEach ->
-        world.destroy()
+        worldRenderer.destroy()
 
       it "should render the region", ->
-        spyOn(world, "add").andCallThrough()
-        spyOn(world, "attachToDom").andCallThrough()
-        spyOn(world, "animate").andCallThrough()
-        spyOn(App, "World").andReturn(world)
+        spyOn(worldRenderer, "add").andCallThrough()
+        spyOn(worldRenderer, "attachToDom").andCallThrough()
+        spyOn(worldRenderer, "animate").andCallThrough()
+        spyOn(App, "WorldRenderer").andReturn(worldRenderer)
 
         showAction = regionsController.show.active(id: nyc.slug)
 
         mostRecentAjaxRequest().response(Factories.nycBlocksResponse())
 
-        expect(world.add.callCount).toBe(nyc.blocks().all().length)
-        expect(world.attachToDom).toHaveBeenCalled()
-        expect(world.animate).toHaveBeenCalled()
+        expect(worldRenderer.add.callCount).toBe(nyc.blocks().all().length)
+        expect(worldRenderer.attachToDom).toHaveBeenCalled()
+        expect(worldRenderer.animate).toHaveBeenCalled()
         expect(showAction.$("h1").text()).toContain(nyc.name)
 
     describe "new", ->

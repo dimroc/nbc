@@ -1,36 +1,36 @@
-describe "World", ->
+describe "WorldRenderer", ->
   describe "#constructor", ->
     it "should create the camera, scene, and renderer", ->
-      world = new App.World()
-      expect(world.scene).toBeDefined()
-      expect(world.renderer).toBeDefined()
-      expect(world.camera).toBeDefined()
-      world.destroy()
+      worldRenderer = new App.WorldRenderer()
+      expect(worldRenderer.scene).toBeDefined()
+      expect(worldRenderer.renderer).toBeDefined()
+      expect(worldRenderer.camera).toBeDefined()
+      worldRenderer.destroy()
 
   describe "when constructed", ->
-    world = null
+    worldRenderer = null
     beforeEach ->
-      world = new App.World()
+      worldRenderer = new App.WorldRenderer()
 
     afterEach ->
-      world.destroy()
+      worldRenderer.destroy()
 
     describe "#attachToDom", ->
       it "should append a canvas element", ->
         dom = $("<div></div>")
-        world.attachToDom(dom)
+        worldRenderer.attachToDom(dom)
         expect(dom).toContain("canvas")
 
     describe "#add", ->
       it "should add to its children", ->
         mesh = new THREE.Mesh()
-        world.add(mesh)
-        expect(world.scene.children).toInclude(mesh)
+        worldRenderer.add(mesh)
+        expect(worldRenderer.scene.children).toInclude(mesh)
 
     describe "#animate", ->
       it "should animate its children", ->
         blockMesh = new App.BlockMesh(Fixtures.nyc_blocks[0])
         spyOn(blockMesh, "animate").andCallThrough()
-        world.add(blockMesh)
-        world.animate()
+        worldRenderer.add(blockMesh)
+        worldRenderer.animate()
         expect(blockMesh.animate).toHaveBeenCalled()
