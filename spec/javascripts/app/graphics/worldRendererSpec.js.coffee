@@ -1,4 +1,4 @@
-describe "WorldRenderer", ->
+describe "graphics.WorldRenderer", ->
   describe "#constructor", ->
     it "should create the camera, scene, and renderer", ->
       worldRenderer = new App.WorldRenderer()
@@ -29,7 +29,7 @@ describe "WorldRenderer", ->
 
     describe "#animate", ->
       it "should animate its children", ->
-        blockMesh = new App.BlockMesh(Fixtures.nyc_blocks[0])
+        blockMesh = new App.BlockMesh(Fixtures.nyc[0].blocks[0])
         spyOn(blockMesh, "animate").andCallThrough()
         worldRenderer.add(blockMesh)
         worldRenderer.animate()

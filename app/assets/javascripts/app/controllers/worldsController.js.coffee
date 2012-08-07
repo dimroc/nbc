@@ -1,10 +1,10 @@
 $ = jQuery.sub()
-Region = App.Region
+World = App.World
 
 $.fn.item = ->
   elementID   = $(@).data('slug')
   elementID or= $(@).parents('[data-slug]').data('slug')
-  Region.findByAttribute("slug", elementID)
+  World.findByAttribute("slug", elementID)
 
 class New extends Spine.Controller
   events:
@@ -16,15 +16,15 @@ class New extends Spine.Controller
     @active @render
 
   render: ->
-    @html @view('regions/new')
+    @html @view('worlds/new')
 
   back: ->
-    @navigate '/regions'
+    @navigate '/worlds'
 
   submit: (e) ->
     e.preventDefault()
-    region = Region.fromForm(e.target).save()
-    @navigate '/regions', region.slug if region
+    world = World.fromForm(e.target).save()
+    @navigate '/worlds', world.slug if world
 
 class Edit extends Spine.Controller
   events:
@@ -37,19 +37,19 @@ class Edit extends Spine.Controller
       @change(params.id)
 
   change: (slug) ->
-    @item = Region.findByAttribute("slug", slug)
+    @item = World.findByAttribute("slug", slug)
     @render()
 
   render: ->
-    @html @view('regions/edit')(@item)
+    @html @view('worlds/edit')(@item)
 
   back: ->
-    @navigate '/regions'
+    @navigate '/worlds'
 
   submit: (e) ->
     e.preventDefault()
     @item.fromForm(e.target).save()
-    @navigate '/regions'
+    @navigate '/worlds'
 
 class Show extends Spine.Controller
   events:
@@ -62,28 +62,27 @@ class Show extends Spine.Controller
       @change(params.id)
 
   change: (slug) ->
-    Region.findOrFetch(slug, (region) =>
-      @item = region
-      @item.fetchBlocks => @render()
+    World.findOrFetch(slug, (world) =>
+      @item = world
+      @item.fetchRegions => @render()
     )
 
   render: ->
-    output = @html @view('regions/show')(@item)
+    output = @html @view('worlds/show')(@item)
     @worldRenderer.attachToDom(output)
 
-    _.each(@item.blocks().all(), (block) =>
-      blockController = new App.BlocksGraphicController(block)
-      @worldRenderer.add(blockController.view)
-    )
+    _.each(@item.allBlocks(), (block) =>
+      @worldRenderer.add(new App.BlockMesh(block))
+    , @)
 
     @worldRenderer.animate()
     output
 
   edit: ->
-    @navigate '/regions', @item.slug, 'edit'
+    @navigate '/worlds', @item.slug, 'edit'
 
   back: ->
-    @navigate '/regions'
+    @navigate '/worlds'
 
   activate: ->
     super
@@ -106,16 +105,16 @@ class Index extends Spine.Controller
 
   constructor: ->
     super
-    Region.bind 'refresh change', @render
-    Region.fetch()
+    World.bind 'refresh change', @render
+    World.fetch()
 
   render: =>
-    regions = Region.all()
-    @html @view('regions/index')(regions: regions)
+    worlds = World.all()
+    @html @view('worlds/index')(worlds: worlds)
 
   edit: (e) ->
     item = $(e.target).item()
-    @navigate '/regions', item.slug, 'edit'
+    @navigate '/worlds', item.slug, 'edit'
 
   destroy: (e) ->
     item = $(e.target).item()
@@ -123,12 +122,12 @@ class Index extends Spine.Controller
 
   show: (e) ->
     item = $(e.target).item()
-    @navigate '/regions', item.slug
+    @navigate '/worlds', item.slug
 
   new: ->
-    @navigate '/regions/new'
+    @navigate '/worlds/new'
 
-class App.RegionsController extends Spine.Stack
+class App.WorldsController extends Spine.Stack
   controllers:
     index: Index
     edit:  Edit
@@ -136,10 +135,10 @@ class App.RegionsController extends Spine.Stack
     new:   New
 
   routes:
-    '/regions/new':      'new'
-    '/regions/:id/edit': 'edit'
-    '/regions/:id':      'show'
-    '/regions':          'index'
+    '/worlds/new':      'new'
+    '/worlds/:id/edit': 'edit'
+    '/worlds/:id':      'show'
+    '/worlds':          'index'
 
   default: 'index'
-  className: 'stack regions'
+  className: 'stack worlds'

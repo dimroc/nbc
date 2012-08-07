@@ -25,6 +25,11 @@ class App.World extends App.Model
     @appendErrors(name: "Name is required") unless @name
     @appendErrors(slug: "slug is required") unless @slug
 
+  allBlocks: ->
+    _.reduce(@regions().all(), (memo, region) ->
+      memo.concat(region.blocks().all())
+    , [])
+
   fetchRegions: (successCallback)->
     $.ajax(
       type: "GET",
@@ -32,7 +37,7 @@ class App.World extends App.Model
       dataType: "json",
       cache: false
     ).success((data) =>
-      @blocks(data)
+      @regions(data)
       successCallback(@) if successCallback
     ).error (response, status)=>
       console.warn "Error retrieving regions for world #{@slug}"

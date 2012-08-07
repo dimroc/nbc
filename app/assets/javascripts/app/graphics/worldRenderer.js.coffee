@@ -59,8 +59,13 @@ class App.WorldRenderer
     else
       requestAnimationFrame(@animate)
 
-  add: (mesh)->
-    @scene.add( mesh )
+  add: (meshParam)->
+    meshes = if _.isArray(meshParam) then meshParam else [meshParam]
+
+    _.each(meshes, (mesh) ->
+      @scene.add( mesh )
+    , @)
+
     @
 
   meshes: ->
