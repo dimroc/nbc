@@ -3,7 +3,7 @@ NewBlockCity::Application.routes.draw do
 
   root :to => 'home#index'
 
-  resources :regions do
-    resources :blocks, only: [:index]
+  resources :worlds do
+    resources :regions
   end
 end

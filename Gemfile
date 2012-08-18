@@ -17,6 +17,11 @@ gem "spine-rails", git: "git://github.com/maccman/spine-rails.git"
 gem "eco"
 gem "friendly_id"
 
+gem 'activerecord-postgis-adapter'
+gem 'rgeo'
+gem 'rgeo-shapefile'
+gem 'georuby'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -30,6 +35,7 @@ group :test, :development do
   gem "guard-livereload", ">= 0.3.0"
   gem "guard-coffeescript"
   gem "guard-ctags-bundler"
+  gem "guard-rails", git: "git://github.com/johnbintz/guard-rails.git"
 
   gem "debugger"
   gem "pry"
@@ -39,12 +45,15 @@ group :test, :development do
   gem "awesome_print"
   gem "haml-rails", ">= 0.3.4"
   gem "rspec-rails", ">= 2.10.1"
+  gem "capybara"
+  gem "capybara-firebug"
   gem "shoulda-matchers"
   gem "database_cleaner", ">= 0.7.2"
   gem "factory_girl_rails", ">= 3.3.0"
   gem "fixture_builder"
   gem "email_spec", ">= 1.2.1"
   gem "jasmine"
+  gem "jasminerice", git: "git://github.com/dimroc/jasminerice.git"
 
   case HOST_OS
     when /darwin/i

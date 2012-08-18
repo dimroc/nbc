@@ -16,6 +16,7 @@ afterEach ->
   $("#jasmine_content").html('')
 
 teardownSpine = ->
+  App.World.destroyAll()
   App.Region.destroyAll()
   App.Block.destroyAll()
   delete App.instance
@@ -25,7 +26,7 @@ window.initializeSpine = ->
   request = mostRecentAjaxRequest()
   request.response({
     status: 200,
-    responseText: JSON.stringify Fixtures.regions
+    responseText: JSON.stringify Fixtures.worlds
   })
 
 window.loadHtmlFixture = (fixture) ->

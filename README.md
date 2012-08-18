@@ -1,6 +1,8 @@
 Project: New Block City
 =======================
 
-Visually appealing representation of New York City leveraging WebGL.
-Ultimate goal is to collate media made in NYC based on the content's
-borough and neighborhood.
+WebGL representation of New York City using a collection
+of cubes to represent a particular borough.
+
+Leverages PostGIS to read shapefiles and then generate geographically
+accurate blocks to be rendered by the front-end using SpineJS and WebGL.

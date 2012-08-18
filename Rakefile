@@ -5,8 +5,3 @@
 require File.expand_path('../config/application', __FILE__)
 
 NewBlockCity::Application.load_tasks
-
-if Rails.env.development? || Rails.env.test?
-  task default: "jasmine:ci"
-end
-

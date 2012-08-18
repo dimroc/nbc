@@ -1,0 +1,14 @@
+<h1>Block Cities</h1>
+<div class="well">
+  <ul class="nav nav-list">
+    <% for world in @worlds: %>
+      <li class="row-fluid" data-slug="<%= world.slug %>">
+        <a class="span4" data-type="show"><%= world.name %></a>
+        <a class="span2" data-type="edit">Edit</a>
+        <a class="span2" data-type="destroy">Destroy</a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<p><a data-type="new">New World</a></p>

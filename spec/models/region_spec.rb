@@ -3,44 +3,73 @@ require 'spec_helper'
 describe Region do
   describe "factories" do
     context ".region" do
-      shared_examples_for "a valid region" do
-        it "should generate the region" do
-          expected_count = width * height
-          expect { region.save }.to change { Region.count }.by(1)
-          region.blocks.count.should == expected_count
+      subject { FactoryGirl.build(:region) }
+      it { should be_valid }
+    end
 
-          (0..width).each do |left|
-            (0..height).each do |top|
-              region.blocks.any? { |block| block.left == left && block.top == top }
-            end
-          end
-        end
-      end
-
-      context "with default values" do
-        let(:region) { FactoryGirl.build(:region) }
-        let(:width) { 10 }
-        let(:height) { 10 }
-        it_should_behave_like "a valid region"
-      end
-
-      context "with set values" do
-        let(:region) { FactoryGirl.build(:region, name: region_name, width: width, height: height) }
-        let(:region_name) { "New York City" }
-        let(:width) { 19 }
-        let(:height) { 7 }
-
-        it "should assign the name" do
-          region.name.should == region_name
-        end
-
-        it_should_behave_like "a valid region"
-      end
+    context ".region_with_geometry" do
+      subject { FactoryGirl.build(:region_with_geometry, height: 5, width: 5) }
+      it { should be_valid }
     end
   end
 
   describe "validations" do
     it { should validate_presence_of :name }
     it { should validate_presence_of :slug }
+    it { should validate_presence_of :left }
+    it { should validate_presence_of :bottom }
+  end
+
+  describe "#as_json" do
+    subject { region.as_json.with_indifferent_access }
+    let(:region) { FactoryGirl.build(:region_with_geometry) }
+    it "should not have geometry" do
+      subject[:geometry].should be_nil
+    end
+
+    context "with blocks generated" do
+      before { region.generate_blocks(1) }
+      it "should include blocks" do
+        subject[:blocks].should have(64).items
+      end
+    end
+  end
+
+  describe "#generate_blocks" do
+    let(:region) { FactoryGirl.build(:region_with_geometry, width: width, height: height) }
+    let(:width) { 9 }
+    let(:height) { 9 }
+
+    it "should generate blocks within the geometry" do
+      # Minus 1 from the boundaries because the generated
+      # blocks must be WITHIN the geometry
+      expected_count = (width-1) * (height-1)
+
+      region.generate_blocks(1)
+      expect { region.save }.to change { Region.count }.by(1)
+
+      region.blocks.count.should == expected_count
+
+      (1...width).each do |left|
+        (1...height).each do |bottom|
+          region.blocks.any? do |block|
+            block.left == left && block.bottom == bottom &&
+              block.point == Cartesian::preferred_factory().point(left, bottom)
+          end.should be_true
+        end
+      end
+    end
+  end
+
+  describe "#generate_bounding_box" do
+    let(:region) { FactoryGirl.build(:region_with_geometry) }
+    let(:expected_bb) do
+      Cartesian::BoundingBox.create_from_geometry(region.geometry)
+    end
+
+    it "should generate the bounding box" do
+      region.generated_bounding_box.should == expected_bb
+    end
   end
 end
+
