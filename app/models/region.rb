@@ -8,6 +8,8 @@ class Region < ActiveRecord::Base
 
   validates_presence_of :name
   validates_presence_of :slug
+  validates_presence_of :left
+  validates_presence_of :bottom
 
   def as_json(options={})
     super({ except: :geometry, include: [:blocks] }.merge(options))

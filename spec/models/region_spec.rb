@@ -16,6 +16,8 @@ describe Region do
   describe "validations" do
     it { should validate_presence_of :name }
     it { should validate_presence_of :slug }
+    it { should validate_presence_of :left }
+    it { should validate_presence_of :bottom }
   end
 
   describe "#as_json" do

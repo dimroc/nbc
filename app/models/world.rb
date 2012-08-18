@@ -38,9 +38,36 @@ class World < ActiveRecord::Base
   end
 
   def generate_blocks(block_length)
+    assign_regions_relative_coordinates(block_length)
     regions.each do |region|
       region.generate_blocks(block_length)
     end
     regions.flat_map(&:blocks)
+  end
+
+  def generated_bounding_box
+    bb = Cartesian::BoundingBox.new(Cartesian::preferred_factory())
+    bounding_boxes = regions.each do |region|
+      bb.add(region.generated_bounding_box)
+    end
+    bb
+  end
+
+  private
+
+  def assign_regions_relative_coordinates(block_length)
+    # Post process each region's left/bottom coordinates relative to the whole world
+    bb = generated_bounding_box
+    regions.each do |region|
+      region_bb = region.generated_bounding_box
+
+      bb.step(block_length) do |point, x, y|
+        if region_bb.contains? point
+          region.left = x
+          region.bottom = y
+          break
+        end
+      end
+    end
   end
 end

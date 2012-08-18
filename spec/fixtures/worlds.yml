@@ -1,13 +1,13 @@
 ---
 nyc:
-  id: 3
+  id: 4
   name: NYC
   slug: nyc
-  created_at: 2012-07-28 17:08:03.708795000 Z
-  updated_at: 2012-07-28 17:08:03.708795000 Z
+  created_at: 2012-08-18 19:57:30.638066000 Z
+  updated_at: 2012-08-18 19:57:30.638066000 Z
 miami:
-  id: 4
+  id: 5
   name: Miami
   slug: miami
-  created_at: 2012-07-28 17:08:04.929113000 Z
-  updated_at: 2012-07-28 17:08:04.929113000 Z
+  created_at: 2012-08-18 19:57:32.008819000 Z
+  updated_at: 2012-08-18 19:57:32.008819000 Z

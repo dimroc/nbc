@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 2
-  email: shemar_hessel@king.info
-  encrypted_password: $2a$10$aPeOEr2sy4gat/Kfmc3k4eRuAGwnumuK7AtKDaLB4UG5bYR2CuQd2
+  email: kathryn@windler.us
+  encrypted_password: $2a$04$/4auen.AGunil/rBX3r7we.X5YKBD/eCqaF22rA2AlM0IL3bIfFNy
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
