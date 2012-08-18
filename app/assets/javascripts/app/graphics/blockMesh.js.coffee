@@ -8,8 +8,15 @@ class App.BlockMesh extends THREE.Mesh
     material = new THREE.MeshLambertMaterial()
 
     super(geometry, material)
-    @position.x = (WIDTH + GUTTER_LENGTH) * block.left
-    @position.y = (HEIGHT + GUTTER_LENGTH) * block.bottom
+
+    left = block.left
+    bottom = block.bottom
+
+    left += block.region().left if block.region
+    bottom += block.region().bottom if block.region
+
+    @position.x = (WIDTH + GUTTER_LENGTH) * left
+    @position.y = (HEIGHT + GUTTER_LENGTH) * bottom
 
   animate: ->
     @rotation.y += 0.02
