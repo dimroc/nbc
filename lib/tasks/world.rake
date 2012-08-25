@@ -33,5 +33,15 @@ namespace :world do
       World.find_by_slug("new-york-city").try(:destroy)
       Rake::Task["world:generate:nyc"].invoke
     end
+
+    desc "Generate blocks that represent manhattan and williamsburg, brooklyn"
+    task :manhattan => :environment do
+      puts "Creating Manhattan"
+      shapefile = "lib/assets/shapefiles/manhattan/region"
+      world = World.build_from_shapefile(shapefile, "BoroCD" => "name")
+      world.name = "Manhattan"
+      world.generate_blocks(800)
+      world.save!
+    end
   end
 end

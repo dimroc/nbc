@@ -9,7 +9,7 @@ describe RGeo::Cartesian::BoundingBox do
 
   describe "#step" do
     let(:increment) { 1 }
-    it "should generate yield a point for ever step" do
+    it "should yield a point for every step" do
       steps = []
       positions = []
       bb.step(increment) do |point, step_x, step_y|
