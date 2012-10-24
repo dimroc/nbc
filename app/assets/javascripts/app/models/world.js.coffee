@@ -42,3 +42,6 @@ class App.World extends App.Model
     ).error (response, status)=>
       console.warn "Error retrieving regions for world #{@slug}"
       console.warn "Received status: #{status}. message: #{response.responseText}"
+
+  meshes: ->
+    [new App.MeshFactory.create_world(@)]
