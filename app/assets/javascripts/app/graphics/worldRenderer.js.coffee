@@ -44,7 +44,7 @@ class App.WorldRenderer
 
     @destroyed = true
     $(@stats.domElement).remove() if @stats
-    cancelAnimationFrame
+    cancelAnimationFrame @requestId
     App.worldRenderers = _(App.worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
@@ -54,10 +54,10 @@ class App.WorldRenderer
   animate: (elapsedTicks)=>
     render(@)
     if @destroyed
-      cancelAnimationFrame
+      cancelAnimationFrame @requestId
       console.debug("Animating after destruction...")
     else
-      requestAnimationFrame(@animate)
+      @requestId = requestAnimationFrame(@animate)
 
   add: (meshParam)->
     meshes = if _.isArray(meshParam) then meshParam else [meshParam]
