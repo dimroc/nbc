@@ -5,9 +5,6 @@ describe "graphics.BlockMesh", ->
     block.left = block.bottom = 0
     block.region = jasmine.createSpy("region").andReturn({left: 100, bottom: 100})
 
-  it "should respond to animate", ->
-    expect(new App.BlockMesh(block)).toRespondTo("animate")
-
   it "should position the mesh relative to the region", ->
     blockMesh = new App.BlockMesh(block)
 

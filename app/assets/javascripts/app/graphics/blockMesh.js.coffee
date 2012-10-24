@@ -19,6 +19,3 @@ class App.BlockMesh extends THREE.Mesh
 
     @position.x = (WIDTH + GUTTER_LENGTH) * left
     @position.y = (HEIGHT + GUTTER_LENGTH) * bottom
-
-  animate: ->
-    @rotation.y += 0.02
