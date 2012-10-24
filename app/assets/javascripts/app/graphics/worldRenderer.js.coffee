@@ -1,14 +1,16 @@
-App.worldRenderers = []
-
 class App.WorldRenderer
+
+  worldRenderers = []
+
   @DEFAULT_OPTIONS: {
     fov: 45
     width: 1280
     height: 720
   }
 
-  @create: (options) ->
-    new WorldRenderer(options)
+  @all: -> worldRenderers
+  @first: -> worldRenderers[0]
+  @create: (options) -> new WorldRenderer(options)
 
   constructor: (options)->
     options = $.extend(true, WorldRenderer.DEFAULT_OPTIONS, options)
@@ -37,7 +39,7 @@ class App.WorldRenderer
       @stats = createStats()
       document.body.appendChild(@stats.domElement)
 
-    App.worldRenderers.push(@)
+    worldRenderers.push(@)
 
   destroy: ->
     console.debug("Destroying worldRenderer...")
@@ -45,7 +47,7 @@ class App.WorldRenderer
     @destroyed = true
     $(@stats.domElement).remove() if @stats
     cancelAnimationFrame @requestId
-    App.worldRenderers = _(App.worldRenderers).reject (worldRenderer) => worldRenderer == @
+    worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
