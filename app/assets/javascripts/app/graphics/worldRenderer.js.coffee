@@ -34,7 +34,7 @@ class App.WorldRenderer
     @scene.add(@directionalLight)
 
     if Env.development
-      @stats = new Stats()
+      @stats = createStats()
       document.body.appendChild(@stats.domElement)
 
     App.worldRenderers.push(@)
@@ -93,6 +93,19 @@ createDirectionalLight = (options) ->
 
 createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
+
+createStats = ->
+  stats = new Stats()
+  stats.setMode(0)
+
+  # Align top-left
+  stats.domElement.style.position = 'absolute'
+  stats.domElement.style.zIndex = 100
+
+  stats.domElement.children[ 0 ].children[ 0 ].style.color = "#aaa"
+  stats.domElement.children[ 0 ].style.background = "transparent"
+  stats.domElement.children[ 0 ].children[ 1 ].style.display = "none"
+  stats
 
 render = (worldRenderer) ->
   worldRenderer.scene.children.forEach (child) ->
