@@ -41,7 +41,7 @@ describe World do
 
     describe "square with hole from uDig" do
       let(:world) { World.build_from_shapefile(shapefile) }
-      let(:shapefile) { "lib/assets/shapefiles/holed_square/region" }
+      let(:shapefile) { "lib/data/shapefiles/holed_square/region" }
 
       it "should generate geometries from the shapefile" do
         world.regions.size.should == 1
@@ -52,7 +52,7 @@ describe World do
 
     describe "new york city shape file" do
       let(:world) { World.build_from_shapefile(shapefile, "BoroName" => "name") }
-      let(:shapefile) { "lib/assets/shapefiles/nyc/region" }
+      let(:shapefile) { "lib/data/shapefiles/nyc/region" }
 
       it "should generate a geometry for every borough" do
         # Primarily used to test drive and debug
