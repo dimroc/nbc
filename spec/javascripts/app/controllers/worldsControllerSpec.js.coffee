@@ -32,7 +32,7 @@ describe "controllers.worldsController", ->
 
         mostRecentAjaxRequest().response(Factories.nycRegionsResponse())
 
-        expect(worldRenderer.add.callCount).toBe(nyc.allBlocks().length)
+        expect(worldRenderer.add).toHaveBeenCalled()
         expect(worldRenderer.attachToDom).toHaveBeenCalled()
         expect(worldRenderer.animate).toHaveBeenCalled()
         expect(showAction.$("h1").text()).toContain(nyc.name)

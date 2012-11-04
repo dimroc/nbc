@@ -26,11 +26,3 @@ describe "graphics.WorldRenderer", ->
         mesh = new THREE.Mesh()
         worldRenderer.add(mesh)
         expect(worldRenderer.scene.children).toInclude(mesh)
-
-    describe "#animate", ->
-      it "should animate its children", ->
-        blockMesh = new App.BlockMesh(Fixtures.nyc[0].blocks[0])
-        spyOn(blockMesh, "animate").andCallThrough()
-        worldRenderer.add(blockMesh)
-        worldRenderer.animate()
-        expect(blockMesh.animate).toHaveBeenCalled()

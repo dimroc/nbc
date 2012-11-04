@@ -1,14 +1,16 @@
-App.worldRenderers = []
-
 class App.WorldRenderer
+
+  worldRenderers = []
+
   @DEFAULT_OPTIONS: {
     fov: 45
     width: 1280
     height: 720
   }
 
-  @create: (options) ->
-    new WorldRenderer(options)
+  @all: -> worldRenderers
+  @first: -> worldRenderers[0]
+  @create: (options) -> new WorldRenderer(options)
 
   constructor: (options)->
     options = $.extend(true, WorldRenderer.DEFAULT_OPTIONS, options)
@@ -34,18 +36,18 @@ class App.WorldRenderer
     @scene.add(@directionalLight)
 
     if Env.development
-      @stats = new Stats()
+      @stats = createStats()
       document.body.appendChild(@stats.domElement)
 
-    App.worldRenderers.push(@)
+    worldRenderers.push(@)
 
   destroy: ->
     console.debug("Destroying worldRenderer...")
 
     @destroyed = true
     $(@stats.domElement).remove() if @stats
-    cancelAnimationFrame
-    App.worldRenderers = _(App.worldRenderers).reject (worldRenderer) => worldRenderer == @
+    cancelAnimationFrame @requestId
+    worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
@@ -54,10 +56,10 @@ class App.WorldRenderer
   animate: (elapsedTicks)=>
     render(@)
     if @destroyed
-      cancelAnimationFrame
+      cancelAnimationFrame @requestId
       console.debug("Animating after destruction...")
     else
-      requestAnimationFrame(@animate)
+      @requestId = requestAnimationFrame(@animate)
 
   add: (meshParam)->
     meshes = if _.isArray(meshParam) then meshParam else [meshParam]
@@ -75,9 +77,8 @@ class App.WorldRenderer
 
 createCamera = (options) ->
   camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 10000 )
-  camera.position.z = 8000
-  camera.position.x = 5000
-  camera.position.y = 2000
+  camera.position = new THREE.Vector3(0, -3000, 4500)
+  camera.lookAt(new THREE.Vector3(0,-500,0))
   camera
 
 createRenderer = (options) ->
@@ -93,6 +94,19 @@ createDirectionalLight = (options) ->
 
 createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
+
+createStats = ->
+  stats = new Stats()
+  stats.setMode(0)
+
+  # Align top-left
+  stats.domElement.style.position = 'absolute'
+  stats.domElement.style.zIndex = 100
+
+  stats.domElement.children[ 0 ].children[ 0 ].style.color = "#aaa"
+  stats.domElement.children[ 0 ].style.background = "transparent"
+  stats.domElement.children[ 0 ].children[ 1 ].style.display = "none"
+  stats
 
 render = (worldRenderer) ->
   worldRenderer.scene.children.forEach (child) ->
