@@ -1,7 +1,7 @@
 class App.Block extends App.Model
-  @HEIGHT = @WIDTH = 50
-  @DEPTH = 5
-  @GUTTER_LENGTH = 20
+  @HEIGHT = @WIDTH = 25
+  @DEPTH = 100
+  @GUTTER_LENGTH = 10
 
   @configure 'Block', 'id', 'region_id', 'bottom', 'left', 'point'
   @extend Spine.Model.Ajax

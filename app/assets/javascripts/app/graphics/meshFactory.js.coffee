@@ -1,16 +1,19 @@
 class App.MeshFactory
   @create_world: (world) ->
     geometry = new THREE.Geometry()
+    cubeMaterial = new THREE.MeshLambertMaterial({color: 0xcccccc})
 
     _.each(world.allBlocks(), (block) ->
-      geometry.vertices.push(block.world_position())
+      cubeGeom = new THREE.CubeGeometry(
+        App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH,
+        1, 1, 1,
+        cubeMaterial)
+
+      cubeMesh = new THREE.Mesh(cubeGeom)
+      cubeMesh.position = block.world_position()
+      THREE.GeometryUtils.merge(geometry, cubeMesh)
     )
 
-    material = new THREE.ParticleBasicMaterial(
-      color: App.ColorMap.fetch(null),
-      size: 50
-    )
-
-    material.color.setHSV(0,0,0)
-
-    new THREE.ParticleSystem(geometry, material)
+    geometry.mergeVertices()
+    THREE.GeometryUtils.center(geometry)
+    new THREE.Mesh(geometry, new THREE.MeshFaceMaterial())
