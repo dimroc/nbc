@@ -1,0 +1,29 @@
+#!/bin/sh
+
+database=$1
+script_dir=$2
+
+if [ -z $database ]; then
+  echo Must specify a database
+  exit 1
+fi
+
+if [ -z $script_dir ]; then
+  echo Must specify a script directory
+  exit 1
+fi
+
+sql_files=( postgis postgis_comments spatial_ref_sys rtpostgis raster_comments topology topology_comments)
+
+for sql_file in "${sql_files[@]}"; do
+  psql -d $database -f "${script_dir}/${sql_file}.sql"
+done
+
+# reference:  http://postgis.refractions.net/documentation/manual-2.0/postgis_installation.html#id624295
+# psql -d yourdatabase -f postgis.sql
+# psql -d yourdatabase -f postgis_comments.sql
+# psql -d yourdatabase -f spatial_ref_sys.sql
+# psql -d yourdatabase -f rtpostgis.sql
+# psql -d yourdatabase -f raster_comments.sql
+# psql -d yourdatabase -f topology/topology.sql
+# psql -d yourdatabase -f doc/topology_comments.sql
