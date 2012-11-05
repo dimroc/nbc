@@ -9,9 +9,9 @@ FixtureBuilder.configure do |fbuilder|
     @nyc =
       World.build_from_shapefile(
         "lib/data/shapefiles/nyc/region",
-        "BoroName" => "name")
+        "BoroCD" => "name")
     @nyc.name = "NYC"
-    @nyc.generate_blocks(8000)
+    @nyc.generate_blocks(500)
     @nyc.save!
 
     @miami =

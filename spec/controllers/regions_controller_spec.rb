@@ -13,12 +13,6 @@ describe RegionsController do
       end
     end
 
-    describe "for nyc" do
-      it_should_behave_like "a region index action" do
-        let(:world) { worlds(:nyc) }
-      end
-    end
-
     describe "for miami" do
       it_should_behave_like "a region index action" do
         let(:world) { worlds(:miami) }

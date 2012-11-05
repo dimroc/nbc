@@ -28,10 +28,11 @@ describe World do
 
       it "should generate the region with the geometry" do
         region = world.regions.first
-        region.generated_bounding_box.should ==
-          Cartesian::BoundingBox.create_from_points(
-            Cartesian::preferred_factory().point(0, 0),
-            Cartesian::preferred_factory().point(9, 9))
+        bb = region.generated_bounding_box
+        bb.min_y.should == 0
+        bb.min_x.should == 0
+        bb.max_y.should == 9
+        bb.max_x.should == 9
 
         region.should be_valid
         world.name = "bogus"
@@ -51,14 +52,14 @@ describe World do
     end
 
     describe "new york city shape file" do
-      let(:world) { World.build_from_shapefile(shapefile, "BoroName" => "name") }
+      let(:world) { World.build_from_shapefile(shapefile, "BoroCD" => "name") }
       let(:shapefile) { "lib/data/shapefiles/nyc/region" }
 
       it "should generate a geometry for every borough" do
         # Primarily used to test drive and debug
-        world.regions.size.should == 5
-        world.regions.map(&:name).should include "Manhattan"
-        world.regions.map(&:name).should include "Brooklyn"
+        world.regions.size.should == 33
+        world.regions.map(&:name).should include 101
+        world.regions.map(&:name).should include 317
 
         world.name = "bogus"
         world.should be_valid
