@@ -25,13 +25,11 @@ class Socrata::Shape
   private
 
   def create_point(x, y)
-    factory = Cartesian.preferred_factory
-    factory.point(x.to_f, y.to_f)
+    Mercator::FACTORY.point(x.to_f, y.to_f)
   end
 
   def create_geometry(rings)
-    factory = Cartesian.preferred_factory
-    points = rings[0].map { |point_array| factory.point(point_array[0], point_array[1]) }
-    factory.linear_ring(points)
+    points = rings[0].map { |point_array| Mercator::FACTORY.point(point_array[0], point_array[1]) }
+    Mercator::FACTORY.linear_ring(points)
   end
 end

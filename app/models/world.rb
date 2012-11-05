@@ -13,7 +13,7 @@ class World < ActiveRecord::Base
       require 'rgeo/shapefile'
 
       world = World.new
-      RGeo::Shapefile::Reader.open(shapefile) do |file|
+      RGeo::Shapefile::Reader.open(shapefile, factory: Mercator::FACTORY) do |file|
         raise ArgumentError, "File contains no records" if file.num_records == 0
 
         file.each do |record|

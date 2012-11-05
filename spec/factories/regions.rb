@@ -17,7 +17,7 @@ FactoryGirl.define do
       width = evaluator.width
       height = evaluator.height
 
-      factory = Cartesian::preferred_factory()
+      factory = Mercator::FACTORY
 
       linear_ring = factory.linear_ring([
         factory.point(left, bottom),
