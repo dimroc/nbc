@@ -15,15 +15,4 @@ describe WorldsController do
       save_fixture(response.body, "worlds")
     end
   end
-
-  describe ".show" do
-    subject { JSON.parse response.body }
-    before { get :show, id: nyc.id }
-
-    it "should return nyc's regions", jasmine_fixture: true do
-      response.status.should == 200
-      subject.should equal_json_of nyc
-      save_fixture response.body, "nyc"
-    end
-  end
 end
