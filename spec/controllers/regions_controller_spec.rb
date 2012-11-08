@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe RegionsController do
   describe ".index" do
-    shared_examples_for "a region index action" do
+    describe "for nyc" do
+      let(:world) { worlds(:nyc) }
       it "should return all regions in json", jasmine_fixture: true do
         get :index, world_id: world.id
         regions_json = JSON.parse response.body
@@ -10,12 +11,6 @@ describe RegionsController do
         regions_json.should equal_json_of world.regions
 
         save_fixture(response.body, world.slug)
-      end
-    end
-
-    describe "for miami" do
-      it_should_behave_like "a region index action" do
-        let(:world) { worlds(:miami) }
       end
     end
   end

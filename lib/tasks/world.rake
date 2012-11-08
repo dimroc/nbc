@@ -24,7 +24,7 @@ namespace :world do
       shapefile = "lib/data/shapefiles/nyc/region"
       world = World.build_from_shapefile(shapefile, "BoroCD" => "name")
       world.name = "New York City"
-      world.generate_blocks(100)
+      world.generate_blocks(500)
       world.save!
     end
 

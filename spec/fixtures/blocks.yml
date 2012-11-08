@@ -1,1 +1,985 @@
---- {}
+---
+blocks_001:
+  id: 1
+  region_id: 2
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.077946000 Z
+  updated_at: 2012-11-08 02:54:52.077946000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8236804.9902320448309183 4926693.6009614765644073)
+blocks_002:
+  id: 2
+  region_id: 3
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.086530000 Z
+  updated_at: 2012-11-08 02:54:52.086530000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8239306.2081522215157747 4929091.2882103193551302)
+blocks_003:
+  id: 3
+  region_id: 4
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.092585000 Z
+  updated_at: 2012-11-08 02:54:52.092585000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8229777.6960530020296574 4933170.0182640403509140)
+blocks_004:
+  id: 4
+  region_id: 5
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.101730000 Z
+  updated_at: 2012-11-08 02:54:52.101730000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8235088.4827363891527057 4940338.2278064517304301)
+blocks_005:
+  id: 5
+  region_id: 7
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.358295000 Z
+  updated_at: 2012-11-08 02:54:52.358295000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8228778.7562464652583003 4926412.0522956745699048)
+blocks_006:
+  id: 6
+  region_id: 7
+  left: 1
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.359925000 Z
+  updated_at: 2012-11-08 02:54:52.359925000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8228778.7562464652583003 4929412.0522956745699048)
+blocks_007:
+  id: 7
+  region_id: 7
+  left: 2
+  bottom: 3
+  created_at: 2012-11-08 02:54:52.361274000 Z
+  updated_at: 2012-11-08 02:54:52.361274000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8225778.7562464652583003 4932412.0522956745699048)
+blocks_008:
+  id: 8
+  region_id: 8
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.372570000 Z
+  updated_at: 2012-11-08 02:54:52.372570000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8236863.3628055211156607 4937607.6293775606900454)
+blocks_009:
+  id: 9
+  region_id: 9
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.430063000 Z
+  updated_at: 2012-11-08 02:54:52.430063000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8226848.1084454935044050 4925276.9970133174210787)
+blocks_010:
+  id: 10
+  region_id: 9
+  left: 2
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.431695000 Z
+  updated_at: 2012-11-08 02:54:52.431695000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223848.1084454935044050 4928276.9970133174210787)
+blocks_011:
+  id: 11
+  region_id: 9
+  left: 2
+  bottom: 3
+  created_at: 2012-11-08 02:54:52.433012000 Z
+  updated_at: 2012-11-08 02:54:52.433012000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223848.1084454935044050 4931276.9970133174210787)
+blocks_012:
+  id: 12
+  region_id: 10
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.505465000 Z
+  updated_at: 2012-11-08 02:54:52.505465000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8233967.2635967601090670 4953296.5259009292349219)
+blocks_013:
+  id: 13
+  region_id: 15
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.533831000 Z
+  updated_at: 2012-11-08 02:54:52.533831000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8238239.1452922187745571 4933712.1837610583752394)
+blocks_014:
+  id: 14
+  region_id: 15
+  left: 2
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.535468000 Z
+  updated_at: 2012-11-08 02:54:52.535468000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8235239.1452922187745571 4933712.1837610583752394)
+blocks_015:
+  id: 15
+  region_id: 18
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.558093000 Z
+  updated_at: 2012-11-08 02:54:52.558093000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8235820.4576392248272896 4929959.2745185177773237)
+blocks_016:
+  id: 16
+  region_id: 19
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.563759000 Z
+  updated_at: 2012-11-08 02:54:52.563759000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8232150.5902387052774429 4930130.5030709970742464)
+blocks_017:
+  id: 17
+  region_id: 22
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.593304000 Z
+  updated_at: 2012-11-08 02:54:52.593304000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8236092.9764221254736185 4924222.7711062226444483)
+blocks_018:
+  id: 18
+  region_id: 23
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.696140000 Z
+  updated_at: 2012-11-08 02:54:52.696140000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8232830.2072826446965337 4924906.5251149777323008)
+blocks_019:
+  id: 19
+  region_id: 23
+  left: 2
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.697829000 Z
+  updated_at: 2012-11-08 02:54:52.697829000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8229830.2072826446965337 4924906.5251149777323008)
+blocks_020:
+  id: 20
+  region_id: 24
+  left: 1
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.728390000 Z
+  updated_at: 2012-11-08 02:54:52.728390000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8229093.6220569722354412 4965378.1261277962476015)
+blocks_021:
+  id: 21
+  region_id: 26
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.741044000 Z
+  updated_at: 2012-11-08 02:54:52.741044000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8228178.0836096638813615 4940248.9520643716678023)
+blocks_022:
+  id: 22
+  region_id: 27
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.749762000 Z
+  updated_at: 2012-11-08 02:54:52.749762000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223960.8125977199524641 4934487.4507378619164228)
+blocks_023:
+  id: 23
+  region_id: 27
+  left: 1
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.751088000 Z
+  updated_at: 2012-11-08 02:54:52.751088000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223960.8125977199524641 4937487.4507378619164228)
+blocks_024:
+  id: 24
+  region_id: 33
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.804772000 Z
+  updated_at: 2012-11-08 02:54:52.804772000 Z
+  point: !ruby/object:RGeo::Geos::CAPIPointImpl
+    factory: !ruby/object:RGeo::Geos::CAPIFactory
+      has_z_coordinate: false
+      has_m_coordinate: false
+      srid: 3785
+      buffer_resolution: 1
+      lenient_multi_polygon_assertions: false
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
+      wkb_generator:
+        type_format: wkb11
+        emit_ewkb_srid: 
+        hex_format: false
+        little_endian: false
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
+      wkb_parser:
+        support_ewkb: false
+        support_wkb12: false
+        ignore_extra_bytes: false
+        default_srid: 
+      auto_prepare: simple
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8231303.7951009059324861 4943001.0068932166323066)

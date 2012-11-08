@@ -25,7 +25,7 @@ class Region < ActiveRecord::Base
     bb = generated_bounding_box
 
     bb.step(block_length) do |point, x, y|
-      point = Mercator::FACTORY.point(point.x, point.y)
+      point = Mercator::FACTORY.projection_factory.point(point.x, point.y)
       blocks.build(left: x, bottom: y, point: point) if geometry.contains? point
     end if !bb.empty? && block_length
     blocks

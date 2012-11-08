@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: jolie@hellercruickshank.name
-  encrypted_password: $2a$04$.RXt8oHl3JC3oVxiQ8jNletI75hK60zL6acK3mjDCgLowVA6qPChm
+  email: leonor_witting@danielsmitham.biz
+  encrypted_password: $2a$04$CHSnh3XVYYcV3EDkP1Npu.Eg3oVJeM1jACYydpxTMVorYI5r6YFDe
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

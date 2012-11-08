@@ -17,7 +17,7 @@ FactoryGirl.define do
       width = evaluator.width
       height = evaluator.height
 
-      factory = Mercator::FACTORY
+      factory = Mercator::FACTORY.projection_factory
 
       linear_ring = factory.linear_ring([
         factory.point(left, bottom),
