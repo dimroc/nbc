@@ -81,7 +81,6 @@ GEM
     columnize (0.3.6)
     commonjs (0.2.6)
     daemons (1.1.9)
-    database_cleaner (0.9.1)
     dbf (2.0.2)
       fastercsv (~> 1.5.4)
     debugger (1.2.1)
@@ -302,7 +301,6 @@ DEPENDENCIES
   capybara
   capybara-firebug
   coffee-rails (~> 3.2.1)
-  database_cleaner (>= 0.7.2)
   debugger
   devise (>= 2.1.0)
   eco
