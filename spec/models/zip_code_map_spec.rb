@@ -20,8 +20,8 @@ describe ZipCodeMap do
       its(:zip) { should == "11372" }
       its(:po_name) { should == "Jackson Heights" }
       its(:county) { should == "Queens" }
-      its(:point) { should == socrata_shape.point }
-      its(:geometry) { should == socrata_shape.geometry }
+      its(:point) { should == Mercator.to_projected(socrata_shape.point) }
+      its(:geometry) { should == Mercator.to_projected(socrata_shape.geometry) }
       its(:shape_length) { should == 20624.6 }
       its(:shape_area) { should == 20163283.8 }
     end

@@ -1,16 +1,16 @@
 ---
 blocks_001:
-  id: 148
-  region_id: 9
+  id: 1
+  region_id: 2
   left: 1
   bottom: 1
-  created_at: 2012-08-18 19:57:31.025752000 Z
-  updated_at: 2012-08-18 19:57:31.025752000 Z
+  created_at: 2012-11-08 02:54:52.077946000 Z
+  updated_at: 2012-11-08 02:54:52.077946000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -35,19 +35,23 @@ blocks_001:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (921175.1088256835937500 128121.8812540033977712)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8236804.9902320448309183 4926693.6009614765644073)
 blocks_002:
-  id: 149
-  region_id: 9
+  id: 2
+  region_id: 3
   left: 1
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.028142000 Z
-  updated_at: 2012-08-18 19:57:31.028142000 Z
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.086530000 Z
+  updated_at: 2012-11-08 02:54:52.086530000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -72,19 +76,23 @@ blocks_002:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (921175.1088256835937500 136121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8239306.2081522215157747 4929091.2882103193551302)
 blocks_003:
-  id: 150
-  region_id: 9
-  left: 2
+  id: 3
+  region_id: 4
+  left: 1
   bottom: 1
-  created_at: 2012-08-18 19:57:31.028967000 Z
-  updated_at: 2012-08-18 19:57:31.028967000 Z
+  created_at: 2012-11-08 02:54:52.092585000 Z
+  updated_at: 2012-11-08 02:54:52.092585000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -109,19 +117,23 @@ blocks_003:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (929175.1088256835937500 128121.8812540033977712)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8229777.6960530020296574 4933170.0182640403509140)
 blocks_004:
-  id: 151
-  region_id: 9
-  left: 2
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.029707000 Z
-  updated_at: 2012-08-18 19:57:31.029707000 Z
+  id: 4
+  region_id: 5
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.101730000 Z
+  updated_at: 2012-11-08 02:54:52.101730000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -146,19 +158,23 @@ blocks_004:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (929175.1088256835937500 136121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8235088.4827363891527057 4940338.2278064517304301)
 blocks_005:
-  id: 152
-  region_id: 9
-  left: 2
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.030494000 Z
-  updated_at: 2012-08-18 19:57:31.030494000 Z
+  id: 5
+  region_id: 7
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.358295000 Z
+  updated_at: 2012-11-08 02:54:52.358295000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -183,19 +199,23 @@ blocks_005:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (929175.1088256835937500 144121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8228778.7562464652583003 4926412.0522956745699048)
 blocks_006:
-  id: 153
-  region_id: 9
-  left: 2
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.031260000 Z
-  updated_at: 2012-08-18 19:57:31.031260000 Z
+  id: 6
+  region_id: 7
+  left: 1
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.359925000 Z
+  updated_at: 2012-11-08 02:54:52.359925000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -220,19 +240,23 @@ blocks_006:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (929175.1088256835937500 152121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8228778.7562464652583003 4929412.0522956745699048)
 blocks_007:
-  id: 154
-  region_id: 9
+  id: 7
+  region_id: 7
   left: 2
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.032034000 Z
-  updated_at: 2012-08-18 19:57:31.032034000 Z
+  bottom: 3
+  created_at: 2012-11-08 02:54:52.361274000 Z
+  updated_at: 2012-11-08 02:54:52.361274000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -257,19 +281,23 @@ blocks_007:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (929175.1088256835937500 168121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8225778.7562464652583003 4932412.0522956745699048)
 blocks_008:
-  id: 155
-  region_id: 9
-  left: 3
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.032766000 Z
-  updated_at: 2012-08-18 19:57:31.032766000 Z
+  id: 8
+  region_id: 8
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.372570000 Z
+  updated_at: 2012-11-08 02:54:52.372570000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -294,19 +322,23 @@ blocks_008:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (937175.1088256835937500 136121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8236863.3628055211156607 4937607.6293775606900454)
 blocks_009:
-  id: 156
+  id: 9
   region_id: 9
-  left: 3
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.033536000 Z
-  updated_at: 2012-08-18 19:57:31.033536000 Z
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.430063000 Z
+  updated_at: 2012-11-08 02:54:52.430063000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -331,19 +363,23 @@ blocks_009:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (937175.1088256835937500 144121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8226848.1084454935044050 4925276.9970133174210787)
 blocks_010:
-  id: 157
+  id: 10
   region_id: 9
-  left: 3
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.034289000 Z
-  updated_at: 2012-08-18 19:57:31.034289000 Z
+  left: 2
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.431695000 Z
+  updated_at: 2012-11-08 02:54:52.431695000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -368,19 +404,23 @@ blocks_010:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (937175.1088256835937500 152121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223848.1084454935044050 4928276.9970133174210787)
 blocks_011:
-  id: 158
+  id: 11
   region_id: 9
-  left: 3
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.035132000 Z
-  updated_at: 2012-08-18 19:57:31.035132000 Z
+  left: 2
+  bottom: 3
+  created_at: 2012-11-08 02:54:52.433012000 Z
+  updated_at: 2012-11-08 02:54:52.433012000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -405,19 +445,23 @@ blocks_011:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (937175.1088256835937500 160121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223848.1084454935044050 4931276.9970133174210787)
 blocks_012:
-  id: 159
-  region_id: 9
-  left: 3
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.035888000 Z
-  updated_at: 2012-08-18 19:57:31.035888000 Z
+  id: 12
+  region_id: 10
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.505465000 Z
+  updated_at: 2012-11-08 02:54:52.505465000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -442,19 +486,23 @@ blocks_012:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (937175.1088256835937500 168121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8233967.2635967601090670 4953296.5259009292349219)
 blocks_013:
-  id: 160
-  region_id: 9
-  left: 4
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.036612000 Z
-  updated_at: 2012-08-18 19:57:31.036612000 Z
+  id: 13
+  region_id: 15
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.533831000 Z
+  updated_at: 2012-11-08 02:54:52.533831000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -479,19 +527,23 @@ blocks_013:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (945175.1088256835937500 144121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8238239.1452922187745571 4933712.1837610583752394)
 blocks_014:
-  id: 161
-  region_id: 9
-  left: 4
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.037329000 Z
-  updated_at: 2012-08-18 19:57:31.037329000 Z
+  id: 14
+  region_id: 15
+  left: 2
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.535468000 Z
+  updated_at: 2012-11-08 02:54:52.535468000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -516,19 +568,23 @@ blocks_014:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (945175.1088256835937500 152121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8235239.1452922187745571 4933712.1837610583752394)
 blocks_015:
-  id: 162
-  region_id: 9
-  left: 4
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.038058000 Z
-  updated_at: 2012-08-18 19:57:31.038058000 Z
+  id: 15
+  region_id: 18
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.558093000 Z
+  updated_at: 2012-11-08 02:54:52.558093000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -553,19 +609,23 @@ blocks_015:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (945175.1088256835937500 160121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8235820.4576392248272896 4929959.2745185177773237)
 blocks_016:
-  id: 163
-  region_id: 9
-  left: 4
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.038779000 Z
-  updated_at: 2012-08-18 19:57:31.038779000 Z
+  id: 16
+  region_id: 19
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.563759000 Z
+  updated_at: 2012-11-08 02:54:52.563759000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -590,19 +650,23 @@ blocks_016:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (945175.1088256835937500 168121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8232150.5902387052774429 4930130.5030709970742464)
 blocks_017:
-  id: 164
-  region_id: 9
-  left: 5
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.039496000 Z
-  updated_at: 2012-08-18 19:57:31.039496000 Z
+  id: 17
+  region_id: 22
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.593304000 Z
+  updated_at: 2012-11-08 02:54:52.593304000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -627,19 +691,23 @@ blocks_017:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (953175.1088256835937500 144121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8236092.9764221254736185 4924222.7711062226444483)
 blocks_018:
-  id: 165
-  region_id: 9
-  left: 5
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.040214000 Z
-  updated_at: 2012-08-18 19:57:31.040214000 Z
+  id: 18
+  region_id: 23
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.696140000 Z
+  updated_at: 2012-11-08 02:54:52.696140000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -664,19 +732,23 @@ blocks_018:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (953175.1088256835937500 152121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8232830.2072826446965337 4924906.5251149777323008)
 blocks_019:
-  id: 166
-  region_id: 9
-  left: 5
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.040925000 Z
-  updated_at: 2012-08-18 19:57:31.040925000 Z
+  id: 19
+  region_id: 23
+  left: 2
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.697829000 Z
+  updated_at: 2012-11-08 02:54:52.697829000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -701,19 +773,23 @@ blocks_019:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (953175.1088256835937500 160121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8229830.2072826446965337 4924906.5251149777323008)
 blocks_020:
-  id: 167
-  region_id: 9
-  left: 5
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.041703000 Z
-  updated_at: 2012-08-18 19:57:31.041703000 Z
+  id: 20
+  region_id: 24
+  left: 1
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.728390000 Z
+  updated_at: 2012-11-08 02:54:52.728390000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -738,19 +814,23 @@ blocks_020:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (953175.1088256835937500 168121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8229093.6220569722354412 4965378.1261277962476015)
 blocks_021:
-  id: 168
-  region_id: 9
-  left: 6
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.042448000 Z
-  updated_at: 2012-08-18 19:57:31.042448000 Z
+  id: 21
+  region_id: 26
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.741044000 Z
+  updated_at: 2012-11-08 02:54:52.741044000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -775,19 +855,23 @@ blocks_021:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (961175.1088256835937500 152121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8228178.0836096638813615 4940248.9520643716678023)
 blocks_022:
-  id: 169
-  region_id: 9
-  left: 6
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.043128000 Z
-  updated_at: 2012-08-18 19:57:31.043128000 Z
+  id: 22
+  region_id: 27
+  left: 1
+  bottom: 1
+  created_at: 2012-11-08 02:54:52.749762000 Z
+  updated_at: 2012-11-08 02:54:52.749762000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -812,19 +896,23 @@ blocks_022:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (961175.1088256835937500 160121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223960.8125977199524641 4934487.4507378619164228)
 blocks_023:
-  id: 170
-  region_id: 9
-  left: 6
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.043879000 Z
-  updated_at: 2012-08-18 19:57:31.043879000 Z
+  id: 23
+  region_id: 27
+  left: 1
+  bottom: 2
+  created_at: 2012-11-08 02:54:52.751088000 Z
+  updated_at: 2012-11-08 02:54:52.751088000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -849,2868 +937,23 @@ blocks_023:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (961175.1088256835937500 168121.8812540033832192)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8223960.8125977199524641 4937487.4507378619164228)
 blocks_024:
-  id: 171
-  region_id: 10
-  left: 1
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.276608000 Z
-  updated_at: 2012-08-18 19:57:31.276608000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (980619.7128295898437500 162772.0317993164062500)
-blocks_025:
-  id: 172
-  region_id: 10
-  left: 1
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.277733000 Z
-  updated_at: 2012-08-18 19:57:31.277733000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (980619.7128295898437500 170772.0317993164062500)
-blocks_026:
-  id: 173
-  region_id: 10
-  left: 1
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.278508000 Z
-  updated_at: 2012-08-18 19:57:31.278508000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (980619.7128295898437500 178772.0317993164062500)
-blocks_027:
-  id: 174
-  region_id: 10
-  left: 1
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.279233000 Z
-  updated_at: 2012-08-18 19:57:31.279233000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (980619.7128295898437500 186772.0317993164062500)
-blocks_028:
-  id: 175
-  region_id: 10
-  left: 2
-  bottom: 1
-  created_at: 2012-08-18 19:57:31.280184000 Z
-  updated_at: 2012-08-18 19:57:31.280184000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (988619.7128295898437500 154772.0317993164062500)
-blocks_029:
-  id: 176
-  region_id: 10
-  left: 2
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.281109000 Z
-  updated_at: 2012-08-18 19:57:31.281109000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (988619.7128295898437500 162772.0317993164062500)
-blocks_030:
-  id: 177
-  region_id: 10
-  left: 2
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.281836000 Z
-  updated_at: 2012-08-18 19:57:31.281836000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (988619.7128295898437500 170772.0317993164062500)
-blocks_031:
-  id: 178
-  region_id: 10
-  left: 2
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.282578000 Z
-  updated_at: 2012-08-18 19:57:31.282578000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (988619.7128295898437500 178772.0317993164062500)
-blocks_032:
-  id: 179
-  region_id: 10
-  left: 2
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.283291000 Z
-  updated_at: 2012-08-18 19:57:31.283291000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (988619.7128295898437500 186772.0317993164062500)
-blocks_033:
-  id: 180
-  region_id: 10
-  left: 2
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.284341000 Z
-  updated_at: 2012-08-18 19:57:31.284341000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (988619.7128295898437500 194772.0317993164062500)
-blocks_034:
-  id: 181
-  region_id: 10
-  left: 3
-  bottom: 1
-  created_at: 2012-08-18 19:57:31.285354000 Z
-  updated_at: 2012-08-18 19:57:31.285354000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (996619.7128295898437500 154772.0317993164062500)
-blocks_035:
-  id: 182
-  region_id: 10
-  left: 3
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.286117000 Z
-  updated_at: 2012-08-18 19:57:31.286117000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (996619.7128295898437500 162772.0317993164062500)
-blocks_036:
-  id: 183
-  region_id: 10
-  left: 3
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.286864000 Z
-  updated_at: 2012-08-18 19:57:31.286864000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (996619.7128295898437500 170772.0317993164062500)
-blocks_037:
-  id: 184
-  region_id: 10
-  left: 3
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.287596000 Z
-  updated_at: 2012-08-18 19:57:31.287596000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (996619.7128295898437500 178772.0317993164062500)
-blocks_038:
-  id: 185
-  region_id: 10
-  left: 3
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.288318000 Z
-  updated_at: 2012-08-18 19:57:31.288318000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (996619.7128295898437500 186772.0317993164062500)
-blocks_039:
-  id: 186
-  region_id: 10
-  left: 3
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.289019000 Z
-  updated_at: 2012-08-18 19:57:31.289019000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (996619.7128295898437500 194772.0317993164062500)
-blocks_040:
-  id: 187
-  region_id: 10
-  left: 3
-  bottom: 7
-  created_at: 2012-08-18 19:57:31.289722000 Z
-  updated_at: 2012-08-18 19:57:31.289722000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (996619.7128295898437500 202772.0317993164062500)
-blocks_041:
-  id: 188
-  region_id: 10
-  left: 4
-  bottom: 1
-  created_at: 2012-08-18 19:57:31.290424000 Z
-  updated_at: 2012-08-18 19:57:31.290424000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1004619.7128295898437500 154772.0317993164062500)
-blocks_042:
-  id: 189
-  region_id: 10
-  left: 4
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.291132000 Z
-  updated_at: 2012-08-18 19:57:31.291132000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1004619.7128295898437500 162772.0317993164062500)
-blocks_043:
-  id: 190
-  region_id: 10
-  left: 4
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.291824000 Z
-  updated_at: 2012-08-18 19:57:31.291824000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1004619.7128295898437500 170772.0317993164062500)
-blocks_044:
-  id: 191
-  region_id: 10
-  left: 4
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.292541000 Z
-  updated_at: 2012-08-18 19:57:31.292541000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1004619.7128295898437500 178772.0317993164062500)
-blocks_045:
-  id: 192
-  region_id: 10
-  left: 4
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.293260000 Z
-  updated_at: 2012-08-18 19:57:31.293260000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1004619.7128295898437500 186772.0317993164062500)
-blocks_046:
-  id: 193
-  region_id: 10
-  left: 4
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.293926000 Z
-  updated_at: 2012-08-18 19:57:31.293926000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1004619.7128295898437500 194772.0317993164062500)
-blocks_047:
-  id: 194
-  region_id: 10
-  left: 5
-  bottom: 1
-  created_at: 2012-08-18 19:57:31.294569000 Z
-  updated_at: 2012-08-18 19:57:31.294569000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1012619.7128295898437500 154772.0317993164062500)
-blocks_048:
-  id: 195
-  region_id: 10
-  left: 5
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.295268000 Z
-  updated_at: 2012-08-18 19:57:31.295268000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1012619.7128295898437500 162772.0317993164062500)
-blocks_049:
-  id: 196
-  region_id: 10
-  left: 5
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.295955000 Z
-  updated_at: 2012-08-18 19:57:31.295955000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1012619.7128295898437500 170772.0317993164062500)
-blocks_050:
-  id: 197
-  region_id: 10
-  left: 5
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.296753000 Z
-  updated_at: 2012-08-18 19:57:31.296753000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1012619.7128295898437500 178772.0317993164062500)
-blocks_051:
-  id: 198
-  region_id: 10
-  left: 5
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.297649000 Z
-  updated_at: 2012-08-18 19:57:31.297649000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1012619.7128295898437500 186772.0317993164062500)
-blocks_052:
-  id: 199
-  region_id: 10
-  left: 6
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.298498000 Z
-  updated_at: 2012-08-18 19:57:31.298498000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1020619.7128295898437500 178772.0317993164062500)
-blocks_053:
-  id: 200
-  region_id: 10
-  left: 6
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.299224000 Z
-  updated_at: 2012-08-18 19:57:31.299224000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1020619.7128295898437500 186772.0317993164062500)
-blocks_054:
-  id: 201
-  region_id: 11
-  left: 1
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.695463000 Z
-  updated_at: 2012-08-18 19:57:31.695463000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1002608.4556274414062500 208681.7761840820312500)
-blocks_055:
-  id: 202
-  region_id: 11
-  left: 1
-  bottom: 10
-  created_at: 2012-08-18 19:57:31.696717000 Z
-  updated_at: 2012-08-18 19:57:31.696717000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1002608.4556274414062500 216681.7761840820312500)
-blocks_056:
-  id: 203
-  region_id: 11
-  left: 2
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.697562000 Z
-  updated_at: 2012-08-18 19:57:31.697562000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010608.4556274414062500 200681.7761840820312500)
-blocks_057:
-  id: 204
-  region_id: 11
-  left: 2
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.698443000 Z
-  updated_at: 2012-08-18 19:57:31.698443000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010608.4556274414062500 208681.7761840820312500)
-blocks_058:
-  id: 205
-  region_id: 11
-  left: 2
-  bottom: 10
-  created_at: 2012-08-18 19:57:31.699229000 Z
-  updated_at: 2012-08-18 19:57:31.699229000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010608.4556274414062500 216681.7761840820312500)
-blocks_059:
-  id: 206
-  region_id: 11
-  left: 2
-  bottom: 11
-  created_at: 2012-08-18 19:57:31.699998000 Z
-  updated_at: 2012-08-18 19:57:31.699998000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010608.4556274414062500 224681.7761840820312500)
-blocks_060:
-  id: 207
-  region_id: 11
-  left: 3
-  bottom: 1
-  created_at: 2012-08-18 19:57:31.700764000 Z
-  updated_at: 2012-08-18 19:57:31.700764000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018608.4556274414062500 144681.7761840820312500)
-blocks_061:
-  id: 208
-  region_id: 11
-  left: 3
-  bottom: 7
-  created_at: 2012-08-18 19:57:31.701527000 Z
-  updated_at: 2012-08-18 19:57:31.701527000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018608.4556274414062500 192681.7761840820312500)
-blocks_062:
-  id: 209
-  region_id: 11
-  left: 3
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.702308000 Z
-  updated_at: 2012-08-18 19:57:31.702308000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018608.4556274414062500 200681.7761840820312500)
-blocks_063:
-  id: 210
-  region_id: 11
-  left: 3
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.703031000 Z
-  updated_at: 2012-08-18 19:57:31.703031000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018608.4556274414062500 208681.7761840820312500)
-blocks_064:
-  id: 211
-  region_id: 11
-  left: 3
-  bottom: 10
-  created_at: 2012-08-18 19:57:31.703751000 Z
-  updated_at: 2012-08-18 19:57:31.703751000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018608.4556274414062500 216681.7761840820312500)
-blocks_065:
-  id: 212
-  region_id: 11
-  left: 4
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.704467000 Z
-  updated_at: 2012-08-18 19:57:31.704467000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026608.4556274414062500 176681.7761840820312500)
-blocks_066:
-  id: 213
-  region_id: 11
-  left: 4
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.705181000 Z
-  updated_at: 2012-08-18 19:57:31.705181000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026608.4556274414062500 184681.7761840820312500)
-blocks_067:
-  id: 214
-  region_id: 11
-  left: 4
-  bottom: 7
-  created_at: 2012-08-18 19:57:31.705939000 Z
-  updated_at: 2012-08-18 19:57:31.705939000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026608.4556274414062500 192681.7761840820312500)
-blocks_068:
-  id: 215
-  region_id: 11
-  left: 4
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.706659000 Z
-  updated_at: 2012-08-18 19:57:31.706659000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026608.4556274414062500 200681.7761840820312500)
-blocks_069:
-  id: 216
-  region_id: 11
-  left: 4
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.707365000 Z
-  updated_at: 2012-08-18 19:57:31.707365000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026608.4556274414062500 208681.7761840820312500)
-blocks_070:
-  id: 217
-  region_id: 11
-  left: 4
-  bottom: 11
-  created_at: 2012-08-18 19:57:31.708081000 Z
-  updated_at: 2012-08-18 19:57:31.708081000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026608.4556274414062500 224681.7761840820312500)
-blocks_071:
-  id: 218
-  region_id: 11
-  left: 5
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.708819000 Z
-  updated_at: 2012-08-18 19:57:31.708819000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 152681.7761840820312500)
-blocks_072:
-  id: 219
-  region_id: 11
-  left: 5
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.709521000 Z
-  updated_at: 2012-08-18 19:57:31.709521000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 160681.7761840820312500)
-blocks_073:
-  id: 220
-  region_id: 11
-  left: 5
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.710249000 Z
-  updated_at: 2012-08-18 19:57:31.710249000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 176681.7761840820312500)
-blocks_074:
-  id: 221
-  region_id: 11
-  left: 5
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.710949000 Z
-  updated_at: 2012-08-18 19:57:31.710949000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 184681.7761840820312500)
-blocks_075:
-  id: 222
-  region_id: 11
-  left: 5
-  bottom: 7
-  created_at: 2012-08-18 19:57:31.711652000 Z
-  updated_at: 2012-08-18 19:57:31.711652000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 192681.7761840820312500)
-blocks_076:
-  id: 223
-  region_id: 11
-  left: 5
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.712466000 Z
-  updated_at: 2012-08-18 19:57:31.712466000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 200681.7761840820312500)
-blocks_077:
-  id: 224
-  region_id: 11
-  left: 5
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.713311000 Z
-  updated_at: 2012-08-18 19:57:31.713311000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 208681.7761840820312500)
-blocks_078:
-  id: 225
-  region_id: 11
-  left: 5
-  bottom: 10
-  created_at: 2012-08-18 19:57:31.714149000 Z
-  updated_at: 2012-08-18 19:57:31.714149000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 216681.7761840820312500)
-blocks_079:
-  id: 226
-  region_id: 11
-  left: 5
-  bottom: 11
-  created_at: 2012-08-18 19:57:31.714925000 Z
-  updated_at: 2012-08-18 19:57:31.714925000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034608.4556274414062500 224681.7761840820312500)
-blocks_080:
-  id: 227
-  region_id: 11
-  left: 6
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.715684000 Z
-  updated_at: 2012-08-18 19:57:31.715684000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042608.4556274414062500 176681.7761840820312500)
-blocks_081:
-  id: 228
-  region_id: 11
-  left: 6
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.716438000 Z
-  updated_at: 2012-08-18 19:57:31.716438000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042608.4556274414062500 184681.7761840820312500)
-blocks_082:
-  id: 229
-  region_id: 11
-  left: 6
-  bottom: 7
-  created_at: 2012-08-18 19:57:31.717184000 Z
-  updated_at: 2012-08-18 19:57:31.717184000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042608.4556274414062500 192681.7761840820312500)
-blocks_083:
-  id: 230
-  region_id: 11
-  left: 6
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.717952000 Z
-  updated_at: 2012-08-18 19:57:31.717952000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042608.4556274414062500 200681.7761840820312500)
-blocks_084:
-  id: 231
-  region_id: 11
-  left: 6
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.718644000 Z
-  updated_at: 2012-08-18 19:57:31.718644000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042608.4556274414062500 208681.7761840820312500)
-blocks_085:
-  id: 232
-  region_id: 11
-  left: 6
-  bottom: 10
-  created_at: 2012-08-18 19:57:31.719358000 Z
-  updated_at: 2012-08-18 19:57:31.719358000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042608.4556274414062500 216681.7761840820312500)
-blocks_086:
-  id: 233
-  region_id: 11
-  left: 6
-  bottom: 11
-  created_at: 2012-08-18 19:57:31.720052000 Z
-  updated_at: 2012-08-18 19:57:31.720052000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042608.4556274414062500 224681.7761840820312500)
-blocks_087:
-  id: 234
-  region_id: 11
-  left: 7
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.720750000 Z
-  updated_at: 2012-08-18 19:57:31.720750000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1050608.4556274414062500 160681.7761840820312500)
-blocks_088:
-  id: 235
-  region_id: 11
-  left: 7
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.721461000 Z
-  updated_at: 2012-08-18 19:57:31.721461000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1050608.4556274414062500 176681.7761840820312500)
-blocks_089:
-  id: 236
-  region_id: 11
-  left: 7
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.722153000 Z
-  updated_at: 2012-08-18 19:57:31.722153000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1050608.4556274414062500 184681.7761840820312500)
-blocks_090:
-  id: 237
-  region_id: 11
-  left: 7
-  bottom: 7
-  created_at: 2012-08-18 19:57:31.722842000 Z
-  updated_at: 2012-08-18 19:57:31.722842000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1050608.4556274414062500 192681.7761840820312500)
-blocks_091:
-  id: 238
-  region_id: 11
-  left: 7
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.723572000 Z
-  updated_at: 2012-08-18 19:57:31.723572000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1050608.4556274414062500 200681.7761840820312500)
-blocks_092:
-  id: 239
-  region_id: 11
-  left: 7
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.724280000 Z
-  updated_at: 2012-08-18 19:57:31.724280000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1050608.4556274414062500 208681.7761840820312500)
-blocks_093:
-  id: 240
-  region_id: 11
-  left: 7
-  bottom: 10
-  created_at: 2012-08-18 19:57:31.724989000 Z
-  updated_at: 2012-08-18 19:57:31.724989000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1050608.4556274414062500 216681.7761840820312500)
-blocks_094:
-  id: 241
-  region_id: 11
-  left: 8
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.725689000 Z
-  updated_at: 2012-08-18 19:57:31.725689000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1058608.4556274414062500 176681.7761840820312500)
-blocks_095:
-  id: 242
-  region_id: 11
-  left: 8
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.726390000 Z
-  updated_at: 2012-08-18 19:57:31.726390000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1058608.4556274414062500 184681.7761840820312500)
-blocks_096:
-  id: 243
-  region_id: 11
-  left: 8
-  bottom: 7
-  created_at: 2012-08-18 19:57:31.727089000 Z
-  updated_at: 2012-08-18 19:57:31.727089000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1058608.4556274414062500 192681.7761840820312500)
-blocks_097:
-  id: 244
-  region_id: 11
-  left: 8
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.727789000 Z
-  updated_at: 2012-08-18 19:57:31.727789000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1058608.4556274414062500 200681.7761840820312500)
-blocks_098:
-  id: 245
-  region_id: 11
-  left: 8
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.728547000 Z
-  updated_at: 2012-08-18 19:57:31.728547000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1058608.4556274414062500 208681.7761840820312500)
-blocks_099:
-  id: 246
-  region_id: 11
-  left: 8
-  bottom: 10
-  created_at: 2012-08-18 19:57:31.729274000 Z
-  updated_at: 2012-08-18 19:57:31.729274000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1058608.4556274414062500 216681.7761840820312500)
-blocks_100:
-  id: 247
-  region_id: 11
-  left: 9
-  bottom: 9
-  created_at: 2012-08-18 19:57:31.729993000 Z
-  updated_at: 2012-08-18 19:57:31.729993000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1066608.4556274414062500 208681.7761840820312500)
-blocks_101:
-  id: 248
-  region_id: 12
+  id: 24
+  region_id: 33
   left: 1
   bottom: 1
-  created_at: 2012-08-18 19:57:31.863588000 Z
-  updated_at: 2012-08-18 19:57:31.863588000 Z
+  created_at: 2012-11-08 02:54:52.804772000 Z
+  updated_at: 2012-11-08 02:54:52.804772000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
       has_m_coordinate: false
-      srid: 0
+      srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
@@ -3735,1706 +978,8 @@ blocks_101:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-    wkt: POINT (1010623.1343994140625000 233426.8845825195312500)
-blocks_102:
-  id: 249
-  region_id: 12
-  left: 1
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.864693000 Z
-  updated_at: 2012-08-18 19:57:31.864693000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010623.1343994140625000 241426.8845825195312500)
-blocks_103:
-  id: 250
-  region_id: 12
-  left: 1
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.865584000 Z
-  updated_at: 2012-08-18 19:57:31.865584000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010623.1343994140625000 249426.8845825195312500)
-blocks_104:
-  id: 251
-  region_id: 12
-  left: 1
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.866353000 Z
-  updated_at: 2012-08-18 19:57:31.866353000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010623.1343994140625000 257426.8845825195312500)
-blocks_105:
-  id: 252
-  region_id: 12
-  left: 1
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.867113000 Z
-  updated_at: 2012-08-18 19:57:31.867113000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1010623.1343994140625000 265426.8845825195312500)
-blocks_106:
-  id: 253
-  region_id: 12
-  left: 2
-  bottom: 1
-  created_at: 2012-08-18 19:57:31.867867000 Z
-  updated_at: 2012-08-18 19:57:31.867867000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018623.1343994140625000 233426.8845825195312500)
-blocks_107:
-  id: 254
-  region_id: 12
-  left: 2
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.868614000 Z
-  updated_at: 2012-08-18 19:57:31.868614000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018623.1343994140625000 241426.8845825195312500)
-blocks_108:
-  id: 255
-  region_id: 12
-  left: 2
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.869266000 Z
-  updated_at: 2012-08-18 19:57:31.869266000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018623.1343994140625000 249426.8845825195312500)
-blocks_109:
-  id: 256
-  region_id: 12
-  left: 2
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.869965000 Z
-  updated_at: 2012-08-18 19:57:31.869965000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018623.1343994140625000 257426.8845825195312500)
-blocks_110:
-  id: 257
-  region_id: 12
-  left: 2
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.870665000 Z
-  updated_at: 2012-08-18 19:57:31.870665000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1018623.1343994140625000 265426.8845825195312500)
-blocks_111:
-  id: 258
-  region_id: 12
-  left: 3
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.871368000 Z
-  updated_at: 2012-08-18 19:57:31.871368000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026623.1343994140625000 241426.8845825195312500)
-blocks_112:
-  id: 259
-  region_id: 12
-  left: 3
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.872072000 Z
-  updated_at: 2012-08-18 19:57:31.872072000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026623.1343994140625000 249426.8845825195312500)
-blocks_113:
-  id: 260
-  region_id: 12
-  left: 3
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.872765000 Z
-  updated_at: 2012-08-18 19:57:31.872765000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026623.1343994140625000 257426.8845825195312500)
-blocks_114:
-  id: 261
-  region_id: 12
-  left: 3
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.873492000 Z
-  updated_at: 2012-08-18 19:57:31.873492000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1026623.1343994140625000 265426.8845825195312500)
-blocks_115:
-  id: 262
-  region_id: 12
-  left: 4
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.874187000 Z
-  updated_at: 2012-08-18 19:57:31.874187000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034623.1343994140625000 241426.8845825195312500)
-blocks_116:
-  id: 263
-  region_id: 12
-  left: 4
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.874874000 Z
-  updated_at: 2012-08-18 19:57:31.874874000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034623.1343994140625000 249426.8845825195312500)
-blocks_117:
-  id: 264
-  region_id: 12
-  left: 4
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.875601000 Z
-  updated_at: 2012-08-18 19:57:31.875601000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1034623.1343994140625000 257426.8845825195312500)
-blocks_118:
-  id: 265
-  region_id: 12
-  left: 5
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.876268000 Z
-  updated_at: 2012-08-18 19:57:31.876268000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042623.1343994140625000 249426.8845825195312500)
-blocks_119:
-  id: 266
-  region_id: 12
-  left: 5
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.877030000 Z
-  updated_at: 2012-08-18 19:57:31.877030000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1042623.1343994140625000 257426.8845825195312500)
-blocks_120:
-  id: 267
-  region_id: 13
-  left: 1
-  bottom: 1
-  created_at: 2012-08-18 19:57:31.982602000 Z
-  updated_at: 2012-08-18 19:57:31.982602000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (979013.4880371093750000 196082.3223876953125000)
-blocks_121:
-  id: 268
-  region_id: 13
-  left: 2
-  bottom: 2
-  created_at: 2012-08-18 19:57:31.983641000 Z
-  updated_at: 2012-08-18 19:57:31.983641000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (987013.4880371093750000 204082.3223876953125000)
-blocks_122:
-  id: 269
-  region_id: 13
-  left: 2
-  bottom: 3
-  created_at: 2012-08-18 19:57:31.984449000 Z
-  updated_at: 2012-08-18 19:57:31.984449000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (987013.4880371093750000 212082.3223876953125000)
-blocks_123:
-  id: 270
-  region_id: 13
-  left: 2
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.985279000 Z
-  updated_at: 2012-08-18 19:57:31.985279000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (987013.4880371093750000 220082.3223876953125000)
-blocks_124:
-  id: 271
-  region_id: 13
-  left: 3
-  bottom: 4
-  created_at: 2012-08-18 19:57:31.986020000 Z
-  updated_at: 2012-08-18 19:57:31.986020000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (995013.4880371093750000 220082.3223876953125000)
-blocks_125:
-  id: 272
-  region_id: 13
-  left: 3
-  bottom: 5
-  created_at: 2012-08-18 19:57:31.986778000 Z
-  updated_at: 2012-08-18 19:57:31.986778000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (995013.4880371093750000 228082.3223876953125000)
-blocks_126:
-  id: 273
-  region_id: 13
-  left: 3
-  bottom: 6
-  created_at: 2012-08-18 19:57:31.987517000 Z
-  updated_at: 2012-08-18 19:57:31.987517000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (995013.4880371093750000 236082.3223876953125000)
-blocks_127:
-  id: 274
-  region_id: 13
-  left: 4
-  bottom: 8
-  created_at: 2012-08-18 19:57:31.988800000 Z
-  updated_at: 2012-08-18 19:57:31.988800000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (1003013.4880371093750000 252082.3223876953125000)
-blocks_128:
-  id: 275
-  region_id: 14
-  left: 1
-  bottom: 1
-  created_at: 2012-08-18 19:57:32.011900000 Z
-  updated_at: 2012-08-18 19:57:32.011900000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546982.6922717484412715 1167866.7026633366476744)
-blocks_129:
-  id: 276
-  region_id: 14
-  left: 1
-  bottom: 2
-  created_at: 2012-08-18 19:57:32.012669000 Z
-  updated_at: 2012-08-18 19:57:32.012669000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546982.6922717484412715 1167868.7026633366476744)
-blocks_130:
-  id: 277
-  region_id: 14
-  left: 1
-  bottom: 3
-  created_at: 2012-08-18 19:57:32.013426000 Z
-  updated_at: 2012-08-18 19:57:32.013426000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546982.6922717484412715 1167870.7026633366476744)
-blocks_131:
-  id: 278
-  region_id: 14
-  left: 1
-  bottom: 4
-  created_at: 2012-08-18 19:57:32.014133000 Z
-  updated_at: 2012-08-18 19:57:32.014133000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546982.6922717484412715 1167872.7026633366476744)
-blocks_132:
-  id: 279
-  region_id: 14
-  left: 2
-  bottom: 1
-  created_at: 2012-08-18 19:57:32.014884000 Z
-  updated_at: 2012-08-18 19:57:32.014884000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546984.6922717484412715 1167866.7026633366476744)
-blocks_133:
-  id: 280
-  region_id: 14
-  left: 2
-  bottom: 2
-  created_at: 2012-08-18 19:57:32.015685000 Z
-  updated_at: 2012-08-18 19:57:32.015685000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546984.6922717484412715 1167868.7026633366476744)
-blocks_134:
-  id: 281
-  region_id: 14
-  left: 2
-  bottom: 3
-  created_at: 2012-08-18 19:57:32.016534000 Z
-  updated_at: 2012-08-18 19:57:32.016534000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546984.6922717484412715 1167870.7026633366476744)
-blocks_135:
-  id: 282
-  region_id: 14
-  left: 2
-  bottom: 4
-  created_at: 2012-08-18 19:57:32.017356000 Z
-  updated_at: 2012-08-18 19:57:32.017356000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546984.6922717484412715 1167872.7026633366476744)
-blocks_136:
-  id: 283
-  region_id: 14
-  left: 3
-  bottom: 1
-  created_at: 2012-08-18 19:57:32.018204000 Z
-  updated_at: 2012-08-18 19:57:32.018204000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546986.6922717484412715 1167866.7026633366476744)
-blocks_137:
-  id: 284
-  region_id: 14
-  left: 3
-  bottom: 2
-  created_at: 2012-08-18 19:57:32.019001000 Z
-  updated_at: 2012-08-18 19:57:32.019001000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546986.6922717484412715 1167868.7026633366476744)
-blocks_138:
-  id: 285
-  region_id: 14
-  left: 3
-  bottom: 3
-  created_at: 2012-08-18 19:57:32.019895000 Z
-  updated_at: 2012-08-18 19:57:32.019895000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546986.6922717484412715 1167870.7026633366476744)
-blocks_139:
-  id: 286
-  region_id: 14
-  left: 3
-  bottom: 4
-  created_at: 2012-08-18 19:57:32.020667000 Z
-  updated_at: 2012-08-18 19:57:32.020667000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546986.6922717484412715 1167872.7026633366476744)
-blocks_140:
-  id: 287
-  region_id: 14
-  left: 4
-  bottom: 1
-  created_at: 2012-08-18 19:57:32.021415000 Z
-  updated_at: 2012-08-18 19:57:32.021415000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546988.6922717484412715 1167866.7026633366476744)
-blocks_141:
-  id: 288
-  region_id: 14
-  left: 4
-  bottom: 2
-  created_at: 2012-08-18 19:57:32.022190000 Z
-  updated_at: 2012-08-18 19:57:32.022190000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546988.6922717484412715 1167868.7026633366476744)
-blocks_142:
-  id: 289
-  region_id: 14
-  left: 4
-  bottom: 3
-  created_at: 2012-08-18 19:57:32.023016000 Z
-  updated_at: 2012-08-18 19:57:32.023016000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546988.6922717484412715 1167870.7026633366476744)
-blocks_143:
-  id: 290
-  region_id: 14
-  left: 4
-  bottom: 4
-  created_at: 2012-08-18 19:57:32.023867000 Z
-  updated_at: 2012-08-18 19:57:32.023867000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546988.6922717484412715 1167872.7026633366476744)
-blocks_144:
-  id: 291
-  region_id: 14
-  left: 5
-  bottom: 1
-  created_at: 2012-08-18 19:57:32.024679000 Z
-  updated_at: 2012-08-18 19:57:32.024679000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546990.6922717484412715 1167866.7026633366476744)
-blocks_145:
-  id: 292
-  region_id: 14
-  left: 5
-  bottom: 2
-  created_at: 2012-08-18 19:57:32.025413000 Z
-  updated_at: 2012-08-18 19:57:32.025413000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546990.6922717484412715 1167868.7026633366476744)
-blocks_146:
-  id: 293
-  region_id: 14
-  left: 5
-  bottom: 3
-  created_at: 2012-08-18 19:57:32.026130000 Z
-  updated_at: 2012-08-18 19:57:32.026130000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546990.6922717484412715 1167870.7026633366476744)
-blocks_147:
-  id: 294
-  region_id: 14
-  left: 5
-  bottom: 4
-  created_at: 2012-08-18 19:57:32.026836000 Z
-  updated_at: 2012-08-18 19:57:32.026836000 Z
-  point: !ruby/object:RGeo::Geos::CAPIPointImpl
-    factory: !ruby/object:RGeo::Geos::CAPIFactory
-      has_z_coordinate: false
-      has_m_coordinate: false
-      srid: 0
-      buffer_resolution: 1
-      lenient_multi_polygon_assertions: false
-      wkt_generator:
-        tag_format: wkt11
-        emit_ewkt_srid: 
-        square_brackets: false
-        convert_case: upper
-      wkb_generator:
-        type_format: wkb11
-        emit_ewkb_srid: 
-        hex_format: false
-        little_endian: false
-      wkt_parser:
-        support_ewkt: false
-        support_wkt12: false
-        strict_wkt11: false
-        ignore_extra_tokens: false
-        default_srid: 
-      wkb_parser:
-        support_ewkb: false
-        support_wkb12: false
-        ignore_extra_bytes: false
-        default_srid: 
-      auto_prepare: simple
-    wkt: POINT (546990.6922717484412715 1167872.7026633366476744)
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
+        +units=m +no_defs
+      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
+        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+    wkt: POINT (-8231303.7951009059324861 4943001.0068932166323066)

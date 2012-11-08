@@ -17,22 +17,25 @@ ActiveRecord::Schema.define(:version => 20121103170607) do
     t.integer  "region_id"
     t.integer  "left"
     t.integer  "bottom"
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
-    t.spatial  "point",      :limit => {:srid=>0, :type=>"point"}
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
+    t.spatial  "point",      :limit => {:srid=>3785, :type=>"point"}
   end
+
+  add_index "blocks", ["point"], :name => "index_blocks_on_point", :spatial => true
 
   create_table "regions", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",                                                         :null => false
-    t.datetime "updated_at",                                                         :null => false
+    t.datetime "created_at",                                                            :null => false
+    t.datetime "updated_at",                                                            :null => false
     t.string   "slug"
-    t.spatial  "geometry",   :limit => {:srid=>0, :type=>"geometry"}
+    t.spatial  "geometry",   :limit => {:srid=>3785, :type=>"geometry"}
     t.integer  "world_id"
-    t.integer  "left",                                                :default => 0, :null => false
-    t.integer  "bottom",                                              :default => 0, :null => false
+    t.integer  "left",                                                   :default => 0, :null => false
+    t.integer  "bottom",                                                 :default => 0, :null => false
   end
 
+  add_index "regions", ["geometry"], :name => "index_regions_on_geometry", :spatial => true
   add_index "regions", ["slug"], :name => "index_regions_on_slug", :unique => true
 
   create_table "roles", :force => true do |t|
@@ -82,10 +85,10 @@ ActiveRecord::Schema.define(:version => 20121103170607) do
     t.string   "county"
     t.float    "shape_length"
     t.float    "shape_area"
-    t.datetime "created_at",                                            :null => false
-    t.datetime "updated_at",                                            :null => false
-    t.spatial  "point",        :limit => {:srid=>0, :type=>"point"}
-    t.spatial  "geometry",     :limit => {:srid=>0, :type=>"geometry"}
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
+    t.spatial  "point",        :limit => {:srid=>3785, :type=>"point"}
+    t.spatial  "geometry",     :limit => {:srid=>3785, :type=>"geometry"}
   end
 
   add_index "zip_code_maps", ["zip"], :name => "index_zip_code_maps_on_zip"

@@ -5,8 +5,8 @@ class CreateZipCodeMaps < ActiveRecord::Migration
       t.string :po_name
       t.string :county
 
-      t.point :point
-      t.geometry :geometry
+      t.point :point, srid: 3785
+      t.geometry :geometry, srid: 3785
       t.float :shape_length
       t.float :shape_area
 
