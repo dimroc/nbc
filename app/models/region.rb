@@ -17,7 +17,8 @@ class Region < ActiveRecord::Base
 
   def as_json(options={})
     exceptions = [:geometry, :created_at, :updated_at]
-    super({ except: exceptions, include: [:blocks] }.merge(options))
+    block_exceptions = { blocks: { except: [:point, :created_at, :updated_at] } }
+    super({ except: exceptions, include: [block_exceptions] }.merge(options))
   end
 
   def regenerate_blocks(block_length)

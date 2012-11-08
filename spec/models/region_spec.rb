@@ -32,6 +32,12 @@ describe Region do
       it "should include blocks" do
         subject[:blocks].should have(64).items
       end
+
+      it "should only render relevant block information" do
+        subject[:blocks][0][:created_at].should be_nil
+        subject[:blocks][0][:updated_at].should be_nil
+        subject[:blocks][0][:point].should be_nil
+      end
     end
   end
 
