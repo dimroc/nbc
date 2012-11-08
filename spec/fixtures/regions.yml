@@ -2,12 +2,12 @@
 '303':
   id: 1
   name: '303'
-  created_at: 2012-11-08 02:54:52.065622000 Z
-  updated_at: 2012-11-08 02:54:52.065622000 Z
+  created_at: 2012-11-08 05:12:27.695560000 Z
+  updated_at: 2012-11-08 05:12:27.695560000 Z
   slug: '303'
   world_id: 1
-  left: 4
-  bottom: 6
+  left: -8233405
+  bottom: 4936872
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -168,12 +168,12 @@
 '311':
   id: 2
   name: '311'
-  created_at: 2012-11-08 02:54:52.072152000 Z
-  updated_at: 2012-11-08 02:54:52.072152000 Z
+  created_at: 2012-11-08 05:12:27.705443000 Z
+  updated_at: 2012-11-08 05:12:27.705443000 Z
   slug: '311'
   world_id: 1
-  left: 2
-  bottom: 1
+  left: -8239804
+  bottom: 4923693
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -408,12 +408,12 @@
 '310':
   id: 3
   name: '310'
-  created_at: 2012-11-08 02:54:52.081777000 Z
-  updated_at: 2012-11-08 02:54:52.081777000 Z
+  created_at: 2012-11-08 05:12:27.714661000 Z
+  updated_at: 2012-11-08 05:12:27.714661000 Z
   slug: '310'
   world_id: 1
-  left: 1
-  bottom: 2
+  left: -8242306
+  bottom: 4926091
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -632,12 +632,12 @@
 '317':
   id: 4
   name: '317'
-  created_at: 2012-11-08 02:54:52.089106000 Z
-  updated_at: 2012-11-08 02:54:52.089106000 Z
+  created_at: 2012-11-08 05:12:27.723966000 Z
+  updated_at: 2012-11-08 05:12:27.723966000 Z
   slug: '317'
   world_id: 1
-  left: 4
-  bottom: 3
+  left: -8232777
+  bottom: 4930170
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -789,12 +789,12 @@
 '302':
   id: 5
   name: '302'
-  created_at: 2012-11-08 02:54:52.095099000 Z
-  updated_at: 2012-11-08 02:54:52.095099000 Z
+  created_at: 2012-11-08 05:12:27.731355000 Z
+  updated_at: 2012-11-08 05:12:27.731355000 Z
   slug: '302'
   world_id: 1
-  left: 2
-  bottom: 6
+  left: -8238088
+  bottom: 4937338
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1137,12 +1137,12 @@
 '101':
   id: 6
   name: '101'
-  created_at: 2012-11-08 02:54:52.104294000 Z
-  updated_at: 2012-11-08 02:54:52.104294000 Z
+  created_at: 2012-11-08 05:12:27.742422000 Z
+  updated_at: 2012-11-08 05:12:27.742422000 Z
   slug: '101'
   world_id: 1
-  left: 0
-  bottom: 6
+  left: -8242955
+  bottom: 4937789
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1980,12 +1980,12 @@
 '318':
   id: 7
   name: '318'
-  created_at: 2012-11-08 02:54:52.121916000 Z
-  updated_at: 2012-11-08 02:54:52.121916000 Z
+  created_at: 2012-11-08 05:12:27.760887000 Z
+  updated_at: 2012-11-08 05:12:27.760887000 Z
   slug: '318'
   world_id: 1
-  left: 4
-  bottom: 1
+  left: -8231778
+  bottom: 4923412
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7656,12 +7656,12 @@
 '306':
   id: 8
   name: '306'
-  created_at: 2012-11-08 02:54:52.363945000 Z
-  updated_at: 2012-11-08 02:54:52.363945000 Z
+  created_at: 2012-11-08 05:12:28.012640000 Z
+  updated_at: 2012-11-08 05:12:28.012640000 Z
   slug: '306'
   world_id: 1
-  left: 2
-  bottom: 5
+  left: -8239863
+  bottom: 4934607
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8075,12 +8075,12 @@
 '356':
   id: 9
   name: '356'
-  created_at: 2012-11-08 02:54:52.375149000 Z
-  updated_at: 2012-11-08 02:54:52.375149000 Z
+  created_at: 2012-11-08 05:12:28.023610000 Z
+  updated_at: 2012-11-08 05:12:28.023610000 Z
   slug: '356'
   world_id: 1
-  left: 5
-  bottom: 1
+  left: -8229848
+  bottom: 4922276
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10955,12 +10955,12 @@
 '107':
   id: 10
   name: '107'
-  created_at: 2012-11-08 02:54:52.500737000 Z
-  updated_at: 2012-11-08 02:54:52.500737000 Z
+  created_at: 2012-11-08 05:12:28.086288000 Z
+  updated_at: 2012-11-08 05:12:28.086288000 Z
   slug: '107'
   world_id: 1
-  left: 2
-  bottom: 10
+  left: -8236967
+  bottom: 4950296
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11175,12 +11175,12 @@
 '308':
   id: 11
   name: '308'
-  created_at: 2012-11-08 02:54:52.507868000 Z
-  updated_at: 2012-11-08 02:54:52.507868000 Z
+  created_at: 2012-11-08 05:12:28.094354000 Z
+  updated_at: 2012-11-08 05:12:28.094354000 Z
   slug: '308'
   world_id: 1
-  left: 3
-  bottom: 5
+  left: -8234875
+  bottom: 4935096
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11346,12 +11346,12 @@
 '105':
   id: 12
   name: '105'
-  created_at: 2012-11-08 02:54:52.512667000 Z
-  updated_at: 2012-11-08 02:54:52.512667000 Z
+  created_at: 2012-11-08 05:12:28.101076000 Z
+  updated_at: 2012-11-08 05:12:28.101076000 Z
   slug: '105'
   world_id: 1
-  left: 2
-  bottom: 9
+  left: -8237319
+  bottom: 4945257
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11480,12 +11480,12 @@
 '309':
   id: 13
   name: '309'
-  created_at: 2012-11-08 02:54:52.516900000 Z
-  updated_at: 2012-11-08 02:54:52.516900000 Z
+  created_at: 2012-11-08 05:12:28.170545000 Z
+  updated_at: 2012-11-08 05:12:28.170545000 Z
   slug: '309'
   world_id: 1
-  left: 0
-  bottom: 0
+  left: -8233532
+  bottom: 4933684
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11584,12 +11584,12 @@
 '355':
   id: 14
   name: '355'
-  created_at: 2012-11-08 02:54:52.520401000 Z
-  updated_at: 2012-11-08 02:54:52.520401000 Z
+  created_at: 2012-11-08 05:12:28.174468000 Z
+  updated_at: 2012-11-08 05:12:28.174468000 Z
   slug: '355'
   world_id: 1
-  left: 3
-  bottom: 4
+  left: -8235441
+  bottom: 4933130
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11769,12 +11769,12 @@
 '307':
   id: 15
   name: '307'
-  created_at: 2012-11-08 02:54:52.525402000 Z
-  updated_at: 2012-11-08 02:54:52.525402000 Z
+  created_at: 2012-11-08 05:12:28.181429000 Z
+  updated_at: 2012-11-08 05:12:28.181429000 Z
   slug: '307'
   world_id: 1
-  left: 1
-  bottom: 4
+  left: -8241239
+  bottom: 4930712
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -12207,12 +12207,12 @@
 '111':
   id: 16
   name: '111'
-  created_at: 2012-11-08 02:54:52.538213000 Z
-  updated_at: 2012-11-08 02:54:52.538213000 Z
+  created_at: 2012-11-08 05:12:28.194100000 Z
+  updated_at: 2012-11-08 05:12:28.194100000 Z
   slug: '111'
   world_id: 1
-  left: 4
-  bottom: 11
+  left: -8232719
+  bottom: 4952131
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -12681,12 +12681,12 @@
 '103':
   id: 17
   name: '103'
-  created_at: 2012-11-08 02:54:52.548909000 Z
-  updated_at: 2012-11-08 02:54:52.548909000 Z
+  created_at: 2012-11-08 05:12:28.206374000 Z
+  updated_at: 2012-11-08 05:12:28.206374000 Z
   slug: '103'
   world_id: 1
-  left: 2
-  bottom: 7
+  left: -8237806
+  bottom: 4941450
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -12889,12 +12889,12 @@
 '312':
   id: 18
   name: '312'
-  created_at: 2012-11-08 02:54:52.554707000 Z
-  updated_at: 2012-11-08 02:54:52.554707000 Z
+  created_at: 2012-11-08 05:12:28.213904000 Z
+  updated_at: 2012-11-08 05:12:28.213904000 Z
   slug: '312'
   world_id: 1
-  left: 2
-  bottom: 2
+  left: -8238820
+  bottom: 4926959
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13052,12 +13052,12 @@
 '314':
   id: 19
   name: '314'
-  created_at: 2012-11-08 02:54:52.560610000 Z
-  updated_at: 2012-11-08 02:54:52.560610000 Z
+  created_at: 2012-11-08 05:12:28.221980000 Z
+  updated_at: 2012-11-08 05:12:28.221980000 Z
   slug: '314'
   world_id: 1
-  left: 3
-  bottom: 2
+  left: -8235150
+  bottom: 4927130
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13192,12 +13192,12 @@
 '102':
   id: 20
   name: '102'
-  created_at: 2012-11-08 02:54:52.566116000 Z
-  updated_at: 2012-11-08 02:54:52.566116000 Z
+  created_at: 2012-11-08 05:12:28.229207000 Z
+  updated_at: 2012-11-08 05:12:28.229207000 Z
   slug: '102'
   world_id: 1
-  left: 2
-  bottom: 8
+  left: -8239331
+  bottom: 4942662
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13386,12 +13386,12 @@
 '104':
   id: 21
   name: '104'
-  created_at: 2012-11-08 02:54:52.571689000 Z
-  updated_at: 2012-11-08 02:54:52.571689000 Z
+  created_at: 2012-11-08 05:12:28.237038000 Z
+  updated_at: 2012-11-08 05:12:28.237038000 Z
   slug: '104'
   world_id: 1
-  left: 2
-  bottom: 9
+  left: -8238994
+  bottom: 4945754
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13824,12 +13824,12 @@
 '313':
   id: 22
   name: '313'
-  created_at: 2012-11-08 02:54:52.581819000 Z
-  updated_at: 2012-11-08 02:54:52.581819000 Z
+  created_at: 2012-11-08 05:12:28.248902000 Z
+  updated_at: 2012-11-08 05:12:28.248902000 Z
   slug: '313'
   world_id: 1
-  left: 2
-  bottom: 0
+  left: -8239092
+  bottom: 4921222
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -14388,12 +14388,12 @@
 '315':
   id: 23
   name: '315'
-  created_at: 2012-11-08 02:54:52.595911000 Z
-  updated_at: 2012-11-08 02:54:52.595911000 Z
+  created_at: 2012-11-08 05:12:28.263923000 Z
+  updated_at: 2012-11-08 05:12:28.263923000 Z
   slug: '315'
   world_id: 1
-  left: 3
-  bottom: 1
+  left: -8235830
+  bottom: 4921906
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -15956,12 +15956,12 @@
 '112':
   id: 24
   name: '112'
-  created_at: 2012-11-08 02:54:52.700512000 Z
-  updated_at: 2012-11-08 02:54:52.700512000 Z
+  created_at: 2012-11-08 05:12:28.301637000 Z
+  updated_at: 2012-11-08 05:12:28.301637000 Z
   slug: '112'
   world_id: 1
-  left: 4
-  bottom: 13
+  left: -8232093
+  bottom: 4959378
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -17459,12 +17459,12 @@
 '109':
   id: 25
   name: '109'
-  created_at: 2012-11-08 02:54:52.731340000 Z
-  updated_at: 2012-11-08 02:54:52.731340000 Z
+  created_at: 2012-11-08 05:12:28.404325000 Z
+  updated_at: 2012-11-08 05:12:28.404325000 Z
   slug: '109'
   world_id: 1
-  left: 3
-  bottom: 12
+  left: -8234426
+  bottom: 4955095
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -17669,12 +17669,12 @@
 '304':
   id: 26
   name: '304'
-  created_at: 2012-11-08 02:54:52.736872000 Z
-  updated_at: 2012-11-08 02:54:52.736872000 Z
+  created_at: 2012-11-08 05:12:28.410407000 Z
+  updated_at: 2012-11-08 05:12:28.410407000 Z
   slug: '304'
   world_id: 1
-  left: 4
-  bottom: 6
+  left: -8231178
+  bottom: 4937248
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -17849,12 +17849,12 @@
 '305':
   id: 27
   name: '305'
-  created_at: 2012-11-08 02:54:52.743795000 Z
-  updated_at: 2012-11-08 02:54:52.743795000 Z
+  created_at: 2012-11-08 05:12:28.417094000 Z
+  updated_at: 2012-11-08 05:12:28.417094000 Z
   slug: '305'
   world_id: 1
-  left: 6
-  bottom: 4
+  left: -8226960
+  bottom: 4931487
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18142,12 +18142,12 @@
 '316':
   id: 28
   name: '316'
-  created_at: 2012-11-08 02:54:52.753566000 Z
-  updated_at: 2012-11-08 02:54:52.753566000 Z
+  created_at: 2012-11-08 05:12:28.428013000 Z
+  updated_at: 2012-11-08 05:12:28.428013000 Z
   slug: '316'
   world_id: 1
-  left: 5
-  bottom: 4
+  left: -8229225
+  bottom: 4933150
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18306,12 +18306,12 @@
 '164':
   id: 30
   name: '164'
-  created_at: 2012-11-08 02:54:52.765874000 Z
-  updated_at: 2012-11-08 02:54:52.765874000 Z
+  created_at: 2012-11-08 05:12:28.443877000 Z
+  updated_at: 2012-11-08 05:12:28.443877000 Z
   slug: '164'
   world_id: 1
-  left: 3
-  bottom: 10
+  left: -8235602
+  bottom: 4949694
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18436,12 +18436,12 @@
 '106':
   id: 31
   name: '106'
-  created_at: 2012-11-08 02:54:52.769845000 Z
-  updated_at: 2012-11-08 02:54:52.769845000 Z
+  created_at: 2012-11-08 05:12:28.449818000 Z
+  updated_at: 2012-11-08 05:12:28.449818000 Z
   slug: '106'
   world_id: 1
-  left: 3
-  bottom: 8
+  left: -8236393
+  bottom: 4944183
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18864,12 +18864,12 @@
 '110':
   id: 29
   name: '110'
-  created_at: 2012-11-08 02:54:52.758660000 Z
-  updated_at: 2012-11-08 02:54:52.758660000 Z
+  created_at: 2012-11-08 05:12:28.434433000 Z
+  updated_at: 2012-11-08 05:12:28.434433000 Z
   slug: '110'
   world_id: 1
-  left: 4
-  bottom: 12
+  left: -8233150
+  bottom: 4954467
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -19151,12 +19151,12 @@
 '108':
   id: 32
   name: '108'
-  created_at: 2012-11-08 02:54:52.780070000 Z
-  updated_at: 2012-11-08 02:54:52.780070000 Z
+  created_at: 2012-11-08 05:12:28.461416000 Z
+  updated_at: 2012-11-08 05:12:28.461416000 Z
   slug: '108'
   world_id: 1
-  left: 3
-  bottom: 9
+  left: -8234638
+  bottom: 4947516
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -19398,12 +19398,12 @@
 '301':
   id: 33
   name: '301'
-  created_at: 2012-11-08 02:54:52.786836000 Z
-  updated_at: 2012-11-08 02:54:52.786836000 Z
+  created_at: 2012-11-08 05:12:28.467955000 Z
+  updated_at: 2012-11-08 05:12:28.467955000 Z
   slug: '301'
   world_id: 1
-  left: 3
-  bottom: 7
+  left: -8234303
+  bottom: 4940001
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false

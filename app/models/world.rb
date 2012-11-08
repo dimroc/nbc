@@ -4,6 +4,7 @@ class World < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   has_many :regions, dependent: :destroy
+  has_many :blocks, through: :regions
 
   validates_presence_of :name
   validates_presence_of :slug
@@ -38,37 +39,47 @@ class World < ActiveRecord::Base
     end
   end
 
-  def generate_blocks(block_length)
-    assign_regions_relative_coordinates(block_length)
-    regions.each do |region|
-      region.generate_blocks(block_length)
-    end
-    regions.flat_map(&:blocks)
+  def regenerate_blocks(block_length)
+    blocks.clear
+    generate_world_blocks_for_regions(block_length)
+    calculate_region_positions
+    convert_world_blocks_to_region_blocks
   end
 
-  def generated_bounding_box
+  def generate_bounding_box
     bb = Cartesian::BoundingBox.new(Cartesian::preferred_factory())
     bounding_boxes = regions.each do |region|
-      bb.add(region.generated_bounding_box)
+      bb.add(region.generate_bounding_box)
     end
     bb
   end
 
   private
 
-  def assign_regions_relative_coordinates(block_length)
-    # Post process each region's left/bottom coordinates relative to the whole world
-    bb = generated_bounding_box
-    regions.each do |region|
-      region_bb = region.generated_bounding_box
+  def generate_world_blocks_for_regions(block_length)
+    # Discretize world by stepping along the area block_length a time
+    bb = generate_bounding_box
+    bb.step(block_length) do |point, x, y|
+      region = regions.detect { |region| region.contains? point }
+      region.blocks.build(left: x, bottom: y, point: point) if region
+    end
+  end
 
-      bb.step(block_length) do |point, x, y|
-        if region_bb.contains? point
-          region.left = x
-          region.bottom = y
-          break
-        end
+  def convert_world_blocks_to_region_blocks
+    # Blocks will now be relative to the region
+    regions.each do |region|
+      region.blocks.each do |block|
+        block.left -= region.left
+        block.bottom -= region.bottom
       end
+    end
+  end
+
+  def calculate_region_positions
+    regions.each do |region|
+      region_bb = region.generate_bounding_box
+      region.left = region_bb.min_x
+      region.bottom = region_bb.min_y
     end
   end
 end

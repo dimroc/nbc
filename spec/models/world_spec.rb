@@ -28,7 +28,7 @@ describe World do
 
       it "should generate the region with the geometry" do
         region = world.regions.first
-        bb = region.generated_bounding_box
+        bb = region.generate_bounding_box
         bb.min_y.should == 0
         bb.min_x.should == 0
         bb.max_y.should == 9
@@ -67,7 +67,7 @@ describe World do
     end
   end
 
-  describe "#generate_blocks" do
+  describe "#regenerate_blocks" do
     context "for generated geometry" do
       let(:world) { FactoryGirl.build(:world) }
       let(:region1) { FactoryGirl.build(:region_with_geometry) }
@@ -79,7 +79,7 @@ describe World do
       end
 
       it "should create blocks for every region" do
-        world.generate_blocks(1)
+        world.regenerate_blocks(1)
 
         region1.blocks.size.should > 0
         region1.blocks.size.should == region2.blocks.size
@@ -89,7 +89,7 @@ describe World do
       end
 
       it "should assign the regions relative coordinates" do
-        world.generate_blocks(1)
+        world.regenerate_blocks(1)
 
         region1.left.should == 0
         region1.bottom.should == 0
@@ -100,14 +100,14 @@ describe World do
     end
   end
 
-  describe "#generated_bounding_box" do
-    subject { world.generated_bounding_box }
+  describe "#generate_bounding_box" do
+    subject { world.generate_bounding_box }
 
     context "with regions that have geometry" do
       let(:world) { FactoryGirl.create(:world_with_regions) }
       it "should generate a bounding box encompassing all regions" do
         world.regions.each do |region|
-          subject.contains? region.generated_bounding_box
+          subject.contains? region.generate_bounding_box
         end
       end
     end

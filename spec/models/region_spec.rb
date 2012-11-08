@@ -28,14 +28,14 @@ describe Region do
     end
 
     context "with blocks generated" do
-      before { region.generate_blocks(1) }
+      before { region.regenerate_blocks(1) }
       it "should include blocks" do
         subject[:blocks].should have(64).items
       end
     end
   end
 
-  describe "#generate_blocks" do
+  describe "#regenerate_blocks" do
     let(:region) { FactoryGirl.build(:region_with_geometry, width: width, height: height) }
     let(:width) { 9 }
     let(:height) { 9 }
@@ -45,7 +45,7 @@ describe Region do
       # blocks must be WITHIN the geometry
       expected_count = (width-1) * (height-1)
 
-      region.generate_blocks(1)
+      region.regenerate_blocks(1)
       expect { region.save }.to change { Region.count }.by(1)
 
       region.blocks.count.should == expected_count
@@ -68,7 +68,7 @@ describe Region do
     end
 
     it "should generate the bounding box" do
-      region.generated_bounding_box.should == expected_bb
+      region.generate_bounding_box.should == expected_bb
     end
   end
 end

@@ -10,7 +10,7 @@ FixtureBuilder.configure do |fbuilder|
       "/Users/dimroc/workspace/new-block-city/lib/data/shapefiles/nyc/region.shp",
       "BoroCD" => "name")
     @nyc.name = "NYC"
-    @nyc.generate_blocks(3000)
+    @nyc.regenerate_blocks(3000)
     @nyc.save!
   end
 end

@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: leonor_witting@danielsmitham.biz
-  encrypted_password: $2a$04$CHSnh3XVYYcV3EDkP1Npu.Eg3oVJeM1jACYydpxTMVorYI5r6YFDe
+  email: perry@kirlin.name
+  encrypted_password: $2a$04$evQiB8tMyqt.QPyRsUYhO.Z.GBlIb5U.lBsZT1NdBXZ1Wo/WX1Dfu
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
