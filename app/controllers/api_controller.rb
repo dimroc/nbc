@@ -6,6 +6,10 @@ class ApiController < ApplicationController
     render :text => "You do not have access to this service", :status => :forbidden
   end
 
+  rescue_from ::NotFoundError do |exception|
+    render :text => exception, :status => :not_found
+  end
+
   private
 
   def set_default_format
