@@ -1,13 +1,10 @@
 class BlocksController < ApiController
-  before_filter :load_current_point
+  before_filter :fetch_current_point
   load_resource :world
 
   def index
     if @current_point
-      # TODO: Create scope that orders by distance from point
-      respond_with [@world.blocks.order(<<-SQL).first]
-        ST_Distance('SRID=#{@current_point.srid};#{@current_point.as_text}', point) ASC
-      SQL
+      respond_with @world.blocks.near(@current_point).limit(1)
     else
       respond_with @world.blocks
     end
@@ -15,7 +12,7 @@ class BlocksController < ApiController
 
   private
 
-  def load_current_point
+  def fetch_current_point
     latitude = params[:latitude]
     longitude = params[:longitude]
 
