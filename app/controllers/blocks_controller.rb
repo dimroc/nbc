@@ -4,7 +4,9 @@ class BlocksController < ApiController
 
   def index
     if @current_point
-      respond_with @world.blocks.near(@current_point).limit(1)
+      current_block = @world.blocks.near(@current_point).limit(1).first
+      raise NotFoundError unless current_block.region.contains? @current_point
+      respond_with [current_block]
     else
       respond_with @world.blocks
     end
@@ -17,7 +19,8 @@ class BlocksController < ApiController
     longitude = params[:longitude]
 
     if latitude && longitude
-      @current_point = Mercator.to_projected(Mercator::FACTORY.point(longitude,latitude))
+      longlat = Mercator::FACTORY.point(longitude,latitude)
+      @current_point = longlat.projection
     end
   end
 end
