@@ -1,3 +1,7 @@
 window.Env = {
   "<%= Rails.env %>": true
 }
+
+window.navigator.geolocation.getCurrentPosition(function(geoposition) {
+  window.Env.geoposition = geoposition;
+});
