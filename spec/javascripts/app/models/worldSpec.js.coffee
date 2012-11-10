@@ -26,6 +26,17 @@ describe "models.world", ->
         expect(mostRecentAjaxRequest()).toBe(null)
         expect(retrieved_world.name).toEqual("NYC")
 
+  describe "#currentRegion", ->
+    nyc = null
+    beforeEach ->
+      nyc = new App.World(Fixtures.worlds[0])
+      nyc.fetchRegions()
+      mostRecentAjaxRequest().response(Factories.nycRegionsResponse())
+
+    it "should retrieve the region with the current block", ->
+      # Hardcoded against data in nyc regions fixture
+      expect(nyc.currentRegion()).toEqual(App.Region.find(2))
+
   describe "#fetchRegions", ->
     nyc = null
     beforeEach ->

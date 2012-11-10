@@ -51,7 +51,7 @@ class App.WorldRenderer
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
-    $(".navbar .container").append(@stats.domElement)
+    $(".navbar .container").append(@stats.domElement) if @stats
     window.addEventListener( 'resize', @onWindowResize, false )
     @
 

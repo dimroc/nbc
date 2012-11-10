@@ -10,6 +10,16 @@ class ApiController < ApplicationController
     render :text => exception, :status => :not_found
   end
 
+  def fetch_current_point
+    latitude = params[:latitude]
+    longitude = params[:longitude]
+
+    if latitude && longitude
+      longlat = Mercator::FACTORY.point(longitude,latitude)
+      @current_point = longlat.projection
+    end
+  end
+
   private
 
   def set_default_format

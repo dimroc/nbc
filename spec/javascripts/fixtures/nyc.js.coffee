@@ -17,6 +17,7 @@ Fixtures.nyc =
     "left": 1,
     "name": "311",
     "slug": "311",
+    "current_block": 1,
     "world_id": 1,
     "blocks": [
       {
