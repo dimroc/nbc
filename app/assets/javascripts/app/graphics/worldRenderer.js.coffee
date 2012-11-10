@@ -3,9 +3,9 @@ class App.WorldRenderer
   worldRenderers = []
 
   @DEFAULT_OPTIONS: {
-    fov: 45
-    width: 1280
-    height: 720
+    fov: 90
+    width: 960
+    height: 540
   }
 
   @all: -> worldRenderers
@@ -21,7 +21,7 @@ class App.WorldRenderer
     console.debug("Creating worldRenderer...")
     @scene = new THREE.Scene()
 
-    @camera = createCamera(options)
+    @camera = createOrthographicCamera(options)
     @scene.add( @camera )
 
     @renderer = createRenderer(options)
@@ -75,10 +75,16 @@ class App.WorldRenderer
 
 # privates
 
-createCamera = (options) ->
+createOrthographicCamera = (options) ->
+  camera = new THREE.OrthographicCamera( options.width / - 2, options.width / 2, options.height / 2, options.height / - 2,  1, 100 )
+  camera.position = new THREE.Vector3(250, 0, 100)
+  camera.lookAt(new THREE.Vector3(250, 0, 0))
+  camera
+
+createPerspectiveCamera = (options) ->
   camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 10000 )
-  camera.position = new THREE.Vector3(0, -3000, 4500)
-  camera.lookAt(new THREE.Vector3(0,-500,0))
+  camera.position = new THREE.Vector3(0, -125, 250)
+  camera.lookAt(new THREE.Vector3(0,-40,0))
   camera
 
 createRenderer = (options) ->

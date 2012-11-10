@@ -1,7 +1,7 @@
 class App.MeshFactory
   @create_world: (world) ->
     geometry = new THREE.Geometry()
-    cubeMaterial = new THREE.MeshLambertMaterial({color: 0xcccccc})
+    cubeMaterial = new THREE.MeshLambertMaterial({color: 0x111111})
 
     _.each(world.allBlocks(), (block) ->
       cubeGeom = new THREE.CubeGeometry(

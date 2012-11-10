@@ -5,3 +5,7 @@ window.Env = {
 window.navigator.geolocation.getCurrentPosition(function(geoposition) {
   window.Env.geoposition = geoposition;
 });
+
+window.getHook = function() {
+  return window.App.WorldRenderer.first();
+}
