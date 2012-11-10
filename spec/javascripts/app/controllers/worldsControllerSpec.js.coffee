@@ -35,7 +35,6 @@ describe "controllers.worldsController", ->
         expect(worldRenderer.add).toHaveBeenCalled()
         expect(worldRenderer.attachToDom).toHaveBeenCalled()
         expect(worldRenderer.animate).toHaveBeenCalled()
-        expect(showAction.$("h1").text()).toContain(nyc.name)
 
     describe "new", ->
       it "should render the world form", ->
