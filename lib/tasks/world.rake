@@ -21,6 +21,7 @@ namespace :world do
     desc "Generate blocks that represent New York City"
     task :nyc => :environment do
       puts "Creating new york city..."
+      World.find_by_slug("new-york-city").try(:destroy)
       shapefile = "lib/data/shapefiles/nyc/region"
       world = World.build_from_shapefile(shapefile, "BoroCD" => "name")
       world.regenerate_blocks(250)
@@ -28,10 +29,15 @@ namespace :world do
       world.save!
     end
 
-    desc "Delete any nyc entry and regenerate"
-    task :recreate_nyc => :environment do
-      World.find_by_slug("new-york-city").try(:destroy)
-      Rake::Task["world:generate:nyc"].invoke
+    desc "Generate blocks that represent Manhattan"
+    task :manhattan => :environment do
+      puts "Creating Manhattan..."
+      World.find_by_slug("manhattan").try(:destroy)
+      shapefile = "lib/data/shapefiles/manhattan/region"
+      world = World.build_from_shapefile(shapefile, "BoroCD" => "name")
+      world.regenerate_blocks(250)
+      world.name = "Manhattan"
+      world.save!
     end
   end
 end
