@@ -1,3 +1,10 @@
-<h1><%= @name %></h1>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <h1 class="left"><%= @name %></h1>
 
-<a data-type="edit">Edit</a> <a data-type="back">Back</a>
+    <ul class="nav">
+      <li><a data-type="edit">Edit</a></li>
+      <li><a data-type="back">Back</a></li>
+    </ul>
+  </div>
+</div>

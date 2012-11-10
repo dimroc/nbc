@@ -4,8 +4,8 @@ class App.WorldRenderer
 
   @DEFAULT_OPTIONS: {
     fov: 90
-    width: 960
-    height: 540
+    width: window.innerWidth
+    height: window.innerHeight
   }
 
   @all: -> worldRenderers
@@ -21,7 +21,7 @@ class App.WorldRenderer
     console.debug("Creating worldRenderer...")
     @scene = new THREE.Scene()
 
-    @camera = createOrthographicCamera(options)
+    @camera = createPerspectiveCamera(options)
     @scene.add( @camera )
 
     @renderer = createRenderer(options)
@@ -37,7 +37,6 @@ class App.WorldRenderer
 
     if Env.development
       @stats = createStats()
-      document.body.appendChild(@stats.domElement)
 
     worldRenderers.push(@)
 
@@ -47,11 +46,19 @@ class App.WorldRenderer
     @destroyed = true
     $(@stats.domElement).remove() if @stats
     cancelAnimationFrame @requestId
+    window.removeEventListener( 'resize', @onWindowResize, false )
     worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
+    $(".navbar .container").append(@stats.domElement)
+    window.addEventListener( 'resize', @onWindowResize, false )
     @
+
+  onWindowResize: ( event ) =>
+    @renderer.setSize( window.innerWidth, window.innerHeight )
+    @camera.aspect = window.innerWidth / window.innerHeight
+    @camera.updateProjectionMatrix()
 
   animate: (elapsedTicks)=>
     render(@)
@@ -105,9 +112,7 @@ createStats = ->
   stats = new Stats()
   stats.setMode(0)
 
-  # Align top-left
-  stats.domElement.style.position = 'absolute'
-  stats.domElement.style.zIndex = 100
+  $(stats.domElement).addClass("left")
 
   stats.domElement.children[ 0 ].children[ 0 ].style.color = "#aaa"
   stats.domElement.children[ 0 ].style.background = "transparent"

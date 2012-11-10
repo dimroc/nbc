@@ -1,5 +1,5 @@
 class App.Block extends App.Model
-  @HEIGHT = @WIDTH = 3
+  @HEIGHT = @WIDTH = 2.5
   @DEPTH = 1
   @GUTTER_LENGTH = 1.5
 
