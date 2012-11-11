@@ -35,7 +35,7 @@ namespace :world do
       World.find_by_slug("manhattan").try(:destroy)
       shapefile = "lib/data/shapefiles/manhattan/region"
       world = World.build_from_shapefile(shapefile, "BoroCD" => "name")
-      world.regenerate_blocks(250)
+      world.regenerate_blocks(700)
       world.name = "Manhattan"
       world.save!
     end

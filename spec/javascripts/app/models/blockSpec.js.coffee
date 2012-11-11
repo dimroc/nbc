@@ -11,11 +11,11 @@ describe "models.block", ->
       nyc = Factories.nycWorld()
       block = nyc.allBlocks().first()
 
-    describe "#color_key", ->
+    describe "#colorKey", ->
       it "should return the region slug", ->
-        expect(block.color_key()).toEqual(block.region().slug)
+        expect(block.colorKey()).toEqual(block.region().slug)
 
-    describe "#world_position", ->
+    describe "#worldPosition", ->
       describe "with region offset", ->
         beforeEach ->
           region = jasmine.createSpy("region")
@@ -26,4 +26,7 @@ describe "models.block", ->
         it "should return the correct world position", ->
           left = (block.left + 7) * (App.Block.WIDTH + App.Block.GUTTER_LENGTH)
           bottom = (block.left + 9) * (App.Block.HEIGHT + App.Block.GUTTER_LENGTH)
-          expect(block.world_position()).toEqual(new THREE.Vector3(left,bottom,0))
+          expectation = new THREE.Vector3(left,bottom,0)
+          expectation.addSelf(App.Block.OFFSET)
+
+          expect(block.worldPosition()).toEqual(expectation)

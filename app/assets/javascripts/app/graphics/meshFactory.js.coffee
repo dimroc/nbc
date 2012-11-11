@@ -9,7 +9,7 @@ class App.MeshFactory
         blockMaterial(block))
 
       cubeMesh = new THREE.Mesh(cubeGeom)
-      cubeMesh.position = block.world_position()
+      cubeMesh.position = block.worldPosition()
       THREE.GeometryUtils.merge(geometry, cubeMesh)
     )
 
@@ -17,7 +17,7 @@ class App.MeshFactory
     new THREE.Mesh(geometry, new THREE.MeshFaceMaterial())
 
 
-cubeMaterial = new THREE.MeshLambertMaterial({color: 0x111111})
+cubeMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF})
 currentMaterial = new THREE.MeshLambertMaterial({color: 0xAB1A25})
 regionMaterial = new THREE.MeshLambertMaterial({color: 0x009959})
 
