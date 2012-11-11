@@ -35,7 +35,9 @@ describe "models.world", ->
 
     it "should retrieve the region with the current block", ->
       # Hardcoded against data in nyc regions fixture
-      expect(nyc.currentRegion()).toEqual(App.Region.find(2))
+      current_region = _(App.Region.all()).detect((region) -> region.current_block)
+      expect(current_region).not.toBeNull()
+      expect(nyc.currentRegion()).toEqual(current_region)
 
   describe "#fetchRegions", ->
     nyc = null

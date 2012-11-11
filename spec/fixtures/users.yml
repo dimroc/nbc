@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 1
-  email: perry@kirlin.name
-  encrypted_password: $2a$04$evQiB8tMyqt.QPyRsUYhO.Z.GBlIb5U.lBsZT1NdBXZ1Wo/WX1Dfu
+  id: 4
+  email: cathy.corkery@schroeder.info
+  encrypted_password: $2a$10$4pu4SIoFxs7hxM8YsQjVge3Vo/Ch1gqZQXnLegHDbMrppRUNCZyLC
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
