@@ -1,11 +1,11 @@
 ---
 blocks_001:
-  id: 1
-  region_id: 1
-  left: 8233409
-  bottom: -4936866
-  created_at: 2012-11-08 05:12:27.701444000 Z
-  updated_at: 2012-11-08 05:12:27.701444000 Z
+  id: 376
+  region_id: 51
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:19.928894000 Z
+  updated_at: 2012-11-11 16:47:19.928894000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -35,18 +35,16 @@ blocks_001:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4939222.7711062226444483)
 blocks_002:
-  id: 2
-  region_id: 2
-  left: 8239806
-  bottom: -4923692
-  created_at: 2012-11-08 05:12:27.710558000 Z
-  updated_at: 2012-11-08 05:12:27.710558000 Z
+  id: 377
+  region_id: 52
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:19.938802000 Z
+  updated_at: 2012-11-11 16:47:19.938802000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -76,18 +74,16 @@ blocks_002:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4924222.7711062226444483)
 blocks_003:
-  id: 3
-  region_id: 2
-  left: 8239806
-  bottom: -4923691
-  created_at: 2012-11-08 05:12:27.711886000 Z
-  updated_at: 2012-11-08 05:12:27.711886000 Z
+  id: 378
+  region_id: 52
+  left: 0
+  bottom: 1
+  created_at: 2012-11-11 16:47:19.940150000 Z
+  updated_at: 2012-11-11 16:47:19.940150000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -117,18 +113,16 @@ blocks_003:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4927222.7711062226444483)
 blocks_004:
-  id: 4
-  region_id: 3
-  left: 8242307
-  bottom: -4926089
-  created_at: 2012-11-08 05:12:27.720046000 Z
-  updated_at: 2012-11-08 05:12:27.720046000 Z
+  id: 379
+  region_id: 53
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:19.948321000 Z
+  updated_at: 2012-11-11 16:47:19.948321000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -158,18 +152,16 @@ blocks_004:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8239955.5565458377823234 4927222.7711062226444483)
 blocks_005:
-  id: 5
-  region_id: 3
-  left: 8242307
-  bottom: -4926088
-  created_at: 2012-11-08 05:12:27.721378000 Z
-  updated_at: 2012-11-08 05:12:27.721378000 Z
+  id: 380
+  region_id: 53
+  left: 0
+  bottom: 1
+  created_at: 2012-11-11 16:47:19.949680000 Z
+  updated_at: 2012-11-11 16:47:19.949680000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -199,18 +191,16 @@ blocks_005:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8239955.5565458377823234 4930222.7711062226444483)
 blocks_006:
-  id: 6
-  region_id: 4
-  left: 8232781
-  bottom: -4930166
-  created_at: 2012-11-08 05:12:27.727370000 Z
-  updated_at: 2012-11-08 05:12:27.727370000 Z
+  id: 381
+  region_id: 54
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:19.956540000 Z
+  updated_at: 2012-11-11 16:47:19.956540000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -240,18 +230,16 @@ blocks_006:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4933222.7711062226444483)
 blocks_007:
-  id: 7
-  region_id: 4
-  left: 8232782
-  bottom: -4930166
-  created_at: 2012-11-08 05:12:27.728713000 Z
-  updated_at: 2012-11-08 05:12:27.728713000 Z
+  id: 382
+  region_id: 54
+  left: 1
+  bottom: 0
+  created_at: 2012-11-11 16:47:19.958142000 Z
+  updated_at: 2012-11-11 16:47:19.958142000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -281,18 +269,16 @@ blocks_007:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8227955.5565458377823234 4933222.7711062226444483)
 blocks_008:
-  id: 8
-  region_id: 5
-  left: 8238090
-  bottom: -4937332
-  created_at: 2012-11-08 05:12:27.738651000 Z
-  updated_at: 2012-11-08 05:12:27.738651000 Z
+  id: 383
+  region_id: 55
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:19.968595000 Z
+  updated_at: 2012-11-11 16:47:19.968595000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -322,18 +308,16 @@ blocks_008:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4939222.7711062226444483)
 blocks_009:
-  id: 9
-  region_id: 5
-  left: 8238091
-  bottom: -4937332
-  created_at: 2012-11-08 05:12:27.740003000 Z
-  updated_at: 2012-11-08 05:12:27.740003000 Z
+  id: 384
+  region_id: 55
+  left: 1
+  bottom: 0
+  created_at: 2012-11-11 16:47:19.970252000 Z
+  updated_at: 2012-11-11 16:47:19.970252000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -363,18 +347,16 @@ blocks_009:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4939222.7711062226444483)
 blocks_010:
-  id: 10
-  region_id: 7
-  left: 8231782
-  bottom: -4923410
-  created_at: 2012-11-08 05:12:28.003986000 Z
-  updated_at: 2012-11-08 05:12:28.003986000 Z
+  id: 385
+  region_id: 57
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.225519000 Z
+  updated_at: 2012-11-11 16:47:20.225519000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -404,18 +386,16 @@ blocks_010:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4927222.7711062226444483)
 blocks_011:
-  id: 11
-  region_id: 7
-  left: 8231782
-  bottom: -4923409
-  created_at: 2012-11-08 05:12:28.005541000 Z
-  updated_at: 2012-11-08 05:12:28.005541000 Z
+  id: 386
+  region_id: 57
+  left: 0
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.227210000 Z
+  updated_at: 2012-11-11 16:47:20.227210000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -445,18 +425,16 @@ blocks_011:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4930222.7711062226444483)
 blocks_012:
-  id: 12
-  region_id: 7
-  left: 8231783
-  bottom: -4923410
-  created_at: 2012-11-08 05:12:28.006865000 Z
-  updated_at: 2012-11-08 05:12:28.006865000 Z
+  id: 387
+  region_id: 57
+  left: 1
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.228461000 Z
+  updated_at: 2012-11-11 16:47:20.228461000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -486,18 +464,16 @@ blocks_012:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8227955.5565458377823234 4927222.7711062226444483)
 blocks_013:
-  id: 13
-  region_id: 7
-  left: 8231783
-  bottom: -4923409
-  created_at: 2012-11-08 05:12:28.008200000 Z
-  updated_at: 2012-11-08 05:12:28.008200000 Z
+  id: 388
+  region_id: 57
+  left: 1
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.229683000 Z
+  updated_at: 2012-11-11 16:47:20.229683000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -527,18 +503,16 @@ blocks_013:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8227955.5565458377823234 4930222.7711062226444483)
 blocks_014:
-  id: 14
-  region_id: 7
-  left: 8231784
-  bottom: -4923409
-  created_at: 2012-11-08 05:12:28.009749000 Z
-  updated_at: 2012-11-08 05:12:28.009749000 Z
+  id: 389
+  region_id: 57
+  left: 2
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.230904000 Z
+  updated_at: 2012-11-11 16:47:20.230904000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -568,18 +542,16 @@ blocks_014:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8224955.5565458377823234 4930222.7711062226444483)
 blocks_015:
-  id: 15
-  region_id: 8
-  left: 8239865
-  bottom: -4934602
-  created_at: 2012-11-08 05:12:28.020911000 Z
-  updated_at: 2012-11-08 05:12:28.020911000 Z
+  id: 390
+  region_id: 58
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.242635000 Z
+  updated_at: 2012-11-11 16:47:20.242635000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -609,18 +581,16 @@ blocks_015:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4936222.7711062226444483)
 blocks_016:
-  id: 16
-  region_id: 9
-  left: 8229854
-  bottom: -4922275
-  created_at: 2012-11-08 05:12:28.080643000 Z
-  updated_at: 2012-11-08 05:12:28.080643000 Z
+  id: 391
+  region_id: 59
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.302363000 Z
+  updated_at: 2012-11-11 16:47:20.302363000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -650,18 +620,16 @@ blocks_016:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8224955.5565458377823234 4924222.7711062226444483)
 blocks_017:
-  id: 17
-  region_id: 9
-  left: 8229855
-  bottom: -4922274
-  created_at: 2012-11-08 05:12:28.082213000 Z
-  updated_at: 2012-11-08 05:12:28.082213000 Z
+  id: 392
+  region_id: 59
+  left: 1
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.304048000 Z
+  updated_at: 2012-11-11 16:47:20.304048000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -691,18 +659,16 @@ blocks_017:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8221955.5565458377823234 4927222.7711062226444483)
 blocks_018:
-  id: 18
-  region_id: 9
-  left: 8229855
-  bottom: -4922272
-  created_at: 2012-11-08 05:12:28.083470000 Z
-  updated_at: 2012-11-08 05:12:28.083470000 Z
+  id: 393
+  region_id: 59
+  left: 1
+  bottom: 3
+  created_at: 2012-11-11 16:47:20.305395000 Z
+  updated_at: 2012-11-11 16:47:20.305395000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -732,18 +698,16 @@ blocks_018:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8221955.5565458377823234 4933222.7711062226444483)
 blocks_019:
-  id: 19
-  region_id: 10
-  left: 8236970
-  bottom: -4950285
-  created_at: 2012-11-08 05:12:28.091728000 Z
-  updated_at: 2012-11-08 05:12:28.091728000 Z
+  id: 394
+  region_id: 60
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.312982000 Z
+  updated_at: 2012-11-11 16:47:20.312982000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -773,18 +737,16 @@ blocks_019:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4954222.7711062226444483)
 blocks_020:
-  id: 20
-  region_id: 11
-  left: 8234879
-  bottom: -4935091
-  created_at: 2012-11-08 05:12:28.098516000 Z
-  updated_at: 2012-11-08 05:12:28.098516000 Z
+  id: 395
+  region_id: 61
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.320239000 Z
+  updated_at: 2012-11-11 16:47:20.320239000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -814,18 +776,16 @@ blocks_020:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4936222.7711062226444483)
 blocks_021:
-  id: 21
-  region_id: 14
-  left: 8235444
-  bottom: -4933125
-  created_at: 2012-11-08 05:12:28.178711000 Z
-  updated_at: 2012-11-08 05:12:28.178711000 Z
+  id: 396
+  region_id: 64
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.394770000 Z
+  updated_at: 2012-11-11 16:47:20.394770000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -855,18 +815,16 @@ blocks_021:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4936222.7711062226444483)
 blocks_022:
-  id: 22
-  region_id: 15
-  left: 8241240
-  bottom: -4930708
-  created_at: 2012-11-08 05:12:28.190128000 Z
-  updated_at: 2012-11-08 05:12:28.190128000 Z
+  id: 397
+  region_id: 65
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.406001000 Z
+  updated_at: 2012-11-11 16:47:20.406001000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -896,18 +854,16 @@ blocks_022:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8239955.5565458377823234 4933222.7711062226444483)
 blocks_023:
-  id: 23
-  region_id: 15
-  left: 8241241
-  bottom: -4930708
-  created_at: 2012-11-08 05:12:28.191473000 Z
-  updated_at: 2012-11-08 05:12:28.191473000 Z
+  id: 398
+  region_id: 65
+  left: 1
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.407297000 Z
+  updated_at: 2012-11-11 16:47:20.407297000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -937,18 +893,16 @@ blocks_023:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4933222.7711062226444483)
 blocks_024:
-  id: 24
-  region_id: 16
-  left: 8232723
-  bottom: -4952120
-  created_at: 2012-11-08 05:12:28.203546000 Z
-  updated_at: 2012-11-08 05:12:28.203546000 Z
+  id: 399
+  region_id: 66
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.419874000 Z
+  updated_at: 2012-11-11 16:47:20.419874000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -978,18 +932,16 @@ blocks_024:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4954222.7711062226444483)
 blocks_025:
-  id: 25
-  region_id: 17
-  left: 8237808
-  bottom: -4941443
-  created_at: 2012-11-08 05:12:28.211030000 Z
-  updated_at: 2012-11-08 05:12:28.211030000 Z
+  id: 400
+  region_id: 67
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.427375000 Z
+  updated_at: 2012-11-11 16:47:20.427375000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1019,18 +971,16 @@ blocks_025:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4942222.7711062226444483)
 blocks_026:
-  id: 26
-  region_id: 18
-  left: 8238822
-  bottom: -4926956
-  created_at: 2012-11-08 05:12:28.217923000 Z
-  updated_at: 2012-11-08 05:12:28.217923000 Z
+  id: 401
+  region_id: 68
+  left: 0
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.434005000 Z
+  updated_at: 2012-11-11 16:47:20.434005000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1060,18 +1010,16 @@ blocks_026:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4930222.7711062226444483)
 blocks_027:
-  id: 27
-  region_id: 18
-  left: 8238823
-  bottom: -4926957
-  created_at: 2012-11-08 05:12:28.219276000 Z
-  updated_at: 2012-11-08 05:12:28.219276000 Z
+  id: 402
+  region_id: 68
+  left: 1
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.435349000 Z
+  updated_at: 2012-11-11 16:47:20.435349000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1101,18 +1049,16 @@ blocks_027:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4927222.7711062226444483)
 blocks_028:
-  id: 28
-  region_id: 19
-  left: 8235153
-  bottom: -4927127
-  created_at: 2012-11-08 05:12:28.225409000 Z
-  updated_at: 2012-11-08 05:12:28.225409000 Z
+  id: 403
+  region_id: 69
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.441045000 Z
+  updated_at: 2012-11-11 16:47:20.441045000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1142,18 +1088,16 @@ blocks_028:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4930222.7711062226444483)
 blocks_029:
-  id: 29
-  region_id: 19
-  left: 8235153
-  bottom: -4927126
-  created_at: 2012-11-08 05:12:28.226700000 Z
-  updated_at: 2012-11-08 05:12:28.226700000 Z
+  id: 404
+  region_id: 69
+  left: 0
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.442360000 Z
+  updated_at: 2012-11-11 16:47:20.442360000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1183,18 +1127,16 @@ blocks_029:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4933222.7711062226444483)
 blocks_030:
-  id: 30
-  region_id: 20
-  left: 8239333
-  bottom: -4942654
-  created_at: 2012-11-08 05:12:28.234059000 Z
-  updated_at: 2012-11-08 05:12:28.234059000 Z
+  id: 405
+  region_id: 70
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.450118000 Z
+  updated_at: 2012-11-11 16:47:20.450118000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1224,18 +1166,16 @@ blocks_030:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4945222.7711062226444483)
 blocks_031:
-  id: 31
-  region_id: 21
-  left: 8238996
-  bottom: -4945745
-  created_at: 2012-11-08 05:12:28.246176000 Z
-  updated_at: 2012-11-08 05:12:28.246176000 Z
+  id: 406
+  region_id: 71
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.461929000 Z
+  updated_at: 2012-11-11 16:47:20.461929000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1265,18 +1205,16 @@ blocks_031:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8236955.5565458377823234 4948222.7711062226444483)
 blocks_032:
-  id: 32
-  region_id: 23
-  left: 8235833
-  bottom: -4921905
-  created_at: 2012-11-08 05:12:28.296740000 Z
-  updated_at: 2012-11-08 05:12:28.296740000 Z
+  id: 407
+  region_id: 73
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.509762000 Z
+  updated_at: 2012-11-11 16:47:20.509762000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1306,18 +1244,16 @@ blocks_032:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4924222.7711062226444483)
 blocks_033:
-  id: 33
-  region_id: 23
-  left: 8235834
-  bottom: -4921905
-  created_at: 2012-11-08 05:12:28.298675000 Z
-  updated_at: 2012-11-08 05:12:28.298675000 Z
+  id: 408
+  region_id: 73
+  left: 1
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.511323000 Z
+  updated_at: 2012-11-11 16:47:20.511323000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1347,18 +1283,16 @@ blocks_033:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4924222.7711062226444483)
 blocks_034:
-  id: 34
-  region_id: 24
-  left: 8232097
-  bottom: -4959365
-  created_at: 2012-11-08 05:12:28.400027000 Z
-  updated_at: 2012-11-08 05:12:28.400027000 Z
+  id: 409
+  region_id: 74
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.607198000 Z
+  updated_at: 2012-11-11 16:47:20.607198000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1388,18 +1322,16 @@ blocks_034:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4960222.7711062226444483)
 blocks_035:
-  id: 35
-  region_id: 24
-  left: 8232097
-  bottom: -4959364
-  created_at: 2012-11-08 05:12:28.401651000 Z
-  updated_at: 2012-11-08 05:12:28.401651000 Z
+  id: 410
+  region_id: 74
+  left: 0
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.608735000 Z
+  updated_at: 2012-11-11 16:47:20.608735000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1429,18 +1361,16 @@ blocks_035:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4963222.7711062226444483)
 blocks_036:
-  id: 36
-  region_id: 26
-  left: 8231183
-  bottom: -4937242
-  created_at: 2012-11-08 05:12:28.414338000 Z
-  updated_at: 2012-11-08 05:12:28.414338000 Z
+  id: 411
+  region_id: 76
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.621219000 Z
+  updated_at: 2012-11-11 16:47:20.621219000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1470,18 +1400,16 @@ blocks_036:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8227955.5565458377823234 4939222.7711062226444483)
 blocks_037:
-  id: 37
-  region_id: 27
-  left: 8226966
-  bottom: -4931483
-  created_at: 2012-11-08 05:12:28.423921000 Z
-  updated_at: 2012-11-08 05:12:28.423921000 Z
+  id: 412
+  region_id: 77
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.629937000 Z
+  updated_at: 2012-11-11 16:47:20.629937000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1511,18 +1439,16 @@ blocks_037:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8224955.5565458377823234 4933222.7711062226444483)
 blocks_038:
-  id: 38
-  region_id: 27
-  left: 8226966
-  bottom: -4931482
-  created_at: 2012-11-08 05:12:28.425280000 Z
-  updated_at: 2012-11-08 05:12:28.425280000 Z
+  id: 413
+  region_id: 77
+  left: 0
+  bottom: 1
+  created_at: 2012-11-11 16:47:20.631531000 Z
+  updated_at: 2012-11-11 16:47:20.631531000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1552,18 +1478,16 @@ blocks_038:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8224955.5565458377823234 4936222.7711062226444483)
 blocks_039:
-  id: 39
-  region_id: 28
-  left: 8229230
-  bottom: -4933145
-  created_at: 2012-11-08 05:12:28.431747000 Z
-  updated_at: 2012-11-08 05:12:28.431747000 Z
+  id: 414
+  region_id: 78
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.638073000 Z
+  updated_at: 2012-11-11 16:47:20.638073000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1593,18 +1517,16 @@ blocks_039:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8227955.5565458377823234 4936222.7711062226444483)
 blocks_040:
-  id: 40
-  region_id: 29
-  left: 8233154
-  bottom: -4954455
-  created_at: 2012-11-08 05:12:28.440887000 Z
-  updated_at: 2012-11-08 05:12:28.440887000 Z
+  id: 415
+  region_id: 79
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.646377000 Z
+  updated_at: 2012-11-11 16:47:20.646377000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1634,18 +1556,16 @@ blocks_040:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4957222.7711062226444483)
 blocks_041:
-  id: 41
-  region_id: 30
-  left: 8235605
-  bottom: -4949684
-  created_at: 2012-11-08 05:12:28.447233000 Z
-  updated_at: 2012-11-08 05:12:28.447233000 Z
+  id: 416
+  region_id: 80
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.652857000 Z
+  updated_at: 2012-11-11 16:47:20.652857000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1675,18 +1595,16 @@ blocks_041:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4951222.7711062226444483)
 blocks_042:
-  id: 42
-  region_id: 31
-  left: 8236396
-  bottom: -4944174
-  created_at: 2012-11-08 05:12:28.458799000 Z
-  updated_at: 2012-11-08 05:12:28.458799000 Z
+  id: 417
+  region_id: 81
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.664606000 Z
+  updated_at: 2012-11-11 16:47:20.664606000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1716,18 +1634,16 @@ blocks_042:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4948222.7711062226444483)
 blocks_043:
-  id: 43
-  region_id: 33
-  left: 8234306
-  bottom: -4939994
-  created_at: 2012-11-08 05:12:28.486505000 Z
-  updated_at: 2012-11-08 05:12:28.486505000 Z
+  id: 418
+  region_id: 83
+  left: 0
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.693589000 Z
+  updated_at: 2012-11-11 16:47:20.693589000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1757,18 +1673,16 @@ blocks_043:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8233955.5565458377823234 4942222.7711062226444483)
 blocks_044:
-  id: 44
-  region_id: 33
-  left: 8234307
-  bottom: -4939994
-  created_at: 2012-11-08 05:12:28.487996000 Z
-  updated_at: 2012-11-08 05:12:28.487996000 Z
+  id: 419
+  region_id: 83
+  left: 1
+  bottom: 0
+  created_at: 2012-11-11 16:47:20.695036000 Z
+  updated_at: 2012-11-11 16:47:20.695036000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1798,8 +1712,6 @@ blocks_044:
         ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
-      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0
-        +units=m +no_defs
-      coord_sys: PROJCS["Popular Visualisation CRS / Mercator",GEOGCS["Popular Visualisation
-        CRS",DATUM["Popular_Visualisation_Datum",SPHEROID["Popular Visualisation Sphere",6378137.0,0.0,AUTHORITY["EPSG","7059"]],TOWGS84[0.0,0.0,0.0,0.0,0.0,0.0,0.0],AUTHORITY["EPSG","6055"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4055"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0.0],PARAMETER["scale_factor",1.0],PARAMETER["false_easting",0.0],PARAMETER["false_northing",0.0],UNIT["metre",1.0,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","3785"]]
+      proj4: +proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m
+        +no_defs
     wkt: POINT (-8230955.5565458377823234 4942222.7711062226444483)

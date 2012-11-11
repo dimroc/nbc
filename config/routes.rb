@@ -5,5 +5,6 @@ NewBlockCity::Application.routes.draw do
 
   resources :worlds do
     resources :regions
+    resources :blocks
   end
 end

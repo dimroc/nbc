@@ -12,8 +12,7 @@ class App.World extends App.Model
       $.ajax(
         type: "GET",
         url: "/worlds",
-        dataType: "json",
-        cache: false
+        dataType: "json"
       ).success((data) =>
         @refresh(data)
         callback(@findByAttribute("slug", slug))
@@ -30,12 +29,16 @@ class App.World extends App.Model
       memo.concat(region.blocks().all())
     , [])
 
+  currentRegion: ->
+    _.detect(@regions().all(), (entry)-> entry.current_block )
+
   fetchRegions: (successCallback)->
+    url = "/worlds/#{@slug}/regions"
+    url += "?longitude=#{Env.longitude}&latitude=#{Env.latitude}" if Env.geoposition
     $.ajax(
       type: "GET",
-      url: "/worlds/#{@slug}/regions",
-      dataType: "json",
-      cache: false
+      url: url,
+      dataType: "json"
     ).success((data) =>
       @regions(data)
       successCallback(@) if successCallback
@@ -44,4 +47,4 @@ class App.World extends App.Model
       console.warn "Received status: #{status}. message: #{response.responseText}"
 
   meshes: ->
-    [new App.MeshFactory.create_world(@)]
+    _(@regions().all()).map((region) -> region.mesh())

@@ -91,11 +91,11 @@ describe World do
       it "should assign the regions relative coordinates" do
         world.regenerate_blocks(1)
 
-        region1.left.should == 0
-        region1.bottom.should == 0
+        region1.left.should == 1
+        region1.bottom.should == 1
 
-        region2.left.should == 9
-        region2.bottom.should == 9
+        region2.left.should == 10
+        region2.bottom.should == 10
       end
     end
   end

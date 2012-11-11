@@ -8,8 +8,8 @@ class ZipCodeMap < ActiveRecord::Base
         zip: socrata_row[10],
         po_name: socrata_row[11],
         county: socrata_row[13],
-        point: Mercator.to_projected(shape.point),
-        geometry: Mercator.to_projected(shape.geometry),
+        point: shape.point.projection,
+        geometry: shape.geometry.projection,
         shape_length: socrata_row[17],
         shape_area: socrata_row[18])
 

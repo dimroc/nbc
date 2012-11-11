@@ -76,10 +76,6 @@ class World < ActiveRecord::Base
   end
 
   def calculate_region_positions
-    regions.each do |region|
-      region_bb = region.generate_bounding_box
-      region.left = region_bb.min_x
-      region.bottom = region_bb.min_y
-    end
+    regions.each { |region| region.regenerate_coordinates }
   end
 end

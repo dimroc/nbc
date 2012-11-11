@@ -33,6 +33,19 @@ class Region < ActiveRecord::Base
     blocks
   end
 
+  def regenerate_coordinates
+    self.left = furthest_left
+    self.bottom = furthest_bottom
+  end
+
+  def furthest_left
+    self.blocks.min_by(&:left).try(:left) || 0
+  end
+
+  def furthest_bottom
+    self.blocks.min_by(&:bottom).try(:bottom) || 0
+  end
+
   def generate_bounding_box
     Cartesian::BoundingBox.create_from_geometry(geometry) if geometry
   end
