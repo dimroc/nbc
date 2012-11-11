@@ -47,4 +47,4 @@ class App.World extends App.Model
       console.warn "Received status: #{status}. message: #{response.responseText}"
 
   meshes: ->
-    [new App.MeshFactory.create_world(@)]
+    _(@regions().all()).map((region) -> region.mesh())

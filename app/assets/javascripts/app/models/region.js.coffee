@@ -10,3 +10,6 @@ class App.Region extends App.Model
     @appendErrors(slug: "slug is required") unless @slug
     @appendErrors(left: "left is required") unless @left
     @appendErrors(bottom: "bottom is required") unless @bottom
+
+  mesh: ->
+    App.MeshFactory.create_region(@)
