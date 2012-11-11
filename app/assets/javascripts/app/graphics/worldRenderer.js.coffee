@@ -35,8 +35,7 @@ class App.WorldRenderer
 
     @scene.add(@directionalLight)
 
-    if Env.development
-      @stats = createStats()
+    @stats = new App.StatsRenderer()
 
     worldRenderers.push(@)
 
@@ -44,14 +43,14 @@ class App.WorldRenderer
     console.debug("Destroying worldRenderer...")
 
     @destroyed = true
-    $(@stats.domElement).remove() if @stats
+    @stats.destroy()
     cancelAnimationFrame @requestId
     window.removeEventListener( 'resize', @onWindowResize, false )
     worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
-    $(".navbar .container").append(@stats.domElement) if @stats
+    @stats.attachToDom()
     window.addEventListener( 'resize', @onWindowResize, false )
     @
 
@@ -108,20 +107,9 @@ createDirectionalLight = (options) ->
 createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
 
-createStats = ->
-  stats = new Stats()
-  stats.setMode(0)
-
-  $(stats.domElement).addClass("left")
-
-  stats.domElement.children[ 0 ].children[ 0 ].style.color = "#aaa"
-  stats.domElement.children[ 0 ].style.background = "transparent"
-  stats.domElement.children[ 0 ].children[ 1 ].style.display = "none"
-  stats
-
 render = (worldRenderer) ->
   worldRenderer.scene.children.forEach (child) ->
     child.animate() if child.animate
 
   worldRenderer.renderer.render( worldRenderer.scene, worldRenderer.camera )
-  worldRenderer.stats.update() if worldRenderer.stats
+  worldRenderer.stats.update()
