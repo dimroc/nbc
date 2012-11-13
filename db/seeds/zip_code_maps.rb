@@ -1,5 +1,3 @@
-puts "Loading seed: zip code maps"
-
 ActiveRecord::Base.connection.execute(<<-SQL) #postgres specific
 TRUNCATE zip_code_maps RESTART IDENTITY;
 SQL
