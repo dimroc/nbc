@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: nikita.zieme@stamm.biz
-  encrypted_password: $2a$04$J0RsmCf5B4SKBXmXpdqV4uWQMDPIPZD/PSpxCiG6r3JhsUZz9bG9C
+  email: abner_von@hirthe.name
+  encrypted_password: $2a$04$aQu3djn1rU.0xxBhHQ0dN.A3cEYKoNoHlHiyahMcVBooAf9Xu.o6u
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
