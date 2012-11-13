@@ -23,7 +23,7 @@ namespace :world do
       puts "Creating new york city..."
       World.find_by_slug("new-york-city").try(:destroy)
       shapefile = "lib/data/shapefiles/nyc/region"
-      world = World.build_from_shapefile(shapefile, "BoroCD" => "name")
+      world = Loader::World.from_shapefile(shapefile, "BoroCD" => "name")
       world.regenerate_blocks(250)
       world.name = "New York City"
       world.save!
@@ -34,7 +34,7 @@ namespace :world do
       puts "Creating Manhattan..."
       World.find_by_slug("manhattan").try(:destroy)
       shapefile = "lib/data/shapefiles/manhattan/region"
-      world = World.build_from_shapefile(shapefile, "BoroCD" => "name")
+      world = Loader::World.from_shapefile(shapefile, "BoroCD" => "name")
       world.regenerate_blocks(700)
       world.name = "Manhattan"
       world.save!

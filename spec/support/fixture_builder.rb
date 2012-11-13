@@ -6,7 +6,7 @@ FixtureBuilder.configure do |fbuilder|
     fbuilder.name(:standard_user, FactoryGirl.create(:user))
 
     # Worlds
-    @nyc = World.build_from_shapefile(
+    @nyc = Loader::World.from_shapefile(
       "/Users/dimroc/workspace/new-block-city/lib/data/shapefiles/nyc/region.shp",
       "BoroCD" => "name")
     @nyc.name = "NYC"

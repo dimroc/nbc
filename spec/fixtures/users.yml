@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: lucas_vonrueden@homenick.biz
-  encrypted_password: $2a$04$vR2CiRHzPdD3AobzUvFzWONtc0/i6HVKiEhsFT4Smjj5wHDB4rw1e
+  email: nikita.zieme@stamm.biz
+  encrypted_password: $2a$04$J0RsmCf5B4SKBXmXpdqV4uWQMDPIPZD/PSpxCiG6r3JhsUZz9bG9C
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

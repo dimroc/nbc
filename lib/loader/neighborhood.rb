@@ -1,4 +1,4 @@
-class NeighborhoodLoader
+class Loader::Neighborhood
   class << self
     def from_shapefile(shapefile)
       require 'rgeo/shapefile'

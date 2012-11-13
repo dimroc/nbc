@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe NeighborhoodLoader do
+describe Loader::Neighborhood do
   describe ".from_shapefile" do
-    subject { NeighborhoodLoader.from_shapefile(shapefile) }
+    subject { Loader::Neighborhood.from_shapefile(shapefile) }
     context "integration" do
       let(:shapefile) { "lib/data/shapefiles/neighborhoods/region" }
 
