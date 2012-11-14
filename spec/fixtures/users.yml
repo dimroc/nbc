@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 4
-  email: cathy.corkery@schroeder.info
-  encrypted_password: $2a$10$4pu4SIoFxs7hxM8YsQjVge3Vo/Ch1gqZQXnLegHDbMrppRUNCZyLC
+  id: 1
+  email: cheyenne@bashiriangerlach.uk
+  encrypted_password: $2a$04$4zx1G.dDQEapX4iy/ZRZpeeiy366WaUsGCVXhdDRV7YAi9Nfv3zEW
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

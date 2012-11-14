@@ -69,7 +69,7 @@ class Show extends Spine.Controller
 
   render: ->
     output = @html @view('worlds/show')(@item)
-    @worldRenderer.attachToDom(output)
+    @worldRenderer.attachToDom($(output).find("#world"))
     @worldRenderer.add(@item.meshes())
     @worldRenderer.animate()
     output

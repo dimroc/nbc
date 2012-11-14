@@ -12,7 +12,8 @@ class App.World extends App.Model
       $.ajax(
         type: "GET",
         url: "/worlds",
-        dataType: "json"
+        dataType: "json",
+        cache: false
       ).success((data) =>
         @refresh(data)
         callback(@findByAttribute("slug", slug))
@@ -32,13 +33,18 @@ class App.World extends App.Model
   currentRegion: ->
     _.detect(@regions().all(), (entry)-> entry.current_block )
 
+  currentNeighborhoods: ->
+    currentRegion = @currentRegion()
+    currentRegion.neighborhoodNames() if currentRegion
+
   fetchRegions: (successCallback)->
     url = "/worlds/#{@slug}/regions"
     url += "?longitude=#{Env.longitude}&latitude=#{Env.latitude}" if Env.geoposition
     $.ajax(
       type: "GET",
       url: url,
-      dataType: "json"
+      dataType: "json",
+      cache: false
     ).success((data) =>
       @regions(data)
       successCallback(@) if successCallback

@@ -1,11 +1,11 @@
 ---
 blocks_001:
-  id: 376
-  region_id: 51
+  id: 1
+  region_id: 1
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:19.928894000 Z
-  updated_at: 2012-11-11 16:47:19.928894000 Z
+  created_at: 2012-11-14 04:07:13.990072000 Z
+  updated_at: 2012-11-14 04:07:13.990072000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -39,12 +39,12 @@ blocks_001:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4939222.7711062226444483)
 blocks_002:
-  id: 377
-  region_id: 52
+  id: 2
+  region_id: 2
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:19.938802000 Z
-  updated_at: 2012-11-11 16:47:19.938802000 Z
+  created_at: 2012-11-14 04:07:14.046434000 Z
+  updated_at: 2012-11-14 04:07:14.046434000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -78,12 +78,12 @@ blocks_002:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4924222.7711062226444483)
 blocks_003:
-  id: 378
-  region_id: 52
+  id: 3
+  region_id: 2
   left: 0
   bottom: 1
-  created_at: 2012-11-11 16:47:19.940150000 Z
-  updated_at: 2012-11-11 16:47:19.940150000 Z
+  created_at: 2012-11-14 04:07:14.047871000 Z
+  updated_at: 2012-11-14 04:07:14.047871000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -117,12 +117,12 @@ blocks_003:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4927222.7711062226444483)
 blocks_004:
-  id: 379
-  region_id: 53
+  id: 4
+  region_id: 3
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:19.948321000 Z
-  updated_at: 2012-11-11 16:47:19.948321000 Z
+  created_at: 2012-11-14 04:07:14.059164000 Z
+  updated_at: 2012-11-14 04:07:14.059164000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -156,12 +156,12 @@ blocks_004:
         +no_defs
     wkt: POINT (-8239955.5565458377823234 4927222.7711062226444483)
 blocks_005:
-  id: 380
-  region_id: 53
+  id: 5
+  region_id: 3
   left: 0
   bottom: 1
-  created_at: 2012-11-11 16:47:19.949680000 Z
-  updated_at: 2012-11-11 16:47:19.949680000 Z
+  created_at: 2012-11-14 04:07:14.060539000 Z
+  updated_at: 2012-11-14 04:07:14.060539000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -195,12 +195,12 @@ blocks_005:
         +no_defs
     wkt: POINT (-8239955.5565458377823234 4930222.7711062226444483)
 blocks_006:
-  id: 381
-  region_id: 54
+  id: 6
+  region_id: 4
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:19.956540000 Z
-  updated_at: 2012-11-11 16:47:19.956540000 Z
+  created_at: 2012-11-14 04:07:14.071053000 Z
+  updated_at: 2012-11-14 04:07:14.071053000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -234,12 +234,12 @@ blocks_006:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4933222.7711062226444483)
 blocks_007:
-  id: 382
-  region_id: 54
+  id: 7
+  region_id: 4
   left: 1
   bottom: 0
-  created_at: 2012-11-11 16:47:19.958142000 Z
-  updated_at: 2012-11-11 16:47:19.958142000 Z
+  created_at: 2012-11-14 04:07:14.072397000 Z
+  updated_at: 2012-11-14 04:07:14.072397000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -273,12 +273,12 @@ blocks_007:
         +no_defs
     wkt: POINT (-8227955.5565458377823234 4933222.7711062226444483)
 blocks_008:
-  id: 383
-  region_id: 55
+  id: 8
+  region_id: 5
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:19.968595000 Z
-  updated_at: 2012-11-11 16:47:19.968595000 Z
+  created_at: 2012-11-14 04:07:14.086869000 Z
+  updated_at: 2012-11-14 04:07:14.086869000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -312,12 +312,12 @@ blocks_008:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4939222.7711062226444483)
 blocks_009:
-  id: 384
-  region_id: 55
+  id: 9
+  region_id: 5
   left: 1
   bottom: 0
-  created_at: 2012-11-11 16:47:19.970252000 Z
-  updated_at: 2012-11-11 16:47:19.970252000 Z
+  created_at: 2012-11-14 04:07:14.088137000 Z
+  updated_at: 2012-11-14 04:07:14.088137000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -351,12 +351,12 @@ blocks_009:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4939222.7711062226444483)
 blocks_010:
-  id: 385
-  region_id: 57
+  id: 10
+  region_id: 7
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.225519000 Z
-  updated_at: 2012-11-11 16:47:20.225519000 Z
+  created_at: 2012-11-14 04:07:15.189275000 Z
+  updated_at: 2012-11-14 04:07:15.189275000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -390,12 +390,12 @@ blocks_010:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4927222.7711062226444483)
 blocks_011:
-  id: 386
-  region_id: 57
+  id: 11
+  region_id: 7
   left: 0
   bottom: 1
-  created_at: 2012-11-11 16:47:20.227210000 Z
-  updated_at: 2012-11-11 16:47:20.227210000 Z
+  created_at: 2012-11-14 04:07:15.191005000 Z
+  updated_at: 2012-11-14 04:07:15.191005000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -429,12 +429,12 @@ blocks_011:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4930222.7711062226444483)
 blocks_012:
-  id: 387
-  region_id: 57
+  id: 12
+  region_id: 7
   left: 1
   bottom: 0
-  created_at: 2012-11-11 16:47:20.228461000 Z
-  updated_at: 2012-11-11 16:47:20.228461000 Z
+  created_at: 2012-11-14 04:07:15.192364000 Z
+  updated_at: 2012-11-14 04:07:15.192364000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -468,12 +468,12 @@ blocks_012:
         +no_defs
     wkt: POINT (-8227955.5565458377823234 4927222.7711062226444483)
 blocks_013:
-  id: 388
-  region_id: 57
+  id: 13
+  region_id: 7
   left: 1
   bottom: 1
-  created_at: 2012-11-11 16:47:20.229683000 Z
-  updated_at: 2012-11-11 16:47:20.229683000 Z
+  created_at: 2012-11-14 04:07:15.193619000 Z
+  updated_at: 2012-11-14 04:07:15.193619000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -507,12 +507,12 @@ blocks_013:
         +no_defs
     wkt: POINT (-8227955.5565458377823234 4930222.7711062226444483)
 blocks_014:
-  id: 389
-  region_id: 57
+  id: 14
+  region_id: 7
   left: 2
   bottom: 1
-  created_at: 2012-11-11 16:47:20.230904000 Z
-  updated_at: 2012-11-11 16:47:20.230904000 Z
+  created_at: 2012-11-14 04:07:15.194951000 Z
+  updated_at: 2012-11-14 04:07:15.194951000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -546,12 +546,12 @@ blocks_014:
         +no_defs
     wkt: POINT (-8224955.5565458377823234 4930222.7711062226444483)
 blocks_015:
-  id: 390
-  region_id: 58
+  id: 15
+  region_id: 8
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.242635000 Z
-  updated_at: 2012-11-11 16:47:20.242635000 Z
+  created_at: 2012-11-14 04:07:15.216614000 Z
+  updated_at: 2012-11-14 04:07:15.216614000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -585,12 +585,12 @@ blocks_015:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4936222.7711062226444483)
 blocks_016:
-  id: 391
-  region_id: 59
+  id: 16
+  region_id: 9
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.302363000 Z
-  updated_at: 2012-11-11 16:47:20.302363000 Z
+  created_at: 2012-11-14 04:07:15.349884000 Z
+  updated_at: 2012-11-14 04:07:15.349884000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -624,12 +624,12 @@ blocks_016:
         +no_defs
     wkt: POINT (-8224955.5565458377823234 4924222.7711062226444483)
 blocks_017:
-  id: 392
-  region_id: 59
+  id: 17
+  region_id: 9
   left: 1
   bottom: 1
-  created_at: 2012-11-11 16:47:20.304048000 Z
-  updated_at: 2012-11-11 16:47:20.304048000 Z
+  created_at: 2012-11-14 04:07:15.351653000 Z
+  updated_at: 2012-11-14 04:07:15.351653000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -663,12 +663,12 @@ blocks_017:
         +no_defs
     wkt: POINT (-8221955.5565458377823234 4927222.7711062226444483)
 blocks_018:
-  id: 393
-  region_id: 59
+  id: 18
+  region_id: 9
   left: 1
   bottom: 3
-  created_at: 2012-11-11 16:47:20.305395000 Z
-  updated_at: 2012-11-11 16:47:20.305395000 Z
+  created_at: 2012-11-14 04:07:15.352874000 Z
+  updated_at: 2012-11-14 04:07:15.352874000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -702,12 +702,12 @@ blocks_018:
         +no_defs
     wkt: POINT (-8221955.5565458377823234 4933222.7711062226444483)
 blocks_019:
-  id: 394
-  region_id: 60
+  id: 19
+  region_id: 10
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.312982000 Z
-  updated_at: 2012-11-11 16:47:20.312982000 Z
+  created_at: 2012-11-14 04:07:15.360789000 Z
+  updated_at: 2012-11-14 04:07:15.360789000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -741,12 +741,12 @@ blocks_019:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4954222.7711062226444483)
 blocks_020:
-  id: 395
-  region_id: 61
+  id: 20
+  region_id: 11
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.320239000 Z
-  updated_at: 2012-11-11 16:47:20.320239000 Z
+  created_at: 2012-11-14 04:07:15.372107000 Z
+  updated_at: 2012-11-14 04:07:15.372107000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -780,12 +780,12 @@ blocks_020:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4936222.7711062226444483)
 blocks_021:
-  id: 396
-  region_id: 64
+  id: 21
+  region_id: 14
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.394770000 Z
-  updated_at: 2012-11-11 16:47:20.394770000 Z
+  created_at: 2012-11-14 04:07:15.397754000 Z
+  updated_at: 2012-11-14 04:07:15.397754000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -819,12 +819,12 @@ blocks_021:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4936222.7711062226444483)
 blocks_022:
-  id: 397
-  region_id: 65
+  id: 22
+  region_id: 15
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.406001000 Z
-  updated_at: 2012-11-11 16:47:20.406001000 Z
+  created_at: 2012-11-14 04:07:15.410063000 Z
+  updated_at: 2012-11-14 04:07:15.410063000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -858,12 +858,12 @@ blocks_022:
         +no_defs
     wkt: POINT (-8239955.5565458377823234 4933222.7711062226444483)
 blocks_023:
-  id: 398
-  region_id: 65
+  id: 23
+  region_id: 15
   left: 1
   bottom: 0
-  created_at: 2012-11-11 16:47:20.407297000 Z
-  updated_at: 2012-11-11 16:47:20.407297000 Z
+  created_at: 2012-11-14 04:07:15.411457000 Z
+  updated_at: 2012-11-14 04:07:15.411457000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -897,12 +897,12 @@ blocks_023:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4933222.7711062226444483)
 blocks_024:
-  id: 399
-  region_id: 66
+  id: 24
+  region_id: 16
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.419874000 Z
-  updated_at: 2012-11-11 16:47:20.419874000 Z
+  created_at: 2012-11-14 04:07:15.427009000 Z
+  updated_at: 2012-11-14 04:07:15.427009000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -936,12 +936,12 @@ blocks_024:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4954222.7711062226444483)
 blocks_025:
-  id: 400
-  region_id: 67
+  id: 25
+  region_id: 17
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.427375000 Z
-  updated_at: 2012-11-11 16:47:20.427375000 Z
+  created_at: 2012-11-14 04:07:15.435926000 Z
+  updated_at: 2012-11-14 04:07:15.435926000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -975,12 +975,12 @@ blocks_025:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4942222.7711062226444483)
 blocks_026:
-  id: 401
-  region_id: 68
+  id: 26
+  region_id: 18
   left: 0
   bottom: 1
-  created_at: 2012-11-11 16:47:20.434005000 Z
-  updated_at: 2012-11-11 16:47:20.434005000 Z
+  created_at: 2012-11-14 04:07:15.446753000 Z
+  updated_at: 2012-11-14 04:07:15.446753000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1014,12 +1014,12 @@ blocks_026:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4930222.7711062226444483)
 blocks_027:
-  id: 402
-  region_id: 68
+  id: 27
+  region_id: 18
   left: 1
   bottom: 0
-  created_at: 2012-11-11 16:47:20.435349000 Z
-  updated_at: 2012-11-11 16:47:20.435349000 Z
+  created_at: 2012-11-14 04:07:15.448106000 Z
+  updated_at: 2012-11-14 04:07:15.448106000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1053,12 +1053,12 @@ blocks_027:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4927222.7711062226444483)
 blocks_028:
-  id: 403
-  region_id: 69
+  id: 28
+  region_id: 19
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.441045000 Z
-  updated_at: 2012-11-11 16:47:20.441045000 Z
+  created_at: 2012-11-14 04:07:15.458047000 Z
+  updated_at: 2012-11-14 04:07:15.458047000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1092,12 +1092,12 @@ blocks_028:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4930222.7711062226444483)
 blocks_029:
-  id: 404
-  region_id: 69
+  id: 29
+  region_id: 19
   left: 0
   bottom: 1
-  created_at: 2012-11-11 16:47:20.442360000 Z
-  updated_at: 2012-11-11 16:47:20.442360000 Z
+  created_at: 2012-11-14 04:07:15.459792000 Z
+  updated_at: 2012-11-14 04:07:15.459792000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1131,12 +1131,12 @@ blocks_029:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4933222.7711062226444483)
 blocks_030:
-  id: 405
-  region_id: 70
+  id: 30
+  region_id: 20
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.450118000 Z
-  updated_at: 2012-11-11 16:47:20.450118000 Z
+  created_at: 2012-11-14 04:07:15.473459000 Z
+  updated_at: 2012-11-14 04:07:15.473459000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1170,12 +1170,12 @@ blocks_030:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4945222.7711062226444483)
 blocks_031:
-  id: 406
-  region_id: 71
+  id: 31
+  region_id: 21
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.461929000 Z
-  updated_at: 2012-11-11 16:47:20.461929000 Z
+  created_at: 2012-11-14 04:07:15.490001000 Z
+  updated_at: 2012-11-14 04:07:15.490001000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1209,12 +1209,12 @@ blocks_031:
         +no_defs
     wkt: POINT (-8236955.5565458377823234 4948222.7711062226444483)
 blocks_032:
-  id: 407
-  region_id: 73
+  id: 32
+  region_id: 23
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.509762000 Z
-  updated_at: 2012-11-11 16:47:20.509762000 Z
+  created_at: 2012-11-14 04:07:15.614809000 Z
+  updated_at: 2012-11-14 04:07:15.614809000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1248,12 +1248,12 @@ blocks_032:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4924222.7711062226444483)
 blocks_033:
-  id: 408
-  region_id: 73
+  id: 33
+  region_id: 23
   left: 1
   bottom: 0
-  created_at: 2012-11-11 16:47:20.511323000 Z
-  updated_at: 2012-11-11 16:47:20.511323000 Z
+  created_at: 2012-11-14 04:07:15.616487000 Z
+  updated_at: 2012-11-14 04:07:15.616487000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1287,12 +1287,12 @@ blocks_033:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4924222.7711062226444483)
 blocks_034:
-  id: 409
-  region_id: 74
+  id: 34
+  region_id: 24
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.607198000 Z
-  updated_at: 2012-11-11 16:47:20.607198000 Z
+  created_at: 2012-11-14 04:07:15.655223000 Z
+  updated_at: 2012-11-14 04:07:15.655223000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1326,12 +1326,12 @@ blocks_034:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4960222.7711062226444483)
 blocks_035:
-  id: 410
-  region_id: 74
+  id: 35
+  region_id: 24
   left: 0
   bottom: 1
-  created_at: 2012-11-11 16:47:20.608735000 Z
-  updated_at: 2012-11-11 16:47:20.608735000 Z
+  created_at: 2012-11-14 04:07:15.656790000 Z
+  updated_at: 2012-11-14 04:07:15.656790000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1365,12 +1365,12 @@ blocks_035:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4963222.7711062226444483)
 blocks_036:
-  id: 411
-  region_id: 76
+  id: 36
+  region_id: 26
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.621219000 Z
-  updated_at: 2012-11-11 16:47:20.621219000 Z
+  created_at: 2012-11-14 04:07:15.676345000 Z
+  updated_at: 2012-11-14 04:07:15.676345000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1404,12 +1404,12 @@ blocks_036:
         +no_defs
     wkt: POINT (-8227955.5565458377823234 4939222.7711062226444483)
 blocks_037:
-  id: 412
-  region_id: 77
+  id: 37
+  region_id: 27
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.629937000 Z
-  updated_at: 2012-11-11 16:47:20.629937000 Z
+  created_at: 2012-11-14 04:07:15.687173000 Z
+  updated_at: 2012-11-14 04:07:15.687173000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1443,12 +1443,12 @@ blocks_037:
         +no_defs
     wkt: POINT (-8224955.5565458377823234 4933222.7711062226444483)
 blocks_038:
-  id: 413
-  region_id: 77
+  id: 38
+  region_id: 27
   left: 0
   bottom: 1
-  created_at: 2012-11-11 16:47:20.631531000 Z
-  updated_at: 2012-11-11 16:47:20.631531000 Z
+  created_at: 2012-11-14 04:07:15.688849000 Z
+  updated_at: 2012-11-14 04:07:15.688849000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1482,12 +1482,12 @@ blocks_038:
         +no_defs
     wkt: POINT (-8224955.5565458377823234 4936222.7711062226444483)
 blocks_039:
-  id: 414
-  region_id: 78
+  id: 39
+  region_id: 28
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.638073000 Z
-  updated_at: 2012-11-11 16:47:20.638073000 Z
+  created_at: 2012-11-14 04:07:15.703955000 Z
+  updated_at: 2012-11-14 04:07:15.703955000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1521,12 +1521,12 @@ blocks_039:
         +no_defs
     wkt: POINT (-8227955.5565458377823234 4936222.7711062226444483)
 blocks_040:
-  id: 415
-  region_id: 79
+  id: 40
+  region_id: 29
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.646377000 Z
-  updated_at: 2012-11-11 16:47:20.646377000 Z
+  created_at: 2012-11-14 04:07:15.721126000 Z
+  updated_at: 2012-11-14 04:07:15.721126000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1560,12 +1560,12 @@ blocks_040:
         +no_defs
     wkt: POINT (-8230955.5565458377823234 4957222.7711062226444483)
 blocks_041:
-  id: 416
-  region_id: 80
+  id: 41
+  region_id: 30
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.652857000 Z
-  updated_at: 2012-11-11 16:47:20.652857000 Z
+  created_at: 2012-11-14 04:07:15.728325000 Z
+  updated_at: 2012-11-14 04:07:15.728325000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1599,12 +1599,12 @@ blocks_041:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4951222.7711062226444483)
 blocks_042:
-  id: 417
-  region_id: 81
+  id: 42
+  region_id: 31
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.664606000 Z
-  updated_at: 2012-11-11 16:47:20.664606000 Z
+  created_at: 2012-11-14 04:07:15.740164000 Z
+  updated_at: 2012-11-14 04:07:15.740164000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1638,12 +1638,12 @@ blocks_042:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4948222.7711062226444483)
 blocks_043:
-  id: 418
-  region_id: 83
+  id: 43
+  region_id: 33
   left: 0
   bottom: 0
-  created_at: 2012-11-11 16:47:20.693589000 Z
-  updated_at: 2012-11-11 16:47:20.693589000 Z
+  created_at: 2012-11-14 04:07:15.849305000 Z
+  updated_at: 2012-11-14 04:07:15.849305000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1677,12 +1677,12 @@ blocks_043:
         +no_defs
     wkt: POINT (-8233955.5565458377823234 4942222.7711062226444483)
 blocks_044:
-  id: 419
-  region_id: 83
+  id: 44
+  region_id: 33
   left: 1
   bottom: 0
-  created_at: 2012-11-11 16:47:20.695036000 Z
-  updated_at: 2012-11-11 16:47:20.695036000 Z
+  created_at: 2012-11-14 04:07:15.851021000 Z
+  updated_at: 2012-11-14 04:07:15.851021000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false

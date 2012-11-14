@@ -11,5 +11,8 @@ class App.Region extends App.Model
     @appendErrors(left: "left is required") unless @left
     @appendErrors(bottom: "bottom is required") unless @bottom
 
+  neighborhoodNames: ->
+    _(@neighborhoods).map((neighborhood)-> neighborhood.name)
+
   mesh: ->
     App.MeshFactory.create_region(@)

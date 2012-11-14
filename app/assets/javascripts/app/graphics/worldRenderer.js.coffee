@@ -2,25 +2,18 @@ class App.WorldRenderer
 
   worldRenderers = []
 
-  @DEFAULT_OPTIONS: {
-    fov: 45
-    width: window.innerWidth
-    height: window.innerHeight
-  }
-
   @all: -> worldRenderers
   @first: -> worldRenderers[0]
-  @create: (options) -> new WorldRenderer(options)
+  @create: () -> new WorldRenderer()
 
-  constructor: (options)->
-    options = $.extend(true, WorldRenderer.DEFAULT_OPTIONS, options)
-
+  constructor: ()->
     if ( ! Detector.webgl )
       Detector.addGetWebGLMessage()
 
     console.debug("Creating worldRenderer...")
     @scene = new THREE.Scene()
 
+    options = calculate_options()
     @camera = createPerspectiveCamera(options)
     @scene.add( @camera )
 
@@ -35,8 +28,7 @@ class App.WorldRenderer
 
     @scene.add(@directionalLight)
 
-    if Env.development
-      @stats = createStats()
+    @stats = new App.StatsRenderer()
 
     worldRenderers.push(@)
 
@@ -44,20 +36,22 @@ class App.WorldRenderer
     console.debug("Destroying worldRenderer...")
 
     @destroyed = true
-    $(@stats.domElement).remove() if @stats
+    @stats.destroy()
     cancelAnimationFrame @requestId
     window.removeEventListener( 'resize', @onWindowResize, false )
     worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
-    $(".navbar .container").append(@stats.domElement) if @stats
+    @stats.attachToDom()
     window.addEventListener( 'resize', @onWindowResize, false )
     @
 
   onWindowResize: ( event ) =>
-    @renderer.setSize( window.innerWidth, window.innerHeight )
-    @camera.aspect = window.innerWidth / window.innerHeight
+    console.log "Resizing..."
+    options = calculate_options()
+    @renderer.setSize( options.width, options.height )
+    @camera.aspect = options.width / options.height
     @camera.updateProjectionMatrix()
 
   animate: (elapsedTicks)=>
@@ -108,20 +102,16 @@ createDirectionalLight = (options) ->
 createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
 
-createStats = ->
-  stats = new Stats()
-  stats.setMode(0)
-
-  $(stats.domElement).addClass("left")
-
-  stats.domElement.children[ 0 ].children[ 0 ].style.color = "#aaa"
-  stats.domElement.children[ 0 ].style.background = "transparent"
-  stats.domElement.children[ 0 ].children[ 1 ].style.display = "none"
-  stats
-
 render = (worldRenderer) ->
   worldRenderer.scene.children.forEach (child) ->
     child.animate() if child.animate
 
   worldRenderer.renderer.render( worldRenderer.scene, worldRenderer.camera )
-  worldRenderer.stats.update() if worldRenderer.stats
+  worldRenderer.stats.update()
+
+calculate_options = ->
+  {
+    fov: 45
+    width: window.innerWidth
+    height: window.innerHeight - 60
+  }
