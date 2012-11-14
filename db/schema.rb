@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112131936) do
+ActiveRecord::Schema.define(:version => 20121114023617) do
 
   create_table "blocks", :force => true do |t|
     t.integer  "region_id"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(:version => 20121112131936) do
   end
 
   add_index "blocks", ["point"], :name => "index_blocks_on_point", :spatial => true
+
+  create_table "neighborhood_regions", :force => true do |t|
+    t.integer "region_id"
+    t.integer "neighborhood_id"
+  end
 
   create_table "neighborhoods", :force => true do |t|
     t.string   "name",                                                :null => false

@@ -5,6 +5,8 @@ class Region < ActiveRecord::Base
 
   belongs_to :world
   has_many :blocks, dependent: :destroy
+  has_many :neighborhood_regions, dependent: :destroy
+  has_many :neighborhoods, through: :neighborhood_regions
 
   delegate :contains?, to: :geometry
 
