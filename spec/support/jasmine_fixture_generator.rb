@@ -16,3 +16,7 @@ Fixtures.#{name} =
     end
   end
 end
+
+RSpec.configure do |config|
+  config.include(JasmineFixtureGenerator)
+end
