@@ -1,6 +1,9 @@
 FactoryGirl.define do
   factory :region do
     name { Faker::AddressUS.state }
+    after(:build) do |region|
+      region.neighborhoods << Neighborhood.first
+    end
   end
 
   factory :region_with_geometry, parent: :region do

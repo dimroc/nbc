@@ -22,6 +22,7 @@ describe Region do
 
   describe "#as_json" do
     subject { region.as_json.with_indifferent_access }
+
     let(:region) { FactoryGirl.build(:region_with_geometry) }
     it "should not have geometry" do
       subject[:geometry].should be_nil
@@ -37,6 +38,13 @@ describe Region do
         subject[:blocks][0][:created_at].should be_nil
         subject[:blocks][0][:updated_at].should be_nil
         subject[:blocks][0][:point].should be_nil
+      end
+    end
+
+    context "with neighborhoods" do
+      it "should only render the neighborhood name" do
+        subject[:neighborhoods][0][:name].should == Neighborhood.first.name
+        subject[:neighborhoods][0][:borough].should be_nil
       end
     end
   end
