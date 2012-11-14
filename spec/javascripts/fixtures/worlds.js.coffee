@@ -1,10 +1,10 @@
 Fixtures.worlds =
 [
   {
-    "created_at": "2012-11-11T16:47:19Z",
-    "id": 11,
+    "created_at": "2012-11-14T04:07:13Z",
+    "id": 1,
     "name": "NYC",
     "slug": "nyc",
-    "updated_at": "2012-11-11T16:47:19Z"
+    "updated_at": "2012-11-14T04:07:13Z"
   }
 ]

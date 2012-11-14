@@ -1,0 +1,429 @@
+---
+neighborhood_regions_001:
+  id: 1
+  region_id: 1
+  neighborhood_id: 64
+neighborhood_regions_002:
+  id: 2
+  region_id: 2
+  neighborhood_id: 48
+neighborhood_regions_003:
+  id: 3
+  region_id: 2
+  neighborhood_id: 80
+neighborhood_regions_004:
+  id: 4
+  region_id: 3
+  neighborhood_id: 47
+neighborhood_regions_005:
+  id: 5
+  region_id: 3
+  neighborhood_id: 82
+neighborhood_regions_006:
+  id: 6
+  region_id: 3
+  neighborhood_id: 102
+neighborhood_regions_007:
+  id: 7
+  region_id: 4
+  neighborhood_id: 57
+neighborhood_regions_008:
+  id: 8
+  region_id: 4
+  neighborhood_id: 226
+neighborhood_regions_009:
+  id: 9
+  region_id: 4
+  neighborhood_id: 262
+neighborhood_regions_010:
+  id: 10
+  region_id: 5
+  neighborhood_id: 65
+neighborhood_regions_011:
+  id: 11
+  region_id: 5
+  neighborhood_id: 70
+neighborhood_regions_012:
+  id: 12
+  region_id: 5
+  neighborhood_id: 85
+neighborhood_regions_013:
+  id: 13
+  region_id: 5
+  neighborhood_id: 87
+neighborhood_regions_014:
+  id: 14
+  region_id: 5
+  neighborhood_id: 88
+neighborhood_regions_015:
+  id: 15
+  region_id: 5
+  neighborhood_id: 100
+neighborhood_regions_016:
+  id: 16
+  region_id: 5
+  neighborhood_id: 283
+neighborhood_regions_017:
+  id: 17
+  region_id: 5
+  neighborhood_id: 286
+neighborhood_regions_018:
+  id: 18
+  region_id: 6
+  neighborhood_id: 123
+neighborhood_regions_019:
+  id: 19
+  region_id: 6
+  neighborhood_id: 130
+neighborhood_regions_020:
+  id: 20
+  region_id: 6
+  neighborhood_id: 131
+neighborhood_regions_021:
+  id: 21
+  region_id: 6
+  neighborhood_id: 252
+neighborhood_regions_022:
+  id: 22
+  region_id: 7
+  neighborhood_id: 75
+neighborhood_regions_023:
+  id: 23
+  region_id: 7
+  neighborhood_id: 76
+neighborhood_regions_024:
+  id: 24
+  region_id: 7
+  neighborhood_id: 84
+neighborhood_regions_025:
+  id: 25
+  region_id: 7
+  neighborhood_id: 92
+neighborhood_regions_026:
+  id: 26
+  region_id: 7
+  neighborhood_id: 95
+neighborhood_regions_027:
+  id: 27
+  region_id: 7
+  neighborhood_id: 264
+neighborhood_regions_028:
+  id: 28
+  region_id: 7
+  neighborhood_id: 265
+neighborhood_regions_029:
+  id: 29
+  region_id: 8
+  neighborhood_id: 66
+neighborhood_regions_030:
+  id: 30
+  region_id: 8
+  neighborhood_id: 67
+neighborhood_regions_031:
+  id: 31
+  region_id: 8
+  neighborhood_id: 68
+neighborhood_regions_032:
+  id: 32
+  region_id: 8
+  neighborhood_id: 69
+neighborhood_regions_033:
+  id: 33
+  region_id: 8
+  neighborhood_id: 71
+neighborhood_regions_034:
+  id: 34
+  region_id: 10
+  neighborhood_id: 114
+neighborhood_regions_035:
+  id: 35
+  region_id: 10
+  neighborhood_id: 115
+neighborhood_regions_036:
+  id: 36
+  region_id: 10
+  neighborhood_id: 127
+neighborhood_regions_037:
+  id: 37
+  region_id: 11
+  neighborhood_id: 56
+neighborhood_regions_038:
+  id: 38
+  region_id: 11
+  neighborhood_id: 60
+neighborhood_regions_039:
+  id: 39
+  region_id: 11
+  neighborhood_id: 284
+neighborhood_regions_040:
+  id: 40
+  region_id: 12
+  neighborhood_id: 117
+neighborhood_regions_041:
+  id: 41
+  region_id: 12
+  neighborhood_id: 253
+neighborhood_regions_042:
+  id: 42
+  region_id: 12
+  neighborhood_id: 279
+neighborhood_regions_043:
+  id: 43
+  region_id: 13
+  neighborhood_id: 89
+neighborhood_regions_044:
+  id: 44
+  region_id: 13
+  neighborhood_id: 225
+neighborhood_regions_045:
+  id: 45
+  region_id: 15
+  neighborhood_id: 49
+neighborhood_regions_046:
+  id: 46
+  region_id: 15
+  neighborhood_id: 59
+neighborhood_regions_047:
+  id: 47
+  region_id: 16
+  neighborhood_id: 109
+neighborhood_regions_048:
+  id: 48
+  region_id: 17
+  neighborhood_id: 103
+neighborhood_regions_049:
+  id: 49
+  region_id: 17
+  neighborhood_id: 121
+neighborhood_regions_050:
+  id: 50
+  region_id: 17
+  neighborhood_id: 122
+neighborhood_regions_051:
+  id: 51
+  region_id: 17
+  neighborhood_id: 251
+neighborhood_regions_052:
+  id: 52
+  region_id: 18
+  neighborhood_id: 58
+neighborhood_regions_053:
+  id: 53
+  region_id: 18
+  neighborhood_id: 81
+neighborhood_regions_054:
+  id: 54
+  region_id: 18
+  neighborhood_id: 101
+neighborhood_regions_055:
+  id: 55
+  region_id: 19
+  neighborhood_id: 54
+neighborhood_regions_056:
+  id: 56
+  region_id: 19
+  neighborhood_id: 55
+neighborhood_regions_057:
+  id: 57
+  region_id: 19
+  neighborhood_id: 93
+neighborhood_regions_058:
+  id: 58
+  region_id: 19
+  neighborhood_id: 94
+neighborhood_regions_059:
+  id: 59
+  region_id: 19
+  neighborhood_id: 224
+neighborhood_regions_060:
+  id: 60
+  region_id: 20
+  neighborhood_id: 120
+neighborhood_regions_061:
+  id: 61
+  region_id: 20
+  neighborhood_id: 124
+neighborhood_regions_062:
+  id: 62
+  region_id: 20
+  neighborhood_id: 125
+neighborhood_regions_063:
+  id: 63
+  region_id: 20
+  neighborhood_id: 126
+neighborhood_regions_064:
+  id: 64
+  region_id: 21
+  neighborhood_id: 116
+neighborhood_regions_065:
+  id: 65
+  region_id: 21
+  neighborhood_id: 119
+neighborhood_regions_066:
+  id: 66
+  region_id: 22
+  neighborhood_id: 52
+neighborhood_regions_067:
+  id: 67
+  region_id: 22
+  neighborhood_id: 79
+neighborhood_regions_068:
+  id: 68
+  region_id: 22
+  neighborhood_id: 86
+neighborhood_regions_069:
+  id: 69
+  region_id: 23
+  neighborhood_id: 51
+neighborhood_regions_070:
+  id: 70
+  region_id: 23
+  neighborhood_id: 53
+neighborhood_regions_071:
+  id: 71
+  region_id: 23
+  neighborhood_id: 78
+neighborhood_regions_072:
+  id: 72
+  region_id: 23
+  neighborhood_id: 83
+neighborhood_regions_073:
+  id: 73
+  region_id: 23
+  neighborhood_id: 292
+neighborhood_regions_074:
+  id: 74
+  region_id: 23
+  neighborhood_id: 299
+neighborhood_regions_075:
+  id: 75
+  region_id: 24
+  neighborhood_id: 104
+neighborhood_regions_076:
+  id: 76
+  region_id: 24
+  neighborhood_id: 105
+neighborhood_regions_077:
+  id: 77
+  region_id: 25
+  neighborhood_id: 106
+neighborhood_regions_078:
+  id: 78
+  region_id: 25
+  neighborhood_id: 107
+neighborhood_regions_079:
+  id: 79
+  region_id: 25
+  neighborhood_id: 128
+neighborhood_regions_080:
+  id: 80
+  region_id: 26
+  neighborhood_id: 63
+neighborhood_regions_081:
+  id: 81
+  region_id: 27
+  neighborhood_id: 72
+neighborhood_regions_082:
+  id: 82
+  region_id: 27
+  neighborhood_id: 73
+neighborhood_regions_083:
+  id: 83
+  region_id: 27
+  neighborhood_id: 74
+neighborhood_regions_084:
+  id: 84
+  region_id: 27
+  neighborhood_id: 91
+neighborhood_regions_085:
+  id: 85
+  region_id: 27
+  neighborhood_id: 96
+neighborhood_regions_086:
+  id: 86
+  region_id: 27
+  neighborhood_id: 263
+neighborhood_regions_087:
+  id: 87
+  region_id: 27
+  neighborhood_id: 298
+neighborhood_regions_088:
+  id: 88
+  region_id: 28
+  neighborhood_id: 61
+neighborhood_regions_089:
+  id: 89
+  region_id: 28
+  neighborhood_id: 90
+neighborhood_regions_090:
+  id: 90
+  region_id: 28
+  neighborhood_id: 285
+neighborhood_regions_091:
+  id: 91
+  region_id: 29
+  neighborhood_id: 108
+neighborhood_regions_092:
+  id: 92
+  region_id: 31
+  neighborhood_id: 118
+neighborhood_regions_093:
+  id: 93
+  region_id: 31
+  neighborhood_id: 129
+neighborhood_regions_094:
+  id: 94
+  region_id: 31
+  neighborhood_id: 274
+neighborhood_regions_095:
+  id: 95
+  region_id: 31
+  neighborhood_id: 276
+neighborhood_regions_096:
+  id: 96
+  region_id: 31
+  neighborhood_id: 277
+neighborhood_regions_097:
+  id: 97
+  region_id: 31
+  neighborhood_id: 278
+neighborhood_regions_098:
+  id: 98
+  region_id: 32
+  neighborhood_id: 110
+neighborhood_regions_099:
+  id: 99
+  region_id: 32
+  neighborhood_id: 111
+neighborhood_regions_100:
+  id: 100
+  region_id: 32
+  neighborhood_id: 112
+neighborhood_regions_101:
+  id: 101
+  region_id: 32
+  neighborhood_id: 113
+neighborhood_regions_102:
+  id: 102
+  region_id: 32
+  neighborhood_id: 250
+neighborhood_regions_103:
+  id: 103
+  region_id: 33
+  neighborhood_id: 50
+neighborhood_regions_104:
+  id: 104
+  region_id: 33
+  neighborhood_id: 62
+neighborhood_regions_105:
+  id: 105
+  region_id: 33
+  neighborhood_id: 97
+neighborhood_regions_106:
+  id: 106
+  region_id: 33
+  neighborhood_id: 98
+neighborhood_regions_107:
+  id: 107
+  region_id: 33
+  neighborhood_id: 99
