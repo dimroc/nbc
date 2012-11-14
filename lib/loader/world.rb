@@ -10,7 +10,8 @@ class Loader::World
 
         file.each do |record|
           region_attributes = map_to_region_attributes(mappings, record.attributes)
-          world.regions.build(region_attributes.merge(geometry: record.geometry))
+          region = world.regions.build(region_attributes.merge(geometry: record.geometry))
+          populate_neighborhoods(region)
         end
       end
 
@@ -26,6 +27,11 @@ class Loader::World
         attributes[map] = v if map
       end
       attributes
+    end
+
+    def populate_neighborhoods(region)
+      return unless region.geometry
+      region.neighborhoods = Neighborhood.in_geometry(region.geometry)
     end
   end
 end

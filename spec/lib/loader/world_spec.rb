@@ -38,11 +38,14 @@ describe Loader::World do
       let(:world) { Loader::World.from_shapefile(shapefile, "BoroCD" => "name") }
       let(:shapefile) { "lib/data/shapefiles/nyc/region" }
 
-      it "should generate a geometry for every borough" do
+      it "should generate a geometry for every borough with neighborhoods" do
         # Primarily used to test drive and debug
         world.regions.size.should == 33
         world.regions.map(&:name).should include 101
         world.regions.map(&:name).should include 317
+
+        neighborhoods = world.regions.flat_map(&:neighborhoods)
+        neighborhoods.count.should > Neighborhood.where(borough: "Manhattan").count
 
         world.name = "bogus"
         world.should be_valid
