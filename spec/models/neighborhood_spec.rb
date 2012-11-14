@@ -19,4 +19,17 @@ describe Neighborhood do
       end
     end
   end
+
+  describe "for_geometry" do
+    subject { Neighborhood.for_geometry(geometry) }
+
+    context "integration" do
+      let(:included_neighborhood) { Neighborhood.first }
+      let(:geometry) { included_neighborhood.point }
+
+      it "should return the relevant neighborhoods" do
+        subject.should == [included_neighborhood]
+      end
+    end
+  end
 end

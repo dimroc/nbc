@@ -11,5 +11,13 @@ class Neighborhood < ActiveRecord::Base
         AND r.id = #{region.id}
       SQL
     end
+
+    def for_geometry(geometry)
+      where(<<-SQL)
+        ST_Contains(
+          ST_GeomFromText('#{geometry.as_text}',#{geometry.srid}),
+          ST_GeomFromEWKB(point))
+      SQL
+    end
   end
 end
