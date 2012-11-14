@@ -2,25 +2,18 @@ class App.WorldRenderer
 
   worldRenderers = []
 
-  @DEFAULT_OPTIONS: {
-    fov: 45
-    width: window.innerWidth
-    height: window.innerHeight
-  }
-
   @all: -> worldRenderers
   @first: -> worldRenderers[0]
-  @create: (options) -> new WorldRenderer(options)
+  @create: () -> new WorldRenderer()
 
-  constructor: (options)->
-    options = $.extend(true, WorldRenderer.DEFAULT_OPTIONS, options)
-
+  constructor: ()->
     if ( ! Detector.webgl )
       Detector.addGetWebGLMessage()
 
     console.debug("Creating worldRenderer...")
     @scene = new THREE.Scene()
 
+    options = calculate_options()
     @camera = createPerspectiveCamera(options)
     @scene.add( @camera )
 
@@ -55,8 +48,10 @@ class App.WorldRenderer
     @
 
   onWindowResize: ( event ) =>
-    @renderer.setSize( window.innerWidth, window.innerHeight )
-    @camera.aspect = window.innerWidth / window.innerHeight
+    console.log "Resizing..."
+    options = calculate_options()
+    @renderer.setSize( options.width, options.height )
+    @camera.aspect = options.width / options.height
     @camera.updateProjectionMatrix()
 
   animate: (elapsedTicks)=>
@@ -113,3 +108,10 @@ render = (worldRenderer) ->
 
   worldRenderer.renderer.render( worldRenderer.scene, worldRenderer.camera )
   worldRenderer.stats.update()
+
+calculate_options = ->
+  {
+    fov: 45
+    width: window.innerWidth
+    height: window.innerHeight - 60
+  }

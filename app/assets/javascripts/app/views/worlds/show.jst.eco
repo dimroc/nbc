@@ -11,3 +11,13 @@
     </div>
   </div>
 </div>
+
+<div id="world"></div>
+
+<div id="footer">
+  <div class="container">
+    <p class="muted credit neighborhoods">
+      Current Neighborhoods: <%= @currentNeighborhoods() %>
+    </p>
+  </div>
+</div>
