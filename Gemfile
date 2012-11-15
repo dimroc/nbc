@@ -3,7 +3,7 @@ HOST_OS = RbConfig::CONFIG['host_os']
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.5'
+gem 'rails', '~> 3.2.9'
 gem 'pg'
 gem 'jquery-rails'
 gem "haml", ">= 3.1.6"
@@ -38,8 +38,9 @@ group :test, :development do
   gem "guard-ctags-bundler"
   gem "guard-rails", git: "git://github.com/johnbintz/guard-rails.git"
 
-  gem "debugger"
+  gem "debugger", "~> 1.1.3"
   gem "pry"
+  gem "pry-debugger"
 
   gem "fuubar"
   gem "ffaker"
