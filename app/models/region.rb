@@ -60,4 +60,11 @@ class Region < ActiveRecord::Base
   def generate_bounding_box
     Cartesian::BoundingBox.create_from_geometry(geometry) if geometry
   end
+
+  def simple_geometry
+    rval = Region.connection.execute(<<-SQL).values.first.first
+    SELECT ST_AsText(ST_Simplify(geometry, 50)) FROM regions WHERE id = #{id} LIMIT 1
+    SQL
+    Mercator::FACTORY.projection_factory.parse_wkt(rval)
+  end
 end
