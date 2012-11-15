@@ -6,7 +6,7 @@ class Neighborhood < ActiveRecord::Base
       where(<<-SQL)
         ST_Contains(
           ST_GeomFromText('#{geometry.as_text}',#{geometry.srid}),
-          ST_GeomFromEWKB(point))
+          point)
       SQL
     end
   end

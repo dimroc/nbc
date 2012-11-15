@@ -20,6 +20,14 @@ GIT
     spine-rails (0.1.0)
       rails (>= 3.1.0)
 
+GIT
+  remote: git@github.com:dimroc/activerecord-postgis-adapter.git
+  revision: 2aedc01a275e02636eda63af56bceceb3f01ae67
+  specs:
+    activerecord-postgis-adapter (0.4.4.nonrelease)
+      pg (>= 0.11.0)
+      rgeo-activerecord (~> 0.4.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,9 +52,6 @@ GEM
       activesupport (= 3.2.9)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activerecord-postgis-adapter (0.4.3)
-      pg (>= 0.11.0)
-      rgeo-activerecord (~> 0.4.5)
     activeresource (3.2.9)
       activemodel (= 3.2.9)
       activesupport (= 3.2.9)
@@ -300,7 +305,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-postgis-adapter
+  activerecord-postgis-adapter!
   awesome_print
   cancan (>= 1.6.7)
   capybara

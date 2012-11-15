@@ -17,7 +17,7 @@ gem "spine-rails", git: "git://github.com/maccman/spine-rails.git"
 gem "eco"
 gem "friendly_id"
 
-gem 'activerecord-postgis-adapter'
+gem 'activerecord-postgis-adapter', git: "git@github.com:dimroc/activerecord-postgis-adapter.git"
 gem 'rgeo'
 gem 'rgeo-shapefile'
 gem 'georuby'
