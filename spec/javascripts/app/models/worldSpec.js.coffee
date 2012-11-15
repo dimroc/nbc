@@ -51,13 +51,10 @@ describe "models.world", ->
       mostRecentAjaxRequest().response(Factories.nycRegionsResponse())
       expect(callback).toHaveBeenCalledWith(nyc)
 
-      world_regions = nyc.regions().select (region) -> region.world_id == nyc.id
-      expect(world_regions.length).toEqual(Fixtures.nyc.length)
-      expect(world_regions.length).toEqual(nyc.regions().all().length)
+      expect(nyc.regions().all().length).toEqual(Fixtures.nyc.length)
 
-      # Expect blocks
-      expect(world_regions[0].blocks().all().length).toEqual(
-        Fixtures.nyc[0].blocks.length)
+      world_region = _(nyc.regions().all()).detect((region) -> region.world_id == nyc.id)
+      expect(world_region).not.toBeNull()
 
     describe "on failure", ->
       it "should log the error", ->
