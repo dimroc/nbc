@@ -6,6 +6,8 @@ Fixtures.nyc =
     "left": 0,
     "name": "105",
     "slug": "105",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
 
@@ -28,6 +30,8 @@ Fixtures.nyc =
     "left": 0,
     "name": "309",
     "slug": "309",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
 
@@ -47,6 +51,8 @@ Fixtures.nyc =
     "left": 4,
     "name": "303",
     "slug": "303",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -68,6 +74,8 @@ Fixtures.nyc =
     "left": 2,
     "name": "311",
     "slug": "311",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -98,6 +106,8 @@ Fixtures.nyc =
     "left": 1,
     "name": "310",
     "slug": "310",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -131,6 +141,8 @@ Fixtures.nyc =
     "left": 4,
     "name": "317",
     "slug": "317",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -164,6 +176,8 @@ Fixtures.nyc =
     "left": 2,
     "name": "302",
     "slug": "302",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -212,6 +226,8 @@ Fixtures.nyc =
     "left": 0,
     "name": "101",
     "slug": "101",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
 
@@ -237,6 +253,8 @@ Fixtures.nyc =
     "left": 4,
     "name": "318",
     "slug": "318",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -300,6 +318,8 @@ Fixtures.nyc =
     "left": 2,
     "name": "306",
     "slug": "306",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -333,6 +353,8 @@ Fixtures.nyc =
     "left": 6,
     "name": "356",
     "slug": "356",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -364,6 +386,8 @@ Fixtures.nyc =
     "left": 3,
     "name": "107",
     "slug": "107",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -391,6 +415,8 @@ Fixtures.nyc =
     "left": 4,
     "name": "308",
     "slug": "308",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -418,6 +444,8 @@ Fixtures.nyc =
     "left": 3,
     "name": "355",
     "slug": "355",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -437,6 +465,8 @@ Fixtures.nyc =
     "left": 1,
     "name": "307",
     "slug": "307",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -467,6 +497,8 @@ Fixtures.nyc =
     "left": 4,
     "name": "111",
     "slug": "111",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -488,6 +520,8 @@ Fixtures.nyc =
     "left": 2,
     "name": "103",
     "slug": "103",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -518,6 +552,8 @@ Fixtures.nyc =
     "left": 2,
     "name": "312",
     "slug": "312",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -551,6 +587,8 @@ Fixtures.nyc =
     "left": 3,
     "name": "314",
     "slug": "314",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -590,6 +628,8 @@ Fixtures.nyc =
     "left": 3,
     "name": "164",
     "slug": "164",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -609,6 +649,8 @@ Fixtures.nyc =
     "left": 3,
     "name": "106",
     "slug": "106",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -645,6 +687,8 @@ Fixtures.nyc =
     "left": 2,
     "name": "102",
     "slug": "102",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -676,6 +720,8 @@ Fixtures.nyc =
     "left": 2,
     "name": "104",
     "slug": "104",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -700,6 +746,8 @@ Fixtures.nyc =
     "left": 0,
     "name": "313",
     "slug": "313",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
 
@@ -722,6 +770,8 @@ Fixtures.nyc =
     "left": 3,
     "name": "315",
     "slug": "315",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -764,6 +814,8 @@ Fixtures.nyc =
     "left": 4,
     "name": "112",
     "slug": "112",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -794,6 +846,8 @@ Fixtures.nyc =
     "left": 5,
     "name": "316",
     "slug": "316",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -821,6 +875,8 @@ Fixtures.nyc =
     "left": 0,
     "name": "109",
     "slug": "109",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
 
@@ -843,6 +899,8 @@ Fixtures.nyc =
     "left": 5,
     "name": "304",
     "slug": "304",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -864,6 +922,8 @@ Fixtures.nyc =
     "left": 6,
     "name": "305",
     "slug": "305",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -909,6 +969,8 @@ Fixtures.nyc =
     "left": 4,
     "name": "110",
     "slug": "110",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {
@@ -930,6 +992,8 @@ Fixtures.nyc =
     "left": 0,
     "name": "108",
     "slug": "108",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
 
@@ -958,6 +1022,8 @@ Fixtures.nyc =
     "left": 3,
     "name": "301",
     "slug": "301",
+    "threejs": {
+    },
     "world_id": 1,
     "blocks": [
       {

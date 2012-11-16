@@ -2,12 +2,13 @@
 '303':
   id: 1
   name: '303'
-  created_at: 2012-11-14 04:07:13.984683000 Z
-  updated_at: 2012-11-14 04:07:13.984683000 Z
+  created_at: 2012-11-16 05:56:01.209203000 Z
+  updated_at: 2012-11-16 05:56:01.209203000 Z
   slug: '303'
   world_id: 1
   left: 4
   bottom: 6
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -166,12 +167,13 @@
 '311':
   id: 2
   name: '311'
-  created_at: 2012-11-14 04:07:14.041105000 Z
-  updated_at: 2012-11-14 04:07:14.041105000 Z
+  created_at: 2012-11-16 05:56:01.221249000 Z
+  updated_at: 2012-11-16 05:56:01.221249000 Z
   slug: '311'
   world_id: 1
   left: 2
   bottom: 1
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -404,12 +406,13 @@
 '310':
   id: 3
   name: '310'
-  created_at: 2012-11-14 04:07:14.053952000 Z
-  updated_at: 2012-11-14 04:07:14.053952000 Z
+  created_at: 2012-11-16 05:56:01.234053000 Z
+  updated_at: 2012-11-16 05:56:01.234053000 Z
   slug: '310'
   world_id: 1
   left: 1
   bottom: 2
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -626,12 +629,13 @@
 '317':
   id: 4
   name: '317'
-  created_at: 2012-11-14 04:07:14.067128000 Z
-  updated_at: 2012-11-14 04:07:14.067128000 Z
+  created_at: 2012-11-16 05:56:01.247192000 Z
+  updated_at: 2012-11-16 05:56:01.247192000 Z
   slug: '317'
   world_id: 1
   left: 4
   bottom: 4
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -781,12 +785,13 @@
 '302':
   id: 5
   name: '302'
-  created_at: 2012-11-14 04:07:14.079779000 Z
-  updated_at: 2012-11-14 04:07:14.079779000 Z
+  created_at: 2012-11-16 05:56:01.259526000 Z
+  updated_at: 2012-11-16 05:56:01.259526000 Z
   slug: '302'
   world_id: 1
   left: 2
   bottom: 6
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1127,12 +1132,13 @@
 '101':
   id: 6
   name: '101'
-  created_at: 2012-11-14 04:07:14.100509000 Z
-  updated_at: 2012-11-14 04:07:14.100509000 Z
+  created_at: 2012-11-16 05:56:01.340362000 Z
+  updated_at: 2012-11-16 05:56:01.340362000 Z
   slug: '101'
   world_id: 1
   left: 0
   bottom: 0
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1968,12 +1974,13 @@
 '318':
   id: 7
   name: '318'
-  created_at: 2012-11-14 04:07:14.190233000 Z
-  updated_at: 2012-11-14 04:07:14.190233000 Z
+  created_at: 2012-11-16 05:56:01.363827000 Z
+  updated_at: 2012-11-16 05:56:01.363827000 Z
   slug: '318'
   world_id: 1
   left: 4
   bottom: 2
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7642,12 +7649,13 @@
 '306':
   id: 8
   name: '306'
-  created_at: 2012-11-14 04:07:15.206499000 Z
-  updated_at: 2012-11-14 04:07:15.206499000 Z
+  created_at: 2012-11-16 05:56:01.553690000 Z
+  updated_at: 2012-11-16 05:56:01.553690000 Z
   slug: '306'
   world_id: 1
   left: 2
   bottom: 5
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8059,12 +8067,13 @@
 '356':
   id: 9
   name: '356'
-  created_at: 2012-11-14 04:07:15.225777000 Z
-  updated_at: 2012-11-14 04:07:15.225777000 Z
+  created_at: 2012-11-16 05:56:01.571020000 Z
+  updated_at: 2012-11-16 05:56:01.571020000 Z
   slug: '356'
   world_id: 1
   left: 6
   bottom: 1
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10937,12 +10946,13 @@
 '107':
   id: 10
   name: '107'
-  created_at: 2012-11-14 04:07:15.355893000 Z
-  updated_at: 2012-11-14 04:07:15.355893000 Z
+  created_at: 2012-11-16 05:56:01.696164000 Z
+  updated_at: 2012-11-16 05:56:01.696164000 Z
   slug: '107'
   world_id: 1
   left: 3
   bottom: 11
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11155,12 +11165,13 @@
 '308':
   id: 11
   name: '308'
-  created_at: 2012-11-14 04:07:15.368008000 Z
-  updated_at: 2012-11-14 04:07:15.368008000 Z
+  created_at: 2012-11-16 05:56:01.707440000 Z
+  updated_at: 2012-11-16 05:56:01.707440000 Z
   slug: '308'
   world_id: 1
   left: 4
   bottom: 5
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11324,12 +11335,13 @@
 '105':
   id: 12
   name: '105'
-  created_at: 2012-11-14 04:07:15.378583000 Z
-  updated_at: 2012-11-14 04:07:15.378583000 Z
+  created_at: 2012-11-16 05:56:01.718480000 Z
+  updated_at: 2012-11-16 05:56:01.718480000 Z
   slug: '105'
   world_id: 1
   left: 0
   bottom: 0
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11456,12 +11468,13 @@
 '309':
   id: 13
   name: '309'
-  created_at: 2012-11-14 04:07:15.386829000 Z
-  updated_at: 2012-11-14 04:07:15.386829000 Z
+  created_at: 2012-11-16 05:56:01.726892000 Z
+  updated_at: 2012-11-16 05:56:01.726892000 Z
   slug: '309'
   world_id: 1
   left: 0
   bottom: 0
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11558,12 +11571,13 @@
 '355':
   id: 14
   name: '355'
-  created_at: 2012-11-14 04:07:15.393532000 Z
-  updated_at: 2012-11-14 04:07:15.393532000 Z
+  created_at: 2012-11-16 05:56:01.733156000 Z
+  updated_at: 2012-11-16 05:56:01.733156000 Z
   slug: '355'
   world_id: 1
   left: 3
   bottom: 5
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -11741,12 +11755,13 @@
 '307':
   id: 15
   name: '307'
-  created_at: 2012-11-14 04:07:15.400608000 Z
-  updated_at: 2012-11-14 04:07:15.400608000 Z
+  created_at: 2012-11-16 05:56:01.740853000 Z
+  updated_at: 2012-11-16 05:56:01.740853000 Z
   slug: '307'
   world_id: 1
   left: 1
   bottom: 4
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -12177,12 +12192,13 @@
 '111':
   id: 16
   name: '111'
-  created_at: 2012-11-14 04:07:15.416845000 Z
-  updated_at: 2012-11-14 04:07:15.416845000 Z
+  created_at: 2012-11-16 05:56:01.756016000 Z
+  updated_at: 2012-11-16 05:56:01.756016000 Z
   slug: '111'
   world_id: 1
   left: 4
   bottom: 11
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -12649,12 +12665,13 @@
 '103':
   id: 17
   name: '103'
-  created_at: 2012-11-14 04:07:15.431470000 Z
-  updated_at: 2012-11-14 04:07:15.431470000 Z
+  created_at: 2012-11-16 05:56:01.770540000 Z
+  updated_at: 2012-11-16 05:56:01.770540000 Z
   slug: '103'
   world_id: 1
   left: 2
   bottom: 7
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -12855,12 +12872,13 @@
 '312':
   id: 18
   name: '312'
-  created_at: 2012-11-14 04:07:15.443146000 Z
-  updated_at: 2012-11-14 04:07:15.443146000 Z
+  created_at: 2012-11-16 05:56:01.783291000 Z
+  updated_at: 2012-11-16 05:56:01.783291000 Z
   slug: '312'
   world_id: 1
   left: 2
   bottom: 2
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13016,12 +13034,13 @@
 '314':
   id: 19
   name: '314'
-  created_at: 2012-11-14 04:07:15.454489000 Z
-  updated_at: 2012-11-14 04:07:15.454489000 Z
+  created_at: 2012-11-16 05:56:01.795611000 Z
+  updated_at: 2012-11-16 05:56:01.795611000 Z
   slug: '314'
   world_id: 1
   left: 3
   bottom: 3
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13154,12 +13173,13 @@
 '102':
   id: 20
   name: '102'
-  created_at: 2012-11-14 04:07:15.469240000 Z
-  updated_at: 2012-11-14 04:07:15.469240000 Z
+  created_at: 2012-11-16 05:56:01.808944000 Z
+  updated_at: 2012-11-16 05:56:01.808944000 Z
   slug: '102'
   world_id: 1
   left: 2
   bottom: 8
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13346,12 +13366,13 @@
 '104':
   id: 21
   name: '104'
-  created_at: 2012-11-14 04:07:15.480837000 Z
-  updated_at: 2012-11-14 04:07:15.480837000 Z
+  created_at: 2012-11-16 05:56:01.820696000 Z
+  updated_at: 2012-11-16 05:56:01.820696000 Z
   slug: '104'
   world_id: 1
   left: 2
   bottom: 9
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -13782,12 +13803,13 @@
 '313':
   id: 22
   name: '313'
-  created_at: 2012-11-14 04:07:15.495479000 Z
-  updated_at: 2012-11-14 04:07:15.495479000 Z
+  created_at: 2012-11-16 05:56:01.835829000 Z
+  updated_at: 2012-11-16 05:56:01.835829000 Z
   slug: '313'
   world_id: 1
   left: 0
   bottom: 0
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -14344,12 +14366,13 @@
 '315':
   id: 23
   name: '315'
-  created_at: 2012-11-14 04:07:15.512031000 Z
-  updated_at: 2012-11-14 04:07:15.512031000 Z
+  created_at: 2012-11-16 05:56:01.851866000 Z
+  updated_at: 2012-11-16 05:56:01.851866000 Z
   slug: '315'
   world_id: 1
   left: 3
   bottom: 1
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -15910,12 +15933,13 @@
 '112':
   id: 24
   name: '112'
-  created_at: 2012-11-14 04:07:15.626778000 Z
-  updated_at: 2012-11-14 04:07:15.626778000 Z
+  created_at: 2012-11-16 05:56:01.962365000 Z
+  updated_at: 2012-11-16 05:56:01.962365000 Z
   slug: '112'
   world_id: 1
   left: 4
   bottom: 13
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -17411,12 +17435,13 @@
 '109':
   id: 25
   name: '109'
-  created_at: 2012-11-14 04:07:15.662393000 Z
-  updated_at: 2012-11-14 04:07:15.662393000 Z
+  created_at: 2012-11-16 05:56:01.998333000 Z
+  updated_at: 2012-11-16 05:56:01.998333000 Z
   slug: '109'
   world_id: 1
   left: 0
   bottom: 0
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -17619,12 +17644,13 @@
 '304':
   id: 26
   name: '304'
-  created_at: 2012-11-14 04:07:15.672324000 Z
-  updated_at: 2012-11-14 04:07:15.672324000 Z
+  created_at: 2012-11-16 05:56:02.007670000 Z
+  updated_at: 2012-11-16 05:56:02.007670000 Z
   slug: '304'
   world_id: 1
   left: 5
   bottom: 6
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -17797,12 +17823,13 @@
 '305':
   id: 27
   name: '305'
-  created_at: 2012-11-14 04:07:15.680931000 Z
-  updated_at: 2012-11-14 04:07:15.680931000 Z
+  created_at: 2012-11-16 05:56:02.016093000 Z
+  updated_at: 2012-11-16 05:56:02.016093000 Z
   slug: '305'
   world_id: 1
   left: 6
   bottom: 4
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18088,12 +18115,13 @@
 '316':
   id: 28
   name: '316'
-  created_at: 2012-11-14 04:07:15.700144000 Z
-  updated_at: 2012-11-14 04:07:15.700144000 Z
+  created_at: 2012-11-16 05:56:02.034048000 Z
+  updated_at: 2012-11-16 05:56:02.034048000 Z
   slug: '316'
   world_id: 1
   left: 5
   bottom: 5
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18250,12 +18278,13 @@
 '164':
   id: 30
   name: '164'
-  created_at: 2012-11-14 04:07:15.725259000 Z
-  updated_at: 2012-11-14 04:07:15.725259000 Z
+  created_at: 2012-11-16 05:56:02.053662000 Z
+  updated_at: 2012-11-16 05:56:02.053662000 Z
   slug: '164'
   world_id: 1
   left: 3
   bottom: 10
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18378,12 +18407,13 @@
 '106':
   id: 31
   name: '106'
-  created_at: 2012-11-14 04:07:15.731430000 Z
-  updated_at: 2012-11-14 04:07:15.731430000 Z
+  created_at: 2012-11-16 05:56:02.059893000 Z
+  updated_at: 2012-11-16 05:56:02.059893000 Z
   slug: '106'
   world_id: 1
   left: 3
   bottom: 9
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -18804,12 +18834,13 @@
 '110':
   id: 29
   name: '110'
-  created_at: 2012-11-14 04:07:15.713159000 Z
-  updated_at: 2012-11-14 04:07:15.713159000 Z
+  created_at: 2012-11-16 05:56:02.043981000 Z
+  updated_at: 2012-11-16 05:56:02.043981000 Z
   slug: '110'
   world_id: 1
   left: 4
   bottom: 12
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -19089,12 +19120,13 @@
 '108':
   id: 32
   name: '108'
-  created_at: 2012-11-14 04:07:15.750022000 Z
-  updated_at: 2012-11-14 04:07:15.750022000 Z
+  created_at: 2012-11-16 05:56:02.078924000 Z
+  updated_at: 2012-11-16 05:56:02.078924000 Z
   slug: '108'
   world_id: 1
   left: 0
   bottom: 0
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -19334,12 +19366,13 @@
 '301':
   id: 33
   name: '301'
-  created_at: 2012-11-14 04:07:15.763254000 Z
-  updated_at: 2012-11-14 04:07:15.763254000 Z
+  created_at: 2012-11-16 05:56:02.091600000 Z
+  updated_at: 2012-11-16 05:56:02.091600000 Z
   slug: '301'
   world_id: 1
   left: 3
   bottom: 7
+  threejs: 
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
