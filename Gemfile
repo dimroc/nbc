@@ -21,6 +21,7 @@ gem 'activerecord-postgis-adapter', git: "git@github.com:dimroc/activerecord-pos
 gem 'rgeo'
 gem 'rgeo-shapefile'
 gem 'georuby'
+gem 'rbpoly2tri'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

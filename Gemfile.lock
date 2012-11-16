@@ -221,6 +221,7 @@ GEM
       thor (>= 0.14.6, < 2.0)
     rake (10.0.1)
     rb-fsevent (0.9.2)
+    rbpoly2tri (0.0.1)
     rdoc (3.12)
       json (~> 1.4)
     rgeo (0.3.19)
@@ -338,6 +339,7 @@ DEPENDENCIES
   pry-debugger
   rails (~> 3.2.9)
   rb-fsevent
+  rbpoly2tri
   rgeo
   rgeo-shapefile
   rolify (>= 3.1.0)
