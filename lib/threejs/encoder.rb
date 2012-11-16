@@ -1,6 +1,7 @@
 class THREEJS::Encoder
   class << self
     def from_geometry(geometry)
+      return nil unless geometry
       ring = coerce_to_exterior_ring(geometry)
       triangles = triangulate_ring(ring)
       create_model_from_triangles(triangles)

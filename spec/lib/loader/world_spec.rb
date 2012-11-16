@@ -9,7 +9,7 @@ describe Loader::World do
         ShapefileHelper.generate_rectangle shapefile, 9, 9
       end
 
-      it "should generate the region with the geometry" do
+      it "should generate the region with geometry and threejs" do
         region = world.regions.first
         bb = region.generate_bounding_box
         bb.min_y.should == 0
@@ -18,6 +18,8 @@ describe Loader::World do
         bb.max_x.should == 9
 
         region.should be_valid
+        region.geometry.should be
+
         world.name = "bogus"
         world.should be_valid
       end
@@ -38,11 +40,13 @@ describe Loader::World do
       let(:world) { Loader::World.from_shapefile(shapefile, "BoroCD" => "name") }
       let(:shapefile) { "lib/data/shapefiles/nyc/region" }
 
-      it "should generate a geometry for every borough with neighborhoods" do
+      it "should generate a geometry and threejs for every borough with neighborhoods" do
         # Primarily used to test drive and debug
         world.regions.size.should == 33
         world.regions.map(&:name).should include 101
         world.regions.map(&:name).should include 317
+
+        world.regions.map(&:threejs).compact.count.should > 30 # nearly all
 
         neighborhoods = world.regions.flat_map(&:neighborhoods)
         neighborhoods.count.should > Neighborhood.where(borough: "Manhattan").count
