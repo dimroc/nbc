@@ -2,12 +2,17 @@ require 'spec_helper'
 
 describe THREEJS::Encoder do
   describe ".from_geometry" do
-    context "integration" do
-      let(:geometry) { worlds(:nyc).regions.first.geometry }
+    context "integration with nyc's simplified geometry" do
+      let(:geometry) do
+        region = worlds(:nyc).regions.find_by_name("106")
+        region.simplify_geometry
+      end
 
-      context "when a point is repeated" do
+      context "when the first and last point are identical" do
         it "should generate a THREE JS model format hash" do
           as_json = THREEJS::Encoder.from_geometry geometry
+          as_json[:vertices].count.should > 0
+          as_json[:faces].count.should > 0
           to_json = as_json.to_json
         end
       end
@@ -22,6 +27,46 @@ describe THREEJS::Encoder do
         as_json[:faces].should == [
           0, 0, 1, 2, # First triangle face
           0, 3, 4, 5  # Second triangle face
+        ]
+      end
+    end
+
+    context "multipolygon" do
+      let(:multipolygon) do
+        factory = Mercator::FACTORY.projection_factory
+
+        left = width = 5
+        bottom = height = 10
+
+        linear_ring = factory.linear_ring([
+          factory.point(left, bottom),
+          factory.point(left, bottom + height),
+          factory.point(left + width, bottom + height),
+          factory.point(left + width, bottom)])
+
+        geometry1 = factory.polygon(linear_ring)
+
+        left = width = 15
+        bottom = height = 2
+
+        linear_ring = factory.linear_ring([
+          factory.point(left, bottom),
+          factory.point(left, bottom + height),
+          factory.point(left + width, bottom + height),
+          factory.point(left + width, bottom)])
+
+        geometry2 = factory.polygon(linear_ring)
+        factory.multi_polygon([geometry1, geometry2])
+      end
+
+      it "should generate triangles for both polygons" do
+        as_json = THREEJS::Encoder.from_geometry multipolygon
+        as_json[:vertices].count.should == 6 * 3 * 2 # 6 3D points for 2 geometries
+        as_json[:faces].should == [
+          0, 0, 1, 2,
+          0, 3, 4, 5,
+          0, 6, 7, 8,
+          0, 9, 10, 11
         ]
       end
     end

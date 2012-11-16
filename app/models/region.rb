@@ -67,7 +67,7 @@ class Region < ActiveRecord::Base
     Cartesian::BoundingBox.create_from_geometry(geometry) if geometry
   end
 
-  def simplify_geometry(tolerance=50)
+  def simplify_geometry(tolerance=5)
     rval = Region.connection.execute(<<-SQL).values.first.first
     SELECT ST_AsText(
       ST_Simplify(

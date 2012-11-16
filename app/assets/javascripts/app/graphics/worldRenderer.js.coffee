@@ -83,9 +83,11 @@ createOrthographicCamera = (options) ->
   camera
 
 createPerspectiveCamera = (options) ->
-  camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 1000 )
-  camera.position = new THREE.Vector3(0, 0, 100)
-  camera.lookAt(new THREE.Vector3(0, 0, 0))
+  camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 150000 )
+  # camera.position = new THREE.Vector3(0, 0, 100)
+  # camera.lookAt(new THREE.Vector3(0, 0, 0))
+  camera.position = new THREE.Vector3(-8242955.55654584, 4949812.90886866, 40000)
+  camera.lookAt(new THREE.Vector3(-8242955.55654584, 4949812.90886866, 0))
   camera
 
 createRenderer = (options) ->

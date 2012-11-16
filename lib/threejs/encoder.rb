@@ -2,12 +2,42 @@ class THREEJS::Encoder
   class << self
     def from_geometry(geometry)
       return nil unless geometry
-      ring = coerce_to_exterior_ring(geometry)
-      triangles = triangulate_ring(ring)
-      create_model_from_triangles(triangles)
+
+      models = coerce_to_geometries(geometry).map do |geometry|
+        triangles = triangulate(geometry)
+        create_model_from_triangles(triangles)
+      end
+
+      converge_models(models)
     end
 
     private
+
+    def converge_models(models)
+      final = template
+
+      models.each do |model|
+        current_vertex_offset = final[:vertices].count / 3
+
+        final[:faces].concat offset_faces(model[:faces], current_vertex_offset)
+        final[:vertices].concat model[:vertices]
+      end
+      final
+    end
+
+    def offset_faces(faces, offset)
+      amended_faces = []
+      faces.each_with_index do |face, index|
+        # Skip over shape identifier, which is every 4th entry starting at 0
+        if index % 4 == 0
+          amended_faces << face
+        else
+          amended_faces << face + offset
+        end
+      end
+
+      amended_faces
+    end
 
     def create_model_from_triangles(triangles)
       model = template
@@ -28,16 +58,20 @@ class THREEJS::Encoder
       model
     end
 
-    def coerce_to_exterior_ring(geometry)
-      geometry = geometry.respond_to?(:geometry_n) ? geometry[0] : geometry
-      geometry.exterior_ring
+    def coerce_to_geometries(geometry)
+      # Handle multipolygons as well as polygons
+      geometries = geometry.respond_to?(:geometry_n) ? geometry : [geometry]
+      geometries
     end
 
     # Crashes if there are any repeated points!
     # Shouldn't be possible with shapefile geometries of NYC
-    def triangulate_ring(ring)
+    def triangulate(geometry)
+      ring = geometry.exterior_ring
+
       input = ring.points.map { |point| [point.x, point.y] }
       input.pop if input.first == input.last
+
       cdt = Poly2Tri::CDT.new(input)
       cdt.triangulate!
       cdt.triangles
