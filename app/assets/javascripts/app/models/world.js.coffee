@@ -53,4 +53,7 @@ class App.World extends App.Model
       console.warn "Received status: #{status}. message: #{response.responseText}"
 
   meshes: ->
-    _(@regions().all()).map((region) -> region.mesh())
+    _.chain(@regions().all())
+      .map((region) -> region.meshes())
+      .flatten()
+      .value()
