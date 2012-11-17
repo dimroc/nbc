@@ -73,15 +73,15 @@ describe THREEJS::Encoder do
   end
 
   describe ".offset" do
-    subject { THREEJS::Encoder.offset(threejs, OpenStruct.new({x: -5, y: 15 }) ) }
+    subject { THREEJS::Encoder.offset(threejs, OpenStruct.new({x: -5, y: 15 }), 1) }
 
     let(:threejs) do
       factory = Mercator::FACTORY.projection_factory
 
       left = 5
       bottom = -15
-      width = 500
-      height = 500
+      width = 5
+      height = 5
 
       linear_ring = factory.linear_ring([
         factory.point(left, bottom),
@@ -94,7 +94,6 @@ describe THREEJS::Encoder do
 
     it "should remove all the padding from the vertices such that 0,0 is the top left most vertex" do
       vertices = subject[:vertices]
-      vertices.min.should == 0
       vertices.should == [
         0, 5.0, 0,
         5.0, 0, 0,

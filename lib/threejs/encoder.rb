@@ -11,20 +11,20 @@ class THREEJS::Encoder
       converge_models(models)
     end
 
-    def offset(threejs, offset)
+    def offset(threejs, offset, scale=1/700.0)
       threejs = Marshal.load(Marshal.dump(threejs))
       vertices = threejs[:vertices]
 
-      vertices = vertices.map { |coordinate| coordinate / 700.0 }
+      vertices = vertices.map { |coordinate| coordinate * scale }
 
       threejs[:vertices] = []
       vertices.each_with_index do |coordinate, index|
         if index % 3 == 0 # X COORDINATE
-          threejs[:vertices] << coordinate + offset.x / 700
+          threejs[:vertices] << coordinate + (offset.x ? offset.x * scale : 0)
         elsif (index-1) % 3 == 0 # Y COORDINATE
-          threejs[:vertices] << coordinate + offset.y / 700
+          threejs[:vertices] << coordinate + (offset.y ? offset.y * scale : 0)
         else
-          threejs[:vertices] << coordinate + offset.z / 700
+          threejs[:vertices] << coordinate + (offset.z ? offset.z * scale : 0)
         end
       end
 
@@ -99,7 +99,7 @@ class THREEJS::Encoder
 
     def template
       {
-        metadata: { formatVersion: 3 },
+        metadata: { formatVersion: 3.1, generatedBy: "NewBlockCity" },
 
         materials: [],
         vertices:  [],

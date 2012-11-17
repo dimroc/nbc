@@ -16,6 +16,7 @@ class App.WorldRenderer
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
+    @scene.add(@camera)
 
     @renderer = createRenderer(options)
 
@@ -48,7 +49,6 @@ class App.WorldRenderer
     @
 
   onWindowResize: ( event ) =>
-    console.log "Resizing..."
     options = calculate_options()
     @renderer.setSize( options.width, options.height )
     @camera.aspect = options.width / options.height
@@ -62,13 +62,7 @@ class App.WorldRenderer
     else
       @requestId = requestAnimationFrame(@animate)
 
-  add_outlines: (meshParam)->
-    _.each(coerceIntoMeshes(meshParam), (mesh) ->
-      @scene.add( mesh )
-    , @)
-    @
-
-  add_blocks: (meshParam)->
+  add: (meshParam)->
     _.each(coerceIntoMeshes(meshParam), (mesh) ->
       @scene.add( mesh )
     , @)
@@ -106,6 +100,7 @@ createDirectionalLight = (options) ->
   # White directional light at half intensity shining from the top.
   directionalLight = new THREE.DirectionalLight( 0xffffff, 0.7 )
   directionalLight.position.set(options.position.x, options.position.y, options.position.z)
+  directionalLight.lookAt(new THREE.Vector3(options.position.x, options.position.y, 0))
   directionalLight
 
 createAmbientLight = (options) ->

@@ -3,15 +3,17 @@ class App.MeshFactory
     return new THREE.Geometry() unless Object.keys(region.threejs).length > 0
 
     loader = new THREE.JSONLoader()
-    color = 0x000000
+    color = if region.current_block then 0xdd0000 else 0x000000
+    material  = new THREE.MeshBasicMaterial({color:color})
+
     mesh = null
     loader.createModel(region.threejs, (geometry) ->
-      mesh = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial({color:color, side: THREE.DoubleSide}) )
+      mesh = new THREE.Mesh( geometry, material )
     )
     mesh
 
   @generate_blocks: (region) ->
-    opacity = 0.2
+    opacity = 1
     cubeMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF, opacity: opacity})
     currentMaterial = new THREE.MeshLambertMaterial({color: 0xAB1A25, opacity: opacity})
     regionMaterial = new THREE.MeshLambertMaterial({color: 0x009959, opacity: opacity})
