@@ -12,10 +12,10 @@ class App.WorldRenderer
 
     console.debug("Creating worldRenderer...")
     @scene = new THREE.Scene()
+    @outline_scene = new THREE.Scene()
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
-    @scene.add( @camera )
 
     @renderer = createRenderer(options)
 
@@ -62,19 +62,26 @@ class App.WorldRenderer
     else
       @requestId = requestAnimationFrame(@animate)
 
-  add: (meshParam)->
-    meshes = if _.isArray(meshParam) then meshParam else [meshParam]
-
-    _.each(meshes, (mesh) ->
+  add_outlines: (meshParam)->
+    _.each(coerceIntoMeshes(meshParam), (mesh) ->
       @scene.add( mesh )
     , @)
+    @
 
+  add_blocks: (meshParam)->
+    _.each(coerceIntoMeshes(meshParam), (mesh) ->
+      @scene.add( mesh )
+    , @)
     @
 
   meshes: ->
-    _.select(@scene.children, (child) -> return child.geometry)
+    @scene.children
 
 # privates
+
+coerceIntoMeshes = (meshParam) ->
+  # Simply convert meshParam into an array if it isn't one already
+  if _.isArray(meshParam) then meshParam else [meshParam]
 
 createOrthographicCamera = (options) ->
   camera = new THREE.OrthographicCamera( options.width / - 2, options.width / 2, options.height / 2, options.height / - 2,  1, 100 )
@@ -83,16 +90,16 @@ createOrthographicCamera = (options) ->
   camera
 
 createPerspectiveCamera = (options) ->
-  camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 150000 )
-  # camera.position = new THREE.Vector3(0, 0, 100)
-  # camera.lookAt(new THREE.Vector3(0, 0, 0))
-  camera.position = new THREE.Vector3(-8242955.55654584, 4949812.90886866, 40000)
-  camera.lookAt(new THREE.Vector3(-8242955.55654584, 4949812.90886866, 0))
+  camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 1000 )
+  position = new THREE.Vector3(45, 20, 60)
+  camera.position = position
+  camera.lookAt(new THREE.Vector3(position.x, position.y, 0))
   camera
 
 createRenderer = (options) ->
-  renderer = new THREE.WebGLRenderer({antialias: true})
+  renderer = new THREE.WebGLRenderer({antialias: true, autoClear: false})
   renderer.setSize( options.width, options.height )
+  renderer.setClearColor( 0, 0 )
   renderer
 
 createDirectionalLight = (options) ->
@@ -105,9 +112,10 @@ createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
 
 render = (worldRenderer) ->
-  worldRenderer.scene.children.forEach (child) ->
+  worldRenderer.meshes().forEach (child) ->
     child.animate() if child.animate
 
+  worldRenderer.renderer.clear()
   worldRenderer.renderer.render( worldRenderer.scene, worldRenderer.camera )
   worldRenderer.stats.update()
 

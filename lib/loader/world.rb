@@ -13,7 +13,6 @@ class Loader::World
           attrs = region_attributes.merge(geometry: record.geometry)
 
           region = world.regions.build(attrs)
-          region.regenerate_threejs
           populate_neighborhoods(region)
         end
       end

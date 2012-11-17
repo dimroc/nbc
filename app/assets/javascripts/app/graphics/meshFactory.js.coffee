@@ -11,9 +11,10 @@ class App.MeshFactory
     mesh
 
   @generate_blocks: (region) ->
-    cubeMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF})
-    currentMaterial = new THREE.MeshLambertMaterial({color: 0xAB1A25})
-    regionMaterial = new THREE.MeshLambertMaterial({color: 0x009959})
+    opacity = 0.2
+    cubeMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF, opacity: opacity})
+    currentMaterial = new THREE.MeshLambertMaterial({color: 0xAB1A25, opacity: opacity})
+    regionMaterial = new THREE.MeshLambertMaterial({color: 0x009959, opacity: opacity})
 
     blockMaterial = (block) ->
       if block.id == block.region().current_block

@@ -51,8 +51,11 @@ class Region < ActiveRecord::Base
     self.bottom = furthest_bottom
   end
 
-  def regenerate_threejs
-    self.threejs = THREEJS::Encoder.from_geometry(simplify_geometry) if geometry
+  def regenerate_threejs(offset)
+    if geometry
+      self.threejs = THREEJS::Encoder.from_geometry(simplify_geometry)
+      self.threejs = THREEJS::Encoder.offset(threejs, offset)
+    end
   end
 
   def furthest_left

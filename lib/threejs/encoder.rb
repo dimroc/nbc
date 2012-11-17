@@ -11,6 +11,26 @@ class THREEJS::Encoder
       converge_models(models)
     end
 
+    def offset(threejs, offset)
+      threejs = Marshal.load(Marshal.dump(threejs))
+      vertices = threejs[:vertices]
+
+      vertices = vertices.map { |coordinate| coordinate / 700.0 }
+
+      threejs[:vertices] = []
+      vertices.each_with_index do |coordinate, index|
+        if index % 3 == 0 # X COORDINATE
+          threejs[:vertices] << coordinate + offset.x / 700
+        elsif (index-1) % 3 == 0 # Y COORDINATE
+          threejs[:vertices] << coordinate + offset.y / 700
+        else
+          threejs[:vertices] << coordinate + offset.z / 700
+        end
+      end
+
+      threejs
+    end
+
     private
 
     def converge_models(models)

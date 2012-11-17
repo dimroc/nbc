@@ -91,7 +91,7 @@ describe Region do
     let(:region) { nyc.regions.first }
 
     it "should have less than 10 vertices" do
-      region.simplify_geometry.first.exterior_ring.num_points.should < 10
+      region.simplify_geometry.first.exterior_ring.num_points.should < 20
     end
   end
 end

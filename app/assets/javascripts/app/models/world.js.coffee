@@ -52,8 +52,10 @@ class App.World extends App.Model
       console.warn "Error retrieving regions for world #{@slug}"
       console.warn "Received status: #{status}. message: #{response.responseText}"
 
-  meshes: ->
-    _.chain(@regions().all())
-      .map((region) -> region.meshes())
-      .flatten()
-      .value()
+  outline_meshes: ->
+    _regions = _(@regions().all())
+    _regions.map((region) -> region.outline_mesh())
+
+  blocks_meshes: ->
+    _regions = _(@regions().all())
+    _regions.map((region) -> region.blocks_mesh())
