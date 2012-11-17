@@ -1,8 +1,8 @@
 class App.Block extends App.Model
-  @HEIGHT = @WIDTH = 1.5
-  @DEPTH = 2
-  @GUTTER_LENGTH = .05
-  @OFFSET = new THREE.Vector3(-70, -30, 0)
+  @HEIGHT = @WIDTH = 0.6
+  @DEPTH = 0.1
+  @GUTTER_LENGTH = .4
+  @OFFSET = new THREE.Vector3(0, 0, 0)
 
   @configure 'Block', 'id', 'region_id', 'bottom', 'left', 'point'
   @extend Spine.Model.Ajax

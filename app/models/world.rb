@@ -14,6 +14,7 @@ class World < ActiveRecord::Base
     generate_world_blocks_for_regions(block_length)
     calculate_region_positions
     convert_world_blocks_to_region_blocks
+    generate_region_outline
   end
 
   def generate_bounding_box
@@ -25,6 +26,12 @@ class World < ActiveRecord::Base
   end
 
   private
+
+  def generate_region_outline
+    bb = generate_bounding_box
+    offset = OpenStruct.new(x: -bb.min_x, y: -bb.min_y, z: 0)
+    regions.each { |region| region.regenerate_threejs offset }
+  end
 
   def generate_world_blocks_for_regions(block_length)
     # Discretize world by stepping along the area block_length a time

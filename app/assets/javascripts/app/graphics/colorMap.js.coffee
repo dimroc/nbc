@@ -1,7 +1,7 @@
 App.ColorMap = {
   fetch: (->
     colors = [
-      0xeeeeee,
+      0x000000,
       0xee0000,
       0x00ee00,
       0x0000ee,

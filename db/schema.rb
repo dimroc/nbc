@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114023617) do
+ActiveRecord::Schema.define(:version => 20121116054921) do
 
   create_table "blocks", :force => true do |t|
     t.integer  "region_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20121114023617) do
     t.integer  "world_id"
     t.integer  "left",                                                   :default => 0, :null => false
     t.integer  "bottom",                                                 :default => 0, :null => false
+    t.text     "threejs"
   end
 
   add_index "regions", ["geometry"], :name => "index_regions_on_geometry", :spatial => true

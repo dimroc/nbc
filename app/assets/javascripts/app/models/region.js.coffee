@@ -14,5 +14,8 @@ class App.Region extends App.Model
   neighborhoodNames: ->
     _(@neighborhoods).map((neighborhood)-> neighborhood.name)
 
-  mesh: ->
-    App.MeshFactory.create_region(@)
+  outline_mesh: ->
+    App.MeshFactory.load_region(@)
+
+  blocks_mesh: ->
+    App.MeshFactory.generate_blocks(@)

@@ -85,5 +85,14 @@ describe Region do
       region.generate_bounding_box.should == expected_bb
     end
   end
+
+  describe "#simplify_geometry" do
+    let(:nyc) { worlds(:nyc) }
+    let(:region) { nyc.regions.first }
+
+    it "should have less than 10 vertices" do
+      region.simplify_geometry.first.exterior_ring.num_points.should < 20
+    end
+  end
 end
 

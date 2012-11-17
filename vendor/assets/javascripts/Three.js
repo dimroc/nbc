@@ -15577,7 +15577,7 @@ THREE.WebGLRenderer = function ( parameters ) {
 
   // scene graph
 
-  this.sortObjects = true;
+  this.sortObjects = false;
 
   this.autoUpdateObjects = true;
   this.autoUpdateScene = true;

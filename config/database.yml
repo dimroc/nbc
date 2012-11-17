@@ -1,23 +1,18 @@
-development:
+defaults: &defaults
   adapter: postgis
   encoding: unicode
-  database: new-block-city_development
   pool: 5
-  postgis_extension: true
-  schema_search_path: public,postgis
+  postgis_extension: postgis,postgis_topology
+  schema_search_path: public,topology
+
+development:
+  database: new-block-city_development
+  <<: *defaults
 
 test:
-  adapter: postgis
-  encoding: unicode
   database: new-block-city_test
-  pool: 5
-  postgis_extension: true
-  schema_search_path: public,postgis
+  <<: *defaults
 
 production:
-  adapter: postgis
-  encoding: unicode
   database: new-block-city_production
-  pool: 5
-  postgis_extension: true
-  schema_search_path: public,postgis
+  <<: *defaults

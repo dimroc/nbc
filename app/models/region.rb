@@ -15,6 +15,8 @@ class Region < ActiveRecord::Base
   validates_presence_of :left
   validates_presence_of :bottom
 
+  serialize :threejs, Hash
+
   set_rgeo_factory_for_column(:geometry, Mercator::FACTORY.projection_factory)
 
   def as_json(options={})
@@ -49,6 +51,13 @@ class Region < ActiveRecord::Base
     self.bottom = furthest_bottom
   end
 
+  def regenerate_threejs(offset)
+    if geometry
+      self.threejs = THREEJS::Encoder.from_geometry(simplify_geometry)
+      self.threejs = THREEJS::Encoder.offset(threejs, offset)
+    end
+  end
+
   def furthest_left
     self.blocks.min_by(&:left).try(:left) || 0
   end
@@ -59,5 +68,15 @@ class Region < ActiveRecord::Base
 
   def generate_bounding_box
     Cartesian::BoundingBox.create_from_geometry(geometry) if geometry
+  end
+
+  def simplify_geometry(tolerance=5)
+    rval = Region.connection.execute(<<-SQL).values.first.first
+    SELECT ST_AsText(
+      ST_Simplify(
+        ST_GeomFromText('#{geometry.as_text}', #{geometry.srid}),
+        #{tolerance}))
+    SQL
+    Mercator::FACTORY.projection_factory.parse_wkt(rval)
   end
 end

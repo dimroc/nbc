@@ -9,8 +9,10 @@ class Loader::World
         raise ArgumentError, "File contains no records" if file.num_records == 0
 
         file.each do |record|
-          region_attributes = map_to_region_attributes(mappings, record.attributes)
-          region = world.regions.build(region_attributes.merge(geometry: record.geometry))
+          region_attributes = map_shapefile_attrs_to_region_attrs(mappings, record.attributes)
+          attrs = region_attributes.merge(geometry: record.geometry)
+
+          region = world.regions.build(attrs)
           populate_neighborhoods(region)
         end
       end
@@ -20,7 +22,7 @@ class Loader::World
 
     private
 
-    def map_to_region_attributes(mappings, fields)
+    def map_shapefile_attrs_to_region_attrs(mappings, fields)
       attributes = {}
       fields.each do |(k, v)|
         map = mappings[k]

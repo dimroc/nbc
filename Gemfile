@@ -3,7 +3,7 @@ HOST_OS = RbConfig::CONFIG['host_os']
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.5'
+gem 'rails', '~> 3.2.9'
 gem 'pg'
 gem 'jquery-rails'
 gem "haml", ">= 3.1.6"
@@ -17,10 +17,11 @@ gem "spine-rails", git: "git://github.com/maccman/spine-rails.git"
 gem "eco"
 gem "friendly_id"
 
-gem 'activerecord-postgis-adapter'
+gem 'activerecord-postgis-adapter', git: "git@github.com:dimroc/activerecord-postgis-adapter.git"
 gem 'rgeo'
 gem 'rgeo-shapefile'
 gem 'georuby'
+gem 'rbpoly2tri'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -38,8 +39,9 @@ group :test, :development do
   gem "guard-ctags-bundler"
   gem "guard-rails", git: "git://github.com/johnbintz/guard-rails.git"
 
-  gem "debugger"
+  gem "debugger", "~> 1.1.3"
   gem "pry"
+  gem "pry-debugger"
 
   gem "fuubar"
   gem "ffaker"

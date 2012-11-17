@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: cheyenne@bashiriangerlach.uk
-  encrypted_password: $2a$04$4zx1G.dDQEapX4iy/ZRZpeeiy366WaUsGCVXhdDRV7YAi9Nfv3zEW
+  email: orval@west.ca
+  encrypted_password: $2a$04$wlG0Co5cAg5YyAhuv5kj0e912WPj9HD6Gep9sTD2CVfDpP0nQECHy
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
