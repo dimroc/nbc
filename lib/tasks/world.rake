@@ -6,9 +6,9 @@ namespace :world do
       puts "Generating blocks with arguments: #{args.inspect}"
 
       world = FactoryGirl.build(:world, name: args.name)
-      region = FactoryGirl.build(:region_with_geometry, 
+      region = FactoryGirl.build(:region_with_geometry,
                                  name: "#{world.name} region",
-                                 width: args.width.to_i, 
+                                 width: args.width.to_i,
                                  height: args.height.to_i)
       world.regions << region
       if world.save
@@ -50,8 +50,8 @@ namespace :world do
       Loader::World.generate({
         name: "USA",
         region_name_key: "NAME",
-        block_length: 140_000,
-        tolerance: 1000
+        block_length: 250_000,
+        tolerance: 500
       }).save!
     end
   end
