@@ -8,6 +8,7 @@ class Loader::World
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)
       generate_blocks(world, options.block_length)
       generate_outlines(world, 1/options.block_length.to_f, options.tolerance)
+
       world
     end
 
@@ -40,7 +41,9 @@ class Loader::World
     def generate_outlines(world, scale, tolerance)
       bb = world.generate_bounding_box
       offset = OpenStruct.new(x: -bb.min_x, y: -bb.min_y, z: 0)
-      world.regions.each { |region| region.regenerate_threejs offset, scale, tolerance }
+      world.regions.each do |region|
+        Loader::Region.generate_threejs(region, offset, scale, tolerance)
+      end
     end
 
     private
@@ -65,7 +68,7 @@ class Loader::World
     end
 
     def calculate_region_positions(world)
-      world.regions.each { |region| region.regenerate_coordinates }
+      world.regions.each { |region| Loader::Region.generate_coordinates(region) }
     end
 
     def map_shapefile_attrs_to_region_attrs(mappings, fields)
