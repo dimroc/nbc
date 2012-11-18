@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 1
-  email: orval@west.ca
-  encrypted_password: $2a$04$wlG0Co5cAg5YyAhuv5kj0e912WPj9HD6Gep9sTD2CVfDpP0nQECHy
+  id: 3
+  email: demetris.buckridge@batzbode.uk
+  encrypted_password: $2a$10$P0Aw3V/N3bIcqw4PpLgwBO/zUIDhJ9lNQnk6oA61X5SWTwwW/BIwW
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

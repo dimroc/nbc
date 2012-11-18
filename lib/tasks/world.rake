@@ -20,24 +20,39 @@ namespace :world do
 
     desc "Generate blocks that represent New York City"
     task :nyc => :environment do
-      puts "Creating new york city..."
-      World.find_by_slug("new-york-city").try(:destroy)
-      shapefile = "lib/data/shapefiles/nyc/region"
-      world = Loader::World.from_shapefile(shapefile, "BoroCD" => "name")
-      world.regenerate_blocks(250)
-      world.name = "New York City"
-      world.save!
+      puts "Creating NYC..."
+      World.find_by_slug("nyc").try(:destroy)
+
+      Loader::World.generate({
+        name: "NYC",
+        region_name_key: "BoroCD",
+        block_length: 250
+      }).save!
     end
 
     desc "Generate blocks that represent Manhattan"
     task :manhattan => :environment do
       puts "Creating Manhattan..."
       World.find_by_slug("manhattan").try(:destroy)
-      shapefile = "lib/data/shapefiles/manhattan/region"
-      world = Loader::World.from_shapefile(shapefile, "BoroCD" => "name")
-      world.regenerate_blocks(700)
-      world.name = "Manhattan"
-      world.save!
+
+      Loader::World.generate({
+        name: "Manhattan",
+        region_name_key: "BoroCD",
+        block_length: 700
+      }).save!
+    end
+
+    desc "Generate blocks that represent USA (Contiguous states)"
+    task :usa => :environment do
+      puts "Creating USA (contiguous states)..."
+      World.find_by_slug("usa").try(:destroy)
+
+      Loader::World.generate({
+        name: "USA",
+        region_name_key: "NAME",
+        block_length: 140_000,
+        tolerance: 1000
+      }).save!
     end
   end
 end

@@ -34,30 +34,6 @@ class Region < ActiveRecord::Base
     super(final_options)
   end
 
-  def regenerate_blocks(block_length)
-    raise ArgumentError, "block_length is required" unless block_length
-
-    blocks.clear
-    bb = generate_bounding_box
-
-    bb.step(block_length) do |point, x, y|
-      blocks.build(left: x, bottom: y, point: point) if geometry.contains? point
-    end if !bb.empty? && block_length
-    blocks
-  end
-
-  def regenerate_coordinates
-    self.left = furthest_left
-    self.bottom = furthest_bottom
-  end
-
-  def regenerate_threejs(offset)
-    if geometry
-      self.threejs = THREEJS::Encoder.from_geometry(simplify_geometry)
-      self.threejs = THREEJS::Encoder.offset(threejs, offset)
-    end
-  end
-
   def furthest_left
     self.blocks.min_by(&:left).try(:left) || 0
   end
@@ -71,6 +47,7 @@ class Region < ActiveRecord::Base
   end
 
   def simplify_geometry(tolerance=5)
+    return nil unless geometry
     rval = Region.connection.execute(<<-SQL).values.first.first
     SELECT ST_AsText(
       ST_Simplify(

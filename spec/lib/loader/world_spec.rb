@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Loader::World do
   describe ".from_shapefile" do
     describe "generated square" do
-      let(:world) { Loader::World.from_shapefile(shapefile) }
+      let(:world) { Loader::World.from_shapefile("SomeWorld", shapefile) }
       let(:shapefile) { "tmp/from_shapefile_spec" }
       before do
         ShapefileHelper.generate_rectangle shapefile, 9, 9
@@ -20,13 +20,12 @@ describe Loader::World do
         region.should be_valid
         region.geometry.should be
 
-        world.name = "bogus"
         world.should be_valid
       end
     end
 
     describe "square with hole from uDig" do
-      let(:world) { Loader::World.from_shapefile(shapefile) }
+      let(:world) { Loader::World.from_shapefile("SomeWorld", shapefile) }
       let(:shapefile) { "lib/data/shapefiles/holed_square/region" }
 
       it "should generate geometries from the shapefile" do
@@ -37,7 +36,7 @@ describe Loader::World do
     end
 
     describe "new york city shape file" do
-      let(:world) { Loader::World.from_shapefile(shapefile, "BoroCD" => "name") }
+      let(:world) { Loader::World.from_shapefile("SomeName", shapefile, "BoroCD") }
       let(:shapefile) { "lib/data/shapefiles/nyc/region" }
 
       it "should generate a geometry and threejs for every borough with neighborhoods" do
@@ -53,6 +52,39 @@ describe Loader::World do
 
         world.name = "bogus"
         world.should be_valid
+      end
+    end
+  end
+
+  describe "#generate_blocks" do
+    context "for generated geometry" do
+      let(:world) { FactoryGirl.build(:world) }
+      let(:region1) { FactoryGirl.build(:region_with_geometry) }
+      let(:region2) { FactoryGirl.build(:region_with_geometry, left: 9, bottom: 9) }
+
+      before do
+        world.regions << region1
+        world.regions << region2
+      end
+
+      it "should create blocks for every region" do
+        Loader::World.generate_blocks(world, 1)
+
+        region1.blocks.size.should > 0
+        region1.blocks.size.should == region2.blocks.size
+        world.save.should == true
+        region1.should be_persisted
+        region2.should be_persisted
+      end
+
+      it "should assign the regions relative coordinates" do
+        Loader::World.generate_blocks(world, 1)
+
+        region1.left.should == 1
+        region1.bottom.should == 1
+
+        region2.left.should == 10
+        region2.bottom.should == 10
       end
     end
   end
