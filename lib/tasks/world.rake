@@ -38,7 +38,8 @@ namespace :world do
       Loader::World.generate({
         name: "Manhattan",
         region_name_key: "BoroCD",
-        block_length: 700
+        block_length: 700,
+        tolerance: 0.5
       }).save!
     end
 
