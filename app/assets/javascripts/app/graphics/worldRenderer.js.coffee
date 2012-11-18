@@ -11,23 +11,26 @@ class App.WorldRenderer
       Detector.addGetWebGLMessage()
 
     console.debug("Creating worldRenderer...")
-    @scene = new THREE.Scene()
+    @clock = new THREE.Clock()
+    @block_scene = new THREE.Scene()
     @outline_scene = new THREE.Scene()
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
-    @scene.add(@camera)
+    @cameraHelper = new THREE.CameraHelper(@camera)
+    @block_scene.add(@cameraHelper)
 
     @renderer = createRenderer(options)
+    @composer = createComposer(options, @)
 
     @ambientLight = createAmbientLight(options)
-    @scene.add(@ambientLight)
+    @block_scene.add(@ambientLight)
 
     @directionalLight = createDirectionalLight(
       _.extend({}, options, {position: @camera.position})
     )
 
-    @scene.add(@directionalLight)
+    @block_scene.add(@directionalLight)
 
     @stats = new App.StatsRenderer()
 
@@ -53,6 +56,7 @@ class App.WorldRenderer
     @renderer.setSize( options.width, options.height )
     @camera.aspect = options.width / options.height
     @camera.updateProjectionMatrix()
+    @cameraHelper.update()
 
   animate: (elapsedTicks)=>
     render(@)
@@ -62,14 +66,20 @@ class App.WorldRenderer
     else
       @requestId = requestAnimationFrame(@animate)
 
-  add: (meshParam)->
+  add_outlines: (meshParam)->
     _.each(coerceIntoMeshes(meshParam), (mesh) ->
-      @scene.add( mesh )
+      @outline_scene.add( mesh )
+    , @)
+    @
+
+  add_blocks: (meshParam)->
+    _.each(coerceIntoMeshes(meshParam), (mesh) ->
+      @block_scene.add( mesh )
     , @)
     @
 
   meshes: ->
-    @scene.children
+    @outline_scene.children.concat @block_scene.children
 
 # privates
 
@@ -91,10 +101,39 @@ createPerspectiveCamera = (options) ->
   camera
 
 createRenderer = (options) ->
-  renderer = new THREE.WebGLRenderer({antialias: true, autoClear: false})
+  renderer = new THREE.WebGLRenderer({antialias: true})
+
   renderer.setSize( options.width, options.height )
-  renderer.setClearColor( 0, 0 )
+  renderer.setClearColorHex( 0xffffff, 0 )
+  renderer.autoClear = false
+  renderer.autoClearColor = false
+  renderer.sortObjects = false
   renderer
+
+createComposer = (options, worldRenderer) ->
+  composer = new THREE.EffectComposer( worldRenderer.renderer, createRenderTarget(options) )
+
+  worldPass = new App.WorldPass ( worldRenderer )
+  worldPass.renderToScreen = true
+
+  # pass = new THREE.ShaderPass( THREE.CopyShader )
+  # pass.renderToScreen = true
+
+  composer.addPass( worldPass )
+  # composer.addPass( pass )
+  composer
+
+createRenderTarget = (options) ->
+  renderTargetParameters = {
+    minFilter: THREE.NearestFilter,
+    magFilter: THREE.NearestFilter,
+    format: THREE.RGBFormat
+  }
+
+  new THREE.WebGLRenderTarget(
+    options.width,
+    options.height,
+    renderTargetParameters)
 
 createDirectionalLight = (options) ->
   # White directional light at half intensity shining from the top.
@@ -107,11 +146,11 @@ createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
 
 render = (worldRenderer) ->
+  delta = worldRenderer.clock.getDelta()
   worldRenderer.meshes().forEach (child) ->
-    child.animate() if child.animate
+    child.animate(delta) if child.animate
 
-  worldRenderer.renderer.clear()
-  worldRenderer.renderer.render( worldRenderer.scene, worldRenderer.camera )
+  worldRenderer.composer.render(delta)
   worldRenderer.stats.update()
 
 calculate_options = ->

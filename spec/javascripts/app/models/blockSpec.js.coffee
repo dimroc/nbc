@@ -11,10 +11,6 @@ describe "models.block", ->
       nyc = Factories.nycWorld()
       block = nyc.allBlocks().first()
 
-    describe "#colorKey", ->
-      it "should return the region slug", ->
-        expect(block.colorKey()).toEqual(block.region().slug)
-
     describe "#worldPosition", ->
       describe "with region offset", ->
         beforeEach ->
