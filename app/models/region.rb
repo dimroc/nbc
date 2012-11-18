@@ -51,10 +51,11 @@ class Region < ActiveRecord::Base
     self.bottom = furthest_bottom
   end
 
-  def regenerate_threejs(offset)
-    if geometry
-      self.threejs = THREEJS::Encoder.from_geometry(simplify_geometry)
-      self.threejs = THREEJS::Encoder.offset(threejs, offset)
+  def regenerate_threejs(offset, scale, tolerance)
+    simple_geometry = simplify_geometry(tolerance)
+    if simple_geometry
+      self.threejs = THREEJS::Encoder.from_geometry(simple_geometry)
+      self.threejs = THREEJS::Encoder.offset(threejs, offset, scale)
     end
   end
 
@@ -71,6 +72,7 @@ class Region < ActiveRecord::Base
   end
 
   def simplify_geometry(tolerance=5)
+    return nil unless geometry
     rval = Region.connection.execute(<<-SQL).values.first.first
     SELECT ST_AsText(
       ST_Simplify(
