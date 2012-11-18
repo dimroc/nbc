@@ -15,12 +15,6 @@ class App.Block extends App.Model
     @appendErrors(left: "left is required") unless @left
     @appendErrors(point: "point is required") unless @point
 
-  colorKey: ->
-    if @region() then @region().slug else null
-
-  color: ->
-    App.ColorMap.fetch(@colorKey())
-
   worldPosition: ->
     left = @left
     bottom = @bottom

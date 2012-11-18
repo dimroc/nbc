@@ -2,7 +2,6 @@ describe "graphics.WorldRenderer", ->
   describe "#constructor", ->
     it "should create the camera, scene, and renderer", ->
       worldRenderer = new App.WorldRenderer()
-      expect(worldRenderer.scene).toBeDefined()
       expect(worldRenderer.renderer).toBeDefined()
       expect(worldRenderer.camera).toBeDefined()
       worldRenderer.destroy()
@@ -21,8 +20,14 @@ describe "graphics.WorldRenderer", ->
         worldRenderer.attachToDom(dom)
         expect(dom).toContain("canvas")
 
-    describe "#add", ->
+    describe "#add_blocks", ->
       it "should add to its children", ->
         mesh = new THREE.Mesh()
-        worldRenderer.add(mesh)
-        expect(worldRenderer.scene.children).toInclude(mesh)
+        worldRenderer.add_blocks(mesh)
+        expect(worldRenderer.meshes()).toInclude(mesh)
+
+    describe "#add_outlines", ->
+      it "should add to its children", ->
+        mesh = new THREE.Mesh()
+        worldRenderer.add_outlines(mesh)
+        expect(worldRenderer.meshes()).toInclude(mesh)

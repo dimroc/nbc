@@ -13,7 +13,7 @@ class App.MeshFactory
     mesh
 
   @generate_blocks: (region) ->
-    opacity = 1
+    opacity = 0.5
     cubeMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF, opacity: opacity})
     currentMaterial = new THREE.MeshLambertMaterial({color: 0xAB1A25, opacity: opacity})
     regionMaterial = new THREE.MeshLambertMaterial({color: 0x009959, opacity: opacity})

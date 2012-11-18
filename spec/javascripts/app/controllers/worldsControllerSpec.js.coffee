@@ -23,7 +23,7 @@ describe "controllers.worldsController", ->
         worldRenderer.destroy()
 
       it "should render the world", ->
-        spyOn(worldRenderer, "add").andCallThrough()
+        spyOn(worldRenderer, "add_blocks").andCallThrough()
         spyOn(worldRenderer, "attachToDom").andCallThrough()
         spyOn(worldRenderer, "animate").andCallThrough()
         spyOn(App, "WorldRenderer").andReturn(worldRenderer)
@@ -32,7 +32,7 @@ describe "controllers.worldsController", ->
 
         mostRecentAjaxRequest().response(Factories.nycRegionsResponse())
 
-        expect(worldRenderer.add).toHaveBeenCalled()
+        expect(worldRenderer.add_blocks).toHaveBeenCalled()
         expect(worldRenderer.attachToDom).toHaveBeenCalled()
         expect(worldRenderer.animate).toHaveBeenCalled()
 
