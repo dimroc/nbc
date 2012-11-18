@@ -39,5 +39,18 @@ namespace :world do
       world.name = "Manhattan"
       world.save!
     end
+
+    desc "Generate blocks that represent USA (Contiguous states)"
+    task :usa => :environment do
+      puts "Creating USA (contiguous states)..."
+      World.find_by_slug("usa").try(:destroy)
+      shapefile = "lib/data/shapefiles/usa/region"
+      world = Loader::World.from_shapefile(shapefile, "NAME" => "name")
+
+      puts "Generating blocks and threejs model..."
+      world.regenerate_blocks(140_000)
+      world.name = "USA"
+      world.save!
+    end
   end
 end
