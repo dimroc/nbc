@@ -2,7 +2,7 @@ class Loader::World
   class << self
     def generate(options)
       options = OpenStruct.new options
-      options.shapefile = "lib/data/shapefiles/#{options.name.downcase}/region" unless options.shapefile
+      options.shapefile = "lib/data/shapefiles/#{options.name.downcase.gsub(' ', '_')}/region" unless options.shapefile
       options.tolerance = 25 unless options.tolerance
 
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)

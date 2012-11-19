@@ -43,6 +43,58 @@ namespace :world do
       }).save!
     end
 
+    desc "Generate blocks that represent Brooklyn"
+    task :brooklyn => :environment do
+      puts "Creating Brooklyn..."
+      World.find_by_slug("brooklyn").try(:destroy)
+
+      Loader::World.generate({
+        name: "Brooklyn",
+        region_name_key: "BoroCD",
+        block_length: 700,
+        tolerance: 1
+      }).save!
+    end
+
+    desc "Generate blocks that represent Queens"
+    task :queens => :environment do
+      puts "Creating Queens..."
+      World.find_by_slug("queens").try(:destroy)
+
+      Loader::World.generate({
+        name: "Queens",
+        region_name_key: "BoroCD",
+        block_length: 1000,
+        tolerance: 5
+      }).save!
+    end
+
+    desc "Generate blocks that represent Bronx"
+    task :bronx => :environment do
+      puts "Creating Bronx..."
+      World.find_by_slug("bronx").try(:destroy)
+
+      Loader::World.generate({
+        name: "Bronx",
+        region_name_key: "BoroCD",
+        block_length: 600,
+        tolerance: 2
+      }).save!
+    end
+
+    desc "Generate blocks that represent Staten Island"
+    task :staten_island => :environment do
+      puts "Creating Staten Island..."
+      World.find_by_slug("staten-island").try(:destroy)
+
+      Loader::World.generate({
+        name: "Staten Island",
+        region_name_key: "BoroCD",
+        block_length: 600,
+        tolerance: 2
+      }).save!
+    end
+
     desc "Generate blocks that represent USA (Contiguous states)"
     task :usa => :environment do
       puts "Creating USA (contiguous states)..."
