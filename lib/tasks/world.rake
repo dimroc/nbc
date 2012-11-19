@@ -82,6 +82,19 @@ namespace :world do
       }).save!
     end
 
+    desc "Generate blocks that represent Staten Island"
+    task :staten_island => :environment do
+      puts "Creating Staten Island..."
+      World.find_by_slug("staten-island").try(:destroy)
+
+      Loader::World.generate({
+        name: "Staten Island",
+        region_name_key: "BoroCD",
+        block_length: 600,
+        tolerance: 2
+      }).save!
+    end
+
     desc "Generate blocks that represent USA (Contiguous states)"
     task :usa => :environment do
       puts "Creating USA (contiguous states)..."
