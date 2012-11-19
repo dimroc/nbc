@@ -31,6 +31,47 @@ describe THREEJS::Encoder do
       end
     end
 
+    context "square with a hole" do
+      let(:geometry) do
+        factory = Mercator::FACTORY.projection_factory
+
+        left = bottom = 0
+        width = height = 10
+
+        exterior_ring = factory.linear_ring([
+          factory.point(left, bottom),
+          factory.point(left, bottom + height),
+          factory.point(left + width, bottom + height),
+          factory.point(left + width, bottom)])
+
+        left = bottom = 3
+        width = height = 3
+
+        interior_ring = factory.linear_ring([
+          factory.point(left, bottom),
+          factory.point(left, bottom + height),
+          factory.point(left + width, bottom + height),
+          factory.point(left + width, bottom)])
+
+        factory.polygon(exterior_ring, [interior_ring])
+      end
+
+      it "should generate a THREE JS model format hash" do
+        as_json = THREEJS::Encoder.from_geometry geometry
+        as_json[:vertices].count.should == 72 # 6 3D points
+        as_json[:faces].should == [
+          0, 0, 1, 2,
+          0, 3, 4, 5,
+          0, 6, 7, 8,
+          0, 9, 10, 11,
+          0, 12, 13, 14,
+          0, 15, 16, 17,
+          0, 18, 19, 20,
+          0, 21, 22, 23
+        ]
+      end
+    end
+
     context "multipolygon" do
       let(:multipolygon) do
         factory = Mercator::FACTORY.projection_factory

@@ -89,12 +89,33 @@ class THREEJS::Encoder
     def triangulate(geometry)
       ring = geometry.exterior_ring
 
-      input = ring.points.map { |point| [point.x, point.y] }
-      input.pop if input.first == input.last
+      exterior = ring.points.map { |point| [point.x, point.y] }
+      exterior.pop if exterior.first == exterior.last
 
-      cdt = Poly2Tri::CDT.new(input)
+      cdt = Poly2Tri::CDT.new(exterior)
+
+      points_so_far = exterior.clone
+      geometry.interior_rings.each do |ring|
+        interior = ring.points.map { |point| [point.x, point.y] }
+        interior.pop if interior.first == interior.last
+
+        cdt.add_hole(interior) if all_are_unique_points(points_so_far, interior)
+        points_so_far.concat interior
+      end
+
       cdt.triangulate!
       cdt.triangles
+    end
+
+    def all_are_unique_points(points1, points2)
+      x1 = points1.values_at(*points1.each_index.select { |p| p.even? })
+      x2 = points2.values_at(*points2.each_index.select { |p| p.even? })
+
+      y1 = points1.values_at(*points1.each_index.select { |p| p.odd? })
+      y2 = points2.values_at(*points2.each_index.select { |p| p.odd? })
+
+      (x1 & x2).empty? && (y1 & y2).empty?
+      (points1 & points2).empty?
     end
 
     def template
