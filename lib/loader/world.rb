@@ -1,5 +1,28 @@
 class Loader::World
   class << self
+    def from_yml!(path, specific_world=nil)
+      yaml = YAML::load(File.open(path))
+
+      if specific_world
+        configurations = yaml["worlds"].select do |config|
+          config["name"].downcase == specific_world.downcase.gsub('_', ' ').gsub('-', ' ')
+        end
+
+        raise ArgumentError, "No worlds named #{specific_world}" if configurations.empty?
+      else
+        configurations = yaml["worlds"]
+      end
+
+      configurations.each do |config|
+        name = config["name"].capitalize
+
+        puts "Generating #{name}..."
+        world = generate(config)
+        World.find_by_slug(name.downcase.gsub(' ','-')).try(:destroy) # Destroy old
+        world.save!
+      end
+    end
+
     def generate(options)
       options = OpenStruct.new options
       options.shapefile = "lib/data/shapefiles/#{options.name.downcase.gsub(' ', '_')}/region" unless options.shapefile
