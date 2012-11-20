@@ -7,6 +7,7 @@ gem 'rails', '~> 3.2.9'
 gem 'pg'
 gem 'jquery-rails'
 gem "haml", ">= 3.1.6"
+gem 'hashie'
 gem "sendgrid"
 gem "devise", ">= 2.1.0"
 gem "cancan", ">= 1.6.7"
