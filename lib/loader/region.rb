@@ -19,12 +19,10 @@ class Loader::Region
       region.bottom = region.furthest_bottom
     end
 
-    def generate_threejs(region, offset, scale, tolerance)
+    def generate_threejs(region, offset = {}, scale = 1, tolerance = 1)
       simple_geometry = region.simplify_geometry(tolerance)
       if simple_geometry
-        threejs = THREEJS::Encoder.from_geometry(simple_geometry)
-        threejs = THREEJS::Encoder.offset(threejs, offset, scale)
-        region.threejs = threejs
+        region.threejs = THREEJS::Encoder.generate(simple_geometry, offset, scale)
       end
     end
   end

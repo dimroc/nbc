@@ -7,7 +7,7 @@ class App.MeshFactory
     material  = new THREE.MeshBasicMaterial({color:color})
 
     mesh = null
-    loader.createModel(region.threejs, (geometry) ->
+    loader.createModel(region.threejs.model, (geometry) ->
       mesh = new THREE.Mesh( geometry, material )
     )
     mesh
