@@ -11,7 +11,7 @@ class THREEJS::Encoder
       converge_models(models)
     end
 
-    def offset(threejs, offset, scale=1/700.0)
+    def offset(threejs, offset, scale)
       threejs = Marshal.load(Marshal.dump(threejs))
       vertices = threejs[:vertices]
 
