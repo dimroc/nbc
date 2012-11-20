@@ -1,5 +1,14 @@
 class THREEJS::Encoder
   class << self
+    def outlines(geometry)
+      return nil unless geometry
+
+      coerce_to_geometries(geometry).map do |geometry|
+        ring = geometry.exterior_ring
+        outline = ring.points.flat_map { |point| [point.x, point.y] }
+      end
+    end
+
     def from_geometry(geometry)
       return nil unless geometry
 

@@ -1,6 +1,23 @@
 require 'spec_helper'
 
 describe THREEJS::Encoder do
+  describe ".outline_from_geometry" do
+    context "square" do
+      let(:geometry) { GeometryHelper.square(0, 0, 5) }
+
+      it "should generate a THREE JS model format hash" do
+        as_json = THREEJS::Encoder.outlines geometry
+        as_json.should == [[
+          0.0, 0.0,
+          0.0, 5.0,
+          5.0, 5.0,
+          5.0, 0.0,
+          0.0, 0.0,
+        ]]
+      end
+    end
+  end
+
   describe ".from_geometry" do
     context "integration with nyc's simplified geometry" do
       let(:geometry) do
@@ -19,7 +36,7 @@ describe THREEJS::Encoder do
     end
 
     context "square" do
-      let(:geometry) { FactoryGirl.create(:region_with_geometry).geometry }
+      let(:geometry) { GeometryHelper.square }
 
       it "should generate a THREE JS model format hash" do
         as_json = THREEJS::Encoder.from_geometry geometry
