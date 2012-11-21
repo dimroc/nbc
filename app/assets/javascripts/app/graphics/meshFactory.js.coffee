@@ -9,6 +9,7 @@ class App.MeshFactory
     mesh = null
     loader.createModel(region.threejs.model, (geometry) ->
       mesh = new THREE.Mesh( geometry, material )
+      mesh.name = "region-#{region.name}"
     )
     mesh
 
@@ -16,7 +17,6 @@ class App.MeshFactory
     return null unless Object.keys(region.threejs).length > 0
 
     material = new THREE.LineBasicMaterial({color: 0xffffff, linewidth: 2, opacity: 0.4})
-    geometry = new THREE.Geometry()
 
     lineMeshes = for outline in region.threejs.outlines then do (outline) ->
       lineGeometry = new THREE.Geometry()
@@ -34,26 +34,24 @@ class App.MeshFactory
 
   @generate_blocks: (region) ->
     opacity = 0.5
-    cubeMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF, opacity: opacity})
-    currentMaterial = new THREE.MeshLambertMaterial({color: 0xAB1A25, opacity: opacity})
-    regionMaterial = new THREE.MeshLambertMaterial({color: 0x009959, opacity: opacity})
+    currentMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xAB1A25), opacity: opacity})
+    cubeMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xFFFFFF), opacity: opacity})
+    regionMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0x009959), opacity: opacity})
 
-    blockMaterial = (block) ->
+    blockMaterialIndex = (block) ->
       if block.id == block.region().current_block
-        material = currentMaterial
+        0
       else if block.region().current_block
-        material = regionMaterial
+        1
       else
-        material = cubeMaterial
+        2
 
     # Create batched geometry
     geometry = new THREE.Geometry()
 
     _.each(region.blocks().all(), (block) ->
-      cubeGeom = new THREE.CubeGeometry(
-        App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH,
-        1, 1, 1,
-        blockMaterial(block))
+      cubeGeom = new THREE.CubeGeometry(App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH)
+      assignMaterialIndexToFaces(cubeGeom, blockMaterialIndex(block))
 
       cubeMesh = new THREE.Mesh(cubeGeom)
       cubeMesh.position = block.worldPosition()
@@ -61,4 +59,11 @@ class App.MeshFactory
     )
 
     geometry.mergeVertices()
-    new THREE.Mesh(geometry, new THREE.MeshFaceMaterial())
+    faceMaterial = new THREE.MeshFaceMaterial([currentMaterial, regionMaterial, cubeMaterial])
+
+    batchedBlocks = new THREE.Mesh(geometry, faceMaterial)
+    batchedBlocks.name = "blocks-region-#{region.name}"
+    batchedBlocks
+
+assignMaterialIndexToFaces = (geometry, materialIndex) ->
+  face.materialIndex = materialIndex for face in geometry.faces
