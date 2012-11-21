@@ -21,11 +21,25 @@ describe Region do
   end
 
   describe "#as_json" do
-    subject { region.as_json.with_indifferent_access }
+    subject { Hashie::Mash.new region.as_json }
 
     let(:region) { FactoryGirl.build(:region_with_geometry) }
-    it "should not have geometry" do
-      subject[:geometry].should be_nil
+
+    its(:geometry) { should be_nil }
+
+    context "with threejs generated" do
+      before { Loader::Region.generate_threejs(region) }
+
+      it "should have threejs entries" do
+        subject[:threejs][:model].should be
+        subject[:threejs][:outlines].should == [[
+          0.0, 0.0,
+          0.0, 9.0,
+          9.0, 9.0,
+          9.0, 0.0,
+          0.0, 0.0
+        ]]
+      end
     end
 
     context "with blocks generated" do
@@ -65,7 +79,7 @@ describe Region do
     let(:region) { nyc.regions.first }
 
     it "should have less than 10 vertices" do
-      region.simplify_geometry.first.exterior_ring.num_points.should < 20
+      region.simplify_geometry.first.exterior_ring.num_points.should < 30
     end
   end
 end

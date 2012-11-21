@@ -14,7 +14,7 @@ class Loader::World
       end
 
       configurations.each do |config|
-        name = config["name"].capitalize
+        name = config["name"].titleize
 
         puts "Generating #{name}..."
         world = generate(config)
@@ -63,7 +63,7 @@ class Loader::World
 
     def generate_outlines(world, scale, tolerance)
       bb = world.generate_bounding_box
-      offset = OpenStruct.new(x: -bb.min_x, y: -bb.min_y, z: 0)
+      offset = Hashie::Mash.new(x: -bb.min_x, y: -bb.min_y, z: 0)
       world.regions.each do |region|
         Loader::Region.generate_threejs(region, offset, scale, tolerance)
       end

@@ -20,15 +20,7 @@ FactoryGirl.define do
       width = evaluator.width
       height = evaluator.height
 
-      factory = Mercator::FACTORY.projection_factory
-
-      linear_ring = factory.linear_ring([
-        factory.point(left, bottom),
-        factory.point(left, bottom + height),
-        factory.point(left + width, bottom + height),
-        factory.point(left + width, bottom)])
-
-      region.geometry = factory.polygon(linear_ring)
+      region.geometry = GeometryHelper.rectangle left, bottom, width, height
     end
   end
 end

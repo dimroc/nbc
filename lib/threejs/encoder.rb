@@ -1,6 +1,27 @@
 class THREEJS::Encoder
   class << self
-    def from_geometry(geometry)
+    def generate(geometry, offset, scale)
+      return nil unless geometry
+
+      model = THREEJS::Encoder.model_from_geometry(geometry)
+      model = THREEJS::Encoder.offset_model(model, offset, scale)
+
+      outlines = THREEJS::Encoder.outlines(geometry)
+      outlines = THREEJS::Encoder.offset_outlines(outlines, offset, scale)
+
+      { model: model, outlines: outlines }
+    end
+
+    def outlines(geometry)
+      return nil unless geometry
+
+      coerce_to_geometries(geometry).map do |geometry|
+        ring = geometry.exterior_ring
+        outline = ring.points.flat_map { |point| [point.x, point.y] }
+      end
+    end
+
+    def model_from_geometry(geometry)
       return nil unless geometry
 
       models = coerce_to_geometries(geometry).map do |geometry|
@@ -11,27 +32,46 @@ class THREEJS::Encoder
       converge_models(models)
     end
 
-    def offset(threejs, offset, scale)
-      threejs = Marshal.load(Marshal.dump(threejs))
-      vertices = threejs[:vertices]
+    def offset_model(model, offset, scale)
+      offset = Hashie::Mash.new(offset)
+      vertices = model[:vertices].map { |coordinate| coordinate * scale }
 
-      vertices = vertices.map { |coordinate| coordinate * scale }
-
-      threejs[:vertices] = []
+      model[:vertices] = []
       vertices.each_with_index do |coordinate, index|
         if index % 3 == 0 # X COORDINATE
-          threejs[:vertices] << coordinate + (offset.x ? offset.x * scale : 0)
+          model[:vertices] << coordinate + (offset.x ? offset.x * scale : 0)
         elsif (index-1) % 3 == 0 # Y COORDINATE
-          threejs[:vertices] << coordinate + (offset.y ? offset.y * scale : 0)
+          model[:vertices] << coordinate + (offset.y ? offset.y * scale : 0)
         else
-          threejs[:vertices] << coordinate + (offset.z ? offset.z * scale : 0)
+          model[:vertices] << coordinate + (offset.z ? offset.z * scale : 0)
         end
       end
 
-      threejs
+      model
+    end
+
+    def offset_outlines(outlines, offset, scale)
+      outlines.map { |outline| offset_outline outline, offset, scale }
     end
 
     private
+
+    def offset_outline(vertices, offset, scale)
+      # Outline is 2D
+      output = []
+      offset = Hashie::Mash.new(offset)
+      vertices.each_with_index do |coordinate, index|
+        coordinate *= scale
+
+        if index.even?
+          output << coordinate + (offset.x ? offset.x * scale : 0)
+        else
+          output << coordinate + (offset.y ? offset.y * scale : 0)
+        end
+      end
+
+      output
+    end
 
     def converge_models(models)
       final = template

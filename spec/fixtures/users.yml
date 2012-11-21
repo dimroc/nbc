@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 3
-  email: demetris.buckridge@batzbode.uk
-  encrypted_password: $2a$10$P0Aw3V/N3bIcqw4PpLgwBO/zUIDhJ9lNQnk6oA61X5SWTwwW/BIwW
+  id: 1
+  email: isabelle@fritsch.uk
+  encrypted_password: $2a$04$YiA28c1WuJtlVmjeBWRtD.GcPjxaNvRdTGaQVp8qXm5VyPI32QMg.
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 
