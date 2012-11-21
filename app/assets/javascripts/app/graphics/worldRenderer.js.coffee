@@ -17,8 +17,6 @@ class App.WorldRenderer
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
-    @cameraHelper = new THREE.CameraHelper(@camera)
-    @block_scene.add(@cameraHelper)
 
     @renderer = createRenderer(options)
     @composer = createComposer(options, @)
@@ -60,7 +58,6 @@ class App.WorldRenderer
     options = calculate_options()
     @renderer.setSize( options.width, options.height )
     updateCamera(@camera, options)
-    @cameraHelper.update()
 
   onDocumentMouseMove: ( event ) =>
     event.preventDefault()
@@ -139,7 +136,7 @@ createRenderer = (options) ->
   renderer = new THREE.WebGLRenderer({antialias: true})
 
   renderer.setSize( options.width, options.height )
-  renderer.setClearColorHex( 0xffffff, 0 )
+  renderer.setClearColorHex( 0x000000, 1 )
   renderer.autoClear = false
   renderer.autoClearColor = false
   renderer.sortObjects = false

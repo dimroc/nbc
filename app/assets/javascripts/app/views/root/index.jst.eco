@@ -1,10 +1,12 @@
-<h1>Block Cities</h1>
-<div class="well">
-  <ul class="nav nav-list">
-    <% for world in @worlds: %>
-      <li class="row-fluid" data-slug="<%= world.slug %>">
-        <a class="span4" data-type="show"><%= world.name %></a>
-      </li>
-    <% end %>
-  </ul>
+<div class="container">
+  <h1>Block Cities</h1>
+  <div class="well">
+    <ul class="nav nav-list">
+        <% for world in @worlds: %>
+          <li class="row-fluid" data-slug="<%= world.slug %>">
+            <a class="span4" data-type="show"><%= world.name %></a>
+          </li>
+        <% end %>
+    </ul>
+  </div>
 </div>

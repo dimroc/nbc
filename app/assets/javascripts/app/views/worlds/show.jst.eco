@@ -1,23 +1,18 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container">
-      <i class="icon-th icon-white left"></i>
-      <h4 class="left"><%= @name %></h4>
+    <i class="icon-th icon-white left"></i>
+    <h4 class="left"><%= @name %></h4>
 
-      <ul class="nav">
-        <li><a data-type="edit">Edit</a></li>
-        <li><a data-type="back">Back</a></li>
-      </ul>
-    </div>
+    <ul class="nav">
+      <li><a data-type="back">Back</a></li>
+    </ul>
   </div>
 </div>
 
 <div id="world"></div>
 
 <div id="footer">
-  <div class="container">
-    <p class="muted credit neighborhoods">
-      Current Neighborhoods: <%= @currentNeighborhoods() %>
-    </p>
-  </div>
+  <p class="muted credit neighborhoods">
+    Current Neighborhoods: <%= @currentNeighborhoods() %>
+  </p>
 </div>

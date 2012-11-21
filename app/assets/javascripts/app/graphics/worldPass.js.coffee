@@ -7,6 +7,7 @@ class App.WorldPass
     @renderToScreen = false
 
   render: ( renderer, writeBuffer, readBuffer, delta ) ->
+    renderer.clear()
     renderer.clearTarget(readBuffer)
 
     if @renderToScreen

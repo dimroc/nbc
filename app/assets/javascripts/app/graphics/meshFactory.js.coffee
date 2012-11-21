@@ -3,7 +3,7 @@ class App.MeshFactory
     return null unless Object.keys(region.threejs).length > 0
 
     loader = new THREE.JSONLoader()
-    color = if region.current_block then 0xdd0000 else 0x000000
+    color = if region.current_block then 0xdd0000 else 0xdddddd
     material  = new THREE.MeshBasicMaterial({color:color})
 
     mesh = null
@@ -16,7 +16,7 @@ class App.MeshFactory
   @load_region_outlines: (region) ->
     return null unless Object.keys(region.threejs).length > 0
 
-    material = new THREE.LineBasicMaterial({color: 0xffffff, linewidth: 2, opacity: 0.4})
+    material = new THREE.LineBasicMaterial({color: 0x000000, linewidth: 2, opacity: 0.4})
 
     lineMeshes = for outline in region.threejs.outlines then do (outline) ->
       lineGeometry = new THREE.Geometry()
@@ -33,7 +33,7 @@ class App.MeshFactory
       new THREE.Line(lineGeometry, material)
 
   @generate_blocks: (region) ->
-    opacity = 0.5
+    opacity = 0.6
     currentMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xAB1A25), opacity: opacity})
     cubeMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xFFFFFF), opacity: opacity})
     regionMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0x009959), opacity: opacity})

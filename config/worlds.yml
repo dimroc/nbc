@@ -1,12 +1,12 @@
 defaults: &defaults
   region_name_key: BoroCD
   block_length: 700
-  tolerance: 2
+  tolerance: 5
 
 worlds:
   - name: Manhattan
     <<: *defaults
-    tolerance: 0.5
+    # tolerance: 0.5
 
   - name: Bronx
     <<: *defaults
@@ -15,6 +15,7 @@ worlds:
   - name: Queens
     <<: *defaults
     block_length: 1000
+    tolerance: 3
 
   - name: Brooklyn
     <<: *defaults

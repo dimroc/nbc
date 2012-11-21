@@ -37,6 +37,9 @@ class App.World extends App.Model
     currentRegion = @currentRegion()
     currentRegion.neighborhoodNames() if currentRegion
 
+  selectedRegions: ->
+    _([@currentRegion()]).compact()
+
   fetchRegions: (successCallback)->
     url = "/worlds/#{@slug}/regions"
     url += "?longitude=#{Env.longitude}&latitude=#{Env.latitude}" if Env.geoposition
@@ -53,7 +56,7 @@ class App.World extends App.Model
       console.warn "Received status: #{status}. message: #{response.responseText}"
 
   outline_meshes: ->
-    _regions = _(@regions().all())
+    _regions = _(@selectedRegions())
     _regions.chain()
       .map((region) -> region.outline_meshes())
       .flatten()
@@ -67,5 +70,5 @@ class App.World extends App.Model
       .value()
 
   blocks_meshes: ->
-    _regions = _(@regions().all())
+    _regions = _(@selectedRegions())
     _regions.map((region) -> region.blocks_mesh())
