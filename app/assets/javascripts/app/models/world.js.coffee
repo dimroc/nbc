@@ -54,7 +54,17 @@ class App.World extends App.Model
 
   outline_meshes: ->
     _regions = _(@regions().all())
-    _regions.map((region) -> region.outline_mesh())
+    _regions.chain()
+      .map((region) -> region.outline_meshes())
+      .flatten()
+      .compact()
+      .value()
+
+  model_meshes: ->
+    _.chain(@regions().all())
+      .map((region) -> region.model_mesh())
+      .compact()
+      .value()
 
   blocks_meshes: ->
     _regions = _(@regions().all())
