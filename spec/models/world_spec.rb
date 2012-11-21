@@ -18,6 +18,21 @@ describe World do
     it { should validate_presence_of :slug }
   end
 
+  describe "contains?" do
+    subject { world.contains? point }
+    let(:world) { FactoryGirl.create(:world_with_regions) }
+
+    context "with a point in the region" do
+      let(:point) { Mercator::FACTORY.point(5, 5) }
+      it { should be_true }
+    end
+
+    context "with a point outside the region" do
+      let(:point) { Mercator::FACTORY.point(-10000, -10000) }
+      it { should be_false }
+    end
+  end
+
   describe "#generate_bounding_box" do
     subject { world.generate_bounding_box }
 

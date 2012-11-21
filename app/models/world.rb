@@ -9,6 +9,10 @@ class World < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :slug
 
+  def contains?(point)
+    regions.any? { |region| region.contains? point }
+  end
+
   def generate_bounding_box
     bb = Cartesian::BoundingBox.new(Cartesian::preferred_factory())
     bounding_boxes = regions.each do |region|

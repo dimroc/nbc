@@ -16,7 +16,6 @@ class Region < ActiveRecord::Base
   validates_presence_of :bottom
 
   serialize :threejs, Hash
-  serialize :outlines, Array
 
   set_rgeo_factory_for_column(:geometry, Mercator::FACTORY.projection_factory)
 

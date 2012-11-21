@@ -4,7 +4,7 @@ class RegionsController < ApiController
 
   def index
     as_json = @world.regions.as_json
-    set_current_block(as_json) if @current_point
+    set_current_block(as_json)
 
     respond_with(as_json)
   end
@@ -14,9 +14,11 @@ class RegionsController < ApiController
   def set_current_block(as_json)
     return unless @current_point
 
-    current_block = @world.blocks.near(@current_point).limit(1).first
+    if @world.contains?(@current_point)
+      current_block = @world.blocks.near(@current_point).limit(1).first
 
-    current_region = as_json.detect { |entry| entry["id"] == current_block.region_id }
-    current_region.merge!("current_block" => current_block.id)
+      current_region = as_json.detect { |entry| entry["id"] == current_block.region_id }
+      current_region.merge!("current_block" => current_block.id)
+    end
   end
 end
