@@ -6,13 +6,13 @@ defaults: &defaults
   schema_search_path: public,topology
 
 development:
-  database: new-block-city_development
+  database: nbc_development
   <<: *defaults
 
 test:
-  database: new-block-city_test
+  database: nbc_test
   <<: *defaults
 
 production:
-  database: new-block-city_production
+  database: nbc_production
   <<: *defaults
