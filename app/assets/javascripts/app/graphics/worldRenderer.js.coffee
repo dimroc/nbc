@@ -12,8 +12,8 @@ class App.WorldRenderer
 
     console.debug("Creating worldRenderer...")
     @clock = new THREE.Clock()
-    @block_scene = new THREE.Scene()
-    @outline_scene = new THREE.Scene()
+    @blockScene = new THREE.Scene()
+    @outlineScene = new THREE.Scene()
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
@@ -22,13 +22,13 @@ class App.WorldRenderer
     @composer = createComposer(options, @)
 
     @ambientLight = createAmbientLight(options)
-    @block_scene.add(@ambientLight)
+    @blockScene.add(@ambientLight)
 
     @directionalLight = createDirectionalLight(
       _.extend({}, options, {position: @camera.position})
     )
 
-    @block_scene.add(@directionalLight)
+    @blockScene.add(@directionalLight)
 
     @projector = new THREE.Projector()
     @mouse2D = new THREE.Vector3( 0, 1000, 0.5 )
@@ -76,20 +76,20 @@ class App.WorldRenderer
     else
       @requestId = requestAnimationFrame(@animate)
 
-  add_outlines: (meshParam)->
+  addOutlines: (meshParam)->
     _.each(coerceIntoMeshes(meshParam), (mesh) ->
-      @outline_scene.add( mesh )
+      @outlineScene.add( mesh )
     , @)
     @
 
-  add_blocks: (meshParam)->
+  addBlocks: (meshParam)->
     _.each(coerceIntoMeshes(meshParam), (mesh) ->
-      @block_scene.add( mesh )
+      @blockScene.add( mesh )
     , @)
     @
 
   meshes: ->
-    @outline_scene.children.concat @block_scene.children
+    @outlineScene.children.concat @blockScene.children
 
 # privates
 

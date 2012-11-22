@@ -17,11 +17,11 @@ class App.Region extends App.Model
   neighborhoodNames: ->
     _(@neighborhoods).map((neighborhood)-> neighborhood.name)
 
-  outline_meshes: ->
-    App.MeshFactory.load_region_outlines(@)
+  outlineMeshes: ->
+    App.MeshFactory.loadRegionOutlines(@)
 
-  model_mesh: ->
-    App.MeshFactory.load_region_model(@)
+  modelMesh: ->
+    App.MeshFactory.loadRegionModel(@)
 
-  blocks_mesh: ->
-    App.MeshFactory.generate_blocks(@)
+  blocksMesh: ->
+    App.MeshFactory.generateBlocks(@)

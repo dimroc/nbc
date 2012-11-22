@@ -19,10 +19,10 @@ class App.WorldsController extends Spine.Controller
     output = @html @view('worlds/show')(@item)
     @worldRenderer.attachToDom($(output).find("#world"))
 
-    @worldRenderer.add_outlines(@item.outline_meshes())
-    @worldRenderer.add_outlines(@item.model_meshes())
+    @worldRenderer.addOutlines(@item.outlineMeshes())
+    @worldRenderer.addOutlines(@item.modelMeshes())
 
-    @worldRenderer.add_blocks(@item.selected_block_meshes())
+    @worldRenderer.addBlocks(@item.selectedBlockMeshes())
     @worldRenderer.animate()
     output
 

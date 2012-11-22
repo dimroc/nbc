@@ -1,5 +1,5 @@
 class App.MeshFactory
-  @load_region_model: (region) ->
+  @loadRegionModel: (region) ->
     return null unless Object.keys(region.threejs).length > 0
 
     loader = new THREE.JSONLoader()
@@ -13,7 +13,7 @@ class App.MeshFactory
     )
     mesh
 
-  @load_region_outlines: (region) ->
+  @loadRegionOutlines: (region) ->
     return null unless Object.keys(region.threejs).length > 0
 
     material = new THREE.LineBasicMaterial({color: 0xffffff, linewidth: 2, opacity: 1})
@@ -21,12 +21,12 @@ class App.MeshFactory
     lineMeshes = for outline in region.threejs.outlines then do (outline) ->
       lineGeometry = new THREE.Geometry()
 
-      x_points = []
-      y_points = []
-      x_points.push point for point in outline by 2
-      y_points.push point for point in outline[1..] by 2
+      xPoints = []
+      yPoints = []
+      xPoints.push point for point in outline by 2
+      yPoints.push point for point in outline[1..] by 2
 
-      points = _.zip(x_points, y_points)
+      points = _.zip(xPoints, yPoints)
       for point in points then do (point) ->
         lineGeometry.vertices.push(new THREE.Vector3(point[0], point[1], 0))
 
@@ -40,7 +40,7 @@ class App.MeshFactory
     cubeMesh.position = block.worldPosition()
     cubeMesh
 
-  @generate_blocks: (region) ->
+  @generateBlocks: (region) ->
     opacity = 0.8
     currentMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xAB1A25), opacity: opacity})
     cubeMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xFFFFFF), opacity: opacity})
