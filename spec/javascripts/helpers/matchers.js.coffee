@@ -2,7 +2,6 @@ beforeEach ->
   @addMatchers({
     toBeAnAction: () ->
       Helpers.getTypeName(@actual.isActive) == "Function"
-      Helpers.getTypeName(@actual.render) == "Function"
       Helpers.getTypeName(@actual.activate) == "Function"
       Helpers.getTypeName(@actual.deactivate) == "Function"
 

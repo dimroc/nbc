@@ -23,11 +23,6 @@ teardownSpine = ->
 
 window.initializeSpine = ->
   new App { el: $('#jasmine_content') }
-  request = mostRecentAjaxRequest()
-  request.response({
-    status: 200,
-    responseText: JSON.stringify Fixtures.worlds
-  })
 
 window.loadHtmlFixture = (fixture) ->
   $("#jasmine_content").html(fixture)

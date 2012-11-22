@@ -1,16 +1,20 @@
 $ = jQuery.sub()
 World = App.World
 
+getDefaultController = ->
+  # Load empty test controller when running jasmine
+  if jasmine? then App.Controller.Test else App.Controller.Splash
+
 class App.Controller.Root extends Spine.Stack
   controllers:
-    loading: App.Controller.Loading
+    splash: getDefaultController()
     worldsShow:  App.Controller.Worlds.Show
     worldsIndex:  App.Controller.Worlds.Index
 
   routes:
-    '/':                'loading'
+    '/':                'splash'
     '/worlds':          'worldsIndex'
     '/worlds/:id':      'worldsShow'
 
-  default: 'loading'
+  default: 'splash'
   className: 'stack root'

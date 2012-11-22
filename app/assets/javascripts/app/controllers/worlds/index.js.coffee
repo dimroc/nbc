@@ -8,12 +8,10 @@ $.fn.itemViaSlug = ->
 class App.Controller.Worlds.Index extends Spine.Controller
   events:
     'click [data-type=show]':    'show'
-    'click [data-type=back]': 'back'
+    'click [data-type=back]':    'back'
 
   constructor: ->
     super
-    World.bind 'refresh change', @render
-    World.fetch()
 
   render: =>
     worlds = World.all()

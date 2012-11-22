@@ -7,11 +7,11 @@
     isChrome23: checkIfAtLeastChrome23()
   }
 
-  window.navigator.geolocation.getCurrentPosition(function(geoposition) {
-    window.Env.geoposition = geoposition;
-    window.Env.longitude = geoposition.coords.longitude;
-    window.Env.latitude = geoposition.coords.latitude;
-  });
+  <%# window.navigator.geolocation.getCurrentPosition(function(geoposition) { %>
+    <%# window.Env.geoposition = geoposition; %>
+    <%# window.Env.longitude = geoposition.coords.longitude; %>
+    <%# window.Env.latitude = geoposition.coords.latitude; %>
+  <%# }); %>
 
   window.getHook = function() {
     return window.App.WorldRenderer.first();

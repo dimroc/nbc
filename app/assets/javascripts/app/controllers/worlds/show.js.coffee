@@ -10,10 +10,8 @@ class App.Controller.Worlds.Show extends Spine.Controller
       @change(params.id)
 
   change: (slug) ->
-    World.findOrFetch(slug, (world) =>
-      @item = world
-      @item.fetchRegions => @render()
-    )
+    @item = World.findByAttribute("slug", slug)
+    @render()
 
   render: ->
     output = @html @view('worlds/show')(@item)
