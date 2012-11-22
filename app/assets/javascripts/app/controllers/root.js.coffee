@@ -1,31 +1,16 @@
 $ = jQuery.sub()
 World = App.World
 
-class Index extends Spine.Controller
-  events:
-    'click [data-type=show]':    'show'
-
-  constructor: ->
-    super
-    @render()
-
-  render: =>
-    worlds = World.all()
-    @html @view('root/index')(worlds: worlds)
-
-  show: (e) ->
-    @navigate '/worlds'#, item.slug
-
 class App.Controller.Root extends Spine.Stack
   controllers:
-    index: Index
+    loading: App.Controller.Loading
     worldsShow:  App.Controller.Worlds.Show
     worldsIndex:  App.Controller.Worlds.Index
 
   routes:
-    '/':                'index'
+    '/':                'loading'
     '/worlds':          'worldsIndex'
     '/worlds/:id':      'worldsShow'
 
-  default: 'index'
+  default: 'loading'
   className: 'stack root'

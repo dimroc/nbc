@@ -7,7 +7,7 @@ describe "controllers.root", ->
     rootController = App.instance.rootController
     nyc = App.World.findByAttribute("slug", "nyc")
 
-  it "should have the correct actions", ->
-    expect(rootController.index).toBeAnAction()
+  it "should have the correct routes", ->
+    expect(rootController.loading).toBeAnAction()
     expect(rootController.worldsIndex).toBeAnAction()
     expect(rootController.worldsShow).toBeAnAction()

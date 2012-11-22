@@ -76,5 +76,5 @@ class App.World extends App.Model
       value()
 
   allBlockMeshes: ->
-    _regions = _(@selectedRegions())
+    _regions = _(@regions().all())
     _regions.map((region) -> region.blocksMesh())

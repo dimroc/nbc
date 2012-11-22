@@ -15,6 +15,7 @@
 #= require_tree ./models
 
 #= require ./controllers/controller
+#= require ./controllers/loading
 #= require_tree ./controllers/worlds
 #= require ./controllers/root
 
