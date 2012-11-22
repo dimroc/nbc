@@ -12,17 +12,8 @@
           </td>
         <% end %>
       </tr>
-
-      <tr>
-        <% for world in @worlds: %>
-          <td class="<%= _(world.name).underscored() %> centered">
-            <img src="<%= Constants.loading_image_path %>" alt="<%= world.name %>">
-          </td>
-        <% end %>
-      </tr>
     </tbody>
   </table>
-
-  <br/>
-  <h3>Loading...</h3>
+  <h2>Error!</h2>
+  <p>This application requires <a href="http://www.google.com/chrome">Chrome!</a> version 23+.</p>
 </div>
