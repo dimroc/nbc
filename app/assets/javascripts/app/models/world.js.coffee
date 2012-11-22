@@ -69,6 +69,12 @@ class App.World extends App.Model
       .compact()
       .value()
 
-  blocks_meshes: ->
+  selected_block_meshes: ->
+    _.chain(@selectedRegions()).
+      map((region) -> App.MeshFactory.generate_block(region.fetchCurrentBlock())).
+      compact().
+      value()
+
+  all_blocks_meshes: ->
     _regions = _(@selectedRegions())
     _regions.map((region) -> region.blocks_mesh())

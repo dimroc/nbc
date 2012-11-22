@@ -22,7 +22,7 @@ class App.WorldsController extends Spine.Controller
     @worldRenderer.add_outlines(@item.outline_meshes())
     @worldRenderer.add_outlines(@item.model_meshes())
 
-    @worldRenderer.add_blocks(@item.blocks_meshes())
+    @worldRenderer.add_blocks(@item.selected_block_meshes())
     @worldRenderer.animate()
     output
 
