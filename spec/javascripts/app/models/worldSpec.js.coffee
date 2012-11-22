@@ -26,6 +26,11 @@ describe "models.world", ->
         expect(mostRecentAjaxRequest()).toBe(null)
         expect(retrieved_world.name).toEqual("NYC")
 
+  describe "#icon_path", ->
+    it "should return the correct icon path", ->
+      block = new App.World(name: "Staten Island", slug: "staten island")
+      expect(block.icon_path()).toBe("/assets/icons/staten_island.png")
+
   describe "#currentRegion", ->
     nyc = null
     beforeEach ->

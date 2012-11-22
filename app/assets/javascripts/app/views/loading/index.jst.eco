@@ -1,0 +1,28 @@
+<div class="container">
+  <p class="span12 height100"/>
+
+  <h1>New Block City</h1>
+  <table>
+    <tbody>
+
+      <tr>
+        <% for world in @worlds: %>
+          <td class="<%= _(world.name).underscored() %>">
+            <img src="<%= world.icon_path() %>" alt="<%= world.name %>">
+          </td>
+        <% end %>
+      </tr>
+
+      <tr>
+        <% for world in @worlds: %>
+          <td class="<%= _(world.name).underscored() %>" align=center>
+            <img src="<%= Constants.loading_image_path %>" alt="<%= world.name %>">
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+
+  <br/>
+  <h3>Loading...</h3>
+</div>

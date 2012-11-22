@@ -12,8 +12,7 @@ class App.World extends App.Model
       $.ajax(
         type: "GET",
         url: "/worlds",
-        dataType: "json",
-        cache: false
+        dataType: "json"
       ).success((data) =>
         @refresh(data)
         callback(@findByAttribute("slug", slug))
@@ -24,6 +23,9 @@ class App.World extends App.Model
     @errors = {}
     @appendErrors(name: "Name is required") unless @name
     @appendErrors(slug: "slug is required") unless @slug
+
+  icon_path: ->
+    "/assets/icons/#{_(@name).underscored()}.png"
 
   allBlocks: ->
     _.reduce(@regions().all(), (memo, region) ->
@@ -46,8 +48,7 @@ class App.World extends App.Model
     $.ajax(
       type: "GET",
       url: url,
-      dataType: "json",
-      cache: false
+      dataType: "json"
     ).success((data) =>
       @regions(data)
       successCallback(@) if successCallback
