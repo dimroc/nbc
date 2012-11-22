@@ -14,8 +14,9 @@
 #= require ./models/model
 #= require_tree ./models
 
-#= require ./controllers/worldsController
-#= require_tree ./controllers
+#= require ./controllers/controller
+#= require_tree ./controllers/worlds
+#= require ./controllers/root
 
 #= require_tree ./views
 
@@ -28,7 +29,7 @@ class App extends Spine.Controller
     #  ...
 
     Spine.Log.log("Initializing Application...")
-    @append(@rootController = new App.RootController)
+    @append(@rootController = new App.Controller.Root)
     Spine.Route.setup()
     App.instance = @
 

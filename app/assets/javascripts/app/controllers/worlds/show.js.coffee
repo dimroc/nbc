@@ -1,6 +1,6 @@
 World = App.World
 
-class App.WorldsController extends Spine.Controller
+class App.Controller.Worlds.Show extends Spine.Controller
   events:
     'click [data-type=back]': 'back'
 
@@ -27,7 +27,7 @@ class App.WorldsController extends Spine.Controller
     output
 
   back: ->
-    @navigate '/'
+    @navigate '/worlds'
 
   activate: ->
     super
@@ -40,4 +40,3 @@ class App.WorldsController extends Spine.Controller
       delete @worldRenderer
 
     @el.empty()
-
