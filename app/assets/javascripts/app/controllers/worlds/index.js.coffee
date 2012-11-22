@@ -12,6 +12,7 @@ class App.Controller.Worlds.Index extends Spine.Controller
 
   constructor: ->
     super
+    @render
 
   render: =>
     worlds = World.all()

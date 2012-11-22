@@ -1,0 +1,16 @@
+$(function() {
+  App.World.bind('all_loaded', function() {
+    var gui = new dat.GUI();
+
+    var options = {
+      "See Worlds": function() { console.log("Showing worlds"); }
+    };
+
+    gui.add(options, "See Worlds");
+    gui.closed = true
+
+    <% if Rails.env.production? %>
+        <%= gui.domElement.hidden = true %>
+    <% end %>
+  });
+});

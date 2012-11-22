@@ -3,6 +3,6 @@
 //= require twitter/bootstrap
 //= require vendor
 //
-//= require_tree ./app/initializers
+//= require_tree ./initializers
 //= require app
-//= require initialize_spine
+//= require_tree ./bootstrap

@@ -18,10 +18,15 @@ class App.Controller.Splash extends Spine.Controller
       @_asyncLoadWorlds(worlds)
 
   _asyncLoadWorlds: (worlds) ->
-    console.log "Loading Boroughs"
+    loaded = 0
     _(worlds).each (world) ->
       world.fetchRegions (world) ->
-        console.log "Loaded #{world.name}"
         world_class = _(world.name).underscored()
+
         $(".loading.#{world_class}").addClass("hidden")
+        World.trigger('loaded', world)
+
+        loaded += 1
+        if loaded == worlds.length
+          World.trigger('all_loaded')
 
