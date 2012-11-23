@@ -7,6 +7,8 @@ class App.Controller.Splash extends Spine.Controller
   constructor: ->
     super
     World.bind 'refresh change', @render
+    World.one 'loaded', @_loadedCallback
+    World.one 'allLoaded', @_allLoadedCallback
     World.fetch()
 
   render: =>
@@ -16,3 +18,10 @@ class App.Controller.Splash extends Spine.Controller
     else
       @html @view('splash/index')(worlds: worlds)
       World.fetchAllDetails()
+
+  _loadedCallback: (world) =>
+    world_class = _(world.name).underscored()
+    $(".loading.#{world_class}").addClass("hidden")
+
+  _allLoadedCallback: =>
+    $(".loading").addClass("hidden")

@@ -4,7 +4,7 @@ class App.World extends App.Model
 
   @hasMany 'regions', "App.Region"
 
-  @loaded: false
+  @allLoaded: false
 
   @findOrFetch: (slug, callback)->
     world = @findByAttribute("slug", slug)
@@ -26,15 +26,12 @@ class App.World extends App.Model
     worlds = @all()
     _(worlds).each (world) ->
       world.fetchRegions (world) ->
-        world_class = _(world.name).underscored()
-
-        $(".loading.#{world_class}").addClass("hidden")
         World.trigger('loaded', world)
 
         loaded += 1
         if loaded == worlds.length
-          @loaded = true
-          World.trigger('all_loaded')
+          World.allLoaded = true
+          World.trigger('allLoaded')
 
   validate: ->
     @errors = {}

@@ -22,4 +22,6 @@
       </tr>
     </tbody>
   </table>
+
+  <h3 class="loading">Loading...</h3>
 </div>

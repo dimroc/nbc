@@ -3,7 +3,7 @@ $(function() {
     App.instance.navigate('/worlds')
   };
 
-  App.World.bind('all_loaded', function() {
+  App.World.one('allLoaded', function() {
     var gui = new dat.GUI();
 
     var options = {

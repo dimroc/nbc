@@ -30,8 +30,14 @@ class App extends Spine.Controller
     #  @append(@items = new App.Items)
     #  ...
 
+    App.World.one('allLoaded', @_loadCallback)
     @append(@rootController = new App.Controller.Root)
-    Spine.Route.setup()
+    @initialUrl = location.hash
+
     App.instance = @
+
+  _loadCallback: =>
+    # Only navigate to URL once loaded.
+    Spine.Route.setup()
 
 window.App = App

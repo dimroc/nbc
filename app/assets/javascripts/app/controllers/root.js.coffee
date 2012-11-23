@@ -1,6 +1,3 @@
-$ = jQuery.sub()
-World = App.World
-
 getDefaultController = ->
   # Load empty test controller when running jasmine
   if jasmine? then App.Controller.Test else App.Controller.Splash
