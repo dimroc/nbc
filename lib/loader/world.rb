@@ -20,12 +20,15 @@ class Loader::World
         world = generate(config)
         World.find_by_slug(name.downcase.gsub(' ','-')).try(:destroy) # Destroy old
         world.save!
+        dump_to_file(world)
       end
     end
 
     def generate(options)
       options = OpenStruct.new options
-      options.shapefile = "lib/data/shapefiles/#{options.name.downcase.gsub(' ', '_')}/region" unless options.shapefile
+      file_name = options.name.downcase.gsub(' ', '_')
+
+      options.shapefile = "lib/data/shapefiles/#{file_name}/region" unless options.shapefile
       options.tolerance = 25 unless options.tolerance
 
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)
@@ -62,6 +65,16 @@ class Loader::World
     end
 
     private
+
+    def dump_to_file(world)
+      directory = "public/static/#{world.slug}/"
+      output_file = "#{directory}regions.json"
+
+      FileUtils.mkdir_p directory
+      File.open(output_file, "w") do |file|
+        file.write world.regions.to_json
+      end
+    end
 
     def map_shapefile_attrs_to_region_attrs(mappings, fields)
       attributes = {}

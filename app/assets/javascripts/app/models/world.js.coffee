@@ -57,7 +57,7 @@ class App.World extends App.Model
     _([@currentRegion()]).compact()
 
   fetchRegions: (successCallback)->
-    url = "/worlds/#{@slug}/regions"
+    url = "/static/#{@slug}/regions.json"
     url += "?longitude=#{Env.longitude}&latitude=#{Env.latitude}" if Env.geoposition
     $.ajax(
       type: "GET",
