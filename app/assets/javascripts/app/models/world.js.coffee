@@ -4,6 +4,8 @@ class App.World extends App.Model
 
   @hasMany 'regions', "App.Region"
 
+  @loaded: false
+
   @findOrFetch: (slug, callback)->
     world = @findByAttribute("slug", slug)
     if world
@@ -18,6 +20,21 @@ class App.World extends App.Model
         callback(@findByAttribute("slug", slug))
       ).error (response, status) =>
         console.warn "Failed to fetch worlds: #{response.responseText}"
+
+  @fetchAllDetails: ->
+    loaded = 0
+    worlds = @all()
+    _(worlds).each (world) ->
+      world.fetchRegions (world) ->
+        world_class = _(world.name).underscored()
+
+        $(".loading.#{world_class}").addClass("hidden")
+        World.trigger('loaded', world)
+
+        loaded += 1
+        if loaded == worlds.length
+          @loaded = true
+          World.trigger('all_loaded')
 
   validate: ->
     @errors = {}
