@@ -1,3 +1,4 @@
+$ = jQuery.sub()
 World = App.World
 
 $.fn.itemViaSlug = ->
@@ -12,7 +13,7 @@ class App.Controller.Worlds.Index extends Spine.Controller
 
   constructor: ->
     super
-    @render
+    World.bind 'refresh change', @render
 
   render: =>
     worlds = World.all()

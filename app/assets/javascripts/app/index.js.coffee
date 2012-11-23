@@ -30,7 +30,6 @@ class App extends Spine.Controller
     #  @append(@items = new App.Items)
     #  ...
 
-    Spine.Log.log("Initializing Application...")
     @append(@rootController = new App.Controller.Root)
     Spine.Route.setup()
     App.instance = @

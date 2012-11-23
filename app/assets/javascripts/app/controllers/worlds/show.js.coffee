@@ -1,3 +1,4 @@
+$ = jQuery.sub()
 World = App.World
 
 class App.Controller.Worlds.Show extends Spine.Controller
@@ -11,7 +12,6 @@ class App.Controller.Worlds.Show extends Spine.Controller
 
   change: (slug) ->
     @item = World.findByAttribute("slug", slug)
-    @render()
 
   render: ->
     output = @html @view('worlds/show')(@item)
@@ -29,6 +29,7 @@ class App.Controller.Worlds.Show extends Spine.Controller
   activate: ->
     super
     @worldRenderer = new App.WorldRenderer()
+    @render()
 
   deactivate: ->
     super

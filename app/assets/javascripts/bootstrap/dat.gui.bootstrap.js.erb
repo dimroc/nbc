@@ -1,9 +1,13 @@
 $(function() {
+  var navigateToWorlds = function() {
+    App.instance.navigate('/worlds')
+  };
+
   App.World.bind('all_loaded', function() {
     var gui = new dat.GUI();
 
     var options = {
-      "See Worlds": function() { console.log("Showing worlds"); }
+      "See Worlds": navigateToWorlds
     };
 
     gui.add(options, "See Worlds");
