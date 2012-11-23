@@ -18,7 +18,7 @@ describe RegionsController do
         it "should mark the region with the location", jasmine_fixture: true do
           get :index, world_id: world.id, longitude: longitude, latitude: latitude
           regions = JSON.parse response.body
-          regions.detect { |region| region["current_block"].present? }.should be
+          regions.detect { |region| region["current"].presence }.should be
 
           save_fixture(response.body, world.slug)
         end

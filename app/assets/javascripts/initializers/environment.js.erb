@@ -1,0 +1,48 @@
+(function() {
+  var currentEnvironment = "<%= Rails.env %>"
+
+  window.Env = {
+    "<%= Rails.env %>": true,
+    isChrome: checkIfChrome(),
+    isChrome23: checkIfAtLeastChrome23()
+  }
+
+  <%# window.navigator.geolocation.getCurrentPosition(function(geoposition) { %>
+    <%# window.Env.geoposition = geoposition; %>
+    <%# window.Env.longitude = geoposition.coords.longitude; %>
+    <%# window.Env.latitude = geoposition.coords.latitude; %>
+  <%# }); %>
+
+  window.getHook = function() {
+    return window.App.WorldRenderer.first();
+  };
+
+  function checkIfChrome() {
+    return navigator.userAgent.toLowerCase().indexOf("chrome") >= 0;
+  };
+
+  function checkIfAtLeastChrome23() {
+    if(currentEnvironment == "test") return true;
+
+    var userAgentString = navigator.userAgent.toLowerCase();
+
+    if(checkIfChrome()) {
+      var chromePrefix = "chrome/";
+      var chromeAgent = _.chain(userAgentString).
+        words().
+        detect(function(agentPortion) { return agentPortion.startsWith(chromePrefix) }).
+        value();
+
+      if(chromeAgent) {
+        version = chromeAgent.substr(chromePrefix.length);
+        version = parseInt(version);
+
+        console.log("Detected Chrome version " + version);
+        if (version >= 23) return true;
+      }
+    }
+
+    console.error("Did not detect Chrome version >= 23 from " + userAgentString);
+    return false;
+  };
+})();

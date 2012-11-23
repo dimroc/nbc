@@ -4,11 +4,11 @@ class BlocksController < ApiController
 
   def index
     if @current_point
-      current_block = @world.blocks.near(@current_point).limit(1).first
-      raise NotFoundError unless current_block.region.contains? @current_point
+      current_block = Block.near(@current_point).limit(1).first
+      raise NotFoundError unless @world.contains? @current_point
       respond_with [current_block]
     else
-      respond_with @world.blocks
+      respond_with Block.all
     end
   end
 end

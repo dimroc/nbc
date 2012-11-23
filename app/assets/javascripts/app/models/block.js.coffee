@@ -4,7 +4,7 @@ class App.Block extends App.Model
   @GUTTER_LENGTH = .4
   @OFFSET = new THREE.Vector3(0, 0, 0)
 
-  @configure 'Block', 'id', 'region_id', 'bottom', 'left', 'point'
+  @configure 'Block', 'id', 'region_id', 'point'
   @extend Spine.Model.Ajax
 
   @belongsTo "region", "App.Region"

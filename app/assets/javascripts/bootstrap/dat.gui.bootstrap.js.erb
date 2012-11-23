@@ -1,0 +1,20 @@
+$(function() {
+  var navigateToWorlds = function() {
+    App.instance.navigate('/worlds')
+  };
+
+  App.World.one('allLoaded', function() {
+    var gui = new dat.GUI();
+
+    var options = {
+      "See Worlds": navigateToWorlds
+    };
+
+    gui.add(options, "See Worlds");
+    gui.closed = true
+
+    <% if Rails.env.production? %>
+        <%= gui.domElement.hidden = true %>
+    <% end %>
+  });
+});

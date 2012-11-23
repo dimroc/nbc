@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: isabelle@fritsch.uk
-  encrypted_password: $2a$04$YiA28c1WuJtlVmjeBWRtD.GcPjxaNvRdTGaQVp8qXm5VyPI32QMg.
+  email: mckayla_donnelly@halvorson.co.uk
+  encrypted_password: $2a$10$14OSG1c8WCsJ/qA2V4sGkOFpFpv1W14Sfn9MdzhxwA.ah1qDed5ym
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

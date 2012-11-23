@@ -13,7 +13,7 @@ FixtureBuilder.configure do |fbuilder|
     @nyc = Loader::World.generate({
       name: "NYC",
       region_name_key: "BoroCD",
-      block_length: 3000,
+      inverse_scale: 3000,
       tolerance: 200
     }).save!
   end

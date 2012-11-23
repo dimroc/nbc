@@ -4,7 +4,6 @@ class World < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   has_many :regions, dependent: :destroy
-  has_many :blocks, through: :regions
 
   validates_presence_of :name
   validates_presence_of :slug

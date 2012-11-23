@@ -20,17 +20,19 @@ class Loader::World
         world = generate(config)
         World.find_by_slug(name.downcase.gsub(' ','-')).try(:destroy) # Destroy old
         world.save!
+        dump_to_file(world)
       end
     end
 
     def generate(options)
       options = OpenStruct.new options
-      options.shapefile = "lib/data/shapefiles/#{options.name.downcase.gsub(' ', '_')}/region" unless options.shapefile
+      file_name = options.name.downcase.gsub(' ', '_')
+
+      options.shapefile = "lib/data/shapefiles/#{file_name}/region" unless options.shapefile
       options.tolerance = 25 unless options.tolerance
 
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)
-      generate_blocks(world, options.block_length)
-      generate_outlines(world, 1/options.block_length.to_f, options.tolerance)
+      generate_outlines(world, 1/options.inverse_scale.to_f, options.tolerance)
 
       world
     end
@@ -54,13 +56,6 @@ class Loader::World
       world
     end
 
-    def generate_blocks(world, block_length)
-      world.blocks.clear
-      generate_world_blocks_for_regions(world, block_length)
-      calculate_region_positions(world)
-      convert_world_blocks_to_region_blocks(world)
-    end
-
     def generate_outlines(world, scale, tolerance)
       bb = world.generate_bounding_box
       offset = Hashie::Mash.new(x: -bb.min_x, y: -bb.min_y, z: 0)
@@ -71,27 +66,14 @@ class Loader::World
 
     private
 
-    def generate_world_blocks_for_regions(world, block_length)
-      # Discretize world by stepping along the area block_length a time
-      bb = world.generate_bounding_box
-      bb.step(block_length) do |point, x, y|
-        region = world.regions.detect { |region| region.contains? point }
-        region.blocks.build(left: x, bottom: y, point: point) if region
-      end
-    end
+    def dump_to_file(world)
+      directory = "public/static/#{world.slug}/"
+      output_file = "#{directory}regions.json"
 
-    def convert_world_blocks_to_region_blocks(world)
-      # Blocks will now be relative to the region
-      world.regions.each do |region|
-        region.blocks.each do |block|
-          block.left -= region.left
-          block.bottom -= region.bottom
-        end
+      FileUtils.mkdir_p directory
+      File.open(output_file, "w") do |file|
+        file.write world.regions.to_json
       end
-    end
-
-    def calculate_region_positions(world)
-      world.regions.each { |region| Loader::Region.generate_coordinates(region) }
     end
 
     def map_shapefile_attrs_to_region_attrs(mappings, fields)

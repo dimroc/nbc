@@ -1,8 +1,6 @@
 class Block < ActiveRecord::Base
   belongs_to :region
-
-  validates_presence_of :left
-  validates_presence_of :bottom
+  delegate :world, to: :region, allow_nil: true
 
   set_rgeo_factory_for_column(:point, Mercator::FACTORY.projection_factory)
 

@@ -14,8 +14,11 @@
 #= require ./models/model
 #= require_tree ./models
 
-#= require ./controllers/worldsController
-#= require_tree ./controllers
+#= require ./controllers/controller
+#= require ./controllers/splash
+#= require ./controllers/test
+#= require_tree ./controllers/worlds
+#= require ./controllers/root
 
 #= require_tree ./views
 
@@ -27,9 +30,14 @@ class App extends Spine.Controller
     #  @append(@items = new App.Items)
     #  ...
 
-    Spine.Log.log("Initializing Application...")
-    @append(@rootController = new App.RootController)
-    Spine.Route.setup()
+    App.World.one('allLoaded', @_loadCallback)
+    @append(@rootController = new App.Controller.Root)
+    @initialUrl = location.hash
+
     App.instance = @
+
+  _loadCallback: =>
+    # Only navigate to URL once loaded.
+    Spine.Route.setup()
 
 window.App = App

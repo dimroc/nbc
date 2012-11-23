@@ -1,6 +1,7 @@
+$ = jQuery.sub()
 World = App.World
 
-class App.WorldsController extends Spine.Controller
+class App.Controller.Worlds.Show extends Spine.Controller
   events:
     'click [data-type=back]': 'back'
 
@@ -10,28 +11,25 @@ class App.WorldsController extends Spine.Controller
       @change(params.id)
 
   change: (slug) ->
-    World.findOrFetch(slug, (world) =>
-      @item = world
-      @item.fetchRegions => @render()
-    )
+    @item = World.findByAttribute("slug", slug)
 
   render: ->
     output = @html @view('worlds/show')(@item)
     @worldRenderer.attachToDom($(output).find("#world"))
 
-    @worldRenderer.add_outlines(@item.outline_meshes())
-    @worldRenderer.add_outlines(@item.model_meshes())
-
-    @worldRenderer.add_blocks(@item.blocks_meshes())
+    @worldRenderer.addOutlines(@item.outlineMeshes())
+    @worldRenderer.addOutlines(@item.modelMeshes())
+    @worldRenderer.addBlocks(@item.allBlockMeshes())
     @worldRenderer.animate()
     output
 
   back: ->
-    @navigate '/'
+    @navigate '/worlds'
 
   activate: ->
     super
     @worldRenderer = new App.WorldRenderer()
+    @render()
 
   deactivate: ->
     super
@@ -40,4 +38,3 @@ class App.WorldsController extends Spine.Controller
       delete @worldRenderer
 
     @el.empty()
-

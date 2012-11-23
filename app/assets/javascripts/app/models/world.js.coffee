@@ -4,6 +4,8 @@ class App.World extends App.Model
 
   @hasMany 'regions', "App.Region"
 
+  @allLoaded: false
+
   @findOrFetch: (slug, callback)->
     world = @findByAttribute("slug", slug)
     if world
@@ -12,18 +14,32 @@ class App.World extends App.Model
       $.ajax(
         type: "GET",
         url: "/worlds",
-        dataType: "json",
-        cache: false
+        dataType: "json"
       ).success((data) =>
         @refresh(data)
         callback(@findByAttribute("slug", slug))
       ).error (response, status) =>
         console.warn "Failed to fetch worlds: #{response.responseText}"
 
+  @fetchAllDetails: ->
+    loaded = 0
+    worlds = @all()
+    _(worlds).each (world) ->
+      world.fetchRegions (world) ->
+        World.trigger('loaded', world)
+
+        loaded += 1
+        if loaded == worlds.length
+          World.allLoaded = true
+          World.trigger('allLoaded')
+
   validate: ->
     @errors = {}
     @appendErrors(name: "Name is required") unless @name
     @appendErrors(slug: "slug is required") unless @slug
+
+  icon_path: ->
+    "/assets/icons/#{_(@name).underscored()}.png"
 
   allBlocks: ->
     _.reduce(@regions().all(), (memo, region) ->
@@ -41,13 +57,12 @@ class App.World extends App.Model
     _([@currentRegion()]).compact()
 
   fetchRegions: (successCallback)->
-    url = "/worlds/#{@slug}/regions"
+    url = "/static/#{@slug}/regions.json"
     url += "?longitude=#{Env.longitude}&latitude=#{Env.latitude}" if Env.geoposition
     $.ajax(
       type: "GET",
       url: url,
-      dataType: "json",
-      cache: false
+      dataType: "json"
     ).success((data) =>
       @regions(data)
       successCallback(@) if successCallback
@@ -55,20 +70,26 @@ class App.World extends App.Model
       console.warn "Error retrieving regions for world #{@slug}"
       console.warn "Received status: #{status}. message: #{response.responseText}"
 
-  outline_meshes: ->
+  outlineMeshes: ->
     _regions = _(@selectedRegions())
     _regions.chain()
-      .map((region) -> region.outline_meshes())
+      .map((region) -> region.outlineMeshes())
       .flatten()
       .compact()
       .value()
 
-  model_meshes: ->
+  modelMeshes: ->
     _.chain(@regions().all())
-      .map((region) -> region.model_mesh())
+      .map((region) -> region.modelMesh())
       .compact()
       .value()
 
-  blocks_meshes: ->
-    _regions = _(@selectedRegions())
-    _regions.map((region) -> region.blocks_mesh())
+  selectedBlockMeshes: ->
+    _.chain(@selectedRegions()).
+      map((region) -> App.MeshFactory.generate_block(region.fetchCurrentBlock())).
+      compact().
+      value()
+
+  allBlockMeshes: ->
+    _regions = _(@regions().all())
+    _regions.map((region) -> region.blocksMesh())

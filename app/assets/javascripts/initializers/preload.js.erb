@@ -1,0 +1,11 @@
+image_paths = [
+  "<%= image_path("loading.gif") %>",
+  <% World.all.map(&:name).each do |name| %>
+  "<%= image_path("icons/#{name.gsub(' ', '_').underscore}.png") %>",
+  <% end %>
+]
+
+for(var i = 0; i < image_paths.length; i++) {
+  var image = new Image();
+  image.src = image_paths[i];
+}
