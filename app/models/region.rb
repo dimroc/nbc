@@ -4,7 +4,6 @@ class Region < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   belongs_to :world
-  has_many :blocks, dependent: :destroy
   has_many :neighborhood_regions, dependent: :destroy
   has_many :neighborhoods, through: :neighborhood_regions
 
@@ -12,8 +11,6 @@ class Region < ActiveRecord::Base
 
   validates_presence_of :name
   validates_presence_of :slug
-  validates_presence_of :left
-  validates_presence_of :bottom
 
   serialize :threejs, Hash
 
@@ -22,7 +19,6 @@ class Region < ActiveRecord::Base
   def as_json(options={})
     exceptions = [:geometry, :created_at, :updated_at]
     nested_inclusion = {
-      blocks: { except: [:point, :created_at, :updated_at] },
       neighborhoods: { only: :name }
     }
 
@@ -32,14 +28,6 @@ class Region < ActiveRecord::Base
     }.merge(options)
 
     super(final_options)
-  end
-
-  def furthest_left
-    self.blocks.min_by(&:left).try(:left) || 0
-  end
-
-  def furthest_bottom
-    self.blocks.min_by(&:bottom).try(:bottom) || 0
   end
 
   def generate_bounding_box

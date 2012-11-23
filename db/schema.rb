@@ -11,12 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121116054921) do
+ActiveRecord::Schema.define(:version => 20121123223200) do
 
   create_table "blocks", :force => true do |t|
     t.integer  "region_id"
-    t.integer  "left"
-    t.integer  "bottom"
     t.datetime "created_at",                                          :null => false
     t.datetime "updated_at",                                          :null => false
     t.spatial  "point",      :limit => {:srid=>3785, :type=>"point"}
@@ -39,13 +37,11 @@ ActiveRecord::Schema.define(:version => 20121116054921) do
 
   create_table "regions", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",                                                            :null => false
-    t.datetime "updated_at",                                                            :null => false
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
     t.string   "slug"
     t.spatial  "geometry",   :limit => {:srid=>3785, :type=>"geometry"}
     t.integer  "world_id"
-    t.integer  "left",                                                   :default => 0, :null => false
-    t.integer  "bottom",                                                 :default => 0, :null => false
     t.text     "threejs"
   end
 

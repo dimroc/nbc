@@ -2,12 +2,10 @@
 '303':
   id: 1
   name: '303'
-  created_at: 2012-11-20 13:43:55.301043000 Z
-  updated_at: 2012-11-20 13:43:55.301043000 Z
+  created_at: 2012-11-23 23:02:30.360684000 Z
+  updated_at: 2012-11-23 23:02:30.360684000 Z
   slug: '303'
   world_id: 1
-  left: 4
-  bottom: 6
   threejs:
     :model:
       :metadata:
@@ -229,12 +227,10 @@
 '311':
   id: 2
   name: '311'
-  created_at: 2012-11-20 13:43:55.317721000 Z
-  updated_at: 2012-11-20 13:43:55.317721000 Z
+  created_at: 2012-11-23 23:02:30.377519000 Z
+  updated_at: 2012-11-23 23:02:30.377519000 Z
   slug: '311'
   world_id: 1
-  left: 2
-  bottom: 1
   threejs:
     :model:
       :metadata:
@@ -665,12 +661,10 @@
 '310':
   id: 3
   name: '310'
-  created_at: 2012-11-20 13:43:55.340161000 Z
-  updated_at: 2012-11-20 13:43:55.340161000 Z
+  created_at: 2012-11-23 23:02:30.397831000 Z
+  updated_at: 2012-11-23 23:02:30.397831000 Z
   slug: '310'
   world_id: 1
-  left: 1
-  bottom: 2
   threejs:
     :model:
       :metadata:
@@ -1025,12 +1019,10 @@
 '317':
   id: 4
   name: '317'
-  created_at: 2012-11-20 13:43:55.360597000 Z
-  updated_at: 2012-11-20 13:43:55.360597000 Z
+  created_at: 2012-11-23 23:02:30.419176000 Z
+  updated_at: 2012-11-23 23:02:30.419176000 Z
   slug: '317'
   world_id: 1
-  left: 4
-  bottom: 4
   threejs:
     :model:
       :metadata:
@@ -1318,12 +1310,10 @@
 '302':
   id: 5
   name: '302'
-  created_at: 2012-11-20 13:43:55.436841000 Z
-  updated_at: 2012-11-20 13:43:55.436841000 Z
+  created_at: 2012-11-23 23:02:30.437381000 Z
+  updated_at: 2012-11-23 23:02:30.437381000 Z
   slug: '302'
   world_id: 1
-  left: 2
-  bottom: 6
   threejs:
     :model:
       :metadata:
@@ -2102,12 +2092,10 @@
 '101':
   id: 6
   name: '101'
-  created_at: 2012-11-20 13:43:55.479898000 Z
-  updated_at: 2012-11-20 13:43:55.479898000 Z
+  created_at: 2012-11-23 23:02:30.539421000 Z
+  updated_at: 2012-11-23 23:02:30.539421000 Z
   slug: '101'
   world_id: 1
-  left: 0
-  bottom: 0
   threejs:
     :model:
       :metadata:
@@ -3324,12 +3312,10 @@
 '318':
   id: 7
   name: '318'
-  created_at: 2012-11-20 13:43:55.521890000 Z
-  updated_at: 2012-11-20 13:43:55.521890000 Z
+  created_at: 2012-11-23 23:02:30.584200000 Z
+  updated_at: 2012-11-23 23:02:30.584200000 Z
   slug: '318'
   world_id: 1
-  left: 4
-  bottom: 2
   threejs:
     :model:
       :metadata:
@@ -9673,12 +9659,10 @@
 '306':
   id: 8
   name: '306'
-  created_at: 2012-11-20 13:43:55.798746000 Z
-  updated_at: 2012-11-20 13:43:55.798746000 Z
+  created_at: 2012-11-23 23:02:31.025529000 Z
+  updated_at: 2012-11-23 23:02:31.025529000 Z
   slug: '306'
   world_id: 1
-  left: 2
-  bottom: 5
   threejs:
     :model:
       :metadata:
@@ -10949,12 +10933,10 @@
 '356':
   id: 9
   name: '356'
-  created_at: 2012-11-20 13:43:55.857815000 Z
-  updated_at: 2012-11-20 13:43:55.857815000 Z
+  created_at: 2012-11-23 23:02:31.084509000 Z
+  updated_at: 2012-11-23 23:02:31.084509000 Z
   slug: '356'
   world_id: 1
-  left: 6
-  bottom: 1
   threejs: {}
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
@@ -13828,12 +13810,10 @@
 '107':
   id: 10
   name: '107'
-  created_at: 2012-11-20 13:43:55.982063000 Z
-  updated_at: 2012-11-20 13:43:55.982063000 Z
+  created_at: 2012-11-23 23:02:31.205474000 Z
+  updated_at: 2012-11-23 23:02:31.205474000 Z
   slug: '107'
   world_id: 1
-  left: 3
-  bottom: 11
   threejs:
     :model:
       :metadata:
@@ -14139,12 +14119,10 @@
 '308':
   id: 11
   name: '308'
-  created_at: 2012-11-20 13:43:56.000036000 Z
-  updated_at: 2012-11-20 13:43:56.000036000 Z
+  created_at: 2012-11-23 23:02:31.221022000 Z
+  updated_at: 2012-11-23 23:02:31.221022000 Z
   slug: '308'
   world_id: 1
-  left: 4
-  bottom: 5
   threejs:
     :model:
       :metadata:
@@ -14416,12 +14394,10 @@
 '105':
   id: 12
   name: '105'
-  created_at: 2012-11-20 13:43:56.017334000 Z
-  updated_at: 2012-11-20 13:43:56.017334000 Z
+  created_at: 2012-11-23 23:02:31.238807000 Z
+  updated_at: 2012-11-23 23:02:31.238807000 Z
   slug: '105'
   world_id: 1
-  left: 0
-  bottom: 0
   threejs:
     :model:
       :metadata:
@@ -14716,12 +14692,10 @@
 '309':
   id: 13
   name: '309'
-  created_at: 2012-11-20 13:43:56.035658000 Z
-  updated_at: 2012-11-20 13:43:56.035658000 Z
+  created_at: 2012-11-23 23:02:31.257976000 Z
+  updated_at: 2012-11-23 23:02:31.257976000 Z
   slug: '309'
   world_id: 1
-  left: 0
-  bottom: 0
   threejs:
     :model:
       :metadata:
@@ -14896,12 +14870,10 @@
 '355':
   id: 14
   name: '355'
-  created_at: 2012-11-20 13:43:56.046848000 Z
-  updated_at: 2012-11-20 13:43:56.046848000 Z
+  created_at: 2012-11-23 23:02:31.268792000 Z
+  updated_at: 2012-11-23 23:02:31.268792000 Z
   slug: '355'
   world_id: 1
-  left: 3
-  bottom: 5
   threejs:
     :model:
       :metadata:
@@ -15187,12 +15159,10 @@
 '307':
   id: 15
   name: '307'
-  created_at: 2012-11-20 13:43:56.060365000 Z
-  updated_at: 2012-11-20 13:43:56.060365000 Z
+  created_at: 2012-11-23 23:02:31.328228000 Z
+  updated_at: 2012-11-23 23:02:31.328228000 Z
   slug: '307'
   world_id: 1
-  left: 1
-  bottom: 4
   threejs:
     :model:
       :metadata:
@@ -16106,12 +16076,10 @@
 '111':
   id: 16
   name: '111'
-  created_at: 2012-11-20 13:43:56.159262000 Z
-  updated_at: 2012-11-20 13:43:56.159262000 Z
+  created_at: 2012-11-23 23:02:31.429662000 Z
+  updated_at: 2012-11-23 23:02:31.429662000 Z
   slug: '111'
   world_id: 1
-  left: 4
-  bottom: 11
   threejs:
     :model:
       :metadata:
@@ -16838,12 +16806,10 @@
 '103':
   id: 17
   name: '103'
-  created_at: 2012-11-20 13:43:56.186678000 Z
-  updated_at: 2012-11-20 13:43:56.186678000 Z
+  created_at: 2012-11-23 23:02:31.458089000 Z
+  updated_at: 2012-11-23 23:02:31.458089000 Z
   slug: '103'
   world_id: 1
-  left: 2
-  bottom: 7
   threejs:
     :model:
       :metadata:
@@ -17167,12 +17133,10 @@
 '312':
   id: 18
   name: '312'
-  created_at: 2012-11-20 13:43:56.206125000 Z
-  updated_at: 2012-11-20 13:43:56.206125000 Z
+  created_at: 2012-11-23 23:02:31.477010000 Z
+  updated_at: 2012-11-23 23:02:31.477010000 Z
   slug: '312'
   world_id: 1
-  left: 2
-  bottom: 2
   threejs:
     :model:
       :metadata:
@@ -17481,12 +17445,10 @@
 '314':
   id: 19
   name: '314'
-  created_at: 2012-11-20 13:43:56.226240000 Z
-  updated_at: 2012-11-20 13:43:56.226240000 Z
+  created_at: 2012-11-23 23:02:31.497704000 Z
+  updated_at: 2012-11-23 23:02:31.497704000 Z
   slug: '314'
   world_id: 1
-  left: 3
-  bottom: 3
   threejs:
     :model:
       :metadata:
@@ -17817,12 +17779,10 @@
 '102':
   id: 20
   name: '102'
-  created_at: 2012-11-20 13:43:56.250051000 Z
-  updated_at: 2012-11-20 13:43:56.250051000 Z
+  created_at: 2012-11-23 23:02:31.519572000 Z
+  updated_at: 2012-11-23 23:02:31.519572000 Z
   slug: '102'
   world_id: 1
-  left: 2
-  bottom: 8
   threejs:
     :model:
       :metadata:
@@ -18252,12 +18212,10 @@
 '104':
   id: 21
   name: '104'
-  created_at: 2012-11-20 13:43:56.333039000 Z
-  updated_at: 2012-11-20 13:43:56.333039000 Z
+  created_at: 2012-11-23 23:02:31.604409000 Z
+  updated_at: 2012-11-23 23:02:31.604409000 Z
   slug: '104'
   world_id: 1
-  left: 2
-  bottom: 9
   threejs:
     :model:
       :metadata:
@@ -19261,12 +19219,10 @@
 '313':
   id: 22
   name: '313'
-  created_at: 2012-11-20 13:43:56.374197000 Z
-  updated_at: 2012-11-20 13:43:56.374197000 Z
+  created_at: 2012-11-23 23:02:31.648182000 Z
+  updated_at: 2012-11-23 23:02:31.648182000 Z
   slug: '313'
   world_id: 1
-  left: 0
-  bottom: 0
   threejs:
     :model:
       :metadata:
@@ -20141,12 +20097,10 @@
 '315':
   id: 23
   name: '315'
-  created_at: 2012-11-20 13:43:56.405556000 Z
-  updated_at: 2012-11-20 13:43:56.405556000 Z
+  created_at: 2012-11-23 23:02:31.682013000 Z
+  updated_at: 2012-11-23 23:02:31.682013000 Z
   slug: '315'
   world_id: 1
-  left: 3
-  bottom: 1
   threejs:
     :model:
       :metadata:
@@ -22146,12 +22100,10 @@
 '112':
   id: 24
   name: '112'
-  created_at: 2012-11-20 13:43:56.526212000 Z
-  updated_at: 2012-11-20 13:43:56.526212000 Z
+  created_at: 2012-11-23 23:02:31.804231000 Z
+  updated_at: 2012-11-23 23:02:31.804231000 Z
   slug: '112'
   world_id: 1
-  left: 4
-  bottom: 13
   threejs:
     :model:
       :metadata:
@@ -23890,12 +23842,10 @@
 '109':
   id: 25
   name: '109'
-  created_at: 2012-11-20 13:43:56.574561000 Z
-  updated_at: 2012-11-20 13:43:56.574561000 Z
+  created_at: 2012-11-23 23:02:31.853446000 Z
+  updated_at: 2012-11-23 23:02:31.853446000 Z
   slug: '109'
   world_id: 1
-  left: 0
-  bottom: 0
   threejs:
     :model:
       :metadata:
@@ -24146,12 +24096,10 @@
 '304':
   id: 26
   name: '304'
-  created_at: 2012-11-20 13:43:56.588520000 Z
-  updated_at: 2012-11-20 13:43:56.588520000 Z
+  created_at: 2012-11-23 23:02:31.867989000 Z
+  updated_at: 2012-11-23 23:02:31.867989000 Z
   slug: '304'
   world_id: 1
-  left: 5
-  bottom: 6
   threejs:
     :model:
       :metadata:
@@ -24447,12 +24395,10 @@
 '305':
   id: 27
   name: '305'
-  created_at: 2012-11-20 13:43:56.603952000 Z
-  updated_at: 2012-11-20 13:43:56.603952000 Z
+  created_at: 2012-11-23 23:02:31.907413000 Z
+  updated_at: 2012-11-23 23:02:31.907413000 Z
   slug: '305'
   world_id: 1
-  left: 6
-  bottom: 4
   threejs:
     :model:
       :metadata:
@@ -25056,12 +25002,10 @@
 '316':
   id: 28
   name: '316'
-  created_at: 2012-11-20 13:43:56.698403000 Z
-  updated_at: 2012-11-20 13:43:56.698403000 Z
+  created_at: 2012-11-23 23:02:32.005026000 Z
+  updated_at: 2012-11-23 23:02:32.005026000 Z
   slug: '316'
   world_id: 1
-  left: 5
-  bottom: 5
   threejs:
     :model:
       :metadata:
@@ -25311,12 +25255,10 @@
 '164':
   id: 30
   name: '164'
-  created_at: 2012-11-20 13:43:56.727833000 Z
-  updated_at: 2012-11-20 13:43:56.727833000 Z
+  created_at: 2012-11-23 23:02:32.035998000 Z
+  updated_at: 2012-11-23 23:02:32.035998000 Z
   slug: '164'
   world_id: 1
-  left: 3
-  bottom: 10
   threejs:
     :model:
       :metadata:
@@ -25487,12 +25429,10 @@
 '106':
   id: 31
   name: '106'
-  created_at: 2012-11-20 13:43:56.743266000 Z
-  updated_at: 2012-11-20 13:43:56.743266000 Z
+  created_at: 2012-11-23 23:02:32.044622000 Z
+  updated_at: 2012-11-23 23:02:32.044622000 Z
   slug: '106'
   world_id: 1
-  left: 3
-  bottom: 9
   threejs: {}
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
@@ -25914,12 +25854,10 @@
 '110':
   id: 29
   name: '110'
-  created_at: 2012-11-20 13:43:56.714379000 Z
-  updated_at: 2012-11-20 13:43:56.714379000 Z
+  created_at: 2012-11-23 23:02:32.021133000 Z
+  updated_at: 2012-11-23 23:02:32.021133000 Z
   slug: '110'
   world_id: 1
-  left: 4
-  bottom: 12
   threejs:
     :model:
       :metadata:
@@ -26262,12 +26200,10 @@
 '108':
   id: 32
   name: '108'
-  created_at: 2012-11-20 13:43:56.765401000 Z
-  updated_at: 2012-11-20 13:43:56.765401000 Z
+  created_at: 2012-11-23 23:02:32.063580000 Z
+  updated_at: 2012-11-23 23:02:32.063580000 Z
   slug: '108'
   world_id: 1
-  left: 0
-  bottom: 0
   threejs: {}
   geometry: !ruby/object:RGeo::Geos::CAPIMultiPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
@@ -26508,12 +26444,10 @@
 '301':
   id: 33
   name: '301'
-  created_at: 2012-11-20 13:43:56.778906000 Z
-  updated_at: 2012-11-20 13:43:56.778906000 Z
+  created_at: 2012-11-23 23:02:32.078902000 Z
+  updated_at: 2012-11-23 23:02:32.078902000 Z
   slug: '301'
   world_id: 1
-  left: 3
-  bottom: 7
   threejs:
     :model:
       :metadata:

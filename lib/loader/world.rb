@@ -29,8 +29,7 @@ class Loader::World
       options.tolerance = 25 unless options.tolerance
 
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)
-      generate_blocks(world, options.block_length)
-      generate_outlines(world, 1/options.block_length.to_f, options.tolerance)
+      generate_outlines(world, 1/options.inverse_scale.to_f, options.tolerance)
 
       world
     end
@@ -54,13 +53,6 @@ class Loader::World
       world
     end
 
-    def generate_blocks(world, block_length)
-      world.blocks.clear
-      generate_world_blocks_for_regions(world, block_length)
-      calculate_region_positions(world)
-      convert_world_blocks_to_region_blocks(world)
-    end
-
     def generate_outlines(world, scale, tolerance)
       bb = world.generate_bounding_box
       offset = Hashie::Mash.new(x: -bb.min_x, y: -bb.min_y, z: 0)
@@ -70,29 +62,6 @@ class Loader::World
     end
 
     private
-
-    def generate_world_blocks_for_regions(world, block_length)
-      # Discretize world by stepping along the area block_length a time
-      bb = world.generate_bounding_box
-      bb.step(block_length) do |point, x, y|
-        region = world.regions.detect { |region| region.contains? point }
-        region.blocks.build(left: x, bottom: y, point: point) if region
-      end
-    end
-
-    def convert_world_blocks_to_region_blocks(world)
-      # Blocks will now be relative to the region
-      world.regions.each do |region|
-        region.blocks.each do |block|
-          block.left -= region.left
-          block.bottom -= region.bottom
-        end
-      end
-    end
-
-    def calculate_region_positions(world)
-      world.regions.each { |region| Loader::Region.generate_coordinates(region) }
-    end
 
     def map_shapefile_attrs_to_region_attrs(mappings, fields)
       attributes = {}

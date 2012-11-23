@@ -16,8 +16,6 @@ describe Region do
   describe "validations" do
     it { should validate_presence_of :name }
     it { should validate_presence_of :slug }
-    it { should validate_presence_of :left }
-    it { should validate_presence_of :bottom }
   end
 
   describe "#as_json" do
@@ -39,19 +37,6 @@ describe Region do
           9.0, 0.0,
           0.0, 0.0
         ]]
-      end
-    end
-
-    context "with blocks generated" do
-      before { Loader::Region.generate_blocks(region, 1) }
-      it "should include blocks" do
-        subject[:blocks].should have(64).items
-      end
-
-      it "should only render relevant block information" do
-        subject[:blocks][0][:created_at].should be_nil
-        subject[:blocks][0][:updated_at].should be_nil
-        subject[:blocks][0][:point].should be_nil
       end
     end
 

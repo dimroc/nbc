@@ -19,7 +19,7 @@ namespace :world do
       Loader::World.generate({
         name: "USA",
         region_name_key: "NAME",
-        block_length: 250_000,
+        inverse_scale: 250_000,
         tolerance: 500
       }).save!
     end
