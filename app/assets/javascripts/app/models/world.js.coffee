@@ -14,7 +14,7 @@ class App.World extends App.Model
     else
       $.ajax(
         type: "GET",
-        url: "/api/worlds",
+        url: "#{Constants.apiBasePath}/worlds",
         dataType: "json"
       ).success((data) =>
         @refresh(data)

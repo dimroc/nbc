@@ -38,6 +38,6 @@ class App extends Spine.Controller
 
   _loadCallback: =>
     # Only navigate to URL once loaded.
-    Spine.Route.setup()
+    Spine.Route.setup(history: true)
 
 window.App = App
