@@ -1,4 +1,4 @@
-class BlocksController < ApiController
+class Api::BlocksController < ApiController
   before_filter :fetch_current_point
   load_resource :world
 

@@ -6,6 +6,7 @@ class App.Block extends App.Model
 
   @configure 'Block', 'id', 'region_id', 'point'
   @extend Spine.Model.Ajax
+  @url: "#{Constants.apiBasePath}/blocks"
 
   @belongsTo "region", "App.Region"
 

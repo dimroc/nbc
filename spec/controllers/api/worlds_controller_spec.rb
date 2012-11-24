@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe WorldsController do
+describe Api::WorldsController do
   let(:nyc) { worlds(:nyc) }
 
   describe ".index" do

@@ -1,6 +1,7 @@
 class App.World extends App.Model
   @configure 'World', 'id', 'name', 'slug'
   @extend Spine.Model.Ajax
+  @url: "#{Constants.apiBasePath}/worlds"
 
   @hasMany 'regions', "App.Region"
 
@@ -13,7 +14,7 @@ class App.World extends App.Model
     else
       $.ajax(
         type: "GET",
-        url: "/worlds",
+        url: "/api/worlds",
         dataType: "json"
       ).success((data) =>
         @refresh(data)
@@ -58,7 +59,6 @@ class App.World extends App.Model
 
   fetchRegions: (successCallback)->
     url = "/static/#{@slug}/regions.json"
-    url += "?longitude=#{Env.longitude}&latitude=#{Env.latitude}" if Env.geoposition
     $.ajax(
       type: "GET",
       url: url,

@@ -1,4 +1,4 @@
-class RegionsController < ApiController
+class Api::RegionsController < ApiController
   before_filter :fetch_current_point
   load_resource :world
 

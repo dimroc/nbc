@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RegionsController do
+describe Api::RegionsController do
   describe ".index" do
     describe "for nyc" do
       let(:world) { worlds(:nyc) }

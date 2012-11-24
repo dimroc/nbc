@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BlocksController do
+describe Api::BlocksController do
   describe "#index" do
     context "without a world" do
       it "should fail" do
