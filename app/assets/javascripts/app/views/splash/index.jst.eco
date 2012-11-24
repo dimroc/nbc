@@ -16,7 +16,7 @@
       <tr>
         <% for world in @worlds: %>
           <td class="<%= _(world.name).underscored() %> loading centered">
-            <img src="<%= Constants.loading_image_path %>" alt="<%= world.name %>">
+            <img src="<%= Constants.loadingImagePath %>" alt="<%= world.name %>">
           </td>
         <% end %>
       </tr>
