@@ -10,10 +10,11 @@ class App.Controller.BoroughItem extends Spine.Controller
   events:
     'click [data-type=back]':    'back'
 
-  constructor: (world) ->
+  constructor: (worldRenderer, world) ->
     super
+    @worldRenderer = worldRenderer
     @world = world
-    @render()
+    @worldRenderer.addWorlds(@world)
 
   render: =>
 
@@ -21,9 +22,7 @@ class App.Controller.BoroughItem extends Spine.Controller
     @navigate '/boroughs'
 
   activate: ->
-    @el.addClass("active")
     @
 
   deactivate: ->
-    @el.removeClass("active")
     @

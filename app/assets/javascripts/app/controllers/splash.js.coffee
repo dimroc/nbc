@@ -8,7 +8,7 @@ class App.Controller.Splash extends Spine.Controller
     super
     World.bind 'refresh change', @render
     World.bind 'loaded', @_loadedCallback
-    App.WorldRenderer.one 'loaded', @_allLoadedCallback
+    World.one 'allLoaded', @_allLoadedCallback
     World.fetch()
 
   render: =>
@@ -25,7 +25,6 @@ class App.Controller.Splash extends Spine.Controller
     $(".icon.#{world_class}").removeClass("hidden")
 
   _allLoadedCallback: =>
-    console.log "renderer ready"
     @navigate '/boroughs'
 
   activate: ->

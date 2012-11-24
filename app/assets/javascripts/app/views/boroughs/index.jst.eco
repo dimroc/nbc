@@ -1,1 +1,20 @@
+<div class="container navbar-fixed-top">
+  <table>
+    <tbody>
+      <tr>
+        <td class="nyc icon centered">
+          <a data-type="show"><img src="assets/icons/manhattan.png" alt="All"></a>
+        </td>
+        <% for world in @worlds: %>
+          <td class="<%= _(world.name).underscored() %> icon centered">
+            <a data-type="show" data-slug="<%= world.slug %>">
+              <img src="<%= world.icon_path() %>" alt="<%= world.name %>">
+            </a>
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <div id="world"></div>

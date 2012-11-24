@@ -78,23 +78,31 @@ class App.WorldRenderer extends Spine.Module
       @requestId = requestAnimationFrame(@animate)
 
   addOutlines: (meshParam)->
-    _.each(coerceIntoMeshes(meshParam), (mesh) ->
+    _.each(coerceIntoArray(meshParam), (mesh) ->
       @outlineScene.add( mesh )
     , @)
     @
 
   addBlocks: (meshParam)->
-    _.each(coerceIntoMeshes(meshParam), (mesh) ->
+    _.each(coerceIntoArray(meshParam), (mesh) ->
       @blockScene.add( mesh )
     , @)
     @
+
+  addWorlds: (worlds)->
+    _(coerceIntoArray(worlds)).each (world) =>
+      @addOutlines(world.outlineMeshes())
+      @addOutlines(world.modelMeshes())
+      @addBlocks(world.allBlockMeshes())
+
+    App.WorldRenderer.trigger 'worldsAdded', worlds
 
   meshes: ->
     @outlineScene.children.concat @blockScene.children
 
 # privates
 
-coerceIntoMeshes = (meshParam) ->
+coerceIntoArray = (meshParam) ->
   # Simply convert meshParam into an array if it isn't one already
   if _.isArray(meshParam) then meshParam else [meshParam]
 

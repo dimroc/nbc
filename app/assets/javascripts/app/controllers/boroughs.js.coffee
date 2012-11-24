@@ -7,35 +7,34 @@ $.fn.itemViaSlug = ->
   World.findByAttribute("slug", elementID)
 
 class App.Controller.Boroughs extends Spine.Controller
+  events:
+    'click [data-type=show]':    'show'
+
   constructor: ->
     super
+    @boroughItems = []
     @worldRenderer = new App.WorldRenderer()
-    World.one 'allLoaded', @render
+    World.bind 'allLoaded', @addAllBoroughs
+
+  addAllBoroughs: (worlds) =>
+    _(worlds).each (world) =>
+      @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, world))
+    @render()
 
   render: =>
-    output = @html @view('boroughs/index')
+    output = @html @view('boroughs/index')(worlds: World.all())
     @worldRenderer.attachToDom($(output).find("#world"))
-
-    _(World.all()).each (world) =>
-      @worldRenderer.addOutlines(world.outlineMeshes())
-      @worldRenderer.addOutlines(world.modelMeshes())
-      @worldRenderer.addBlocks(world.allBlockMeshes())
-
-    App.WorldRenderer.trigger 'loaded', @worldRenderer
     output
 
   show: (e) ->
     item = $(e.target).itemViaSlug()
     @navigate '/boroughs', item.slug
 
-  back: ->
-    @navigate '/'
-
   activate: ->
-    @el.addClass("active")
+    @el.fadeIn(=> @el.addClass("active"))
     @worldRenderer.animate()
     @
 
   deactivate: ->
-    @el.removeClass("active")
+    @el.fadeOut(=> @el.removeClass("active"))
     @

@@ -32,7 +32,7 @@ class App.World extends App.Model
         loaded += 1
         if loaded == worlds.length
           World.allLoaded = true
-          World.trigger('allLoaded')
+          World.trigger('allLoaded', worlds)
 
   validate: ->
     @errors = {}
