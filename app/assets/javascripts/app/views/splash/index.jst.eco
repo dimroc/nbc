@@ -1,19 +1,18 @@
 <div class="container">
-  <p class="span12 height100"/>
-
-  <h1>New Block City</h1>
   <table>
     <tbody>
 
       <tr>
+        <td><h4>Loading</h4></td>
         <% for world in @worlds: %>
-          <td class="<%= _(world.name).underscored() %> icon centered">
+          <td class="<%= _(world.name).underscored() %> icon hidden centered">
             <img src="<%= world.icon_path() %>" alt="<%= world.name %>">
           </td>
         <% end %>
       </tr>
 
       <tr>
+        <td></td>
         <% for world in @worlds: %>
           <td class="<%= _(world.name).underscored() %> loading centered">
             <img src="<%= Constants.loadingImagePath %>" alt="<%= world.name %>">
@@ -22,6 +21,4 @@
       </tr>
     </tbody>
   </table>
-
-  <h3 class="loading">Loading...</h3>
 </div>

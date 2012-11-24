@@ -15,10 +15,9 @@
 #= require_tree ./models
 
 #= require ./controllers/controller
-#= require ./controllers/splash
-#= require ./controllers/test
+#= require_tree ./controllers/
 #= require_tree ./controllers/worlds
-#= require ./controllers/root
+#= require ./routes
 
 #= require_tree ./views
 

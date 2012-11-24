@@ -1,4 +1,5 @@
-class App.WorldRenderer
+class App.WorldRenderer extends Spine.Module
+  @extend Spine.Events
 
   worldRenderers = []
 
