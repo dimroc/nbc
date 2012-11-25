@@ -16,7 +16,7 @@
 
 #= require ./controllers/controller
 #= require_tree ./controllers/
-#= require_tree ./controllers/worlds
+#= require_tree ./controllers/regions
 #= require ./routes
 
 #= require_tree ./views
@@ -29,7 +29,7 @@ class App extends Spine.Controller
     #  @append(@items = new App.Items)
     #  ...
 
-    App.World.one('allLoaded', @_loadCallback)
+    App.World.one('loaded', @_loadCallback)
     @append(@rootController = new App.Controller.Root)
     @initialUrl = location.hash
 

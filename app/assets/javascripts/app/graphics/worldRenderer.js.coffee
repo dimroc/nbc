@@ -89,13 +89,17 @@ class App.WorldRenderer extends Spine.Module
     , @)
     @
 
-  addWorlds: (worlds)->
-    _(coerceIntoArray(worlds)).each (world) =>
-      @addOutlines(world.outlineMeshes())
-      @addOutlines(world.modelMeshes())
-      @addBlocks(world.allBlockMeshes())
+  addRegions: (regions)->
+    _(coerceIntoArray(regions)).each (region) =>
+      @addOutlines(region.outlineMeshes())
+      @addOutlines(region.modelMesh())
+      @addBlocks(region.blocksMesh())
+      App.WorldRenderer.trigger 'regionAdded', region
 
-    App.WorldRenderer.trigger 'worldsAdded', worlds
+
+  addWorld: (world)->
+    @addRegions(world.regions().all())
+    App.WorldRenderer.trigger 'worldAdded', world
 
   meshes: ->
     @outlineScene.children.concat @blockScene.children

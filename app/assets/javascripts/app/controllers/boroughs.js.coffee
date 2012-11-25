@@ -1,33 +1,44 @@
 $ = jQuery.sub()
 World = App.World
+Region = App.Region
 
-$.fn.itemViaSlug = ->
+$.fn.regionViaSlug = ->
   elementID   = $(@).data('slug')
   elementID or= $(@).parents('[data-slug]').data('slug')
-  World.findByAttribute("slug", elementID)
+  Region.findByAttribute("slug", elementID)
 
 class App.Controller.Boroughs extends Spine.Controller
   events:
+    'click [data-type=index]':   'index'
     'click [data-type=show]':    'show'
 
   constructor: ->
     super
     @boroughItems = []
     @worldRenderer = new App.WorldRenderer()
-    World.bind 'allLoaded', @addAllBoroughs
+    @active (params) -> @change(params.id)
 
-  addAllBoroughs: (worlds) =>
-    _(worlds).each (world) =>
-      @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, world))
-    @render()
+    World.bind 'loaded', @render
+
+  change: (slug) ->
+    @currentBoroughItem = _(@boroughItems).detect((borough) -> borough.slug == slug)
+    console.log("selected #{@currentBoroughItem.slug}") if @currentBoroughItem?
 
   render: =>
-    output = @html @view('boroughs/index')(worlds: World.all())
+    world = World.first()
+
+    _(world.regions().all()).each (region) =>
+      @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
+
+    output = @html @view('boroughs/index')(regions: world.regions().all())
     @worldRenderer.attachToDom($(output).find("#world"))
     output
 
+  index: (e) ->
+    @navigate '/boroughs'
+
   show: (e) ->
-    item = $(e.target).itemViaSlug()
+    item = $(e.target).regionViaSlug()
     @navigate '/boroughs', item.slug
 
   activate: ->

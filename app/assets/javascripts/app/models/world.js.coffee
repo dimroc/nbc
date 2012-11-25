@@ -39,7 +39,7 @@ class App.World extends App.Model
     @appendErrors(name: "Name is required") unless @name
     @appendErrors(slug: "slug is required") unless @slug
 
-  icon_path: ->
+  iconPath: ->
     "/assets/icons/#{_(@name).underscored()}.png"
 
   allBlocks: ->
@@ -65,6 +65,7 @@ class App.World extends App.Model
       dataType: "json"
     ).success((data) =>
       @regions(data)
+      @trigger 'loaded', @
       successCallback(@) if successCallback
     ).error (response, status)=>
       console.warn "Error retrieving regions for world #{@slug}"

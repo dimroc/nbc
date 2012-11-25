@@ -1,16 +1,16 @@
 $(function() {
-  var navigateToWorlds = function() {
-    App.instance.navigate('/worlds')
+  var navigateToRegions = function() {
+    App.instance.navigate('/regions')
   };
 
   App.World.one('allLoaded', function() {
     var gui = new dat.GUI();
 
     var options = {
-      "See Worlds": navigateToWorlds
+      "See Regions": navigateToRegions
     };
 
-    gui.add(options, "See Worlds");
+    gui.add(options, "See Regions");
     gui.closed = true
 
     <% if Rails.env.production? %>

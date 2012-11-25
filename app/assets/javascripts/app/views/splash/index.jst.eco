@@ -1,24 +1,23 @@
-<div class="container navbar-fixed-top">
-  <table>
-    <tbody>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <table>
+        <tbody>
 
-      <tr>
-        <td><h4>Loading</h4></td>
-        <% for world in @worlds: %>
-          <td class="<%= _(world.name).underscored() %> icon hidden centered">
-            <img src="<%= world.icon_path() %>" alt="<%= world.name %>">
-          </td>
-        <% end %>
-      </tr>
+          <tr>
+            <td class="nyc icon centered"> 
+              <img src="/assets/icons/nyc.png" alt="All">
+              <img src="/assets/loading.gif">
+            </td>
 
-      <tr>
-        <td></td>
-        <% for world in @worlds: %>
-          <td class="<%= _(world.name).underscored() %> loading centered">
-            <img src="<%= Constants.loadingImagePath %>" alt="<%= world.name %>">
-          </td>
-        <% end %>
-      </tr>
-    </tbody>
-  </table>
+            <% for regionName in @regionNames: %>
+              <td class="<%= regionName %> icon centered">
+                <img src="<%= "/assets/icons/#{regionName}.png" %>" alt="<%= regionName %>">
+              </td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

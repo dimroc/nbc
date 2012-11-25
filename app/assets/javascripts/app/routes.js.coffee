@@ -9,14 +9,15 @@ class Controller.Root extends Spine.Stack
     test:           Controller.Test
     splash:         Controller.Splash
     boroughs:       Controller.Boroughs
-    worldsShow:     Controller.Worlds.Show
-    worldsIndex:    Controller.Worlds.Index
+    regionsShow:     Controller.Regions.Show
+    regionsIndex:    Controller.Regions.Index
 
   routes:
     '/':                getDefaultController()
     '/boroughs':        'boroughs'
-    '/worlds':          'worldsIndex'
-    '/worlds/:id':      'worldsShow'
+    '/boroughs/:id':    'boroughs'
+    '/regions':         'regionsIndex'
+    '/regions/:id':     'regionsShow'
 
   default: getDefaultController()
   className: 'stack root'

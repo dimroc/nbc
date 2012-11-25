@@ -1,20 +1,25 @@
-<div class="container navbar-fixed-top">
-  <table>
-    <tbody>
-      <tr>
-        <td class="nyc icon centered">
-          <a data-type="show"><img src="assets/icons/manhattan.png" alt="All"></a>
-        </td>
-        <% for world in @worlds: %>
-          <td class="<%= _(world.name).underscored() %> icon centered">
-            <a data-type="show" data-slug="<%= world.slug %>">
-              <img src="<%= world.icon_path() %>" alt="<%= world.name %>">
-            </a>
-          </td>
-        <% end %>
-      </tr>
-    </tbody>
-  </table>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <table>
+        <tbody>
+          <tr>
+            <td class="nyc icon centered">
+              <a data-type="index"><img src="/assets/icons/nyc.png" alt="All"></a>
+            </td>
+
+            <% for region in @regions: %>
+              <td class="<%= region.slug %> icon centered">
+                <a data-type="show" data-slug="<%= region.slug %>">
+                  <img src="<%= region.iconPath() %>" alt="<%= region.name %>">
+                </a>
+              </td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <div id="world"></div>
