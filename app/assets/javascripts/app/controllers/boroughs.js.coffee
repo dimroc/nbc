@@ -33,6 +33,7 @@ class App.Controller.Boroughs extends Spine.Controller
 
     output = @html @view('boroughs/index')(regions: world.regions().all())
     @worldRenderer.attachToDom($(output).find("#world"))
+    @worldRenderer.animate()
 
   index: (e) ->
     @navigate '/boroughs'
@@ -43,7 +44,6 @@ class App.Controller.Boroughs extends Spine.Controller
 
   activate: ->
     @el.fadeIn(=> @el.addClass("active"))
-    @worldRenderer.animate()
     @
 
   deactivate: ->
