@@ -5,7 +5,7 @@ class App.StatsRenderer
 
   attachToDom: ->
     return unless enabled()
-    $("#world").append(@stats.domElement)
+    $(".navbar").append(@stats.domElement)
 
   destroy: ->
     return unless enabled()
