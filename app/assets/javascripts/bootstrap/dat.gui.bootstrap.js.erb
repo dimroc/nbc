@@ -3,8 +3,8 @@ $(function() {
     App.instance.navigate('/regions')
   };
 
-  App.World.one('allLoaded', function() {
-    var gui = new dat.GUI();
+  App.World.bind('loaded', function() {
+    var gui = new dat.GUI({autoPlace: false});
 
     var options = {
       "See Regions": navigateToRegions
@@ -12,6 +12,9 @@ $(function() {
 
     gui.add(options, "See Regions");
     gui.closed = true
+
+    var customContainer = $('#datgui');
+    customContainer.append(gui.domElement);
 
     <% if Rails.env.production? %>
         <%= gui.domElement.hidden = true %>

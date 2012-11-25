@@ -8,6 +8,7 @@ $.fn.regionViaSlug = ->
   Region.findByAttribute("slug", elementID)
 
 class App.Controller.Boroughs extends Spine.Controller
+  className: 'boroughs'
   events:
     'click [data-type=index]':   'index'
     'click [data-type=show]':    'show'
@@ -32,7 +33,6 @@ class App.Controller.Boroughs extends Spine.Controller
 
     output = @html @view('boroughs/index')(regions: world.regions().all())
     @worldRenderer.attachToDom($(output).find("#world"))
-    output
 
   index: (e) ->
     @navigate '/boroughs'
