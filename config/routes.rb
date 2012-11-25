@@ -12,5 +12,5 @@ NewBlockCity::Application.routes.draw do
   mount Jasminerice::Engine => "/jasmine" if Rails.env.development? || Rails.env.test?
   match '/' => 'home#index'
   match '/boroughs/(*other)' => 'home#index'
-  match '/worlds/(*other)' => 'home#index'
+  match '/regions/(*other)' => 'home#index'
 end

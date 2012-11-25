@@ -15,9 +15,11 @@ class App.WorldRenderer extends Spine.Module
     @clock = new THREE.Clock()
     @blockScene = new THREE.Scene()
     @outlineScene = new THREE.Scene()
+    # @outlineScene.fog = new THREE.Fog( 0xffffff, 0, 1000 )
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
+    @controls = new App.CameraControls(@camera)
 
     @renderer = createRenderer(options)
     @composer = createComposer(options, @)
@@ -59,6 +61,7 @@ class App.WorldRenderer extends Spine.Module
     options = calculate_options()
     @renderer.setSize( options.width, options.height )
     updateCamera(@camera, options)
+    @controls.handleResize()
 
   onDocumentMouseMove: ( event ) =>
     event.preventDefault()
@@ -91,7 +94,7 @@ class App.WorldRenderer extends Spine.Module
 
   addRegions: (regions)->
     _(coerceIntoArray(regions)).each (region) =>
-      @addOutlines(region.outlineMeshes())
+      # @addOutlines(region.outlineMeshes())
       @addOutlines(region.modelMesh())
       @addBlocks(region.blocksMesh())
       App.WorldRenderer.trigger 'regionAdded', region
@@ -195,6 +198,7 @@ render = (worldRenderer) ->
   worldRenderer.meshes().forEach (child) ->
     child.animate(delta) if child.animate
 
+  worldRenderer.controls.update( delta )
   worldRenderer.composer.render(delta)
   worldRenderer.stats.update()
 
@@ -202,5 +206,5 @@ calculate_options = ->
   {
     fov: 45
     width: window.innerWidth
-    height: window.innerHeight - 60
+    height: window.innerHeight
   }
