@@ -1,88 +1,62 @@
-###
-Inspired by the TrackballControl from
-@author Eberhard Graether / http://egraether.com/
-###
 class App.CameraControls
-  STATE =
-    NONE: -1
-    ROTATE: 0
-    ZOOM: 1
-    PAN: 2
-
-  constructor: (object, domElement) ->
+  constructor: (camera, domElement) ->
     THREE.EventTarget.call(@)
 
-    @object = object
+    @camera = camera
     @domElement = (if (domElement isnt `undefined`) then domElement else document)
+    @projector = new THREE.Projector()
+    @mouseRayLine = @generateLineForMouseRay()
+    @cameraHelper = new THREE.CameraHelper(@camera)
+
     @enabled = true
-    @screen =
-      width: 0
-      height: 0
-      offsetLeft: 0
-      offsetTop: 0
+    @screen = width: 0, height: 0
 
-    @radius = (@screen.width + @screen.height) / 4
-    @rotateSpeed = 1.0
-    @zoomSpeed = 0.02
-    @panSpeed = 0.3
-
-    @noRotate = false
-    @noZoom = false
-    @noPan = false
+    @zoomSpeed = 2.0
+    @panSpeed = .3
 
     @staticMoving = false
     @dynamicDampingFactor = 0.2
-    @minDistance = 25.0
-    @maxDistance = 220.0
+    @minDistance = 5.0
+    @maxDistance = 300.0
 
-    @keys = [65, 83, 68] # A, S, D
-
+    @eye = new THREE.Vector3(0, 0, 100)
     @target = new THREE.Vector3()
 
-    @lastPosition = new THREE.Vector3()
-    @state = STATE.PAN
-    @eye = new THREE.Vector3()
-    @rotateStart = new THREE.Vector3()
-    @rotateEnd = new THREE.Vector3()
-    @zoomStart = new THREE.Vector2()
-    @zoomEnd = new THREE.Vector2()
+    @zoomStart = @zoomEnd = 0.0
     @panStart = new THREE.Vector2()
     @panEnd = new THREE.Vector2()
 
-    @changeEvent = type: "change"
-
+    @domElement.addEventListener "mousemove", @mousemove, false
     @domElement.addEventListener "mousedown", @mousedown, false
     @domElement.addEventListener "mousewheel", @mousewheel, false
     @domElement.addEventListener "DOMMouseScroll", @mousewheel, false # firefox
-    window.addEventListener "keydown", @keydown, false
-    window.addEventListener "keyup", @keyup, false
     @handleResize()
 
-  keydown: (event) =>
-    return unless @enabled
-
-  keyup: (event) =>
-    return  unless @enabled
+  addDebugMeshesToScene: (scene) ->
+    scene.add(@mouseRayLine)
+    scene.add(@cameraHelper)
 
   mousedown: (event) =>
     return  unless @enabled
     event.preventDefault()
     event.stopPropagation()
 
-    @panStart = @panEnd = @getMouseOnScreen(event.clientX, event.clientY)  if @state is STATE.PAN and not @noPan
-    document.addEventListener "mousemove", @mousemove, false
-    document.addEventListener "mouseup", @mouseup, false
+    @panning = true
+    @panStart = @panEnd = @getMouseOnScreen(event.clientX, event.clientY)
+    @domElement.addEventListener "mouseup", @mouseup, false
 
   mousemove: (event) =>
     return  unless @enabled
-    @panEnd = @getMouseOnScreen(event.clientX, event.clientY)  if @state is STATE.PAN and not @noPan
+    @mouseOnScreen = @getMouseOnScreen(event.clientX, event.clientY)
+    @mouseRay = @getMouseRay()
+    @panEnd = @getMouseOnScreen(event.clientX, event.clientY)
 
   mouseup: (event) =>
     return  unless @enabled
     event.preventDefault()
     event.stopPropagation()
-    document.removeEventListener "mousemove", @mousemove
-    document.removeEventListener "mouseup", @mouseup
+    @domElement.removeEventListener "mouseup", @mouseup
+    @panning = false
 
   mousewheel: (event) =>
     return  unless @enabled
@@ -93,84 +67,108 @@ class App.CameraControls
       delta = event.wheelDelta / 40
     # Firefox
     else delta = -event.detail / 3  if event.detail
-    @zoomStart.y += (1 / delta) * 0.05
+
+    if delta > 0
+      @zoomStart += 0.05
+    else
+      @zoomStart -= 0.05
 
   handleResize: =>
     @screen.width = window.innerWidth
-    @screen.offsetTop = 0
-    @radius = (@screen.width + @screen.height) / 4
+    @screen.height = window.innerHeight
+
+    @camera.aspect = window.innerWidth / window.innerHeight
+    @camera.lookAt(@target)
+    @camera.updateProjectionMatrix()
 
   handleEvent: (event) =>
-    this[event.type] event  if typeof this[event.type] is "function"
+    this[event.type] event if typeof this[event.type] is "function"
 
   getMouseOnScreen: (clientX, clientY) =>
-    new THREE.Vector2((clientX - @screen.offsetLeft) / @radius * 0.5, (clientY - @screen.offsetTop) / @radius * 0.5)
+    new THREE.Vector2(clientX / @screen.width, clientY / @screen.height)
 
-  getMouseProjectionOnBall: (clientX, clientY) =>
-    mouseOnBall = new THREE.Vector3((clientX - @screen.width * 0.5 - @screen.offsetLeft) / @radius, (@screen.height * 0.5 + @screen.offsetTop - clientY) / @radius, 0.0)
-    length = mouseOnBall.length()
-    if length > 1.0
-      mouseOnBall.normalize()
-    else
-      mouseOnBall.z = Math.sqrt(1.0 - length * length)
-    @eye.copy(@object.position).subSelf @target
-    projection = @object.up.clone().setLength(mouseOnBall.y)
-    projection.addSelf @object.up.clone().crossSelf(@eye).setLength(mouseOnBall.x)
-    projection.addSelf @eye.setLength(mouseOnBall.z)
-    projection
+  getMouseRay: ->
+    if @mouseOnScreen?
+      # Convert to screen space coordinates (-1 -> 1 instead of 0 -> 1)
+      screenSpaceMouse = @mouseOnScreen.clone().multiplyScalar(2)
+      screenSpaceMouse.x -= 1
+      screenSpaceMouse.y -= 1
+      screenSpaceMouse.y *= -1
 
-  rotateCamera: ->
-    angle = Math.acos(@rotateStart.dot(@rotateEnd) / @rotateStart.length() / @rotateEnd.length())
-    if angle
-      axis = (new THREE.Vector3()).cross(@rotateStart, @rotateEnd).normalize()
-      quaternion = new THREE.Quaternion()
-      angle *= @rotateSpeed
-      quaternion.setFromAxisAngle axis, -angle
-      quaternion.multiplyVector3 @eye
-      quaternion.multiplyVector3 @object.up
-      quaternion.multiplyVector3 @rotateEnd
-      if @staticMoving
-        @rotateStart.copy @rotateEnd
-      else
-        quaternion.setFromAxisAngle axis, angle * (@dynamicDampingFactor - 1.0)
-        quaternion.multiplyVector3 @rotateStart
+      # Convert mouse position into a ray pointing into world space
+      @projector.pickingRay(screenSpaceMouse, @camera)
+
+  generateLineForMouseRay: ->
+    material = new THREE.LineBasicMaterial({color: 0xFF0000, linewidth: 3})
+    geometry = new THREE.Geometry()
+    geometry.vertices.push(new THREE.Vector3())
+    geometry.vertices.push(new THREE.Vector3())
+    new THREE.Line(geometry, material)
+
+  updateMouseRayLine: ->
+    if @mouseRayLine? and @mouseRay?
+      ray = @mouseRay
+      @mouseRayLine.geometry.vertices[0].copy ray.origin
+
+      destination = new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(300))
+      @mouseRayLine.geometry.vertices[1].copy destination
+      @mouseRayLine.geometry.verticesNeedUpdate = true
 
   zoomCamera: ->
-    factor = 1.0 + (@zoomEnd.y - @zoomStart.y) * @zoomSpeed
-    if factor isnt 1.0 and factor > 0.0
-      @eye.multiplyScalar factor
-      if @staticMoving
-        @zoomStart.copy @zoomEnd
+    factor = (@zoomEnd - @zoomStart) * -@zoomSpeed
+    if factor > 0.001 or factor < -0.001
+      if @mouseRay?
+        ray = @mouseRay
       else
-        @zoomStart.y += (@zoomEnd.y - @zoomStart.y) * @dynamicDampingFactor
+        ray = new THREE.Ray()
+        ray.direction.z = -1
+
+      # Handle z coordinate
+      offset = ray.direction.clone().multiplyScalar(factor * 10)
+      @eye.z += offset.z
+
+      if @withinZoomDistances()
+        # Handle X/Y Coordinate
+        pan = @eye.clone().crossSelf(@camera.up).setLength(-offset.x)
+        pan.addSelf @camera.up.clone().setLength(offset.y)
+        pan.z = 0
+        @camera.position.addSelf pan
+        @target.addSelf pan
+
+      if @staticMoving
+        @zoomStart = @zoomEnd
+      else
+        @zoomStart += (@zoomEnd - @zoomStart) * @dynamicDampingFactor
 
   panCamera: ->
     mouseChange = @panEnd.clone().subSelf(@panStart)
     if mouseChange.lengthSq()
       mouseChange.multiplyScalar @eye.length() * @panSpeed
-      pan = @eye.clone().crossSelf(@object.up).setLength(mouseChange.x)
-      pan.addSelf @object.up.clone().setLength(mouseChange.y)
-      @object.position.addSelf pan
+      pan = @eye.clone().crossSelf(@camera.up).setLength(mouseChange.x)
+      pan.addSelf @camera.up.clone().setLength(mouseChange.y)
+      @camera.position.addSelf pan
       @target.addSelf pan
       if @staticMoving
         @panStart = @panEnd
       else
         @panStart.addSelf mouseChange.sub(@panEnd, @panStart).multiplyScalar(@dynamicDampingFactor)
 
-  checkDistances: ->
-    if not @noZoom or not @noPan
-      @object.position.setLength @maxDistance  if @object.position.lengthSq() > @maxDistance * @maxDistance
-      @object.position.add @target, @eye.setLength(@minDistance)  if @eye.lengthSq() < @minDistance * @minDistance
+  withinZoomDistances: ->
+    if @eye.z > @maxDistance
+      @eye.z = @maxDistance
+      false
+    else if @eye.z < @minDistance
+      @eye.z = @minDistance
+      false
+    else
+      true
 
   update: ->
-    @eye.copy(@object.position).subSelf @target
-    @rotateCamera()  unless @noRotate
-    @zoomCamera()  unless @noZoom
-    @panCamera()  unless @noPan
-    @object.position.add @target, @eye
-    @checkDistances()
-    @object.lookAt @target
-    if @lastPosition.distanceToSquared(@object.position) > 0
-      @dispatchEvent @changeEvent
-      @lastPosition.copy @object.position
+    @eye.copy(@camera.position).subSelf @target
+    @zoomCamera()
+    @panCamera() if @panning
+    @camera.position.add @target, @eye
 
+    @camera.lookAt @target
+    @updateMouseRayLine()
+    @cameraHelper.update()
