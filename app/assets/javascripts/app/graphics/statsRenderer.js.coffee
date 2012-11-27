@@ -3,9 +3,9 @@ class App.StatsRenderer
     return unless enabled()
     @stats = createStats()
 
-  attachToDom: ->
+  attachToDom: (domElement) ->
     return unless enabled()
-    $(".navbar").append(@stats.domElement)
+    $(domElement).prepend(@stats.domElement)
 
   destroy: ->
     return unless enabled()
@@ -16,16 +16,16 @@ class App.StatsRenderer
     @stats.update()
 
 enabled = ->
-  Env.development || Env.test
+  true
+  # Env.development || Env.test
 
 createStats = ->
   stats = new Stats()
   stats.setMode(0)
 
-  $(stats.domElement).addClass("left")
-
-  stats.domElement.style.position = "relative"
-  stats.domElement.style.top = "-15"
+  stats.domElement.style.position = "absolute"
+  stats.domElement.style.top = "50px"
+  stats.domElement.style.left = "0"
 
   stats.domElement.children[ 0 ].children[ 0 ].style.color = "#aaa"
   stats.domElement.children[ 0 ].style.background = "transparent"

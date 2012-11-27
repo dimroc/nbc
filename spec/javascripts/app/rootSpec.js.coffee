@@ -7,5 +7,5 @@ describe "controllers.root", ->
 
   it "should have the correct routes", ->
     expect(rootController.splash).toBeAnAction()
-    expect(rootController.worldsIndex).toBeAnAction()
-    expect(rootController.worldsShow).toBeAnAction()
+    expect(rootController.regionsIndex).toBeAnAction()
+    expect(rootController.regionsShow).toBeAnAction()

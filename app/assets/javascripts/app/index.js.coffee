@@ -17,7 +17,7 @@
 #= require ./controllers/controller
 #= require_tree ./controllers/
 #= require_tree ./controllers/regions
-#= require ./routes
+#= require ./root
 
 #= require_tree ./views
 
