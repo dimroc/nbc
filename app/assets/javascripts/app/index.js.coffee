@@ -15,10 +15,9 @@
 #= require_tree ./models
 
 #= require ./controllers/controller
-#= require ./controllers/splash
-#= require ./controllers/test
-#= require_tree ./controllers/worlds
-#= require ./controllers/root
+#= require_tree ./controllers/
+#= require_tree ./controllers/regions
+#= require ./root
 
 #= require_tree ./views
 
@@ -30,7 +29,7 @@ class App extends Spine.Controller
     #  @append(@items = new App.Items)
     #  ...
 
-    App.World.one('allLoaded', @_loadCallback)
+    App.World.one('loaded', @_loadCallback)
     @append(@rootController = new App.Controller.Root)
     @initialUrl = location.hash
 
@@ -38,6 +37,6 @@ class App extends Spine.Controller
 
   _loadCallback: =>
     # Only navigate to URL once loaded.
-    Spine.Route.setup()
+    Spine.Route.setup(history: true)
 
 window.App = App

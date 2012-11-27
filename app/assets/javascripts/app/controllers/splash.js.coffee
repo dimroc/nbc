@@ -7,21 +7,24 @@ class App.Controller.Splash extends Spine.Controller
   constructor: ->
     super
     World.bind 'refresh change', @render
-    World.one 'loaded', @_loadedCallback
-    World.one 'allLoaded', @_allLoadedCallback
     World.fetch()
 
   render: =>
-    worlds = World.all()
+    world = World.first()
+
     if !Env.isChrome23
-      @html @view('splash/browserError')(worlds: worlds)
+      @html @view('splash/browserError')(regionNames: world.region_names)
     else
-      @html @view('splash/index')(worlds: worlds)
-      World.fetchAllDetails()
+      @html @view('splash/index')(regionNames: world.region_names)
+      world.fetchRegions(@_loadedCallback)
 
-  _loadedCallback: (world) =>
-    world_class = _(world.name).underscored()
-    $(".loading.#{world_class}").addClass("hidden")
+  _loadedCallback: =>
+    @navigate '/boroughs'
 
-  _allLoadedCallback: =>
-    $(".loading").addClass("hidden")
+  activate: ->
+    @el.fadeIn(=> @el.addClass("active"))
+    @
+
+  deactivate: ->
+    @el.fadeOut(=> @el.removeClass("active"))
+    @

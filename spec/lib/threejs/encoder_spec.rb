@@ -35,7 +35,7 @@ describe THREEJS::Encoder do
   describe ".model_from_geometry" do
     context "integration with nyc's simplified geometry" do
       let(:geometry) do
-        region = worlds(:nyc).regions.find_by_name("106")
+        region = worlds(:nyc).regions.find_by_name("Manhattan")
         region.simplify_geometry
       end
 

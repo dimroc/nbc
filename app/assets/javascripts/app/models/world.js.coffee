@@ -1,6 +1,7 @@
 class App.World extends App.Model
   @configure 'World', 'id', 'name', 'slug'
   @extend Spine.Model.Ajax
+  @url: "#{Constants.apiBasePath}/worlds"
 
   @hasMany 'regions', "App.Region"
 
@@ -13,7 +14,7 @@ class App.World extends App.Model
     else
       $.ajax(
         type: "GET",
-        url: "/worlds",
+        url: "#{Constants.apiBasePath}/worlds",
         dataType: "json"
       ).success((data) =>
         @refresh(data)
@@ -31,14 +32,14 @@ class App.World extends App.Model
         loaded += 1
         if loaded == worlds.length
           World.allLoaded = true
-          World.trigger('allLoaded')
+          World.trigger('allLoaded', worlds)
 
   validate: ->
     @errors = {}
     @appendErrors(name: "Name is required") unless @name
     @appendErrors(slug: "slug is required") unless @slug
 
-  icon_path: ->
+  iconPath: ->
     "/assets/icons/#{_(@name).underscored()}.png"
 
   allBlocks: ->
@@ -58,13 +59,13 @@ class App.World extends App.Model
 
   fetchRegions: (successCallback)->
     url = "/static/#{@slug}/regions.json"
-    url += "?longitude=#{Env.longitude}&latitude=#{Env.latitude}" if Env.geoposition
     $.ajax(
       type: "GET",
       url: url,
       dataType: "json"
     ).success((data) =>
       @regions(data)
+      @trigger 'loaded', @
       successCallback(@) if successCallback
     ).error (response, status)=>
       console.warn "Error retrieving regions for world #{@slug}"

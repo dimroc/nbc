@@ -1,17 +1,19 @@
 $(function() {
-  var navigateToWorlds = function() {
-    App.instance.navigate('/worlds')
+  var navigateToRegions = function() {
+    App.instance.navigate('/regions')
   };
 
-  App.World.one('allLoaded', function() {
-    var gui = new dat.GUI();
+  App.World.bind('loaded', function() {
+    var gui = new dat.GUI({autoPlace: false});
 
     var options = {
-      "See Worlds": navigateToWorlds
+      "See Regions": navigateToRegions
     };
 
-    gui.add(options, "See Worlds");
-    gui.closed = true
+    gui.add(options, "See Regions");
+
+    var customContainer = $('#datgui');
+    customContainer.append(gui.domElement);
 
     <% if Rails.env.production? %>
         <%= gui.domElement.hidden = true %>

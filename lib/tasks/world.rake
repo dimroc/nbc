@@ -24,4 +24,18 @@ namespace :world do
       }).save!
     end
   end
+
+  desc "Destroy all worlds or a specific world"
+  task :destroy, [:name] => :environment do |t, args|
+    name = args[:name]
+
+    if name
+      world = World.where("name ILIKE #{name}").first
+      FileUtils.rm_rf ["public/static/#{world.slug}/"]
+      world.destroy
+    else
+      World.destroy_all
+      FileUtils.rm_rf ["public/static/"]
+    end
+  end
 end

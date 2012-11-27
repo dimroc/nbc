@@ -36,19 +36,17 @@ describe Loader::World do
     end
 
     describe "new york city shape file" do
-      let(:world) { Loader::World.from_shapefile("SomeName", shapefile, "BoroCD") }
+      let(:world) { Loader::World.from_shapefile("SomeName", shapefile, "BoroName") }
       let(:shapefile) { "lib/data/shapefiles/nyc/region" }
 
       it "should generate a geometry and threejs for every borough with neighborhoods" do
         # Primarily used to test drive and debug
-        world.regions.size.should == 33
-        world.regions.map(&:name).should include 101
-        world.regions.map(&:name).should include 317
+        world.regions.size.should == 5
+        world.regions.map(&:name).should include "Manhattan"
+        world.regions.map(&:name).should include "Brooklyn"
 
-        world.regions.map(&:threejs).compact.count.should > 30 # nearly all
-
-        neighborhoods = world.regions.flat_map(&:neighborhoods)
-        neighborhoods.count.should > Neighborhood.where(borough: "Manhattan").count
+        neighborhoods = world.regions.detect { |r| r.name == "Manhattan" }.neighborhoods
+        neighborhoods.size.should == Neighborhood.where(borough: "Manhattan").count
 
         world.name = "bogus"
         world.should be_valid

@@ -1,4 +1,5 @@
-class App.WorldRenderer
+class App.WorldRenderer extends Spine.Module
+  @extend Spine.Events
 
   worldRenderers = []
 
@@ -14,9 +15,12 @@ class App.WorldRenderer
     @clock = new THREE.Clock()
     @blockScene = new THREE.Scene()
     @outlineScene = new THREE.Scene()
+    @debugScene = new THREE.Scene()
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
+    @controls = new App.CameraControls(@camera)
+    @controls.addDebugMeshesToScene(@debugScene)
 
     @renderer = createRenderer(options)
     @composer = createComposer(options, @)
@@ -30,11 +34,7 @@ class App.WorldRenderer
 
     @blockScene.add(@directionalLight)
 
-    @projector = new THREE.Projector()
-    @mouse2D = new THREE.Vector3( 0, 1000, 0.5 )
-    @mouseRay = new THREE.Ray( @camera.position, null )
     @stats = new App.StatsRenderer()
-
     worldRenderers.push(@)
 
   destroy: ->
@@ -44,29 +44,18 @@ class App.WorldRenderer
     @stats.destroy()
     cancelAnimationFrame @requestId
     window.removeEventListener( 'resize', @onWindowResize, false )
-    window.removeEventListener( 'mousemove', @onDocumentMouseMove, false )
     worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
-    @stats.attachToDom()
+    @stats.attachToDom(domElement)
     window.addEventListener( 'resize', @onWindowResize, false )
-    window.addEventListener( 'mousemove', @onDocumentMouseMove, false )
     @
 
   onWindowResize: ( event ) =>
     options = calculate_options()
     @renderer.setSize( options.width, options.height )
-    updateCamera(@camera, options)
-
-  onDocumentMouseMove: ( event ) =>
-    event.preventDefault()
-
-    @mouse2D.x = ( event.clientX / window.innerWidth ) * 2 - 1
-    @mouse2D.y = - ( event.clientY / window.innerHeight ) * 2 + 1
-
-    mouse3D = @projector.unprojectVector( @mouse2D.clone(), @camera )
-    @mouseRay.direction = mouse3D.subSelf( @camera.position ).normalize()
+    @controls.handleResize()
 
   animate: (elapsedTicks)=>
     render(@)
@@ -77,23 +66,35 @@ class App.WorldRenderer
       @requestId = requestAnimationFrame(@animate)
 
   addOutlines: (meshParam)->
-    _.each(coerceIntoMeshes(meshParam), (mesh) ->
+    _.each(coerceIntoArray(meshParam), (mesh) ->
       @outlineScene.add( mesh )
     , @)
     @
 
   addBlocks: (meshParam)->
-    _.each(coerceIntoMeshes(meshParam), (mesh) ->
+    _.each(coerceIntoArray(meshParam), (mesh) ->
       @blockScene.add( mesh )
     , @)
     @
+
+  addRegions: (regions)->
+    _(coerceIntoArray(regions)).each (region) =>
+      # @addOutlines(region.outlineMeshes())
+      @addOutlines(region.modelMesh())
+      @addBlocks(region.blocksMesh())
+      App.WorldRenderer.trigger 'regionAdded', region
+
+
+  addWorld: (world)->
+    @addRegions(world.regions().all())
+    App.WorldRenderer.trigger 'worldAdded', world
 
   meshes: ->
     @outlineScene.children.concat @blockScene.children
 
 # privates
 
-coerceIntoMeshes = (meshParam) ->
+coerceIntoArray = (meshParam) ->
   # Simply convert meshParam into an array if it isn't one already
   if _.isArray(meshParam) then meshParam else [meshParam]
 
@@ -105,32 +106,7 @@ createOrthographicCamera = (options) ->
 
 createPerspectiveCamera = (options) ->
   camera = new THREE.PerspectiveCamera( options.fov, options.width / options.height, 1, 1000 )
-  updateCamera(camera, options)
   camera
-
-projector = new THREE.Projector()
-# Bottom left corner of screen space
-leftScreenSpaceVector = new THREE.Vector3(-1, -0.9, 0)
-
-updateCamera = (camera, options) ->
-  distanceFromWorld = 60
-
-  camera.aspect = options.width / options.height
-  camera.position = new THREE.Vector3(0,0,0)
-  camera.lookAt(new THREE.Vector3(0,0,-1))
-  camera.updateMatrixWorld()
-  camera.updateProjectionMatrix()
-
-  # Ray from camera down the bottom-left side of the view frustum
-  ray = projector.pickingRay(leftScreenSpaceVector.clone(), camera)
-
-  magnitudeToWorld = distanceFromWorld / ray.direction.z
-
-  position = ray.origin.clone().addSelf(
-    ray.direction.clone().multiplyScalar(magnitudeToWorld))
-
-  camera.position = new THREE.Vector3(position.x, position.y, distanceFromWorld)
-  camera.lookAt(new THREE.Vector3(position.x, position.y, 0))
 
 createRenderer = (options) ->
   renderer = new THREE.WebGLRenderer({antialias: true})
@@ -182,6 +158,7 @@ render = (worldRenderer) ->
   worldRenderer.meshes().forEach (child) ->
     child.animate(delta) if child.animate
 
+  worldRenderer.controls.update( delta )
   worldRenderer.composer.render(delta)
   worldRenderer.stats.update()
 
@@ -189,5 +166,5 @@ calculate_options = ->
   {
     fov: 45
     width: window.innerWidth
-    height: window.innerHeight - 60
+    height: window.innerHeight
   }

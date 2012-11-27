@@ -8,6 +8,13 @@ class World < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :slug
 
+  def as_json(options={})
+    region_names = regions.map(&:slug)
+    # Opted for manual merge rather than
+    # passing regions: { only: :name } for performance.
+    super(options).merge(region_names: region_names)
+  end
+
   def contains?(point)
     regions.any? { |region| region.contains? point }
   end

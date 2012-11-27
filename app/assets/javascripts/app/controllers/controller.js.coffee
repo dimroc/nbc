@@ -1,2 +1,2 @@
 App.Controller = { }
-App.Controller.Worlds = { }
+App.Controller.Regions = { }

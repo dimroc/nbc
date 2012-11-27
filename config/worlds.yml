@@ -4,20 +4,25 @@ defaults: &defaults
   tolerance: 5
 
 worlds:
-  - name: Manhattan
+  - name: NYC
     <<: *defaults
+    region_name_key: BoroName
+    tolerance: 1
 
-  - name: Bronx
-    <<: *defaults
-    inverse_scale: 600
+  # - name: Manhattan
+    # <<: *defaults
 
-  - name: Queens
-    <<: *defaults
-    inverse_scale: 1000
-    tolerance: 3
+  # - name: Bronx
+    # <<: *defaults
+    # inverse_scale: 600
 
-  - name: Brooklyn
-    <<: *defaults
+  # - name: Queens
+    # <<: *defaults
+    # inverse_scale: 1000
+    # tolerance: 3
 
-  - name: Staten Island
-    <<: *defaults
+  # - name: Brooklyn
+    # <<: *defaults
+
+  # - name: Staten Island
+    # <<: *defaults

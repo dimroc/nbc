@@ -6,9 +6,9 @@
     <tbody>
 
       <tr>
-        <% for world in @worlds: %>
-          <td class="<%= _(world.name).underscored() %> icon centered">
-            <img src="<%= world.icon_path() %>" alt="<%= world.name %>">
+        <% for regionName in @regionNames: %>
+          <td class="<%= regionName %> icon centered">
+            <img src="<%= "/assets/icons/#{regionName}.png" %>" alt="<%= regionName %>">
           </td>
         <% end %>
       </tr>
