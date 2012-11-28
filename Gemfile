@@ -24,6 +24,8 @@ gem 'rgeo-shapefile'
 gem 'georuby'
 gem 'rbpoly2tri'
 
+gem 'panda'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
