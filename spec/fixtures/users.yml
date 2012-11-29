@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 4
-  email: janet_kuphal@cronafarrell.com
-  encrypted_password: $2a$10$UvuAfGG01t0DzQfEY8eqWOZx9zwLJpIlTK3kxBizIeHM/o5ODkJWi
+  id: 2
+  email: einar@schultz.name
+  encrypted_password: $2a$10$XMTF8Ql9IXj4DVfMuhILg.Bu7pQomuYODxvmaii24cU1YcUhmbPOi
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

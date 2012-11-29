@@ -60,6 +60,9 @@ group :test, :development do
   gem "jasmine"
   gem "jasminerice", git: "git://github.com/dimroc/jasminerice.git"
 
+  gem 'vcr'
+  gem 'webmock', require: false
+
   case HOST_OS
     when /darwin/i
       gem 'rb-fsevent', :group => :development

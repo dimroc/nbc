@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121125150230) do
+ActiveRecord::Schema.define(:version => 20121129042005) do
 
   create_table "blocks", :force => true do |t|
-    t.integer  "region_id"
     t.datetime "created_at",                                          :null => false
     t.datetime "updated_at",                                          :null => false
     t.spatial  "point",      :limit => {:srid=>3785, :type=>"point"}
+    t.integer  "video_id"
   end
 
   add_index "blocks", ["point"], :name => "index_blocks_on_point", :spatial => true
@@ -82,6 +82,19 @@ ActiveRecord::Schema.define(:version => 20121125150230) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
+
+  create_table "videos", :force => true do |t|
+    t.string   "panda_id"
+    t.string   "encoding_id"
+    t.string   "original_filename"
+    t.integer  "width"
+    t.integer  "height"
+    t.integer  "duration"
+    t.string   "screenshot"
+    t.string   "url"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "worlds", :force => true do |t|
     t.string   "name"

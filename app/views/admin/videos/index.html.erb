@@ -27,7 +27,7 @@
 <div>
   <ul>
     <% @videos.each do |video| %>
-      <li><%= video.original_filename %></li>
+      <li><%= "#{video.id}: #{video.original_filename}" %></li>
     <% end %>
   </ul>
 </div>
