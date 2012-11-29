@@ -5,4 +5,8 @@ class Admin::VideosController < ApplicationController
     @access_details = Panda.signed_params('POST', '/videos.json')
     @videos = Panda::Video.all
   end
+
+  def create
+    render text: "Created video: #{params.inspect}"
+  end
 end
