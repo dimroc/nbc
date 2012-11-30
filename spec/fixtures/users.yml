@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 2
-  email: einar@schultz.name
-  encrypted_password: $2a$10$XMTF8Ql9IXj4DVfMuhILg.Bu7pQomuYODxvmaii24cU1YcUhmbPOi
+  id: 5
+  email: candido_hegmann@swaniawski.co.uk
+  encrypted_password: $2a$10$NhsH/2tdR1MkwuUrCDrYSecIHlpOOQoUgUM77RuQp7z5ZF93oTPg6
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

@@ -4,11 +4,18 @@ class Api::BlocksController < ApiController
 
   def index
     if @current_point
-      current_block = Block.near(@current_point).limit(1).first
-      raise NotFoundError unless @world.contains? @current_point
-      respond_with [current_block]
+      respond_with Block.near(@current_point).limit(20)
     else
       respond_with Block.all
     end
+  end
+
+  def create
+    raise ActiveResource::BadRequest, "No location given" unless @current_point
+    if params[:video_id]
+      block = Block::Video.create(point: @current_point, video: Video.find(params[:video_id]))
+    end
+
+    respond_with block, location: api_block_path(block)
   end
 end

@@ -14,4 +14,13 @@ describe Block do
 
     it { should == [near_block, far_block] }
   end
+
+  describe "#as_json" do
+    subject { block.as_json }
+    let(:block) { FactoryGirl.create(:block) }
+
+    it "should only include relevant information" do
+      subject.keys.should == ["id", "point"]
+    end
+  end
 end

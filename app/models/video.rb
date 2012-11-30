@@ -3,13 +3,13 @@ class Video < ActiveRecord::Base
     :panda_id, :screenshot, :url, :width
 
   class << self
-    def from_panda(panda_id)
+    def find_or_create_from_panda(panda_id)
       panda = Panda::Encoding.find_by({
         :video_id => panda_id,
         :profile_name => "h264"
       })
 
-      video = Video.new({
+      video = Video.create({
         panda_id: panda.video_id,
         encoding_id: panda.id,
         duration: panda.duration,

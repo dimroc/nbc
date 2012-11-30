@@ -4,12 +4,14 @@ NewBlockCity::Application.routes.draw do
   namespace :api do
     resources :worlds do
       resources :regions
-      resources :blocks
     end
+
+    resources :blocks
+    resources :videos
   end
 
   namespace :admin do
-    resources :videos
+    resources :panda_videos
   end
 
   # Explicitly mount Jasminerice above global match rule to prevent trumping of jasmine
