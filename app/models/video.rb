@@ -2,6 +2,8 @@ class Video < ActiveRecord::Base
   attr_accessible :duration, :encoding_id, :height, :original_filename,
     :panda_id, :screenshot, :url, :width
 
+  scope :encoded, -> { where("videos.url IS NOT NULL") }
+
   class << self
     def find_or_create_from_panda(panda_id)
       panda = Panda::Encoding.find_by({
@@ -20,5 +22,9 @@ class Video < ActiveRecord::Base
         url: panda.url
       })
     end
+  end
+
+  def encoded?
+    url.present?
   end
 end

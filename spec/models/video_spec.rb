@@ -3,6 +3,18 @@ require 'spec_helper'
 describe Video do
   use_vcr_cassette
 
+  describe ".encoded" do
+    subject { Video.encoded }
+    let(:included_video) { FactoryGirl.create(:video, url: "something") }
+
+    before do
+      Video.destroy_all
+      FactoryGirl.create(:video, url: nil)
+    end
+
+    it { should == [included_video] }
+  end
+
   describe ".find_or_create_from_panda" do
     subject { Video.find_or_create_from_panda("81292d1d14b508c23ae93dc98ccee543") }
 
