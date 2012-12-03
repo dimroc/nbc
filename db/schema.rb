@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121129042005) do
+ActiveRecord::Schema.define(:version => 20121203035803) do
 
   create_table "blocks", :force => true do |t|
     t.datetime "created_at",                                          :null => false
@@ -33,6 +33,19 @@ ActiveRecord::Schema.define(:version => 20121129042005) do
     t.datetime "created_at",                                          :null => false
     t.datetime "updated_at",                                          :null => false
     t.spatial  "point",      :limit => {:srid=>3785, :type=>"point"}
+  end
+
+  create_table "panda_videos", :force => true do |t|
+    t.string   "panda_id"
+    t.string   "encoding_id"
+    t.string   "original_filename"
+    t.integer  "width"
+    t.integer  "height"
+    t.integer  "duration"
+    t.string   "screenshot"
+    t.string   "url"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "regions", :force => true do |t|
@@ -82,19 +95,6 @@ ActiveRecord::Schema.define(:version => 20121129042005) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
-
-  create_table "videos", :force => true do |t|
-    t.string   "panda_id"
-    t.string   "encoding_id"
-    t.string   "original_filename"
-    t.integer  "width"
-    t.integer  "height"
-    t.integer  "duration"
-    t.string   "screenshot"
-    t.string   "url"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-  end
 
   create_table "worlds", :force => true do |t|
     t.string   "name"

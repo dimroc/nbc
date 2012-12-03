@@ -1,8 +1,8 @@
-class Video < ActiveRecord::Base
+class PandaVideo < ActiveRecord::Base
   attr_accessible :duration, :encoding_id, :height, :original_filename,
     :panda_id, :screenshot, :url, :width
 
-  scope :encoded, -> { where("videos.url IS NOT NULL") }
+  scope :encoded, -> { where("panda_videos.url IS NOT NULL") }
 
   class << self
     def find_or_create_from_panda(panda_id)
@@ -11,7 +11,7 @@ class Video < ActiveRecord::Base
         :profile_name => "h264"
       })
 
-      video = Video.create({
+      video = PandaVideo.create({
         panda_id: panda.video_id,
         encoding_id: panda.id,
         duration: panda.duration,
@@ -24,7 +24,16 @@ class Video < ActiveRecord::Base
     end
   end
 
+  def refresh_from_panda!
+    panda = Panda::Encoding.find_by({
+      :video_id => panda_id,
+      :profile_name => "h264"
+    })
+
+    update_attributes(url: panda.url, screenshot: panda.screenshots[0])
+  end
+
   def encoded?
-    url.present?
+    self.url.present?
   end
 end

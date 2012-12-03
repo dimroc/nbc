@@ -7,7 +7,11 @@ NewBlockCity::Application.routes.draw do
     end
 
     resources :blocks
-    resources :videos
+    resources :panda_videos do
+      collection do
+        post :callback
+      end
+    end
   end
 
   namespace :admin do

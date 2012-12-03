@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 5
-  email: candido_hegmann@swaniawski.co.uk
-  encrypted_password: $2a$10$NhsH/2tdR1MkwuUrCDrYSecIHlpOOQoUgUM77RuQp7z5ZF93oTPg6
+  id: 2
+  email: sebastian.stroman@lehner.biz
+  encrypted_password: $2a$04$pzFTfLDMvpZag8uzmS/lfufJzwWPARe4XYYoLXh0NMqLM32gRzOuy
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

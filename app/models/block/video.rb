@@ -1,12 +1,12 @@
 class Block::Video < Block
-  belongs_to :video
+  belongs_to :video, class_name: ::PandaVideo
 
   delegate :encoded?, to: :video, allow_nil: true
 
   class << self
     def encoded
-      joins("INNER JOIN videos ON blocks.video_id = videos.id").
-        where("videos.url IS NOT NULL")
+      joins("INNER JOIN panda_videos ON blocks.video_id = panda_videos.id").
+        where("panda_videos.url IS NOT NULL")
     end
   end
 

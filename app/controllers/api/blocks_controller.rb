@@ -13,7 +13,7 @@ class Api::BlocksController < ApiController
   def create
     raise ActiveResource::BadRequest, "No location given" unless @current_point
     if params[:video_id]
-      block = Block::Video.create(point: @current_point, video: Video.find(params[:video_id]))
+      block = Block::Video.create(point: @current_point, video: PandaVideo.find(params[:video_id]))
     end
 
     respond_with block, location: api_block_path(block)
