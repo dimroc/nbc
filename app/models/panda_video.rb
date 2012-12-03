@@ -4,7 +4,7 @@ class PandaVideo < ActiveRecord::Base
 
   validates_uniqueness_of :panda_id
 
-  has_one :block_video, dependent: :nullify, class_name: ::Block::Video
+  has_one :block_video, dependent: :destroy, class_name: ::Block::Video
 
   scope :encoded, -> { where("panda_videos.url IS NOT NULL") }
 
