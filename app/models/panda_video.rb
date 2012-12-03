@@ -2,9 +2,11 @@ class PandaVideo < ActiveRecord::Base
   attr_accessible :duration, :encoding_id, :height, :original_filename,
     :panda_id, :screenshot, :url, :width
 
-  scope :encoded, -> { where("panda_videos.url IS NOT NULL") }
-
   validates_uniqueness_of :panda_id
+
+  has_one :block_video, dependent: :nullify, class_name: ::Block::Video
+
+  scope :encoded, -> { where("panda_videos.url IS NOT NULL") }
 
   class << self
     def find_or_create_from_panda(panda_id)
@@ -32,7 +34,13 @@ class PandaVideo < ActiveRecord::Base
       :profile_name => "h264"
     })
 
-    update_attributes(url: panda.url, screenshot: panda.screenshots[0])
+    update_attributes(url: panda.url, screenshot: panda.screenshots[0]) if panda
+  end
+
+  def exists_in_panda?
+    Panda::Video.find(panda_id)
+  rescue Panda::APIError
+    false
   end
 
   def encoded?

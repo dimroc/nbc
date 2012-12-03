@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121203043241) do
+ActiveRecord::Schema.define(:version => 20121203045933) do
 
   create_table "blocks", :force => true do |t|
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
-    t.spatial  "point",      :limit => {:srid=>3785, :type=>"point"}
-    t.integer  "video_id"
+    t.datetime "created_at",                                              :null => false
+    t.datetime "updated_at",                                              :null => false
+    t.spatial  "point",          :limit => {:srid=>3785, :type=>"point"}
+    t.integer  "panda_video_id"
   end
 
   add_index "blocks", ["point"], :name => "index_blocks_on_point", :spatial => true
