@@ -1,8 +1,10 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
+  sequence(:panda_id) { |n| "PandaId_#{n}" }
+
   factory :video, class: ::PandaVideo do
-    panda_id "MyString"
+    panda_id { generate(:panda_id) }
     duration 1
     width 1
     height 1

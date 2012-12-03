@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Api::PandaVideosController do
-  use_vcr_cassette record: :new_episodes
+  use_vcr_cassette
 
   describe "#create" do
     let(:params) do

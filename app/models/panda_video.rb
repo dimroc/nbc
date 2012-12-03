@@ -4,6 +4,8 @@ class PandaVideo < ActiveRecord::Base
 
   scope :encoded, -> { where("panda_videos.url IS NOT NULL") }
 
+  validates_uniqueness_of :panda_id
+
   class << self
     def find_or_create_from_panda(panda_id)
       panda = Panda::Encoding.find_by({

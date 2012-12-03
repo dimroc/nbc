@@ -3,6 +3,10 @@ require 'spec_helper'
 describe PandaVideo do
   use_vcr_cassette
 
+  describe "validations" do
+    it { should validate_uniqueness_of :panda_id }
+  end
+
   describe ".encoded" do
     subject { PandaVideo.encoded }
     let(:included_video) { FactoryGirl.create(:video, url: "something") }
