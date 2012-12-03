@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20121203045933) do
     t.datetime "updated_at",        :null => false
   end
 
-  add_index "panda_videos", ["panda_id"], :name => "index_panda_videos_on_panda_id"
+  add_index "panda_videos", ["panda_id"], :name => "index_panda_videos_on_panda_id", :unique => true
 
   create_table "regions", :force => true do |t|
     t.string   "name"
