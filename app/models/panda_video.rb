@@ -26,6 +26,15 @@ class PandaVideo < ActiveRecord::Base
         url: panda.url
       })
     end
+
+    def destroy_dangling_panda_entries!
+      pandas = Panda::Video.all
+      exclusion_list = pandas.map(&:id).map { |e| "'#{e}'" }.join(',')
+      to_destroy = PandaVideo.where("panda_id NOT IN (#{exclusion_list})")
+      destroyed = to_destroy.to_a
+      to_destroy.destroy_all
+      destroyed
+    end
   end
 
   def refresh_from_panda!
@@ -37,10 +46,11 @@ class PandaVideo < ActiveRecord::Base
     update_attributes(url: panda.url, screenshot: panda.screenshots[0]) if panda
   end
 
+  # nil return value means does now know
   def exists_in_panda?
     Panda::Video.find(panda_id)
-  rescue Panda::APIError
-    false
+  rescue Panda::APIError => e
+    false if e.message.include? "RecordNotFound"
   end
 
   def encoded?

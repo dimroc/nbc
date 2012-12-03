@@ -9,9 +9,9 @@ FactoryGirl.define do
     width 1
     height 1
     encoding_id 1
-    screenshot "MyString"
-    url "MyString"
-    original_filename "MyString"
+    screenshot "MyScreenshot"
+    url "MyUrl"
+    original_filename "MyFilename"
 
     factory :unencoded_video do
       url { nil }
