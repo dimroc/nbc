@@ -16,7 +16,7 @@ $(function() {
     customContainer.append(gui.domElement);
 
     <% if Rails.env.production? %>
-        <%= gui.domElement.hidden = true %>
+        <%= "gui.domElement.hidden = true;" %>
     <% end %>
   });
 });
