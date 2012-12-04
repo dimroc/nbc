@@ -18,6 +18,11 @@ end
 
 module NewBlockCity
   class Application < Rails::Application
+    # Middleware:
+    #
+    # Unfortunately, the Rack::Deflater gzips too many things (so fix it later):
+    # http://icelab.com.au/articles/wrapping-rack-middleware-to-exclude-certain-urls-for-rails-streaming-responses/
+    config.middleware.insert_before 0, Rack::Deflater
 
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
