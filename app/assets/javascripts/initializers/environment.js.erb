@@ -1,9 +1,10 @@
 (function() {
   var currentEnvironment = "<%= Rails.env %>"
+  var initialDebug = currentEnvironment == "production" ? false : true;
 
   window.Env = {
     "<%= Rails.env %>": true,
-    debug: true,
+    debug: initialDebug, // true unless prod
     isChrome: checkIfChrome(),
     isChrome23: checkIfAtLeastChrome23()
   }

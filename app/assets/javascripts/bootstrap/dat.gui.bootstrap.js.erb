@@ -6,11 +6,10 @@ $(function() {
   App.World.bind('loaded', function() {
     var gui = new dat.GUI({autoPlace: false});
 
-    var options = {
-      "See Regions": navigateToRegions
-    };
+    var options = { "See Regions": navigateToRegions };
 
     gui.add(options, "See Regions");
+    gui.add(Env, "debug");
 
     var customContainer = $('#datgui');
     customContainer.append(gui.domElement);
