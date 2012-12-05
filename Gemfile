@@ -17,6 +17,7 @@ gem "thin-rails"
 gem "spine-rails", git: "git://github.com/maccman/spine-rails.git"
 gem "eco"
 gem "friendly_id"
+gem 'simple_form'
 
 gem 'activerecord-postgis-adapter', git: "git@github.com:dimroc/activerecord-postgis-adapter.git"
 gem 'rgeo'
