@@ -11,16 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121203045933) do
+ActiveRecord::Schema.define(:version => 20121205125916) do
 
   create_table "blocks", :force => true do |t|
     t.datetime "created_at",                                              :null => false
     t.datetime "updated_at",                                              :null => false
     t.spatial  "point",          :limit => {:srid=>3785, :type=>"point"}
     t.integer  "panda_video_id"
+    t.string   "type"
   end
 
+  add_index "blocks", ["panda_video_id"], :name => "index_blocks_on_panda_video_id"
   add_index "blocks", ["point"], :name => "index_blocks_on_point", :spatial => true
+  add_index "blocks", ["type"], :name => "index_blocks_on_type"
 
   create_table "neighborhood_regions", :force => true do |t|
     t.integer "region_id"
