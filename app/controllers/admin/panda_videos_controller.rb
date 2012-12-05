@@ -1,4 +1,4 @@
-class Admin::PandaVideosController < ApplicationController
+class Admin::PandaVideosController < AdminController
   respond_to :html
 
   def index
