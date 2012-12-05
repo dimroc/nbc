@@ -7,9 +7,6 @@
   <!-- upload progress bar (optional) -->
   <div id="upload_progress" class="panda_upload_progress"></div>
 
-  <input type="number" id="lat" name="lat"/>
-  <input type="number" id="long" name="long"/>
-
   <!-- a submit button -->
   <p><input type="submit" value="Upload video" /></p>
 </form>
@@ -24,7 +21,14 @@
 </script>
 
 <div>
-  <table>
+  <h2>Panda Videos (Straight from Panda, no NBC Model)</h2>
+  <table class="table">
+    <tr>
+      <td>id</td>
+      <td>original_filename</td>
+      <td>status</td>
+    </tr>
+
     <% @videos.each do |video| %>
       <tr>
       <td><%= video.id %></td>
