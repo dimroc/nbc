@@ -2,22 +2,23 @@
 
 - block = Block.new
 = simple_form_for [:api, block], method: "POST" do |f|
+  = f.hidden_field :type, value: 'Block::Video'
 
-  / the control will appear next to this, and the video ID will be stored here after the upload
-  %input#returned_video_id{:name => "panda_video_id", :type => "hidden"}/
+  = f.simple_fields_for :video do |panda_form|
+    / the control will appear next to this, and the video ID will be stored here after the upload
+    = panda_form.hidden_field :panda_id, id: :returned_video_id
+    -# %input#returned_video_id{:name => "panda_video_id", :type => "hidden"}/
 
   / upload progress bar (optional)
   #upload_progress.panda_upload_progress
 
+  = f.number_field "point"
   -# %input#lat{:name => "lat", :type => "number"}/
   -# %input#long{:name => "long", :type => "number"}/
-  / a submit button
-  %p
-    = f.button :submit
-    -# %input{:type => "submit", :value => "Upload video"}/
+  = f.button :submit
 
 :javascript
-  var panda_access_details =  @access_details.to_json.html_safe ;
+  var panda_access_details = #{@access_details.to_json.html_safe};
   $("#returned_video_id").pandaUploader(panda_access_details, {
     upload_progress_id: 'upload_progress',
     onsuccess: function() {

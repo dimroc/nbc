@@ -1,6 +1,8 @@
 class Block::Video < Block
   belongs_to :video, class_name: ::PandaVideo, foreign_key: :panda_video_id
 
+  accepts_nested_attributes_for :video
+
   delegate :encoded?, to: :video, allow_nil: true
 
   class << self
