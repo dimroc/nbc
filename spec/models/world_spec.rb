@@ -18,7 +18,22 @@ describe World do
     it { should validate_presence_of :slug }
   end
 
-  describe "contains?" do
+  describe "#as_json" do
+    subject { world.as_json }
+    let(:world) { FactoryGirl.create(:world_with_regions) }
+
+    it do
+      should == {
+        "id"=>world.id,
+        "name"=>world.name,
+        "slug"=>world.slug,
+        :region_names=>world.regions.map(&:slug),
+        :mercator_bounding_box=>{"min_x"=>0.0, "min_y"=>0.0, "max_x"=>19.0, "max_y"=>19.0}
+      }
+    end
+  end
+
+  describe "#contains?" do
     subject { world.contains? point }
     let(:world) { FactoryGirl.create(:world_with_regions) }
 

@@ -1,5 +1,5 @@
 class App.World extends App.Model
-  @configure 'World', 'id', 'name', 'slug'
+  @configure 'World', 'id', 'name', 'slug', 'mercator_bounding_box', 'region_names'
   @extend Spine.Model.Ajax
   @url: "#{Constants.apiBasePath}/worlds"
 

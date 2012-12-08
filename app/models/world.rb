@@ -9,10 +9,18 @@ class World < ActiveRecord::Base
   validates_presence_of :slug
 
   def as_json(options={})
-    region_names = regions.map(&:slug)
     # Opted for manual merge rather than
-    # passing regions: { only: :name } for performance.
-    super(options).merge(region_names: region_names)
+    # passing regions: { only: :name } for performance with region queries.
+    region_names = regions.map(&:slug)
+    bounding_box = generate_bounding_box
+    bounding_box = Hashie::Mash.new bounding_box.as_json
+    includes = {
+      region_names: region_names,
+      mercator_bounding_box: bounding_box.slice(:min_x, :min_y, :max_x, :max_y).as_json
+    }
+
+    final_options = { except: [:created_at, :updated_at] }.merge options
+    super(final_options).merge(includes)
   end
 
   def contains?(point)
