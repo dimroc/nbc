@@ -58,7 +58,6 @@ group :test, :development do
   gem "factory_girl_rails", ">= 3.3.0"
   gem "fixture_builder"
   gem "email_spec", ">= 1.2.1"
-  gem "jasmine"
   gem "jasminerice", git: "git://github.com/dimroc/jasminerice.git"
 
   gem 'vcr'
