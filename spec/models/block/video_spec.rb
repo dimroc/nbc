@@ -3,12 +3,12 @@ require 'spec_helper'
 describe Block::Video do
   describe ".encoded" do
     subject { Block::Video.encoded }
-    let(:encoded_video) { FactoryGirl.create(:video, url: "something") }
+    let(:encoded_video) { FactoryGirl.create(:panda_video, url: "something") }
     let(:included_block_video) { FactoryGirl.create(:block_video, video: encoded_video) }
 
     before do
       Block::Video.destroy_all
-      unencoded_video = FactoryGirl.create(:video, url: nil)
+      unencoded_video = FactoryGirl.create(:panda_video, url: nil)
       FactoryGirl.create(:block_video, video: unencoded_video)
     end
 
@@ -36,7 +36,7 @@ describe Block::Video do
     let(:block_video) { FactoryGirl.create(:block_video, video: video) }
 
     context "with video" do
-      let(:video) { FactoryGirl.create(:video, url: url) }
+      let(:video) { FactoryGirl.create(:panda_video, url: url) }
 
       context "that is encoded" do
         let(:url) { "something" }

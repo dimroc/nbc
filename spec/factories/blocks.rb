@@ -3,7 +3,7 @@ FactoryGirl.define do
     point { Mercator::FACTORY.point(-73, 40.72975).projection }
 
     factory :block_video, class: Block::Video do
-      video
+      association :video, factory: :panda_video
     end
   end
 end

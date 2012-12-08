@@ -1,4 +1,6 @@
 class Block < ActiveRecord::Base
+  BLOCK_TYPES = ["Block::Video"]
+
   set_rgeo_factory_for_column(:point, Mercator::FACTORY.projection_factory)
 
   class << self

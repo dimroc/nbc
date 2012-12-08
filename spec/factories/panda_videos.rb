@@ -3,7 +3,7 @@
 FactoryGirl.define do
   sequence(:panda_id) { |n| "PandaId_#{n}" }
 
-  factory :video, class: ::PandaVideo do
+  factory :panda_video do
     panda_id { generate(:panda_id) }
     duration 1
     width 1
