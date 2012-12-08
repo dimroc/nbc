@@ -11,16 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121125150230) do
+ActiveRecord::Schema.define(:version => 20121205125916) do
 
   create_table "blocks", :force => true do |t|
-    t.integer  "region_id"
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
-    t.spatial  "point",      :limit => {:srid=>3785, :type=>"point"}
+    t.datetime "created_at",                                              :null => false
+    t.datetime "updated_at",                                              :null => false
+    t.spatial  "point",          :limit => {:srid=>3785, :type=>"point"}
+    t.integer  "panda_video_id"
+    t.string   "type"
   end
 
+  add_index "blocks", ["panda_video_id"], :name => "index_blocks_on_panda_video_id"
   add_index "blocks", ["point"], :name => "index_blocks_on_point", :spatial => true
+  add_index "blocks", ["type"], :name => "index_blocks_on_type"
 
   create_table "neighborhood_regions", :force => true do |t|
     t.integer "region_id"
@@ -34,6 +37,21 @@ ActiveRecord::Schema.define(:version => 20121125150230) do
     t.datetime "updated_at",                                          :null => false
     t.spatial  "point",      :limit => {:srid=>3785, :type=>"point"}
   end
+
+  create_table "panda_videos", :force => true do |t|
+    t.string   "panda_id"
+    t.string   "encoding_id"
+    t.string   "original_filename"
+    t.integer  "width"
+    t.integer  "height"
+    t.integer  "duration"
+    t.string   "screenshot"
+    t.string   "url"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "panda_videos", ["panda_id"], :name => "index_panda_videos_on_panda_id", :unique => true
 
   create_table "regions", :force => true do |t|
     t.string   "name"

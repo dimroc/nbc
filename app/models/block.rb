@@ -1,6 +1,5 @@
 class Block < ActiveRecord::Base
-  belongs_to :region
-  delegate :world, to: :region, allow_nil: true
+  BLOCK_TYPES = ["Block::Video"]
 
   set_rgeo_factory_for_column(:point, Mercator::FACTORY.projection_factory)
 
@@ -11,6 +10,11 @@ class Block < ActiveRecord::Base
         ST_Distance('SRID=#{point.srid};#{point.as_text}', point) ASC
       SQL
     end
+  end
+
+  def as_json(options={})
+    inclusion = { only: [:id, :point] }
+    super(options.merge(inclusion))
   end
 
   def point_geographic

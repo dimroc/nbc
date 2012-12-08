@@ -1,0 +1,13 @@
+default: &defaults
+  access_key: 406a5b5620af84ed047d
+  secret_key: 7f61ad2af3115f2fd56c
+  cloud_id: 08f3efa18618adc397c31694f941afcf
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

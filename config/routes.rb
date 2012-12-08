@@ -4,13 +4,24 @@ NewBlockCity::Application.routes.draw do
   namespace :api do
     resources :worlds do
       resources :regions
-      resources :blocks
     end
+
+    resources :blocks
+    resources :panda_videos do
+      collection do
+        post :callback
+      end
+    end
+  end
+
+  namespace :admin do
+    resources :blocks
+    resources :panda_videos
   end
 
   # Explicitly mount Jasminerice above global match rule to prevent trumping of jasmine
   mount Jasminerice::Engine => "/jasmine" if Rails.env.development? || Rails.env.test?
-  match '/' => 'home#index'
-  match '/boroughs/(*other)' => 'home#index'
-  match '/regions/(*other)' => 'home#index'
+  match '/' => 'spine#index'
+  match '/boroughs/(*other)' => 'spine#index'
+  match '/regions/(*other)' => 'spine#index'
 end

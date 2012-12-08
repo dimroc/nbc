@@ -14,14 +14,8 @@
     %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
     %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
-    %link(href="images/favicon.ico" rel="shortcut icon")
 
+    = javascript_include_tag "application"
 
   %body
     = yield
-    #datgui{style: "position: absolute; right: 0; top: 45px;"}
-    /
-      Javascripts
-      \==================================================
-    / Placed at the end of the document so the pages load faster
-    = javascript_include_tag "application"

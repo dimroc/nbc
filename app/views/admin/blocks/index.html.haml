@@ -1,0 +1,46 @@
+%script{:src => "http://cdn.pandastream.com/u/1.4/jquery.panda-uploader.min.js", :type => "text/javascript"}
+
+- block = Block.new
+= simple_form_for [:api, block], method: "POST" do |f|
+  = f.hidden_field :type, value: 'Block::Video'
+
+  / the control will appear next to this, and the video ID will be stored here after the upload
+  %input{name: :panda_id, id: :returned_video_id, type: :hidden}
+
+  / upload progress bar (optional)
+  #upload_progress.panda_upload_progress
+
+  = f.label "Longitude"
+  %input{:name => "longitude", :type => "number"}/
+
+  = f.label "Latitude"
+  %input{:name => "latitude", :type => "number"}/
+
+  %p= f.button :submit
+
+:javascript
+  var panda_access_details = #{@access_details.to_json.html_safe};
+  $("#returned_video_id").pandaUploader(panda_access_details, {
+    upload_progress_id: 'upload_progress',
+    onsuccess: function() {
+      console.log("successfully uploaded file")
+    }
+  });
+%div
+  %table.table
+    %tr
+      %th ID
+      %th Type
+      %th Mercator Point
+      %th Geographic Point
+      %th Panda Video Id
+      %th Video Filename
+
+    - @blocks.each do |block|
+      %tr
+        %td= block.id
+        %td= block.type
+        %td= block.point
+        %td= block.point_geographic
+        %td= block.video.try(:panda_id)
+        %td= block.video.try(:original_filename)

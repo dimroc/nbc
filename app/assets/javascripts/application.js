@@ -3,6 +3,4 @@
 //= require twitter/bootstrap
 //= require vendor
 //
-//= require_tree ./initializers
-//= require app
-//= require_tree ./bootstrap
+//= require ./bootstrap/twitter.bootstrap

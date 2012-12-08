@@ -17,12 +17,15 @@ gem "thin-rails"
 gem "spine-rails", git: "git://github.com/maccman/spine-rails.git"
 gem "eco"
 gem "friendly_id"
+gem 'simple_form'
 
 gem 'activerecord-postgis-adapter', git: "git@github.com:dimroc/activerecord-postgis-adapter.git"
 gem 'rgeo'
 gem 'rgeo-shapefile'
 gem 'georuby'
 gem 'rbpoly2tri'
+
+gem 'panda'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -57,6 +60,9 @@ group :test, :development do
   gem "email_spec", ">= 1.2.1"
   gem "jasmine"
   gem "jasminerice", git: "git://github.com/dimroc/jasminerice.git"
+
+  gem 'vcr'
+  gem 'webmock', require: false
 
   case HOST_OS
     when /darwin/i

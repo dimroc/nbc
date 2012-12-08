@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 4
-  email: janet_kuphal@cronafarrell.com
-  encrypted_password: $2a$10$UvuAfGG01t0DzQfEY8eqWOZx9zwLJpIlTK3kxBizIeHM/o5ODkJWi
+  id: 1
+  email: alexa_crooks@larson.co.uk
+  encrypted_password: $2a$04$1bPyq7E2iQdshWzr6F37le3NUZjBxt/w10FMOl2qgzL5dIFDHKBNi
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

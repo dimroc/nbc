@@ -1,4 +1,4 @@
-#= require application
+#= require spine.bootstrap
 
 #= require_tree ./helpers
 #= require_tree ./fixtures
