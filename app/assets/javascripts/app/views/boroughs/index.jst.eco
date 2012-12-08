@@ -22,4 +22,25 @@
   </div>
 </div>
 
+<div class="nav nav-list debug debug-sidenav affix" style="display: none;">
+  <p class="label label-inverse"> Debug Panel</p>
+  <table class="table table-bordered">
+    <tr>
+      <th></th>
+      <th>x (longitude)</th>
+      <th>y (latitude)</th>
+    </tr>
+    <tr class="render">
+      <td>render</td>
+      <td>todo</td>
+      <td>todo</td>
+    </tr>
+    <tr class="mercator">
+      <td>mercator</td>
+      <td>todo</td>
+      <td>todo</td>
+    </tr>
+  </table>
+</div>
+
 <div id="world"></div>

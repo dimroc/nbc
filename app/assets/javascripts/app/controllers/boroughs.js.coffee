@@ -34,6 +34,7 @@ class App.Controller.Boroughs extends Spine.Controller
     output = @html @view('boroughs/index')(regions: world.regions().all())
     @worldRenderer.attachToDom($(output).find("#world"))
     @worldRenderer.animate()
+    $(output).find(".debug").fadeIn() if Env.debug
 
   index: (e) ->
     @navigate '/boroughs'

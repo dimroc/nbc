@@ -5,11 +5,20 @@ $(function() {
 
   App.World.bind('loaded', function() {
     var gui = new dat.GUI({autoPlace: false});
+    gui.closed = true;
 
     var options = { "See Regions": navigateToRegions };
 
     gui.add(options, "See Regions");
-    gui.add(Env, "debug");
+    var controller = gui.add(Env, "debug");
+    controller.onChange(function(value) {
+      console.log("debug changed to " + value);
+      if(!value) {
+        $(".debug").fadeOut();
+      } else {
+        $(".debug").fadeIn();
+      }
+    });
 
     var customContainer = $('#datgui');
     customContainer.append(gui.domElement);
