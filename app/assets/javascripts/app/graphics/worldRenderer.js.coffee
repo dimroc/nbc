@@ -48,6 +48,7 @@ class App.WorldRenderer extends Spine.Module
 
   attachToDom: (domElement)->
     $(domElement).append(@renderer.domElement)
+    @controls.domElement = domElement[0]
     @stats.attachToDom(domElement)
     window.addEventListener( 'resize', @onWindowResize, false )
     @

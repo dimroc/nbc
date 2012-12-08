@@ -26,19 +26,24 @@
   <p class="label label-inverse"> Debug Panel</p>
   <table class="table table-bordered">
     <tr>
-      <th></th>
+      <th>mouse</th>
       <th>x (longitude)</th>
       <th>y (latitude)</th>
     </tr>
-    <tr class="render">
-      <td>render</td>
-      <td>todo</td>
-      <td>todo</td>
+    <tr class="screen">
+      <td>screen</td>
+      <td class="x"></td>
+      <td class="y"></td>
+    </tr>
+    <tr class="world">
+      <td>world</td>
+      <td class="x"></td>
+      <td class="y"></td>
     </tr>
     <tr class="mercator">
       <td>mercator</td>
-      <td>todo</td>
-      <td>todo</td>
+      <td></td>
+      <td></td>
     </tr>
   </table>
 </div>

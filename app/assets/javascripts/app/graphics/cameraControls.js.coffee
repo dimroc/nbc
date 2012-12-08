@@ -48,7 +48,15 @@ class App.CameraControls
 
   mousemove: (event) =>
     return  unless @enabled
+
     @mouseOnScreen = @getMouseOnScreen(event.clientX, event.clientY)
+
+    # Convert to screen space coordinates (-1 -> 1 instead of 0 -> 1)
+    @screenSpaceMouse = @mouseOnScreen.clone().multiplyScalar(2)
+    @screenSpaceMouse.x -= 1
+    @screenSpaceMouse.y -= 1
+    @screenSpaceMouse.y *= -1
+
     @mouseRay = @getMouseRay()
     @panEnd = @getMouseOnScreen(event.clientX, event.clientY)
 
@@ -90,15 +98,9 @@ class App.CameraControls
     new THREE.Vector2(clientX / @screen.width, clientY / @screen.height)
 
   getMouseRay: ->
-    if @mouseOnScreen?
-      # Convert to screen space coordinates (-1 -> 1 instead of 0 -> 1)
-      screenSpaceMouse = @mouseOnScreen.clone().multiplyScalar(2)
-      screenSpaceMouse.x -= 1
-      screenSpaceMouse.y -= 1
-      screenSpaceMouse.y *= -1
-
+    if @screenSpaceMouse?
       # Convert mouse position into a ray pointing into world space
-      @projector.pickingRay(screenSpaceMouse, @camera)
+      @projector.pickingRay(@screenSpaceMouse.clone(), @camera)
 
   generateLineForMouseRay: ->
     material = new THREE.LineBasicMaterial({color: 0xFF0000, linewidth: 3})
@@ -115,6 +117,22 @@ class App.CameraControls
       destination = new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(300))
       @mouseRayLine.geometry.vertices[1].copy destination
       @mouseRayLine.geometry.verticesNeedUpdate = true
+
+  updateMouseCoordinatesView: ->
+    return unless @screenSpaceMouse and @mouseRay?
+    fixedDecimals = 5
+    $(".debug .screen > .x").text(@screenSpaceMouse.x.toFixed(fixedDecimals))
+    $(".debug .screen > .y").text(@screenSpaceMouse.y.toFixed(fixedDecimals))
+
+    surfacePoint = @getSurfacePointFromMouse()
+    $(".debug .world > .x").text(surfacePoint.x.toFixed(fixedDecimals))
+    $(".debug .world > .y").text(surfacePoint.y.toFixed(fixedDecimals))
+
+  getSurfacePointFromMouse: ->
+    if @mouseRay?
+      ray = @mouseRay
+      magnitudeUntilSurface = -ray.origin.z / ray.direction.z
+      new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
 
   zoomCamera: ->
     factor = (@zoomEnd - @zoomStart) * -@zoomSpeed
@@ -173,4 +191,5 @@ class App.CameraControls
 
     @camera.lookAt @target
     @updateMouseRayLine()
+    @updateMouseCoordinatesView() if Env.debug
     @cameraHelper.update()
