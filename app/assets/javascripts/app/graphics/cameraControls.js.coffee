@@ -37,12 +37,13 @@ class App.CameraControls
     scene.add(@cameraHelper)
 
   mousedown: (event) =>
-    return  unless @enabled
+    return unless @enabled
     event.preventDefault()
     event.stopPropagation()
 
     @panning = true
     @panStart = @panEnd = @getMouseOnScreen(event.clientX, event.clientY)
+    document.body.style.cursor = 'move'
     @domElement.addEventListener "mouseup", @mouseup, false
 
   mousemove: (event) =>
@@ -55,6 +56,7 @@ class App.CameraControls
     return  unless @enabled
     event.preventDefault()
     event.stopPropagation()
+    document.body.style.cursor = 'default'
     @domElement.removeEventListener "mouseup", @mouseup
     @panning = false
 
