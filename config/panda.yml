@@ -11,3 +11,4 @@ test:
 
 production:
   <<: *defaults
+  cloud_id: c77acabd8dd0b1fa0bc7eb3ec6519bd9
