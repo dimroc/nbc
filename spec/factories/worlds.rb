@@ -7,6 +7,9 @@ FactoryGirl.define do
     after(:build) do |world, evaluator|
       world.regions << FactoryGirl.build(:region_with_geometry)
       world.regions << FactoryGirl.build(:region_with_geometry, left: 10, bottom: 10)
+
+      world.mercator_bounding_box_geometry = world.generate_bounding_box.to_geometry
+      world.mesh_bounding_box_geometry = world.generate_mesh_bounding_box.to_geometry
     end
   end
 end

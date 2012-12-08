@@ -21,6 +21,7 @@ FactoryGirl.define do
       height = evaluator.height
 
       region.geometry = GeometryHelper.rectangle left, bottom, width, height
+      Loader::Region.generate_threejs region
     end
   end
 end

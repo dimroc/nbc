@@ -1,8 +1,8 @@
 ---
 standard_user:
-  id: 1
-  email: alexa_crooks@larson.co.uk
-  encrypted_password: $2a$04$1bPyq7E2iQdshWzr6F37le3NUZjBxt/w10FMOl2qgzL5dIFDHKBNi
+  id: 3
+  email: zoe_nikolaus@baileyzboncak.uk
+  encrypted_password: $2a$04$ZgdqNBBp/z3F.Z2GMUjecOiGZC4UFBWKoszOkUO3K6VpCcMqhgj1m
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

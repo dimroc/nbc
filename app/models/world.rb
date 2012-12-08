@@ -14,11 +14,14 @@ class World < ActiveRecord::Base
     region_names = regions.map(&:slug)
     includes = {
       region_names: region_names,
-      mercator_bounding_box: bounding_box_as_json(generate_bounding_box),
-      mesh_bounding_box: bounding_box_as_json(generate_mesh_bounding_box),
+      mercator_bounding_box: mercator_bounding_box_as_json,
+      mesh_bounding_box: mesh_bounding_box_as_json,
     }
 
-    final_options = { except: [:created_at, :updated_at] }.merge options
+    final_options = {
+      only: [:id, :name, :slug],
+      except: [:created_at, :updated_at]
+    }.merge options
     super(final_options).merge(includes)
   end
 
@@ -26,16 +29,14 @@ class World < ActiveRecord::Base
     regions.any? { |region| region.contains? point }
   end
 
-  #TODO: Persist for optimization
   def generate_bounding_box
-    bb = Cartesian::BoundingBox.new(Cartesian::preferred_factory())
+    bb = Cartesian::BoundingBox.new(Mercator::FACTORY.projection_factory)
     bounding_boxes = regions.each do |region|
       bb.add(region.generate_bounding_box)
     end
     bb
   end
 
-  #TODO: Persist for optimization
   def generate_mesh_bounding_box
     bb = Cartesian::BoundingBox.new(Cartesian::preferred_factory())
     outlines = regions.map(&:threejs).map { |threejs| threejs[:outlines] }.flatten
@@ -49,6 +50,18 @@ class World < ActiveRecord::Base
   end
 
   private
+
+  def mercator_bounding_box_as_json
+    bb = Cartesian::BoundingBox.new(Mercator::FACTORY.projection_factory())
+    bb.add mercator_bounding_box_geometry
+    bounding_box_as_json bb
+  end
+
+  def mesh_bounding_box_as_json
+    bb = Cartesian::BoundingBox.new(Cartesian::preferred_factory())
+    bb.add mesh_bounding_box_geometry
+    bounding_box_as_json bb
+  end
 
   def bounding_box_as_json(bb)
     mash = Hashie::Mash.new bb.as_json

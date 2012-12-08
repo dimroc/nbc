@@ -34,6 +34,8 @@ class Loader::World
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)
       generate_outlines(world, 1/options.inverse_scale.to_f, options.tolerance)
 
+      world.mercator_bounding_box_geometry = world.generate_bounding_box.to_geometry
+      world.mesh_bounding_box_geometry = world.generate_mesh_bounding_box.to_geometry
       world
     end
 
