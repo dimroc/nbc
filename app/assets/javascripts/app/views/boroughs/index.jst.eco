@@ -27,8 +27,8 @@
   <table class="table table-bordered">
     <tr>
       <th>mouse</th>
-      <th>x (longitude)</th>
-      <th>y (latitude)</th>
+      <th>x</th>
+      <th>y</th>
     </tr>
     <tr class="screen">
       <td>screen</td>

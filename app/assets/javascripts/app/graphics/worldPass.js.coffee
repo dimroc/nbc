@@ -13,9 +13,9 @@ class App.WorldPass
     if @renderToScreen
       renderer.render(@worldRenderer.outlineScene, @worldRenderer.camera)
       renderer.render(@worldRenderer.blockScene, @worldRenderer.camera)
-      renderer.render(@worldRenderer.debugScene, @worldRenderer.camera) if Env.debug
+      renderer.render(@worldRenderer.debugRenderer.debugScene, @worldRenderer.camera) if Env.debug
     else
       # Render to the ReadBuffer since this is the first pass and no swap is necessary.
       renderer.render(@worldRenderer.outlineScene, @worldRenderer.camera, readBuffer)
       renderer.render(@worldRenderer.blockScene, @worldRenderer.camera, readBuffer)
-      renderer.render(@worldRenderer.debugScene, @worldRenderer.camera, readBuffer) if Env.debug
+      renderer.render(@worldRenderer.debugRenderer.debugScene, @worldRenderer.camera, readBuffer) if Env.debug

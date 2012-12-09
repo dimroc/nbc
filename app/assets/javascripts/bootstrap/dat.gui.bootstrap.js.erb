@@ -12,7 +12,6 @@ $(function() {
     gui.add(options, "See Regions");
     var controller = gui.add(Env, "debug");
     controller.onChange(function(value) {
-      console.log("debug changed to " + value);
       if(!value) {
         $(".debug").fadeOut();
       } else {

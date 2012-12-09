@@ -15,12 +15,10 @@ class App.WorldRenderer extends Spine.Module
     @clock = new THREE.Clock()
     @blockScene = new THREE.Scene()
     @outlineScene = new THREE.Scene()
-    @debugScene = new THREE.Scene()
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
     @controls = new App.CameraControls(@camera)
-    @controls.addDebugMeshesToScene(@debugScene)
 
     @renderer = createRenderer(options)
     @composer = createComposer(options, @)
@@ -33,6 +31,8 @@ class App.WorldRenderer extends Spine.Module
     )
 
     @blockScene.add(@directionalLight)
+
+    @debugRenderer = new App.DebugRenderer(@camera, @controls)
 
     @stats = new App.StatsRenderer()
     worldRenderers.push(@)
@@ -72,22 +72,12 @@ class App.WorldRenderer extends Spine.Module
       @requestId = requestAnimationFrame(@animate)
 
   update: (delta) ->
-    @controls.update( delta )
-    @updateDebugMouseGeographyView(@controls.mouseOnSurface.clone()) if @controls.mouseOnSurface?
+    @controls.update(delta)
+    @debugRenderer.update(delta) if Env.debug
     @stats.update()
 
   render: (delta) ->
     @composer.render(delta)
-
-  updateDebugMouseGeographyView: (mouseOnSurface) ->
-    if @world?
-      mercator = @world.transformSurfaceToMercator(mouseOnSurface)
-      $(".debug .mercator > .x").text(mercator.x.toFixed(5))
-      $(".debug .mercator > .y").text(mercator.y.toFixed(5))
-
-      lonlat = @world.transformSurfaceToLonLat(mouseOnSurface)
-      $(".debug .lonlat > .x").text(lonlat.lon.toFixed(5))
-      $(".debug .lonlat > .y").text(lonlat.lat.toFixed(5))
 
   addOutlines: (meshParam)->
     _.each(coerceIntoArray(meshParam), (mesh) ->
@@ -111,7 +101,7 @@ class App.WorldRenderer extends Spine.Module
 
   addWorld: (world)->
     throw "Can only add one world to world renderer" if @world?
-    @world = world
+    @world = @debugRenderer.world = world
     @addRegions(world.regions().all())
     App.WorldRenderer.trigger 'worldAdded', world
 

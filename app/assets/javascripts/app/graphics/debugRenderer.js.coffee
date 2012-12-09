@@ -1,0 +1,59 @@
+class App.DebugRenderer
+  constructor: (camera, cameraControls) ->
+    @debugScene = new THREE.Scene()
+    @camera = camera
+    @controls = cameraControls
+
+    @mouseRayLine = @generateLineForMouseRay()
+    @debugScene.add(@mouseRayLine)
+
+    @cameraHelper = new THREE.CameraHelper(@camera)
+    @debugScene.add(@cameraHelper)
+
+  update: (delta) ->
+    @cameraHelper.update()
+    @updateMouseRayLine()
+    @updateDebugMouseGeographyView()
+    @updateMouseCoordinatesView()
+
+  updateDebugMouseGeographyView: ->
+    if @world? and @controls.mouseOnSurface?
+      mouseOnSurface = @controls.mouseOnSurface.clone()
+
+      mercator = @world.transformSurfaceToMercator(mouseOnSurface)
+      $(".debug .mercator > .x").text(mercator.x.toFixed(5))
+      $(".debug .mercator > .y").text(mercator.y.toFixed(5))
+
+      lonlat = @world.transformSurfaceToLonLat(mouseOnSurface)
+      $(".debug .lonlat > .x").text(lonlat.lon.toFixed(5))
+      $(".debug .lonlat > .y").text(lonlat.lat.toFixed(5))
+
+  generateLineForMouseRay: ->
+    material = new THREE.LineBasicMaterial({color: 0xFF0000, linewidth: 3})
+    geometry = new THREE.Geometry()
+    geometry.vertices.push(new THREE.Vector3())
+    geometry.vertices.push(new THREE.Vector3())
+    new THREE.Line(geometry, material)
+
+  updateMouseRayLine: ->
+    if @controls.mouseRay?
+      ray = @controls.mouseRay
+      @mouseRayLine.geometry.vertices[0].copy ray.origin
+
+      destination = new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(300))
+      @mouseRayLine.geometry.vertices[1].copy destination
+      @mouseRayLine.geometry.verticesNeedUpdate = true
+
+  updateMouseCoordinatesView: ->
+    return unless @controls.mouseOnScreen? and @controls.mouseOnSurface?
+
+    mouseOnScreen = @controls.mouseOnScreen.clone()
+    fixedDecimals = 5
+    $(".debug .screen > .x").text(mouseOnScreen.x.toFixed(fixedDecimals))
+    $(".debug .screen > .y").text(mouseOnScreen.y.toFixed(fixedDecimals))
+
+    surfacePoint = @controls.mouseOnSurface.clone()
+    $(".debug .world > .x").text(surfacePoint.x.toFixed(fixedDecimals))
+    $(".debug .world > .y").text(surfacePoint.y.toFixed(fixedDecimals))
+
+
