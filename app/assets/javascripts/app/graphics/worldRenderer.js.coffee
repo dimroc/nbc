@@ -47,6 +47,7 @@ class App.WorldRenderer extends Spine.Module
     worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
+    @domElement = domElement
     $(domElement).append(@renderer.domElement)
     @controls.domElement = domElement[0]
     @stats.attachToDom(domElement)
@@ -59,12 +60,34 @@ class App.WorldRenderer extends Spine.Module
     @controls.handleResize()
 
   animate: (elapsedTicks)=>
-    render(@)
+    delta = @clock.getDelta()
+
+    @update(delta)
+    @render(delta)
+
     if @destroyed
       cancelAnimationFrame @requestId
       console.debug("Animating after destruction...")
     else
       @requestId = requestAnimationFrame(@animate)
+
+  update: (delta) ->
+    @controls.update( delta )
+    @updateDebugMouseGeographyView(@controls.mouseOnSurface.clone()) if @controls.mouseOnSurface?
+    @stats.update()
+
+  render: (delta) ->
+    @composer.render(delta)
+
+  updateDebugMouseGeographyView: (mouseOnSurface) ->
+    if @world?
+      mercator = @world.transformSurfaceToMercator(mouseOnSurface)
+      $(".debug .mercator > .x").text(mercator.x.toFixed(5))
+      $(".debug .mercator > .y").text(mercator.y.toFixed(5))
+
+      lonlat = @world.transformSurfaceToLonLat(mouseOnSurface)
+      $(".debug .lonlat > .x").text(lonlat.lon.toFixed(5))
+      $(".debug .lonlat > .y").text(lonlat.lat.toFixed(5))
 
   addOutlines: (meshParam)->
     _.each(coerceIntoArray(meshParam), (mesh) ->
@@ -87,6 +110,8 @@ class App.WorldRenderer extends Spine.Module
 
 
   addWorld: (world)->
+    throw "Can only add one world to world renderer" if @world?
+    @world = world
     @addRegions(world.regions().all())
     App.WorldRenderer.trigger 'worldAdded', world
 
@@ -153,15 +178,6 @@ createDirectionalLight = (options) ->
 
 createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
-
-render = (worldRenderer) ->
-  delta = worldRenderer.clock.getDelta()
-  worldRenderer.meshes().forEach (child) ->
-    child.animate(delta) if child.animate
-
-  worldRenderer.controls.update( delta )
-  worldRenderer.composer.render(delta)
-  worldRenderer.stats.update()
 
 calculate_options = ->
   {

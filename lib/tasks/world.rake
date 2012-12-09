@@ -6,7 +6,7 @@ namespace :world do
 
   def enable_logging
     raise ArgumentError, "must have disabled logging first" unless @old_logger
-    ActiveRecord::Base.logger = old_logger
+    ActiveRecord::Base.logger = @old_logger
   end
 
   desc "Generate all worlds or a specific world from worlds.yml"

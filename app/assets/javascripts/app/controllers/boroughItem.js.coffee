@@ -7,7 +7,6 @@ class App.Controller.BoroughItem extends Spine.Controller
     @worldRenderer = worldRenderer
     @region = region
     @slug = region.slug
-    @worldRenderer.addRegions(region)
 
   render: =>
 

@@ -42,8 +42,13 @@
     </tr>
     <tr class="mercator">
       <td>mercator</td>
-      <td></td>
-      <td></td>
+      <td class="x"></td>
+      <td class="y"></td>
+    </tr>
+    <tr class="lonlat">
+      <td>lon/lat</td>
+      <td class="x"></td>
+      <td class="y"></td>
     </tr>
   </table>
 </div>

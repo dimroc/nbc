@@ -58,6 +58,7 @@ class App.CameraControls
     @screenSpaceMouse.y *= -1
 
     @mouseRay = @getMouseRay()
+    @mouseOnSurface = @getSurfacePointFromMouse()
     @panEnd = @getMouseOnScreen(event.clientX, event.clientY)
 
   mouseup: (event) =>
@@ -102,6 +103,12 @@ class App.CameraControls
       # Convert mouse position into a ray pointing into world space
       @projector.pickingRay(@screenSpaceMouse.clone(), @camera)
 
+  getSurfacePointFromMouse: ->
+    if @mouseRay?
+      ray = @mouseRay
+      magnitudeUntilSurface = -ray.origin.z / ray.direction.z
+      new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
+
   generateLineForMouseRay: ->
     material = new THREE.LineBasicMaterial({color: 0xFF0000, linewidth: 3})
     geometry = new THREE.Geometry()
@@ -124,15 +131,9 @@ class App.CameraControls
     $(".debug .screen > .x").text(@screenSpaceMouse.x.toFixed(fixedDecimals))
     $(".debug .screen > .y").text(@screenSpaceMouse.y.toFixed(fixedDecimals))
 
-    surfacePoint = @getSurfacePointFromMouse()
+    surfacePoint = @mouseOnSurface.clone()
     $(".debug .world > .x").text(surfacePoint.x.toFixed(fixedDecimals))
     $(".debug .world > .y").text(surfacePoint.y.toFixed(fixedDecimals))
-
-  getSurfacePointFromMouse: ->
-    if @mouseRay?
-      ray = @mouseRay
-      magnitudeUntilSurface = -ray.origin.z / ray.direction.z
-      new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
 
   zoomCamera: ->
     factor = (@zoomEnd - @zoomStart) * -@zoomSpeed

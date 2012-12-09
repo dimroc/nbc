@@ -27,6 +27,7 @@ class App.Controller.Boroughs extends Spine.Controller
 
   render: =>
     world = World.first()
+    @worldRenderer.addWorld(world)
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))

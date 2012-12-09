@@ -1,7 +1,7 @@
 defaults: &defaults
   region_name_key: BoroCD
   inverse_scale: 700
-  tolerance: 4
+  tolerance: 3
 
 worlds:
   - name: NYC
