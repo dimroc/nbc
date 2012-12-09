@@ -33,9 +33,8 @@ class Loader::World
 
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)
       generate_threejs(world, 1/options.inverse_scale.to_f, options.tolerance)
+      generate_bounding_boxes(world)
 
-      world.mercator_bounding_box_geometry = world.generate_bounding_box.to_geometry
-      world.mesh_bounding_box_geometry = world.generate_mesh_bounding_box.to_geometry
       world
     end
 
@@ -66,6 +65,11 @@ class Loader::World
       world.regions.each do |region|
         Loader::Region.generate_threejs(region, offset, scale, tolerance)
       end
+    end
+
+    def generate_bounding_boxes(world)
+      world.mercator_bounding_box_geometry = world.generate_bounding_box.to_geometry
+      world.mesh_bounding_box_geometry = world.generate_mesh_bounding_box.to_geometry
     end
 
     private
