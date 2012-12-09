@@ -5,11 +5,24 @@ $(function() {
 
   App.World.bind('loaded', function() {
     var gui = new dat.GUI({autoPlace: false});
+    gui.closed = true;
 
     var options = { "See Regions": navigateToRegions };
 
     gui.add(options, "See Regions");
-    gui.add(Env, "debug");
+    var debugController = gui.add(Env, "debug");
+    debugController.onChange(function(value) {
+      if(!value) {
+        $(".debug").fadeOut();
+      } else {
+        $(".debug").fadeIn();
+      }
+    });
+
+    var wireframeController = gui.add(Env, "wireframe");
+    wireframeController.onChange(function(value) {
+      getHook().reloadRegions();
+    });
 
     var customContainer = $('#datgui');
     customContainer.append(gui.domElement);

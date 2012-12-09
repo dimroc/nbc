@@ -32,7 +32,8 @@ class Loader::World
       options.tolerance = 25 unless options.tolerance
 
       world = from_shapefile(options.name, options.shapefile, options.region_name_key)
-      generate_outlines(world, 1/options.inverse_scale.to_f, options.tolerance)
+      generate_threejs(world, 1/options.inverse_scale.to_f, options.tolerance)
+      generate_bounding_boxes(world)
 
       world
     end
@@ -56,12 +57,19 @@ class Loader::World
       world
     end
 
-    def generate_outlines(world, scale, tolerance)
+    def generate_threejs(world, scale, tolerance)
       bb = world.generate_bounding_box
       offset = Hashie::Mash.new(x: -bb.min_x, y: -bb.min_y, z: 0)
+      world.mesh_scale = scale
+
       world.regions.each do |region|
         Loader::Region.generate_threejs(region, offset, scale, tolerance)
       end
+    end
+
+    def generate_bounding_boxes(world)
+      world.mercator_bounding_box_geometry = world.generate_bounding_box.to_geometry
+      world.mesh_bounding_box_geometry = world.generate_mesh_bounding_box.to_geometry
     end
 
     private

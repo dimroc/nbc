@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: alexa_crooks@larson.co.uk
-  encrypted_password: $2a$04$1bPyq7E2iQdshWzr6F37le3NUZjBxt/w10FMOl2qgzL5dIFDHKBNi
+  email: isom.labadie@oreilly.biz
+  encrypted_password: $2a$04$tLIV8gB0CC9TlodfuIX4.uDiidlB8WJigKv0zUFpUXjtP0Y8UIIE2
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

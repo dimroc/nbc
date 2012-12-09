@@ -1,5 +1,5 @@
 class App.World extends App.Model
-  @configure 'World', 'id', 'name', 'slug'
+  @configure 'World', 'id', 'name', 'slug', 'region_names', 'mercator_bounding_box', 'mesh_bounding_box', 'mesh_scale'
   @extend Spine.Model.Ajax
   @url: "#{Constants.apiBasePath}/worlds"
 
@@ -33,6 +33,10 @@ class App.World extends App.Model
         if loaded == worlds.length
           World.allLoaded = true
           World.trigger('allLoaded', worlds)
+
+  constructor: (attributes = {}) ->
+    super(attributes)
+    @inverse_mesh_scale = 1/@mesh_scale
 
   validate: ->
     @errors = {}
@@ -94,3 +98,12 @@ class App.World extends App.Model
   allBlockMeshes: ->
     _regions = _(@regions().all())
     _regions.map((region) -> region.blocksMesh())
+
+  transformSurfaceToMercator: (surfacePoint) ->
+    x = @mercator_bounding_box.min_x + surfacePoint.x * @inverse_mesh_scale
+    y = @mercator_bounding_box.min_y + surfacePoint.y * @inverse_mesh_scale
+    new THREE.Vector2(x, y)
+
+  transformSurfaceToLonLat: (surfacePoint) ->
+    m = @transformSurfaceToMercator(surfacePoint)
+    MercatorConverter.m2ll(m.x, m.y)

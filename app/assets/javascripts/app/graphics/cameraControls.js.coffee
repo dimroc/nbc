@@ -5,8 +5,6 @@ class App.CameraControls
     @camera = camera
     @domElement = (if (domElement isnt `undefined`) then domElement else document)
     @projector = new THREE.Projector()
-    @mouseRayLine = @generateLineForMouseRay()
-    @cameraHelper = new THREE.CameraHelper(@camera)
 
     @enabled = true
     @screen = width: 0, height: 0
@@ -32,25 +30,30 @@ class App.CameraControls
     @domElement.addEventListener "DOMMouseScroll", @mousewheel, false # firefox
     @handleResize()
 
-  addDebugMeshesToScene: (scene) ->
-    scene.add(@mouseRayLine)
-    scene.add(@cameraHelper)
-
   mousedown: (event) =>
     return unless @enabled
     event.preventDefault()
     event.stopPropagation()
 
     @panning = true
-    @panStart = @panEnd = @getMouseOnScreen(event.clientX, event.clientY)
+    @panStart = @panEnd = @_getMouseOnScreen(event.clientX, event.clientY)
     document.body.style.cursor = 'move'
     @domElement.addEventListener "mouseup", @mouseup, false
 
   mousemove: (event) =>
     return  unless @enabled
-    @mouseOnScreen = @getMouseOnScreen(event.clientX, event.clientY)
-    @mouseRay = @getMouseRay()
-    @panEnd = @getMouseOnScreen(event.clientX, event.clientY)
+
+    @mouseOnHtmlScreen = @_getMouseOnScreen(event.clientX, event.clientY)
+    @panEnd = @mouseOnHtmlScreen.clone()
+
+    # Convert to screen space coordinates (-1 -> 1 instead of 0 -> 1)
+    @mouseOnScreen = @mouseOnHtmlScreen.clone().multiplyScalar(2)
+    @mouseOnScreen.x -= 1
+    @mouseOnScreen.y -= 1
+    @mouseOnScreen.y *= -1
+
+    @mouseRay = @_getMouseRay()
+    @mouseOnSurface = @_getMouseOnSurface()
 
   mouseup: (event) =>
     return  unless @enabled
@@ -86,35 +89,19 @@ class App.CameraControls
   handleEvent: (event) =>
     this[event.type] event if typeof this[event.type] is "function"
 
-  getMouseOnScreen: (clientX, clientY) =>
+  _getMouseOnScreen: (clientX, clientY) =>
     new THREE.Vector2(clientX / @screen.width, clientY / @screen.height)
 
-  getMouseRay: ->
+  _getMouseRay: ->
     if @mouseOnScreen?
-      # Convert to screen space coordinates (-1 -> 1 instead of 0 -> 1)
-      screenSpaceMouse = @mouseOnScreen.clone().multiplyScalar(2)
-      screenSpaceMouse.x -= 1
-      screenSpaceMouse.y -= 1
-      screenSpaceMouse.y *= -1
-
       # Convert mouse position into a ray pointing into world space
-      @projector.pickingRay(screenSpaceMouse, @camera)
+      @projector.pickingRay(@mouseOnScreen.clone(), @camera)
 
-  generateLineForMouseRay: ->
-    material = new THREE.LineBasicMaterial({color: 0xFF0000, linewidth: 3})
-    geometry = new THREE.Geometry()
-    geometry.vertices.push(new THREE.Vector3())
-    geometry.vertices.push(new THREE.Vector3())
-    new THREE.Line(geometry, material)
-
-  updateMouseRayLine: ->
-    if @mouseRayLine? and @mouseRay?
+  _getMouseOnSurface: ->
+    if @mouseRay?
       ray = @mouseRay
-      @mouseRayLine.geometry.vertices[0].copy ray.origin
-
-      destination = new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(300))
-      @mouseRayLine.geometry.vertices[1].copy destination
-      @mouseRayLine.geometry.verticesNeedUpdate = true
+      magnitudeUntilSurface = -ray.origin.z / ray.direction.z
+      new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
 
   zoomCamera: ->
     factor = (@zoomEnd - @zoomStart) * -@zoomSpeed
@@ -172,5 +159,3 @@ class App.CameraControls
     @camera.position.add @target, @eye
 
     @camera.lookAt @target
-    @updateMouseRayLine()
-    @cameraHelper.update()

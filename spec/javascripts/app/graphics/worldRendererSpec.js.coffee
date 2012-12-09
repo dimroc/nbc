@@ -26,8 +26,8 @@ describe "graphics.WorldRenderer", ->
         worldRenderer.addBlocks(mesh)
         expect(worldRenderer.meshes()).toInclude(mesh)
 
-    describe "#addOutlines", ->
+    describe "#addRegionMeshes", ->
       it "should add to its children", ->
         mesh = new THREE.Mesh()
-        worldRenderer.addOutlines(mesh)
+        worldRenderer.addRegionMeshes(mesh)
         expect(worldRenderer.meshes()).toInclude(mesh)

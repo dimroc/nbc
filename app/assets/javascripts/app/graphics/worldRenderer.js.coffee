@@ -14,13 +14,11 @@ class App.WorldRenderer extends Spine.Module
     console.debug("Creating worldRenderer...")
     @clock = new THREE.Clock()
     @blockScene = new THREE.Scene()
-    @outlineScene = new THREE.Scene()
-    @debugScene = new THREE.Scene()
+    @regionScene = new THREE.Scene()
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
     @controls = new App.CameraControls(@camera)
-    @controls.addDebugMeshesToScene(@debugScene)
 
     @renderer = createRenderer(options)
     @composer = createComposer(options, @)
@@ -33,6 +31,8 @@ class App.WorldRenderer extends Spine.Module
     )
 
     @blockScene.add(@directionalLight)
+
+    @debugRenderer = new App.DebugRenderer(@camera, @controls)
 
     @stats = new App.StatsRenderer()
     worldRenderers.push(@)
@@ -47,7 +47,9 @@ class App.WorldRenderer extends Spine.Module
     worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
   attachToDom: (domElement)->
+    @domElement = domElement
     $(domElement).append(@renderer.domElement)
+    @controls.domElement = domElement[0]
     @stats.attachToDom(domElement)
     window.addEventListener( 'resize', @onWindowResize, false )
     @
@@ -58,16 +60,28 @@ class App.WorldRenderer extends Spine.Module
     @controls.handleResize()
 
   animate: (elapsedTicks)=>
-    render(@)
+    delta = @clock.getDelta()
+
+    @update(delta)
+    @render(delta)
+
     if @destroyed
       cancelAnimationFrame @requestId
       console.debug("Animating after destruction...")
     else
       @requestId = requestAnimationFrame(@animate)
 
-  addOutlines: (meshParam)->
+  update: (delta) ->
+    @controls.update(delta)
+    @debugRenderer.update(delta) if Env.debug
+    @stats.update()
+
+  render: (delta) ->
+    @composer.render(delta)
+
+  addRegionMeshes: (meshParam)->
     _.each(coerceIntoArray(meshParam), (mesh) ->
-      @outlineScene.add( mesh )
+      @regionScene.add( mesh )
     , @)
     @
 
@@ -79,18 +93,21 @@ class App.WorldRenderer extends Spine.Module
 
   addRegions: (regions)->
     _(coerceIntoArray(regions)).each (region) =>
-      # @addOutlines(region.outlineMeshes())
-      @addOutlines(region.modelMesh())
-      @addBlocks(region.blocksMesh())
-      App.WorldRenderer.trigger 'regionAdded', region
-
+      # @addRegions(region.outlineMeshes())
+      @addRegionMeshes(region.modelMesh())
 
   addWorld: (world)->
+    throw "Can only add one world to world renderer" if @world?
+    @world = @debugRenderer.world = world
     @addRegions(world.regions().all())
     App.WorldRenderer.trigger 'worldAdded', world
 
+  reloadRegions: ->
+    @regionScene = new THREE.Scene()
+    @addRegions(@world.regions().all())
+
   meshes: ->
-    @outlineScene.children.concat @blockScene.children
+    @regionScene.children.concat @blockScene.children
 
 # privates
 
@@ -152,15 +169,6 @@ createDirectionalLight = (options) ->
 
 createAmbientLight = (options) ->
   light = new THREE.AmbientLight( 0x333333 )
-
-render = (worldRenderer) ->
-  delta = worldRenderer.clock.getDelta()
-  worldRenderer.meshes().forEach (child) ->
-    child.animate(delta) if child.animate
-
-  worldRenderer.controls.update( delta )
-  worldRenderer.composer.render(delta)
-  worldRenderer.stats.update()
 
 calculate_options = ->
   {

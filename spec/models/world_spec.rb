@@ -18,7 +18,24 @@ describe World do
     it { should validate_presence_of :slug }
   end
 
-  describe "contains?" do
+  describe "#as_json" do
+    subject { world.as_json }
+    let(:world) { FactoryGirl.create(:world_with_regions) }
+
+    it do
+      should == {
+        "id"=>world.id,
+        "name"=>world.name,
+        "slug"=>world.slug,
+        :region_names=>world.regions.map(&:slug),
+        "mesh_scale" => 1.0,
+        :mercator_bounding_box=>{"min_x"=>0.0, "min_y"=>0.0, "max_x"=>19.0, "max_y"=>19.0},
+        :mesh_bounding_box=>{"min_x"=>0.0, "min_y"=>0.0, "max_x"=>19.0, "max_y"=>19.0},
+      }
+    end
+  end
+
+  describe "#contains?" do
     subject { world.contains? point }
     let(:world) { FactoryGirl.create(:world_with_regions) }
 
@@ -54,6 +71,20 @@ describe World do
     context "with no regions" do
       let(:world) { FactoryGirl.create(:world) }
       it { should be_empty }
+    end
+  end
+
+  describe "#generate_mesh_bounding_box" do
+    subject { world.generate_mesh_bounding_box }
+    let(:world) { FactoryGirl.create(:world_with_regions) }
+    before { world.regions.each { |region| Loader::Region.generate_threejs region, {}, 0.5 } }
+
+    it "should generate a bounding box for the generated three js outlines" do
+      bb = subject
+      bb.min_x.should == 0.0
+      bb.max_x.should == 9.5 # half of 19, which is factory default
+      bb.min_y.should == 0.0
+      bb.max_y.should == 9.5
     end
   end
 end

@@ -9,7 +9,7 @@ class THREEJS::Encoder
       outlines = THREEJS::Encoder.outlines(geometry)
       outlines = THREEJS::Encoder.offset_outlines(outlines, offset, scale)
 
-      { model: model, outlines: outlines }
+      { model: model, outlines: outlines, scale: scale, offset: offset }
     end
 
     def outlines(geometry)
