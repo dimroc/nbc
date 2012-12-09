@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121208203111) do
+ActiveRecord::Schema.define(:version => 20121209143620) do
 
   create_table "blocks", :force => true do |t|
     t.datetime "created_at",                                              :null => false
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20121208203111) do
     t.datetime "updated_at",                                                                 :null => false
     t.spatial  "mercator_bounding_box_geometry", :limit => {:srid=>3785, :type=>"geometry"}
     t.spatial  "mesh_bounding_box_geometry",     :limit => {:srid=>0, :type=>"geometry"}
+    t.float    "mesh_scale"
   end
 
   create_table "zip_code_maps", :force => true do |t|

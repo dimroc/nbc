@@ -19,7 +19,7 @@ class World < ActiveRecord::Base
     }
 
     final_options = {
-      only: [:id, :name, :slug],
+      only: [:id, :name, :slug, :mesh_scale],
       except: [:created_at, :updated_at]
     }.merge options
     super(final_options).merge(includes)

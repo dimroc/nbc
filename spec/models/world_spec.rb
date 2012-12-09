@@ -28,6 +28,7 @@ describe World do
         "name"=>world.name,
         "slug"=>world.slug,
         :region_names=>world.regions.map(&:slug),
+        "mesh_scale" => 1.0,
         :mercator_bounding_box=>{"min_x"=>0.0, "min_y"=>0.0, "max_x"=>19.0, "max_y"=>19.0},
         :mesh_bounding_box=>{"min_x"=>0.0, "min_y"=>0.0, "max_x"=>19.0, "max_y"=>19.0},
       }

@@ -10,6 +10,7 @@ FactoryGirl.define do
 
       world.mercator_bounding_box_geometry = world.generate_bounding_box.to_geometry
       world.mesh_bounding_box_geometry = world.generate_mesh_bounding_box.to_geometry
+      Loader::World.generate_threejs(world, 1, 1)
     end
   end
 end
