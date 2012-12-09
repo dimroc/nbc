@@ -14,7 +14,7 @@ class App.WorldRenderer extends Spine.Module
     console.debug("Creating worldRenderer...")
     @clock = new THREE.Clock()
     @blockScene = new THREE.Scene()
-    @outlineScene = new THREE.Scene()
+    @regionScene = new THREE.Scene()
 
     options = calculate_options()
     @camera = createPerspectiveCamera(options)
@@ -79,9 +79,9 @@ class App.WorldRenderer extends Spine.Module
   render: (delta) ->
     @composer.render(delta)
 
-  addOutlines: (meshParam)->
+  addRegionMeshes: (meshParam)->
     _.each(coerceIntoArray(meshParam), (mesh) ->
-      @outlineScene.add( mesh )
+      @regionScene.add( mesh )
     , @)
     @
 
@@ -93,11 +93,8 @@ class App.WorldRenderer extends Spine.Module
 
   addRegions: (regions)->
     _(coerceIntoArray(regions)).each (region) =>
-      # @addOutlines(region.outlineMeshes())
-      @addOutlines(region.modelMesh())
-      @addBlocks(region.blocksMesh())
-      App.WorldRenderer.trigger 'regionAdded', region
-
+      # @addRegions(region.outlineMeshes())
+      @addRegionMeshes(region.modelMesh())
 
   addWorld: (world)->
     throw "Can only add one world to world renderer" if @world?
@@ -105,8 +102,12 @@ class App.WorldRenderer extends Spine.Module
     @addRegions(world.regions().all())
     App.WorldRenderer.trigger 'worldAdded', world
 
+  reloadRegions: ->
+    @regionScene = new THREE.Scene()
+    @addRegions(@world.regions().all())
+
   meshes: ->
-    @outlineScene.children.concat @blockScene.children
+    @regionScene.children.concat @blockScene.children
 
 # privates
 

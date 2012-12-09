@@ -3,7 +3,7 @@ class window.Logger
     singleton.debug.apply singleton, arguments
 
   constructor: ->
-    @enabled = Env.debug?
+    @enabled = Env.debug
 
   debug: ->
     return unless @enabled

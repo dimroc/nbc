@@ -4,7 +4,8 @@ class App.MeshFactory
 
     loader = new THREE.JSONLoader()
     color = 0x000000
-    material  = new THREE.MeshBasicMaterial({color:color})
+    material = new THREE.MeshBasicMaterial({color:color})
+    material.wireframe = true if Env.wireframe
 
     mesh = null
     loader.createModel(region.threejs.model, (geometry) ->
