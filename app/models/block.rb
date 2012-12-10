@@ -13,11 +13,23 @@ class Block < ActiveRecord::Base
   end
 
   def as_json(options={})
-    inclusion = { only: [:id, :point] }
-    super(options.merge(inclusion))
+    inclusion = { only: [:id] }
+
+    super(options.merge(inclusion)).merge(point_as_json)
   end
 
   def point_geographic
     Mercator::FACTORY.unproject(self.point)
+  end
+
+  def point_as_json
+    pg = point_geographic
+    {
+      point:
+      {
+        mercator: [point.x, point.y],
+        geographic: [pg.x, pg.y]
+      }
+    }
   end
 end

@@ -1,5 +1,6 @@
 $ = jQuery.sub()
 World = App.World
+Block = App.Block
 
 class App.Controller.Splash extends Spine.Controller
   className: 'splash'

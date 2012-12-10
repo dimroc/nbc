@@ -7,7 +7,7 @@ class App.WorldRenderer extends Spine.Module
   @first: -> worldRenderers[0]
   @create: () -> new WorldRenderer()
 
-  constructor: ()->
+  constructor: (world) ->
     if ( ! Detector.webgl )
       Detector.addGetWebGLMessage()
 
@@ -85,9 +85,9 @@ class App.WorldRenderer extends Spine.Module
     , @)
     @
 
-  addBlocks: (meshParam)->
-    _.each(coerceIntoArray(meshParam), (mesh) ->
-      @blockScene.add( mesh )
+  addBlocks: (blocks) ->
+    _.each(coerceIntoArray(blocks), (block) ->
+      @blockScene.add(block.mesh(@world))
     , @)
     @
 

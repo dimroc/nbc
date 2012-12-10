@@ -46,21 +46,6 @@ class App.World extends App.Model
   iconPath: ->
     "/assets/icons/#{_(@name).underscored()}.png"
 
-  allBlocks: ->
-    _.reduce(@regions().all(), (memo, region) ->
-      memo.concat(region.blocks().all())
-    , [])
-
-  currentRegion: ->
-    _.detect(@regions().all(), (entry)-> entry.current_block )
-
-  currentNeighborhoods: ->
-    currentRegion = @currentRegion()
-    currentRegion.neighborhoodNames() if currentRegion
-
-  selectedRegions: ->
-    _([@currentRegion()]).compact()
-
   fetchRegions: (successCallback)->
     url = "/static/#{@slug}/regions.json"
     $.ajax(
@@ -89,15 +74,10 @@ class App.World extends App.Model
       .compact()
       .value()
 
-  selectedBlockMeshes: ->
-    _.chain(@selectedRegions()).
-      map((region) -> App.MeshFactory.generate_block(region.fetchCurrentBlock())).
-      compact().
-      value()
-
-  allBlockMeshes: ->
-    _regions = _(@regions().all())
-    _regions.map((region) -> region.blocksMesh())
+  transformMercatorToWorld: (mercatorPoint) ->
+    x = (mercatorPoint.x - @mercator_bounding_box.min_x) * @mesh_scale
+    y = (mercatorPoint.y - @mercator_bounding_box.min_y) * @mesh_scale
+    new THREE.Vector3(x, y, 0)
 
   transformSurfaceToMercator: (surfacePoint) ->
     x = @mercator_bounding_box.min_x + surfacePoint.x * @inverse_mesh_scale

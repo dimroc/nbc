@@ -20,7 +20,7 @@ describe Block do
     let(:block) { FactoryGirl.create(:block) }
 
     it "should only include relevant information" do
-      subject.keys.should == ["id", "point"]
+      subject.keys.should == ["id", :point]
     end
   end
 end

@@ -20,12 +20,6 @@ describe "graphics.WorldRenderer", ->
         worldRenderer.attachToDom(dom)
         expect(dom).toContain("canvas")
 
-    describe "#addBlocks", ->
-      it "should add to its children", ->
-        mesh = new THREE.Mesh()
-        worldRenderer.addBlocks(mesh)
-        expect(worldRenderer.meshes()).toInclude(mesh)
-
     describe "#addRegionMeshes", ->
       it "should add to its children", ->
         mesh = new THREE.Mesh()

@@ -1,6 +1,7 @@
 $ = jQuery.sub()
 World = App.World
 Region = App.Region
+Block = App.Block
 
 $.fn.regionViaSlug = ->
   elementID   = $(@).data('slug')
@@ -20,6 +21,7 @@ class App.Controller.Boroughs extends Spine.Controller
     @active (params) -> @change(params.id)
 
     World.bind 'loaded', @render
+    Block.bind 'refresh change', @renderBlocks
 
   change: (slug) ->
     @currentBoroughItem = _(@boroughItems).detect((borough) -> borough.slug == slug)
@@ -28,6 +30,7 @@ class App.Controller.Boroughs extends Spine.Controller
   render: =>
     world = World.first()
     @worldRenderer.addWorld(world)
+    Block.fetch()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
@@ -36,6 +39,9 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer.attachToDom($(output).find("#world"))
     @worldRenderer.animate()
     $(output).find(".debug").fadeIn() if Env.debug
+
+  renderBlocks: =>
+    @worldRenderer.addBlocks(Block.all())
 
   index: (e) ->
     @navigate '/boroughs'
