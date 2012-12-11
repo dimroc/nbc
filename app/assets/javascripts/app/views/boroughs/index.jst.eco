@@ -60,34 +60,6 @@
 
 <!-- Modal -->
 <div id="addBlockModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Add Video Block</h3>
-  </div>
-
-<!-- Have this rendered server side and returned via ajax every time? How do I do the csrf?
-TODO: Need server rendering here somehow -->
-  <form accept-charset="UTF-8" action="/api/blocks" class="simple_form new_block" id="new_block" method="post">
-    <div class="modal-body">
-      <input id="block_type" name="block[type]" type="hidden" value="Block::Video">
-
-      <!-- the control will appear next to this, and the video ID will be stored here after the upload -->
-      <input id="returned_video_id" name="panda_id" type="hidden">
-
-      <!-- upload progress bar (optional) -->
-      <div class="panda_upload_progress" id="upload_progress" style="display: none; width: 250px; height: 26px; border: 1px solid rgb(12, 60, 126); background-image: url(http://d21qbsp9m249bi.cloudfront.net/u/1.4.1/assets/progress_bg.gif); background-attachment: scroll; background-position: 0% 0%; background-repeat: repeat repeat;"></div>
-
-      <!-- Block location -->
-      <label class="string optional control-label" for="block_Longitude">Longitude</label>
-      <input name="longitude" type="number">
-      <label class="string optional control-label" for="block_Latitude">Latitude</label>
-      <input name="latitude" type="number">
-    </div>
-    <div class="modal-footer">
-      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-      <input class="btn btn-primary" name="commit" type="submit" value="Create Block" disabled="disabled">
-    </div>
-  </form>
 </div>
 
 <div id="world"></div>

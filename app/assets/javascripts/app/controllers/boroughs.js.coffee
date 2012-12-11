@@ -41,7 +41,6 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer.attachToDom($(output).find("#world"))
     @worldRenderer.animate()
 
-    @attachPandaUploader()
     $(output).dblclick(@toggleAddBlockModal)
     $(output).find(".debug").fadeIn() if Env.debug
 
@@ -49,14 +48,14 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer.addBlocks(Block.all())
 
   toggleAddBlockModal: =>
-    $('#addBlockModal').modal()
-
-  attachPandaUploader: ->
-    $("#returned_video_id").pandaUploader(Constants.pandaAccessDetails, ->
-      upload_progress_id: 'upload_progress',
-      onsuccess: ->
-        console.log("successfully uploaded file")
-    )
+    if _($("#addBlockModal").html()).isBlank()
+      $.ajax(method: 'get', url: '/partials/block_video_form').
+        success((data) =>
+          $('#addBlockModal').html(data)
+          $('#addBlockModal').modal()
+        )
+    else
+      $('#addBlockModal').modal()
 
   index: (e) ->
     @navigate '/boroughs'

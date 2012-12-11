@@ -1,0 +1,32 @@
+.modal-header
+  %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+  %h3#myModalLabel Add Video Block
+
+= simple_form_for [:api, Block::Video.new], url: api_blocks_path do |f|
+  .modal-body
+    = f.input :type, as: :hidden
+
+    / the control will appear next to this, and the video ID will be stored here after the upload
+    %input{name: :panda_id, id: :returned_video_id, type: :hidden}
+
+    / upload progress bar (optional)
+    #upload_progress.panda_upload_progress
+
+    = f.label "Longitude"
+    %input{:name => "longitude", :type => "number"}/
+
+    = f.label "Latitude"
+    %input{:name => "latitude", :type => "number"}/
+
+  .modal-footer
+    = f.button :submit, class: "btn btn-primary"
+
+- access_details = Panda.signed_params('POST', '/videos.json')
+:javascript
+  var panda_access_details = #{access_details.to_json.html_safe};
+  $("#returned_video_id").pandaUploader(panda_access_details, {
+    upload_progress_id: 'upload_progress',
+    onsuccess: function() {
+      console.log("successfully uploaded file")
+    }
+  });
