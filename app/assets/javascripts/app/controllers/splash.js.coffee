@@ -17,7 +17,7 @@ class App.Controller.Splash extends Spine.Controller
       @html @view('splash/browserError')(regionNames: world.region_names)
     else
       @html @view('splash/index')(regionNames: world.region_names)
-      world.fetchRegions()
+      world.fetchRegions(@_loadCallback)
 
   activate: ->
     @el.fadeIn(=> @el.addClass("active"))
@@ -25,3 +25,6 @@ class App.Controller.Splash extends Spine.Controller
 
   deactivate: ->
     @el.empty()
+
+  _loadCallback: =>
+    @navigate '/boroughs' if location.pathname == "/"
