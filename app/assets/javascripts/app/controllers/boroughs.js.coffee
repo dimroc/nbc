@@ -22,23 +22,24 @@ class App.Controller.Boroughs extends Spine.Controller
     @addBlockModalController = new App.Controller.AddBlockModal()
     Block.bind 'refresh change', @renderBlocks
 
+  destroy: =>
+    @worldRenderer.destroy() if @worldRenderer?
+    @el.unbind()
+
   change: (slug) ->
     @currentBoroughItem = _(@boroughItems).detect((borough) -> borough.slug == slug)
     console.log("selected #{@currentBoroughItem.slug}") if @currentBoroughItem?
 
   render: =>
-    @worldRenderer = new App.WorldRenderer()
-    #TODO: Clean up event handlers (like dblclick) on destruction
-
     world = World.first()
-    @worldRenderer.addWorld(world)
+    output = @html @view('boroughs/index')(regions: world.regions().all())
+
+    @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
     Block.fetch()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
 
-    output = @html @view('boroughs/index')(regions: world.regions().all())
-    @worldRenderer.attachToDom($(output).find("#world"))
     @worldRenderer.animate()
 
     $(output).dblclick(=> @addBlockModalController.activate())
@@ -60,6 +61,6 @@ class App.Controller.Boroughs extends Spine.Controller
     @
 
   deactivate: =>
-    @worldRenderer.destroy() if @worldRenderer?
+    @destroy()
     @el.fadeOut(=> @el.removeClass("active"))
     @

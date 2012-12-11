@@ -1,5 +1,6 @@
 class App.DebugRenderer
-  constructor: (camera, cameraControls) ->
+  constructor: (world, camera, cameraControls) ->
+    @world = world
     @debugScene = new THREE.Scene()
     @camera = camera
     @controls = cameraControls
