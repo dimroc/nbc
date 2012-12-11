@@ -17,10 +17,7 @@ class App.Controller.Splash extends Spine.Controller
       @html @view('splash/browserError')(regionNames: world.region_names)
     else
       @html @view('splash/index')(regionNames: world.region_names)
-      world.fetchRegions(@_loadedCallback)
-
-  _loadedCallback: =>
-    @navigate '/boroughs'
+      world.fetchRegions()
 
   activate: ->
     @el.fadeIn(=> @el.addClass("active"))

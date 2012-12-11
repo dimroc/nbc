@@ -10,6 +10,7 @@ $.fn.regionViaSlug = ->
 
 class App.Controller.Boroughs extends Spine.Controller
   className: 'boroughs'
+
   events:
     'click [data-type=index]':   'index'
     'click [data-type=show]':    'show'
@@ -20,19 +21,17 @@ class App.Controller.Boroughs extends Spine.Controller
     @active (params) -> @change(params.id)
 
     @addBlockModalController = new App.Controller.AddBlockModal()
-
     Block.bind 'refresh change', @renderBlocks
 
-  destroy: =>
-    @worldRenderer.destroy() if @worldRenderer?
-    delete @worldRenderer
-    @el.unbind()
-
   change: (slug) ->
+    @render()
     @currentBoroughItem = _(@boroughItems).detect((borough) -> borough.slug == slug)
-    console.log("selected #{@currentBoroughItem.slug}") if @currentBoroughItem?
+    selection = if @currentBoroughItem? then @currentBoroughItem.slug else "All NYC"
+    console.log("Selected #{selection}")
 
   render: =>
+    return if @worldRenderer?
+
     world = World.first()
     output = @html @view('boroughs/index')(regions: world.regions().all())
 
@@ -63,5 +62,8 @@ class App.Controller.Boroughs extends Spine.Controller
     @
 
   deactivate: =>
-    @destroy()
-    @el.empty()
+    if @worldRenderer?
+      @worldRenderer.destroy() if @worldRenderer?
+      delete @worldRenderer
+      @el.unbind()
+      @el.empty()
