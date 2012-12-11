@@ -17,12 +17,9 @@ class App.Controller.Boroughs extends Spine.Controller
   constructor: ->
     super
     @boroughItems = []
-    @worldRenderer = new App.WorldRenderer()
     @active (params) -> @change(params.id)
 
     @addBlockModalController = new App.Controller.AddBlockModal()
-
-    World.bind 'loaded', @render
     Block.bind 'refresh change', @renderBlocks
 
   change: (slug) ->
@@ -30,6 +27,7 @@ class App.Controller.Boroughs extends Spine.Controller
     console.log("selected #{@currentBoroughItem.slug}") if @currentBoroughItem?
 
   render: =>
+    @worldRenderer = new App.WorldRenderer()
     #TODO: Clean up event handlers (like dblclick) on destruction
 
     world = World.first()
@@ -56,10 +54,12 @@ class App.Controller.Boroughs extends Spine.Controller
     item = $(e.target).regionViaSlug()
     @navigate '/boroughs', item.slug
 
-  activate: ->
+  activate: =>
+    @render()
     @el.fadeIn(=> @el.addClass("active"))
     @
 
-  deactivate: ->
+  deactivate: =>
+    @worldRenderer.destroy() if @worldRenderer?
     @el.fadeOut(=> @el.removeClass("active"))
     @
