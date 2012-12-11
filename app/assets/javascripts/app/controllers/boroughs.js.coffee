@@ -20,7 +20,6 @@ class App.Controller.Boroughs extends Spine.Controller
     @boroughItems = []
     @active (params) -> @change(params.id)
 
-    @addBlockModalController = new App.Controller.AddBlockModal()
     Block.bind 'refresh change', @renderBlocks
 
   change: (slug) ->
@@ -44,7 +43,8 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer.animate()
     $(output).dblclick(=> @addBlockModalController.activate())
 
-    @debugController = new App.Controller.Debug($(output))
+    @addBlockModalController = new App.Controller.AddBlockModal(output)
+    @debugController = new App.Controller.Debug(output)
 
   renderBlocks: =>
     @worldRenderer.addBlocks(Block.all())
@@ -65,5 +65,4 @@ class App.Controller.Boroughs extends Spine.Controller
     if @worldRenderer?
       @worldRenderer.destroy() if @worldRenderer?
       delete @worldRenderer
-      @el.unbind()
       @el.empty()
