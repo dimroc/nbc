@@ -13,6 +13,7 @@ class App.WorldRenderer extends Spine.Module
 
     console.debug("Creating worldRenderer...")
     @world = world
+    @regions = []
     @clock = new THREE.Clock()
     @stats = new App.StatsRenderer()
     @blockScene = new THREE.Scene()
@@ -94,13 +95,14 @@ class App.WorldRenderer extends Spine.Module
     @
 
   addRegions: (regions)->
-    _(coerceIntoArray(regions)).each (region) =>
-      # @addRegions(region.outlineMeshes())
-      @addRegionMeshes(region.modelMesh())
+    @regions = @regions.concat coerceIntoArray(regions)
+    @reloadRegions()
 
   reloadRegions: ->
     @regionScene = new THREE.Scene()
-    @addRegions(@world.regions().all())
+    _(@regions).each (region) =>
+      # @addRegions(region.outlineMeshes())
+      @addRegionMeshes(region.modelMesh())
 
   meshes: ->
     @regionScene.children.concat @blockScene.children

@@ -24,6 +24,7 @@ class App.Controller.Boroughs extends Spine.Controller
 
   destroy: =>
     @worldRenderer.destroy() if @worldRenderer?
+    delete @worldRenderer
     @el.unbind()
 
   change: (slug) ->

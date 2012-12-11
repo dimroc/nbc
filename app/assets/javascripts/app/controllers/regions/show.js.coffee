@@ -1,5 +1,6 @@
 $ = jQuery.sub()
 Region = App.Region
+World = App.World
 
 class App.Controller.Regions.Show extends Spine.Controller
   events:
@@ -15,7 +16,7 @@ class App.Controller.Regions.Show extends Spine.Controller
 
   render: ->
     output = @html @view('regions/show')(@item)
-    @worldRenderer.attachToDom($(output).find("#world"))
+    @worldRenderer = new App.WorldRenderer(World.first(), $(output).find("#world"))
     @worldRenderer.addRegions(@item)
     @worldRenderer.animate()
     output
@@ -25,7 +26,6 @@ class App.Controller.Regions.Show extends Spine.Controller
 
   activate: ->
     super
-    @worldRenderer = new App.WorldRenderer()
     @render()
 
   deactivate: ->
