@@ -19,6 +19,7 @@ class App.Controller.Regions.Show extends Spine.Controller
     @worldRenderer = new App.WorldRenderer(World.first(), $(output).find("#world"))
     @worldRenderer.addRegions(@item)
     @worldRenderer.animate()
+    @debugController = new App.Controller.Debug($(output))
     output
 
   back: ->

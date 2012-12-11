@@ -27,5 +27,4 @@ class App.Controller.Splash extends Spine.Controller
     @
 
   deactivate: ->
-    @el.fadeOut(=> @el.removeClass("active"))
-    @
+    @el.empty()
