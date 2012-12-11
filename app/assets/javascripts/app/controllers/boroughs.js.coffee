@@ -20,6 +20,8 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer = new App.WorldRenderer()
     @active (params) -> @change(params.id)
 
+    @addBlockModalController = new App.Controller.AddBlockModal()
+
     World.bind 'loaded', @render
     Block.bind 'refresh change', @renderBlocks
 
@@ -41,21 +43,11 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer.attachToDom($(output).find("#world"))
     @worldRenderer.animate()
 
-    $(output).dblclick(@toggleAddBlockModal)
+    $(output).dblclick(=> @addBlockModalController.activate())
     $(output).find(".debug").fadeIn() if Env.debug
 
   renderBlocks: =>
     @worldRenderer.addBlocks(Block.all())
-
-  toggleAddBlockModal: =>
-    if _($("#addBlockModal").html()).isBlank()
-      $.ajax(method: 'get', url: '/partials/block_video_form').
-        success((data) =>
-          $('#addBlockModal').html(data)
-          $('#addBlockModal').modal()
-        )
-    else
-      $('#addBlockModal').modal()
 
   index: (e) ->
     @navigate '/boroughs'
