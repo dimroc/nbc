@@ -41,10 +41,10 @@ class App.Controller.Boroughs extends Spine.Controller
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
 
     @worldRenderer.animate()
-    $(output).dblclick(=> @addBlockModalController.activate())
 
-    @addBlockModalController = new App.Controller.AddBlockModal(output)
     @debugController = new App.Controller.Debug(output)
+    @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
+    $(output).dblclick(=> @addBlockModalController.activate())
 
   renderBlocks: =>
     @worldRenderer.addBlocks(Block.all())

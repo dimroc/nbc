@@ -10,5 +10,4 @@ class App.Controller.Debug extends Spine.Controller
     @
 
   deactivate: ->
-    console.log("DEACTIVATING DEBUG CONTROLLER")
     $(".debug").remove()

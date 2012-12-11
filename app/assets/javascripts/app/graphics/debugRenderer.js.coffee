@@ -1,3 +1,4 @@
+#TODO: Pull out of WorldRenderer and place into DebugController. Take worldRenderer in ctor
 class App.DebugRenderer
   constructor: (world, camera, cameraControls) ->
     @world = world
@@ -18,14 +19,13 @@ class App.DebugRenderer
     @updateMouseCoordinatesView()
 
   updateDebugMouseGeographyView: ->
-    if @world? and @controls.mouseOnSurface?
-      mouseOnSurface = @controls.mouseOnSurface.clone()
-
-      mercator = @world.transformSurfaceToMercator(mouseOnSurface)
+    mercator = @controls.mouseToMercator(@world)
+    if mercator?
       $(".debug .mercator > .x").text(mercator.x.toFixed(5))
       $(".debug .mercator > .y").text(mercator.y.toFixed(5))
 
-      lonlat = @world.transformSurfaceToLonLat(mouseOnSurface)
+    lonlat = @controls.mouseToLonLat(@world)
+    if lonlat?
       $(".debug .lonlat > .x").text(lonlat.lon.toFixed(5))
       $(".debug .lonlat > .y").text(lonlat.lat.toFixed(5))
 

@@ -100,6 +100,14 @@ class App.CameraControls
       magnitudeUntilSurface = -ray.origin.z / ray.direction.z
       new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
 
+  mouseToMercator: (world) ->
+    if @mouseOnSurface?
+      world.transformSurfaceToMercator(@mouseOnSurface)
+
+  mouseToLonLat: (world) ->
+    if @mouseOnSurface?
+      world.transformSurfaceToLonLat(@mouseOnSurface)
+
   zoomCamera: ->
     factor = (@zoomEnd - @zoomStart) * -@zoomSpeed
     if factor > 0.001 or factor < -0.001
