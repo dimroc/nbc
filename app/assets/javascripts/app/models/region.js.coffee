@@ -3,8 +3,6 @@ class App.Region extends App.Model
   @extend Spine.Model.Ajax
   @url: "#{Constants.apiBasePath}/regions"
 
-  @hasMany 'blocks', "App.Block"
-
   validate: ->
     @errors = {}
     @appendErrors(name: "Name is required") unless @name
@@ -12,9 +10,6 @@ class App.Region extends App.Model
 
   iconPath: ->
     "/assets/icons/#{@slug}.png"
-
-  fetchCurrentBlock: ->
-    @blocks().find(@current_block)
 
   neighborhoodNames: ->
     _(@neighborhoods).map((neighborhood)-> neighborhood.name)
@@ -24,6 +19,3 @@ class App.Region extends App.Model
 
   modelMesh: ->
     App.MeshFactory.loadRegionModel(@)
-
-  blocksMesh: ->
-    App.MeshFactory.generateBlocks(@)

@@ -1,6 +1,7 @@
 $ = jQuery.sub()
 World = App.World
 Region = App.Region
+Block = App.Block
 
 $.fn.regionViaSlug = ->
   elementID   = $(@).data('slug')
@@ -9,6 +10,7 @@ $.fn.regionViaSlug = ->
 
 class App.Controller.Boroughs extends Spine.Controller
   className: 'boroughs'
+
   events:
     'click [data-type=index]':   'index'
     'click [data-type=show]':    'show'
@@ -16,26 +18,36 @@ class App.Controller.Boroughs extends Spine.Controller
   constructor: ->
     super
     @boroughItems = []
-    @worldRenderer = new App.WorldRenderer()
     @active (params) -> @change(params.id)
 
-    World.bind 'loaded', @render
+    Block.bind 'refresh change', @renderBlocks
 
   change: (slug) ->
+    @render()
     @currentBoroughItem = _(@boroughItems).detect((borough) -> borough.slug == slug)
-    console.log("selected #{@currentBoroughItem.slug}") if @currentBoroughItem?
+    selection = if @currentBoroughItem? then @currentBoroughItem.slug else "All NYC"
+    console.log("Selected #{selection}")
 
   render: =>
+    return if @worldRenderer?
+
     world = World.first()
-    @worldRenderer.addWorld(world)
+    output = @html @view('boroughs/index')(regions: world.regions().all())
+
+    @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
+    Block.fetch()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
 
-    output = @html @view('boroughs/index')(regions: world.regions().all())
-    @worldRenderer.attachToDom($(output).find("#world"))
     @worldRenderer.animate()
-    $(output).find(".debug").fadeIn() if Env.debug
+
+    @debugController = new App.Controller.Debug(output)
+    @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
+    $(output).dblclick(=> @addBlockModalController.activate())
+
+  renderBlocks: =>
+    @worldRenderer.addBlocks(Block.all())
 
   index: (e) ->
     @navigate '/boroughs'
@@ -44,10 +56,13 @@ class App.Controller.Boroughs extends Spine.Controller
     item = $(e.target).regionViaSlug()
     @navigate '/boroughs', item.slug
 
-  activate: ->
+  activate: =>
+    @render()
     @el.fadeIn(=> @el.addClass("active"))
     @
 
-  deactivate: ->
-    @el.fadeOut(=> @el.removeClass("active"))
-    @
+  deactivate: =>
+    if @worldRenderer?
+      @worldRenderer.destroy() if @worldRenderer?
+      delete @worldRenderer
+      @el.empty()

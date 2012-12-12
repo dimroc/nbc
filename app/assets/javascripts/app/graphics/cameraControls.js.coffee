@@ -24,24 +24,25 @@ class App.CameraControls
     @panStart = new THREE.Vector2()
     @panEnd = new THREE.Vector2()
 
-    @domElement.addEventListener "mousemove", @mousemove, false
-    @domElement.addEventListener "mousedown", @mousedown, false
-    @domElement.addEventListener "mousewheel", @mousewheel, false
-    @domElement.addEventListener "DOMMouseScroll", @mousewheel, false # firefox
+    $(@domElement).bind("mousemove", @mousemove)
+    $(@domElement).bind("mousedown", @mousedown)
+    $(@domElement).bind("mousewheel", @mousewheel)
     @handleResize()
+
+  destroy: ->
+    $(@domElement).unbind()
 
   mousedown: (event) =>
     return unless @enabled
-    event.preventDefault()
-    event.stopPropagation()
 
     @panning = true
     @panStart = @panEnd = @_getMouseOnScreen(event.clientX, event.clientY)
     document.body.style.cursor = 'move'
-    @domElement.addEventListener "mouseup", @mouseup, false
+    $(@domElement).bind("mouseup", @mouseup)
+    false
 
   mousemove: (event) =>
-    return  unless @enabled
+    return unless @enabled
 
     @mouseOnHtmlScreen = @_getMouseOnScreen(event.clientX, event.clientY)
     @panEnd = @mouseOnHtmlScreen.clone()
@@ -56,27 +57,23 @@ class App.CameraControls
     @mouseOnSurface = @_getMouseOnSurface()
 
   mouseup: (event) =>
-    return  unless @enabled
-    event.preventDefault()
-    event.stopPropagation()
+    return unless @enabled
     document.body.style.cursor = 'default'
-    @domElement.removeEventListener "mouseup", @mouseup
+    $(@domElement).unbind("mouseup", @mouseup)
     @panning = false
+    false
 
   mousewheel: (event) =>
-    return  unless @enabled
-    event.preventDefault()
-    event.stopPropagation()
-    delta = 0
-    if event.wheelDelta # WebKit / Opera / Explorer 9
-      delta = event.wheelDelta / 40
-    # Firefox
-    else delta = -event.detail / 3  if event.detail
+    return unless @enabled
+
+    wheelDelta = event.originalEvent.wheelDelta
+    delta = wheelDelta / 40
 
     if delta > 0
       @zoomStart += 0.05
     else
       @zoomStart -= 0.05
+    false
 
   handleResize: =>
     @screen.width = window.innerWidth
@@ -102,6 +99,14 @@ class App.CameraControls
       ray = @mouseRay
       magnitudeUntilSurface = -ray.origin.z / ray.direction.z
       new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
+
+  mouseToMercator: (world) ->
+    if @mouseOnSurface?
+      world.transformSurfaceToMercator(@mouseOnSurface)
+
+  mouseToLonLat: (world) ->
+    if @mouseOnSurface?
+      world.transformSurfaceToLonLat(@mouseOnSurface)
 
   zoomCamera: ->
     factor = (@zoomEnd - @zoomStart) * -@zoomSpeed
@@ -157,5 +162,4 @@ class App.CameraControls
     @zoomCamera()
     @panCamera() if @panning
     @camera.position.add @target, @eye
-
     @camera.lookAt @target

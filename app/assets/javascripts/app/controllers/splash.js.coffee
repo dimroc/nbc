@@ -1,5 +1,6 @@
 $ = jQuery.sub()
 World = App.World
+Block = App.Block
 
 class App.Controller.Splash extends Spine.Controller
   className: 'splash'
@@ -16,15 +17,14 @@ class App.Controller.Splash extends Spine.Controller
       @html @view('splash/browserError')(regionNames: world.region_names)
     else
       @html @view('splash/index')(regionNames: world.region_names)
-      world.fetchRegions(@_loadedCallback)
-
-  _loadedCallback: =>
-    @navigate '/boroughs'
+      world.fetchRegions(@_loadCallback)
 
   activate: ->
     @el.fadeIn(=> @el.addClass("active"))
     @
 
   deactivate: ->
-    @el.fadeOut(=> @el.removeClass("active"))
-    @
+    @el.empty()
+
+  _loadCallback: =>
+    @navigate '/boroughs' if location.pathname == "/"

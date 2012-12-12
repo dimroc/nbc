@@ -33,15 +33,15 @@ class App.MeshFactory
 
       new THREE.Line(lineGeometry, material)
 
-  @generate_block: (block) ->
+  @generateBlock: (world, block) ->
     return null unless block
     currentMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(0xFF0000), opacity: 1})
     cubeGeom = new THREE.CubeGeometry(App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH)
     cubeMesh = new THREE.Mesh(cubeGeom, currentMaterial)
-    cubeMesh.position = block.worldPosition()
+    cubeMesh.position = block.worldPosition(world)
     cubeMesh
 
-  @generateBlocks: (region) ->
+  @generateBlockBatch: (region) ->
     opacity = 0.8
     currentMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xAB1A25), opacity: opacity})
     cubeMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xFFFFFF), opacity: opacity})

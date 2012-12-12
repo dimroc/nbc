@@ -19,6 +19,8 @@ NewBlockCity::Application.routes.draw do
     resources :panda_videos
   end
 
+  resources :partials, only: :show
+
   # Explicitly mount Jasminerice above global match rule to prevent trumping of jasmine
   mount Jasminerice::Engine => "/jasmine" if Rails.env.development? || Rails.env.test?
   match '/' => 'spine#index'

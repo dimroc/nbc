@@ -31,7 +31,7 @@ class App extends Spine.Controller
 
     App.World.one('loaded', @_loadCallback)
     @append(@rootController = new App.Controller.Root)
-    @initialUrl = location.hash
+    @initialUrl = location.pathname
 
     App.instance = @
 

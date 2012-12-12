@@ -14,8 +14,8 @@ class Controller.Root extends Spine.Stack
 
   routes:
     '/':                getDefaultController()
-    '/boroughs':        'boroughs'
     '/boroughs/:id':    'boroughs'
+    '/boroughs':        'boroughs'
     '/regions':         'regionsIndex'
     '/regions/:id':     'regionsShow'
 

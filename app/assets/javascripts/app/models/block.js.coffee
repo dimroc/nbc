@@ -8,8 +8,13 @@ class App.Block extends App.Model
   @extend Spine.Model.Ajax
   @url: "#{Constants.apiBasePath}/blocks"
 
-  @belongsTo "region", "App.Region"
-
   validate: ->
     @errors = {}
     @appendErrors(point: "point is required") unless @point
+
+  worldPosition: (world) ->
+    mercatorPoint = new THREE.Vector2(@point.mercator[0], @point.mercator[1])
+    world.transformMercatorToWorld(mercatorPoint)
+
+  mesh: (world) ->
+    App.MeshFactory.generateBlock(world, @)

@@ -14,18 +14,6 @@ describe "graphics.WorldRenderer", ->
     afterEach ->
       worldRenderer.destroy()
 
-    describe "#attachToDom", ->
-      it "should append a canvas element", ->
-        dom = $("<div></div>")
-        worldRenderer.attachToDom(dom)
-        expect(dom).toContain("canvas")
-
-    describe "#addBlocks", ->
-      it "should add to its children", ->
-        mesh = new THREE.Mesh()
-        worldRenderer.addBlocks(mesh)
-        expect(worldRenderer.meshes()).toInclude(mesh)
-
     describe "#addRegionMeshes", ->
       it "should add to its children", ->
         mesh = new THREE.Mesh()

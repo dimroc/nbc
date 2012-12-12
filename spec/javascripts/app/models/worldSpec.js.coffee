@@ -31,19 +31,6 @@ describe "models.world", ->
       block = new App.World(name: "Staten Island", slug: "staten island")
       expect(block.iconPath()).toBe("/assets/icons/staten_island.png")
 
-  describe "#currentRegion", ->
-    nyc = null
-    beforeEach ->
-      nyc = new App.World(Fixtures.worlds[0])
-      nyc.fetchRegions()
-      mostRecentAjaxRequest().response(Factories.nycRegionsResponse())
-
-    it "should retrieve the region with the current block", ->
-      # Hardcoded against data in nyc regions fixture
-      current_region = _(App.Region.all()).detect((region) -> region.current_block)
-      expect(current_region).not.toBeNull()
-      expect(nyc.currentRegion()).toEqual(current_region)
-
   describe "#fetchRegions", ->
     nyc = null
     beforeEach ->
@@ -67,18 +54,3 @@ describe "models.world", ->
         nyc.fetchRegions()
         mostRecentAjaxRequest().response(Factories.errorResponse())
         expect(console.warn).toHaveBeenCalled()
-
-  describe "#allBlocks", ->
-    nyc = null
-    beforeEach ->
-      nyc = new App.World(Fixtures.worlds[0])
-
-    it "should return the blocks from all regions", ->
-      nyc.fetchRegions()
-      mostRecentAjaxRequest().response(Factories.nycRegionsResponse())
-
-      sum = _.reduce(nyc.regions().all(), (memo, region) ->
-        memo += region.blocks().all().length
-      , 0)
-
-      expect(nyc.allBlocks().length).toEqual(sum)

@@ -7,21 +7,23 @@ class App.WorldRenderer extends Spine.Module
   @first: -> worldRenderers[0]
   @create: () -> new WorldRenderer()
 
-  constructor: ()->
+  constructor: (world, domElement) ->
     if ( ! Detector.webgl )
       Detector.addGetWebGLMessage()
 
     console.debug("Creating worldRenderer...")
+    @world = world
+    @regions = []
     @clock = new THREE.Clock()
+    @stats = new App.StatsRenderer()
     @blockScene = new THREE.Scene()
     @regionScene = new THREE.Scene()
 
     options = calculate_options()
-    @camera = createPerspectiveCamera(options)
-    @controls = new App.CameraControls(@camera)
-
     @renderer = createRenderer(options)
     @composer = createComposer(options, @)
+
+    @camera = createPerspectiveCamera(options)
 
     @ambientLight = createAmbientLight(options)
     @blockScene.add(@ambientLight)
@@ -32,24 +34,25 @@ class App.WorldRenderer extends Spine.Module
 
     @blockScene.add(@directionalLight)
 
-    @debugRenderer = new App.DebugRenderer(@camera, @controls)
+    @_attachToDom(domElement)
+    @controls = new App.CameraControls(@camera, domElement)
+    @debugRenderer = new App.DebugRenderer(@world, @camera, @controls)
 
-    @stats = new App.StatsRenderer()
     worldRenderers.push(@)
 
   destroy: ->
     console.debug("Destroying worldRenderer...")
 
     @destroyed = true
+    @controls.destroy()
     @stats.destroy()
     cancelAnimationFrame @requestId
     window.removeEventListener( 'resize', @onWindowResize, false )
     worldRenderers = _(worldRenderers).reject (worldRenderer) => worldRenderer == @
 
-  attachToDom: (domElement)->
+  _attachToDom: (domElement)->
     @domElement = domElement
     $(domElement).append(@renderer.domElement)
-    @controls.domElement = domElement[0]
     @stats.attachToDom(domElement)
     window.addEventListener( 'resize', @onWindowResize, false )
     @
@@ -85,26 +88,21 @@ class App.WorldRenderer extends Spine.Module
     , @)
     @
 
-  addBlocks: (meshParam)->
-    _.each(coerceIntoArray(meshParam), (mesh) ->
-      @blockScene.add( mesh )
+  addBlocks: (blocks) ->
+    _.each(coerceIntoArray(blocks), (block) ->
+      @blockScene.add(block.mesh(@world))
     , @)
     @
 
   addRegions: (regions)->
-    _(coerceIntoArray(regions)).each (region) =>
-      # @addRegions(region.outlineMeshes())
-      @addRegionMeshes(region.modelMesh())
-
-  addWorld: (world)->
-    throw "Can only add one world to world renderer" if @world?
-    @world = @debugRenderer.world = world
-    @addRegions(world.regions().all())
-    App.WorldRenderer.trigger 'worldAdded', world
+    @regions = @regions.concat coerceIntoArray(regions)
+    @reloadRegions()
 
   reloadRegions: ->
     @regionScene = new THREE.Scene()
-    @addRegions(@world.regions().all())
+    _(@regions).each (region) =>
+      # @addRegions(region.outlineMeshes())
+      @addRegionMeshes(region.modelMesh())
 
   meshes: ->
     @regionScene.children.concat @blockScene.children

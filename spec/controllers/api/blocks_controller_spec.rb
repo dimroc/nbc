@@ -7,6 +7,21 @@ describe Api::BlocksController do
     let(:longitude) { -73.0 }
     let(:latitude) { 40.0 }
 
+    context "without any panda/video id" do
+      let(:params) do
+        { "longitude" => longitude, "latitude" => latitude }
+      end
+
+      it "should create a block for that location" do
+        expect {
+          post :create, params
+        }.to change { Block::Video.count }.by(1)
+
+        block_hash = JSON.parse(response.body)
+        Block::Video.last.video.should be_nil
+      end
+    end
+
     context "with PandaVideo id" do
       let(:video) { FactoryGirl.create(:panda_video) }
       let(:params) do
