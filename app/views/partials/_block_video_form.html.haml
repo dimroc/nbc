@@ -13,10 +13,14 @@
     #upload_progress.panda_upload_progress
 
     = f.label "Longitude"
-    %input{:name => "longitude", :type => "number"}/
+    %input{:name => "longitude", :type => "number", step: "any"}/
 
     = f.label "Latitude"
-    %input{:name => "latitude", :type => "number"}/
+    %input{:name => "latitude", :type => "number", step: "any"}/
+
+    %p
+      Please note that it will take a minute for the video to encode
+      before appearing on the map
 
   .modal-footer
     = f.button :submit, class: "btn btn-primary"
@@ -24,9 +28,16 @@
 - access_details = Panda.signed_params('POST', '/videos.json')
 :javascript
   var panda_access_details = #{access_details.to_json.html_safe};
+
+  var successCallback = function(event) {
+    $("#addBlockModal form").ajaxSubmit({
+      error: function() { console.warn("Unable to submit form"); },
+      success: function() { $("#addBlockModal").modal('hide'); }
+    });
+    return false;
+  };
+
   $("#returned_video_id").pandaUploader(panda_access_details, {
     upload_progress_id: 'upload_progress',
-    onsuccess: function() {
-      console.log("successfully uploaded file")
-    }
+    upload_strategy: new PandaUploader.UploadOnSubmitAjax(successCallback)
   });

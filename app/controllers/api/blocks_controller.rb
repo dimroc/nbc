@@ -19,6 +19,8 @@ class Api::BlocksController < ApiController
     elsif params[:panda_id]
       video = PandaVideo.find_or_create_from_panda(params["panda_id"])
       block = Block::Video.create(point: @current_point, video: video)
+    else
+      block = Block::Video.create(point: @current_point)
     end
 
     render json: block.to_json

@@ -27,7 +27,7 @@ class App.Controller.AddBlockModal extends Spine.Controller
 
   activate: ->
     @render()
-    $('#addBlockModal').modal()
+    $('#addBlockModal').modal('show')
 
   deactivate: ->
-    $('#addBlockModal').modal()
+    $('#addBlockModal').modal('hide')
