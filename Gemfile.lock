@@ -200,6 +200,9 @@ GEM
     pry-debugger (0.2.0)
       debugger (~> 1.1.3)
       pry (~> 0.9.9)
+    pusher (0.11.3)
+      multi_json (~> 1.0)
+      signature (~> 0.1.6)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -270,6 +273,7 @@ GEM
       json
     shoulda-matchers (1.4.1)
       activesupport (>= 3.0.0)
+    signature (0.1.6)
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -347,6 +351,7 @@ DEPENDENCIES
   pg
   pry
   pry-debugger
+  pusher
   rails (~> 3.2.12)
   rb-fsevent
   rbpoly2tri

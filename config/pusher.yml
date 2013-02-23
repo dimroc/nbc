@@ -1,0 +1,8 @@
+development: &development
+  app_id: 37977
+  key: c1a904739c74ce478f40
+  secret: 764f4f10cb72b34c84af
+
+test:
+
+production:

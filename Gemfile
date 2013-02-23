@@ -26,6 +26,7 @@ gem 'georuby'
 gem 'rbpoly2tri'
 
 gem 'panda'
+gem 'pusher'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
