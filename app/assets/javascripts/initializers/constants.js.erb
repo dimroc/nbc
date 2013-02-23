@@ -1,5 +1,8 @@
 window.Constants = {
   loadingImagePath: "<%= image_path("loading.gif") %>",
   apiBasePath: '/api',
-  pandaAccessDetails: <%= Panda.signed_params('POST', '/videos.json').to_json.html_safe %>
+  pandaAccessDetails: <%= Panda.signed_params('POST', '/videos.json').to_json.html_safe %>,
+  pusher: {
+    key: '<%= Pusher.key %>'
+  }
 };

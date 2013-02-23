@@ -14,6 +14,8 @@
 #= require ./models/model
 #= require_tree ./models
 
+#= require_tree ./observers
+
 #= require ./controllers/controller
 #= require_tree ./controllers/
 #= require_tree ./controllers/regions
@@ -33,6 +35,7 @@ class App extends Spine.Controller
     @append(@rootController = new App.Controller.Root)
     @initialUrl = location.pathname
 
+    App.PusherObserver.subscribe() unless jasmine?
     App.instance = @
 
   _loadCallback: =>
