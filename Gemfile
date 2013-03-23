@@ -25,7 +25,7 @@ gem 'rgeo-shapefile'
 gem 'georuby'
 gem 'rbpoly2tri'
 
-gem 'panda'
+gem 'panda', git: 'git://github.com/pandastream/panda_gem.git'
 gem 'pusher'
 
 group :assets do
