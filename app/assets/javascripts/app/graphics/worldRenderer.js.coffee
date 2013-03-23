@@ -16,23 +16,19 @@ class App.WorldRenderer extends Spine.Module
     @regions = []
     @clock = new THREE.Clock()
     @stats = new App.StatsRenderer()
-    @blockScene = new THREE.Scene()
-    @regionScene = new THREE.Scene()
 
     options = calculate_options()
     @renderer = createRenderer(options)
     @composer = createComposer(options, @)
-
     @camera = createPerspectiveCamera(options)
 
     @ambientLight = createAmbientLight(options)
-    @blockScene.add(@ambientLight)
-
     @directionalLight = createDirectionalLight(
       _.extend({}, options, {position: @camera.position})
     )
 
-    @blockScene.add(@directionalLight)
+    @regionScene = new THREE.Scene()
+    @blockScene = createBlockScene()
 
     @_attachToDom(domElement)
     @controls = new App.CameraControls(@camera, domElement)
@@ -88,7 +84,8 @@ class App.WorldRenderer extends Spine.Module
     , @)
     @
 
-  addBlocks: (blocks) ->
+  reloadBlocks: (blocks) ->
+    @blockScene = createBlockScene()
     _.each(coerceIntoArray(blocks), (block) ->
       @blockScene.add(block.mesh(@world))
     , @)
@@ -101,7 +98,7 @@ class App.WorldRenderer extends Spine.Module
   reloadRegions: ->
     @regionScene = new THREE.Scene()
     _(@regions).each (region) =>
-      # @addRegions(region.outlineMeshes())
+      #@addRegionMeshes(region.outlineMeshes())
       @addRegionMeshes(region.modelMesh())
 
   meshes: ->
@@ -174,3 +171,9 @@ calculate_options = ->
     width: window.innerWidth
     height: window.innerHeight
   }
+
+createBlockScene = (ambientLight, directionalLight)->
+  scene = new THREE.Scene()
+  scene.add(ambientLight)
+  scene.add(directionalLight)
+  scene

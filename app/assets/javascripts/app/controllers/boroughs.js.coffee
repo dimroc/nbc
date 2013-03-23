@@ -47,7 +47,8 @@ class App.Controller.Boroughs extends Spine.Controller
     $(output).dblclick(=> @addBlockModalController.activate())
 
   renderBlocks: =>
-    @worldRenderer.addBlocks(Block.all())
+    console.debug "Rerendering all blocks..."
+    @worldRenderer.reloadBlocks(Block.all())
 
   index: (e) ->
     @navigate '/boroughs'

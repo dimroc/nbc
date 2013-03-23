@@ -35,7 +35,9 @@ class App.MeshFactory
 
   @generateBlock: (world, block) ->
     return null unless block
-    currentMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(0xFF0000), opacity: 1})
+
+    color = if block.encoded() then new THREE.Color(0x00FF00) else new THREE.Color(0xFF0000)
+    currentMaterial = new THREE.MeshBasicMaterial({color: color, opacity: 1})
     cubeGeom = new THREE.CubeGeometry(App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH)
     cubeMesh = new THREE.Mesh(cubeGeom, currentMaterial)
     cubeMesh.position = block.worldPosition(world)

@@ -12,6 +12,9 @@ class App.Block extends App.Model
     @errors = {}
     @appendErrors(point: "point is required") unless @point
 
+  encoded: ->
+    @video && @video.url? && @video.url.length > 0
+
   worldPosition: (world) ->
     mercatorPoint = new THREE.Vector2(@point.mercator[0], @point.mercator[1])
     world.transformMercatorToWorld(mercatorPoint)

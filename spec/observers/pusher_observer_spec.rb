@@ -13,7 +13,7 @@ describe PusherObserver do
         block = FactoryGirl.build(:block)
         Pusher.should_receive(:trigger).with(
           'global',
-          'newBlock',
+          'block',
           block.as_json)
         PusherObserver.instance.after_create block
       end
