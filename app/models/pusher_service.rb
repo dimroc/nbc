@@ -1,7 +1,7 @@
 class PusherService
   class << self
     def push_block(block)
-      log_failure do
+      with_error_handling do
         Pusher.trigger('global', 'block', block.as_json)
       end
     end
@@ -12,7 +12,8 @@ class PusherService
 
     private
 
-    def log_failure
+    # Contingency method as defined in exceptional ruby
+    def with_error_handling
       if initialized?
         yield
       else
