@@ -6,14 +6,14 @@ class PusherService
       end
     end
 
-    def pusher_initialized?
+    def initialized?
       Pusher.app_id && Pusher.key && Pusher.secret
     end
 
     private
 
     def log_failure
-      if pusher_initialized?
+      if initialized?
         yield
       else
         Rails.logger.warn "Pusher is uninitialized!"
