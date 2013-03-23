@@ -5,6 +5,7 @@ class App.BlockPusherObserver
     @channel.bind('newBlock', @createBlock)
 
   createBlock: (data) =>
+    console.debug "Server pushing block:", data
     App.Block.create data
 
 class App.PusherObserver

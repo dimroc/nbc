@@ -2,7 +2,7 @@ class PusherObserver < ActiveRecord::Observer
   observe :block
 
   def after_create(block)
-    Pusher.trigger('global', 'newBlock', self.as_json) if pusher_initialized?
+    Pusher.trigger('global', 'newBlock', block.as_json) if pusher_initialized?
   end
 
   private

@@ -10,8 +10,12 @@ describe PusherObserver do
       after { Pusher.app_id = Pusher.secret = Pusher.key = nil }
 
       it "should broadcast a pusher event" do
-        Pusher.should_receive(:trigger)
-        FactoryGirl.create(:block)
+        block = FactoryGirl.build(:block)
+        Pusher.should_receive(:trigger).with(
+          'global',
+          'newBlock',
+          block.as_json)
+        PusherObserver.instance.after_create block
       end
     end
 
