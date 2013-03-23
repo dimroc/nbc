@@ -19,13 +19,13 @@ gem "eco"
 gem "friendly_id"
 gem 'simple_form'
 
-gem 'activerecord-postgis-adapter', git: "git@github.com:dimroc/activerecord-postgis-adapter.git"
+gem 'activerecord-postgis-adapter'
 gem 'rgeo'
 gem 'rgeo-shapefile'
 gem 'georuby'
 gem 'rbpoly2tri'
 
-gem 'panda'
+gem 'panda', git: 'git://github.com/pandastream/panda_gem.git'
 gem 'pusher'
 
 group :assets do
@@ -44,9 +44,8 @@ group :test, :development do
   gem "guard-ctags-bundler"
   gem "guard-rails", git: "git://github.com/johnbintz/guard-rails.git"
 
-  gem "debugger", "~> 1.1.3"
   gem "pry"
-  gem "pry-debugger"
+  gem "pry-nav"
 
   gem "fuubar"
   gem "ffaker"
@@ -59,7 +58,7 @@ group :test, :development do
   gem "factory_girl_rails", ">= 3.3.0"
   gem "fixture_builder"
   gem "email_spec", ">= 1.2.1"
-  gem "jasminerice", git: "git://github.com/dimroc/jasminerice.git"
+  gem "jasminerice"
 
   gem 'vcr'
   gem 'webmock', require: false

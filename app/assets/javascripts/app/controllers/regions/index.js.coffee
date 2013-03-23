@@ -1,4 +1,4 @@
-$ = jQuery.sub()
+$ = jQuery
 Region = App.Region
 
 $.fn.itemViaSlug = ->

@@ -52,6 +52,7 @@ describe Api::PandaVideosController do
 
       it "should update the video's encoding url" do
         block_video.should_not be_encoded
+        PusherService.should_receive(:push_block).with(block_video)
         post :callback, params
         block_video.reload.should be_encoded
         response.status.should == 200

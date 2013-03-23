@@ -1,4 +1,4 @@
-$ = jQuery.sub()
+$ = jQuery
 World = App.World
 Block = App.Block
 

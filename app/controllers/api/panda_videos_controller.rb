@@ -20,8 +20,16 @@ class Api::PandaVideosController < ApiController
     case params[:event]
     when "video-encoded"
       @video.refresh_from_panda!
+      push_encoding @video
     end
 
     respond_with @video, location: api_panda_video_path(@video), status: 200
+  end
+
+  private
+
+  def push_encoding panda_video
+    return unless panda_video.block_video
+    PusherService.push_block panda_video.block_video
   end
 end
