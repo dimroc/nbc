@@ -7,6 +7,9 @@ class App.World extends App.Model
 
   @allLoaded: false
 
+  @current: ->
+    App.World.first()
+
   @findOrFetch: (slug, callback)->
     world = @findByAttribute("slug", slug)
     if world

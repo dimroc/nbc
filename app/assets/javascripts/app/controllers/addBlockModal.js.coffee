@@ -14,6 +14,8 @@ class App.Controller.AddBlockModal extends Spine.Controller
       )
 
   updateLocation: ->
+    # TODO: Decouple AddBlockModal from worldRenderer by substituting
+    # in events with relevant info
     lonlat = @controls.mouseToLonLat(@world)
     if lonlat?
       $("#addBlockModal input[name=longitude]").val(lonlat.lon)
