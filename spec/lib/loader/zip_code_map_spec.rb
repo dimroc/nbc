@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Loader::ZipCodeMap do
   describe ".build_from_row" do
     subject { Loader::ZipCodeMap.build_from_row socrata_row }
+    before { ZipCodeMap.destroy_all }
 
     shared_examples "a zip code map" do
       let(:socrata_row) do

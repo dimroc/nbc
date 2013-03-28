@@ -1,8 +1,8 @@
 ---
 standard_user:
   id: 1
-  email: alvera_cormier@heller.ca
-  encrypted_password: $2a$04$JpWgWfvaV6fOjrIuW5YiuuAgsRkcXbUkiY82gYjLb.qRHeaZ/R1T2
+  email: teagan.feeney@bailey.ca
+  encrypted_password: $2a$10$8OUgU7mylD/TwgQH/wp6U.pniky.5iAmFa6ZuV72SMzkIvkLj.w/G
   reset_password_token: 
   reset_password_sent_at: 
   remember_created_at: 

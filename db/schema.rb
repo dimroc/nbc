@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121209143620) do
+ActiveRecord::Schema.define(:version => 20130328042144) do
 
   create_table "blocks", :force => true do |t|
-    t.datetime "created_at",                                              :null => false
-    t.datetime "updated_at",                                              :null => false
-    t.spatial  "point",          :limit => {:srid=>3785, :type=>"point"}
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
+    t.spatial  "point",           :limit => {:srid=>3785, :type=>"point"}
     t.integer  "panda_video_id"
     t.string   "type"
+    t.integer  "zip_code_map_id"
   end
 
   add_index "blocks", ["panda_video_id"], :name => "index_blocks_on_panda_video_id"

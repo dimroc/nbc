@@ -1,6 +1,22 @@
 require 'spec_helper'
 
 describe Block do
+  describe "callbacks" do
+    it "should update the block's zip code" do
+      #point = ZipCodeMap.first.point # This should work ... *sigh*
+      point = Mercator::FACTORY.projection_factory.point(-8223106.86880972,4947516.28618495)
+
+      block = Block.create(point: point)
+
+      block.zip_code_map_id.should == ZipCodeMap.first.id
+      block.zip.should == "11372"
+
+      block.reload
+      block.zip_code_map_id.should == ZipCodeMap.first.id
+      block.zip.should == "11372"
+    end
+  end
+
   describe ".near" do
     subject { Block.near(near_point) }
 

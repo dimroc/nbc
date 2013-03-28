@@ -30,6 +30,6 @@ class Socrata::Shape
 
   def create_geometry(rings)
     points = rings[0].map { |point_array| Mercator::FACTORY.point(point_array[0], point_array[1]) }
-    Mercator::FACTORY.linear_ring(points)
+    Mercator::FACTORY.polygon(Mercator::FACTORY.linear_ring(points))
   end
 end

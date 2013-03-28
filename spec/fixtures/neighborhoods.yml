@@ -3,8 +3,8 @@ wakefield:
   id: 1
   name: Wakefield
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.682346000 Z
-  updated_at: 2012-12-12 04:23:45.682346000 Z
+  created_at: 2013-03-28 05:27:09.032761000 Z
+  updated_at: 2013-03-28 05:27:09.032761000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -39,8 +39,8 @@ co_op_city:
   id: 2
   name: Co-op City
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.688510000 Z
-  updated_at: 2012-12-12 04:23:45.688510000 Z
+  created_at: 2013-03-28 05:27:09.038329000 Z
+  updated_at: 2013-03-28 05:27:09.038329000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -75,8 +75,8 @@ eastchester:
   id: 3
   name: Eastchester
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.691378000 Z
-  updated_at: 2012-12-12 04:23:45.691378000 Z
+  created_at: 2013-03-28 05:27:09.040149000 Z
+  updated_at: 2013-03-28 05:27:09.040149000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -111,8 +111,8 @@ fieldston:
   id: 4
   name: Fieldston
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.693858000 Z
-  updated_at: 2012-12-12 04:23:45.693858000 Z
+  created_at: 2013-03-28 05:27:09.041635000 Z
+  updated_at: 2013-03-28 05:27:09.041635000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -136,7 +136,7 @@ fieldston:
         strict_wkt11: false
         ignore_extra_tokens: false
         default_srid: 
-      wkb_parser: &70277712105900
+      wkb_parser:
         support_ewkb: false
         support_wkb12: false
         ignore_extra_bytes: false
@@ -147,8 +147,8 @@ riverdale:
   id: 5
   name: Riverdale
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.696494000 Z
-  updated_at: 2012-12-12 04:23:45.696494000 Z
+  created_at: 2013-03-28 05:27:09.042952000 Z
+  updated_at: 2013-03-28 05:27:09.042952000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -183,8 +183,8 @@ kingsbridge:
   id: 6
   name: Kingsbridge
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.699031000 Z
-  updated_at: 2012-12-12 04:23:45.699031000 Z
+  created_at: 2013-03-28 05:27:09.044283000 Z
+  updated_at: 2013-03-28 05:27:09.044283000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -219,8 +219,8 @@ marble_hill:
   id: 7
   name: Marble Hill
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.701448000 Z
-  updated_at: 2012-12-12 04:23:45.701448000 Z
+  created_at: 2013-03-28 05:27:09.045782000 Z
+  updated_at: 2013-03-28 05:27:09.045782000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -255,8 +255,8 @@ woodlawn:
   id: 8
   name: Woodlawn
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.703783000 Z
-  updated_at: 2012-12-12 04:23:45.703783000 Z
+  created_at: 2013-03-28 05:27:09.047181000 Z
+  updated_at: 2013-03-28 05:27:09.047181000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -291,8 +291,8 @@ norwood:
   id: 9
   name: Norwood
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.706050000 Z
-  updated_at: 2012-12-12 04:23:45.706050000 Z
+  created_at: 2013-03-28 05:27:09.048496000 Z
+  updated_at: 2013-03-28 05:27:09.048496000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -327,8 +327,8 @@ williamsbridge:
   id: 10
   name: Williamsbridge
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.708295000 Z
-  updated_at: 2012-12-12 04:23:45.708295000 Z
+  created_at: 2013-03-28 05:27:09.049856000 Z
+  updated_at: 2013-03-28 05:27:09.049856000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -363,8 +363,8 @@ baychester:
   id: 11
   name: Baychester
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.710522000 Z
-  updated_at: 2012-12-12 04:23:45.710522000 Z
+  created_at: 2013-03-28 05:27:09.051190000 Z
+  updated_at: 2013-03-28 05:27:09.051190000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -399,8 +399,8 @@ pelham_parkway:
   id: 12
   name: Pelham Parkway
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.713082000 Z
-  updated_at: 2012-12-12 04:23:45.713082000 Z
+  created_at: 2013-03-28 05:27:09.052580000 Z
+  updated_at: 2013-03-28 05:27:09.052580000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -435,8 +435,8 @@ city_island:
   id: 13
   name: City Island
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.715428000 Z
-  updated_at: 2012-12-12 04:23:45.715428000 Z
+  created_at: 2013-03-28 05:27:09.053962000 Z
+  updated_at: 2013-03-28 05:27:09.053962000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -471,8 +471,8 @@ bedford_park:
   id: 14
   name: Bedford Park
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.717879000 Z
-  updated_at: 2012-12-12 04:23:45.717879000 Z
+  created_at: 2013-03-28 05:27:09.055313000 Z
+  updated_at: 2013-03-28 05:27:09.055313000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -507,8 +507,8 @@ university_heights:
   id: 15
   name: University Heights
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.720102000 Z
-  updated_at: 2012-12-12 04:23:45.720102000 Z
+  created_at: 2013-03-28 05:27:09.056667000 Z
+  updated_at: 2013-03-28 05:27:09.056667000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -543,8 +543,8 @@ morris_heights:
   id: 16
   name: Morris Heights
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.722434000 Z
-  updated_at: 2012-12-12 04:23:45.722434000 Z
+  created_at: 2013-03-28 05:27:09.058073000 Z
+  updated_at: 2013-03-28 05:27:09.058073000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -579,8 +579,8 @@ fordham:
   id: 17
   name: Fordham
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.724705000 Z
-  updated_at: 2012-12-12 04:23:45.724705000 Z
+  created_at: 2013-03-28 05:27:09.059420000 Z
+  updated_at: 2013-03-28 05:27:09.059420000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -615,8 +615,8 @@ east_tremont:
   id: 18
   name: East Tremont
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.727701000 Z
-  updated_at: 2012-12-12 04:23:45.727701000 Z
+  created_at: 2013-03-28 05:27:09.060748000 Z
+  updated_at: 2013-03-28 05:27:09.060748000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -651,8 +651,8 @@ west_farms:
   id: 19
   name: West Farms
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.730100000 Z
-  updated_at: 2012-12-12 04:23:45.730100000 Z
+  created_at: 2013-03-28 05:27:09.108344000 Z
+  updated_at: 2013-03-28 05:27:09.108344000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -687,8 +687,8 @@ high_bridge:
   id: 20
   name: High  Bridge
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.732445000 Z
-  updated_at: 2012-12-12 04:23:45.732445000 Z
+  created_at: 2013-03-28 05:27:09.110044000 Z
+  updated_at: 2013-03-28 05:27:09.110044000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -723,8 +723,8 @@ melrose:
   id: 21
   name: Melrose
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.734766000 Z
-  updated_at: 2012-12-12 04:23:45.734766000 Z
+  created_at: 2013-03-28 05:27:09.111408000 Z
+  updated_at: 2013-03-28 05:27:09.111408000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -759,8 +759,8 @@ mott_haven:
   id: 22
   name: Mott Haven
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.737052000 Z
-  updated_at: 2012-12-12 04:23:45.737052000 Z
+  created_at: 2013-03-28 05:27:09.112717000 Z
+  updated_at: 2013-03-28 05:27:09.112717000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -795,8 +795,8 @@ port_morris:
   id: 23
   name: Port Morris
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.739331000 Z
-  updated_at: 2012-12-12 04:23:45.739331000 Z
+  created_at: 2013-03-28 05:27:09.114039000 Z
+  updated_at: 2013-03-28 05:27:09.114039000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -831,8 +831,8 @@ longwood:
   id: 24
   name: Longwood
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.741845000 Z
-  updated_at: 2012-12-12 04:23:45.741845000 Z
+  created_at: 2013-03-28 05:27:09.115387000 Z
+  updated_at: 2013-03-28 05:27:09.115387000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -867,8 +867,8 @@ hunts_point:
   id: 25
   name: Hunts Point
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.744737000 Z
-  updated_at: 2012-12-12 04:23:45.744737000 Z
+  created_at: 2013-03-28 05:27:09.117025000 Z
+  updated_at: 2013-03-28 05:27:09.117025000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -903,8 +903,8 @@ morrisania:
   id: 26
   name: Morrisania
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.747331000 Z
-  updated_at: 2012-12-12 04:23:45.747331000 Z
+  created_at: 2013-03-28 05:27:09.118743000 Z
+  updated_at: 2013-03-28 05:27:09.118743000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -939,8 +939,8 @@ soundview:
   id: 27
   name: Soundview
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.750119000 Z
-  updated_at: 2012-12-12 04:23:45.750119000 Z
+  created_at: 2013-03-28 05:27:09.120398000 Z
+  updated_at: 2013-03-28 05:27:09.120398000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -975,8 +975,8 @@ clason_point:
   id: 28
   name: Clason Point
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.752458000 Z
-  updated_at: 2012-12-12 04:23:45.752458000 Z
+  created_at: 2013-03-28 05:27:09.122036000 Z
+  updated_at: 2013-03-28 05:27:09.122036000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1011,8 +1011,8 @@ throgs_neck:
   id: 29
   name: Throgs Neck
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.754722000 Z
-  updated_at: 2012-12-12 04:23:45.754722000 Z
+  created_at: 2013-03-28 05:27:09.123767000 Z
+  updated_at: 2013-03-28 05:27:09.123767000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1047,8 +1047,8 @@ country_club:
   id: 30
   name: Country Club
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.757028000 Z
-  updated_at: 2012-12-12 04:23:45.757028000 Z
+  created_at: 2013-03-28 05:27:09.125276000 Z
+  updated_at: 2013-03-28 05:27:09.125276000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1072,7 +1072,7 @@ country_club:
         strict_wkt11: false
         ignore_extra_tokens: false
         default_srid: 
-      wkb_parser: &70277712393400
+      wkb_parser:
         support_ewkb: false
         support_wkb12: false
         ignore_extra_bytes: false
@@ -1083,8 +1083,8 @@ parkchester:
   id: 31
   name: Parkchester
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.759827000 Z
-  updated_at: 2012-12-12 04:23:45.759827000 Z
+  created_at: 2013-03-28 05:27:09.126680000 Z
+  updated_at: 2013-03-28 05:27:09.126680000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1119,8 +1119,8 @@ westchester_square:
   id: 32
   name: Westchester Square
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.762459000 Z
-  updated_at: 2012-12-12 04:23:45.762459000 Z
+  created_at: 2013-03-28 05:27:09.127953000 Z
+  updated_at: 2013-03-28 05:27:09.127953000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1155,8 +1155,8 @@ van_nest:
   id: 33
   name: Van Nest
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.764692000 Z
-  updated_at: 2012-12-12 04:23:45.764692000 Z
+  created_at: 2013-03-28 05:27:09.129230000 Z
+  updated_at: 2013-03-28 05:27:09.129230000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1191,8 +1191,8 @@ morris_park:
   id: 34
   name: Morris Park
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.767453000 Z
-  updated_at: 2012-12-12 04:23:45.767453000 Z
+  created_at: 2013-03-28 05:27:09.130542000 Z
+  updated_at: 2013-03-28 05:27:09.130542000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1227,8 +1227,8 @@ belmont:
   id: 35
   name: Belmont
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.769773000 Z
-  updated_at: 2012-12-12 04:23:45.769773000 Z
+  created_at: 2013-03-28 05:27:09.131814000 Z
+  updated_at: 2013-03-28 05:27:09.131814000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1263,8 +1263,8 @@ spuyten_duyvil:
   id: 36
   name: Spuyten Duyvil
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.771985000 Z
-  updated_at: 2012-12-12 04:23:45.771985000 Z
+  created_at: 2013-03-28 05:27:09.133193000 Z
+  updated_at: 2013-03-28 05:27:09.133193000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1299,8 +1299,8 @@ north_riverdale:
   id: 37
   name: North Riverdale
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.774679000 Z
-  updated_at: 2012-12-12 04:23:45.774679000 Z
+  created_at: 2013-03-28 05:27:09.134651000 Z
+  updated_at: 2013-03-28 05:27:09.134651000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1335,8 +1335,8 @@ pelham_bay:
   id: 38
   name: Pelham Bay
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.777663000 Z
-  updated_at: 2012-12-12 04:23:45.777663000 Z
+  created_at: 2013-03-28 05:27:09.136377000 Z
+  updated_at: 2013-03-28 05:27:09.136377000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1371,8 +1371,8 @@ schuylerville:
   id: 39
   name: Schuylerville
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.780223000 Z
-  updated_at: 2012-12-12 04:23:45.780223000 Z
+  created_at: 2013-03-28 05:27:09.138382000 Z
+  updated_at: 2013-03-28 05:27:09.138382000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1407,8 +1407,8 @@ edgewater_park:
   id: 40
   name: Edgewater Park
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.782826000 Z
-  updated_at: 2012-12-12 04:23:45.782826000 Z
+  created_at: 2013-03-28 05:27:09.139807000 Z
+  updated_at: 2013-03-28 05:27:09.139807000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1421,7 +1421,7 @@ edgewater_park:
         emit_ewkt_srid: 
         square_brackets: false
         convert_case: upper
-      wkb_generator: &70277674401200
+      wkb_generator:
         type_format: wkb11
         emit_ewkb_srid: 
         hex_format: false
@@ -1432,7 +1432,7 @@ edgewater_park:
         strict_wkt11: false
         ignore_extra_tokens: false
         default_srid: 
-      wkb_parser: &70277674400720
+      wkb_parser:
         support_ewkb: false
         support_wkb12: false
         ignore_extra_bytes: false
@@ -1443,8 +1443,8 @@ castle_hill:
   id: 41
   name: Castle Hill
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.785235000 Z
-  updated_at: 2012-12-12 04:23:45.785235000 Z
+  created_at: 2013-03-28 05:27:09.141087000 Z
+  updated_at: 2013-03-28 05:27:09.141087000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1479,8 +1479,8 @@ olinville:
   id: 42
   name: Olinville
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.787494000 Z
-  updated_at: 2012-12-12 04:23:45.787494000 Z
+  created_at: 2013-03-28 05:27:09.142503000 Z
+  updated_at: 2013-03-28 05:27:09.142503000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1515,8 +1515,8 @@ pelham_gardens:
   id: 43
   name: Pelham Gardens
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.789856000 Z
-  updated_at: 2012-12-12 04:23:45.789856000 Z
+  created_at: 2013-03-28 05:27:09.143881000 Z
+  updated_at: 2013-03-28 05:27:09.143881000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1551,8 +1551,8 @@ concourse:
   id: 44
   name: Concourse
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.792280000 Z
-  updated_at: 2012-12-12 04:23:45.792280000 Z
+  created_at: 2013-03-28 05:27:09.145188000 Z
+  updated_at: 2013-03-28 05:27:09.145188000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1587,8 +1587,8 @@ unionport:
   id: 45
   name: Unionport
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.794770000 Z
-  updated_at: 2012-12-12 04:23:45.794770000 Z
+  created_at: 2013-03-28 05:27:09.146562000 Z
+  updated_at: 2013-03-28 05:27:09.146562000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1623,8 +1623,8 @@ edenwald:
   id: 46
   name: Edenwald
   borough: Bronx
-  created_at: 2012-12-12 04:23:45.797008000 Z
-  updated_at: 2012-12-12 04:23:45.797008000 Z
+  created_at: 2013-03-28 05:27:09.147903000 Z
+  updated_at: 2013-03-28 05:27:09.147903000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1659,8 +1659,8 @@ bay_ridge:
   id: 47
   name: Bay Ridge
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.799593000 Z
-  updated_at: 2012-12-12 04:23:45.799593000 Z
+  created_at: 2013-03-28 05:27:09.149169000 Z
+  updated_at: 2013-03-28 05:27:09.149169000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1695,8 +1695,8 @@ bensonhurst:
   id: 48
   name: Bensonhurst
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.801998000 Z
-  updated_at: 2012-12-12 04:23:45.801998000 Z
+  created_at: 2013-03-28 05:27:09.150444000 Z
+  updated_at: 2013-03-28 05:27:09.150444000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1731,8 +1731,8 @@ sunset_park:
   id: 49
   name: Sunset Park
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.804449000 Z
-  updated_at: 2012-12-12 04:23:45.804449000 Z
+  created_at: 2013-03-28 05:27:09.151811000 Z
+  updated_at: 2013-03-28 05:27:09.151811000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1767,8 +1767,8 @@ greenpoint:
   id: 50
   name: Greenpoint
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.806651000 Z
-  updated_at: 2012-12-12 04:23:45.806651000 Z
+  created_at: 2013-03-28 05:27:09.153172000 Z
+  updated_at: 2013-03-28 05:27:09.153172000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1803,8 +1803,8 @@ gravesend:
   id: 51
   name: Gravesend
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.809190000 Z
-  updated_at: 2012-12-12 04:23:45.809190000 Z
+  created_at: 2013-03-28 05:27:09.154466000 Z
+  updated_at: 2013-03-28 05:27:09.154466000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1839,8 +1839,8 @@ brighton_beach:
   id: 52
   name: Brighton Beach
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.811738000 Z
-  updated_at: 2012-12-12 04:23:45.811738000 Z
+  created_at: 2013-03-28 05:27:09.155726000 Z
+  updated_at: 2013-03-28 05:27:09.155726000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1875,8 +1875,8 @@ sheepshead_bay:
   id: 53
   name: Sheepshead Bay
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.814521000 Z
-  updated_at: 2012-12-12 04:23:45.814521000 Z
+  created_at: 2013-03-28 05:27:09.156980000 Z
+  updated_at: 2013-03-28 05:27:09.156980000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1884,7 +1884,7 @@ sheepshead_bay:
       srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
-      wkt_generator: &70277712950600
+      wkt_generator:
         tag_format: wkt11
         emit_ewkt_srid: 
         square_brackets: false
@@ -1894,7 +1894,7 @@ sheepshead_bay:
         emit_ewkb_srid: 
         hex_format: false
         little_endian: false
-      wkt_parser: &70277712950040
+      wkt_parser:
         support_ewkt: false
         support_wkt12: false
         strict_wkt11: false
@@ -1911,8 +1911,8 @@ manhattan_terrace:
   id: 54
   name: Manhattan Terrace
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.817307000 Z
-  updated_at: 2012-12-12 04:23:45.817307000 Z
+  created_at: 2013-03-28 05:27:09.158237000 Z
+  updated_at: 2013-03-28 05:27:09.158237000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1947,8 +1947,8 @@ flatbush:
   id: 55
   name: Flatbush
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.819876000 Z
-  updated_at: 2012-12-12 04:23:45.819876000 Z
+  created_at: 2013-03-28 05:27:09.159667000 Z
+  updated_at: 2013-03-28 05:27:09.159667000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -1983,8 +1983,8 @@ crown_heights:
   id: 56
   name: Crown Heights
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.822212000 Z
-  updated_at: 2012-12-12 04:23:45.822212000 Z
+  created_at: 2013-03-28 05:27:09.161395000 Z
+  updated_at: 2013-03-28 05:27:09.161395000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2019,8 +2019,8 @@ east_flatbush:
   id: 57
   name: East Flatbush
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.824958000 Z
-  updated_at: 2012-12-12 04:23:45.824958000 Z
+  created_at: 2013-03-28 05:27:09.162785000 Z
+  updated_at: 2013-03-28 05:27:09.162785000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2055,8 +2055,8 @@ kensington:
   id: 58
   name: Kensington
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.827587000 Z
-  updated_at: 2012-12-12 04:23:45.827587000 Z
+  created_at: 2013-03-28 05:27:09.164090000 Z
+  updated_at: 2013-03-28 05:27:09.164090000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2091,8 +2091,8 @@ windsor_terrace:
   id: 59
   name: Windsor Terrace
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.829949000 Z
-  updated_at: 2012-12-12 04:23:45.829949000 Z
+  created_at: 2013-03-28 05:27:09.165374000 Z
+  updated_at: 2013-03-28 05:27:09.165374000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2127,8 +2127,8 @@ prospect_heights:
   id: 60
   name: Prospect Heights
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.832187000 Z
-  updated_at: 2012-12-12 04:23:45.832187000 Z
+  created_at: 2013-03-28 05:27:09.166658000 Z
+  updated_at: 2013-03-28 05:27:09.166658000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2163,8 +2163,8 @@ brownsville:
   id: 61
   name: Brownsville
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.834553000 Z
-  updated_at: 2012-12-12 04:23:45.834553000 Z
+  created_at: 2013-03-28 05:27:09.168092000 Z
+  updated_at: 2013-03-28 05:27:09.168092000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2199,8 +2199,8 @@ williamsburg:
   id: 62
   name: Williamsburg
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.836823000 Z
-  updated_at: 2012-12-12 04:23:45.836823000 Z
+  created_at: 2013-03-28 05:27:09.169439000 Z
+  updated_at: 2013-03-28 05:27:09.169439000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2235,8 +2235,8 @@ bushwick:
   id: 63
   name: Bushwick
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.839319000 Z
-  updated_at: 2012-12-12 04:23:45.839319000 Z
+  created_at: 2013-03-28 05:27:09.170748000 Z
+  updated_at: 2013-03-28 05:27:09.170748000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2271,8 +2271,8 @@ bedford_stuyvesant:
   id: 64
   name: Bedford Stuyvesant
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.841863000 Z
-  updated_at: 2012-12-12 04:23:45.841863000 Z
+  created_at: 2013-03-28 05:27:09.172492000 Z
+  updated_at: 2013-03-28 05:27:09.172492000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2307,8 +2307,8 @@ brooklyn_heights:
   id: 65
   name: Brooklyn Heights
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.844328000 Z
-  updated_at: 2012-12-12 04:23:45.844328000 Z
+  created_at: 2013-03-28 05:27:09.173871000 Z
+  updated_at: 2013-03-28 05:27:09.173871000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2343,8 +2343,8 @@ cobble_hill:
   id: 66
   name: Cobble Hill
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.847064000 Z
-  updated_at: 2012-12-12 04:23:45.847064000 Z
+  created_at: 2013-03-28 05:27:09.175135000 Z
+  updated_at: 2013-03-28 05:27:09.175135000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2368,7 +2368,7 @@ cobble_hill:
         strict_wkt11: false
         ignore_extra_tokens: false
         default_srid: 
-      wkb_parser: &70277713170420
+      wkb_parser:
         support_ewkb: false
         support_wkb12: false
         ignore_extra_bytes: false
@@ -2379,8 +2379,8 @@ carroll_gardens:
   id: 67
   name: Carroll Gardens
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.849594000 Z
-  updated_at: 2012-12-12 04:23:45.849594000 Z
+  created_at: 2013-03-28 05:27:09.176382000 Z
+  updated_at: 2013-03-28 05:27:09.176382000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2415,8 +2415,8 @@ red_hook:
   id: 68
   name: Red Hook
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.852143000 Z
-  updated_at: 2012-12-12 04:23:45.852143000 Z
+  created_at: 2013-03-28 05:27:09.177909000 Z
+  updated_at: 2013-03-28 05:27:09.177909000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2451,8 +2451,8 @@ gowanus:
   id: 69
   name: Gowanus
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.854469000 Z
-  updated_at: 2012-12-12 04:23:45.854469000 Z
+  created_at: 2013-03-28 05:27:09.179735000 Z
+  updated_at: 2013-03-28 05:27:09.179735000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2487,8 +2487,8 @@ fort_greene:
   id: 70
   name: Fort Greene
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.856753000 Z
-  updated_at: 2012-12-12 04:23:45.856753000 Z
+  created_at: 2013-03-28 05:27:09.181573000 Z
+  updated_at: 2013-03-28 05:27:09.181573000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2523,8 +2523,8 @@ park_slope:
   id: 71
   name: Park Slope
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.859065000 Z
-  updated_at: 2012-12-12 04:23:45.859065000 Z
+  created_at: 2013-03-28 05:27:09.183816000 Z
+  updated_at: 2013-03-28 05:27:09.183816000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2559,8 +2559,8 @@ cypress_hills:
   id: 72
   name: Cypress Hills
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.861424000 Z
-  updated_at: 2012-12-12 04:23:45.861424000 Z
+  created_at: 2013-03-28 05:27:09.185378000 Z
+  updated_at: 2013-03-28 05:27:09.185378000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2595,8 +2595,8 @@ east_new_york:
   id: 73
   name: East New York
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.863758000 Z
-  updated_at: 2012-12-12 04:23:45.863758000 Z
+  created_at: 2013-03-28 05:27:09.186788000 Z
+  updated_at: 2013-03-28 05:27:09.186788000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2631,8 +2631,8 @@ starrett_city:
   id: 74
   name: Starrett City
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.866104000 Z
-  updated_at: 2012-12-12 04:23:45.866104000 Z
+  created_at: 2013-03-28 05:27:09.188064000 Z
+  updated_at: 2013-03-28 05:27:09.188064000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2667,8 +2667,8 @@ canarsie:
   id: 75
   name: Canarsie
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.868571000 Z
-  updated_at: 2012-12-12 04:23:45.868571000 Z
+  created_at: 2013-03-28 05:27:09.189338000 Z
+  updated_at: 2013-03-28 05:27:09.189338000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2703,8 +2703,8 @@ flatlands:
   id: 76
   name: Flatlands
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.871067000 Z
-  updated_at: 2012-12-12 04:23:45.871067000 Z
+  created_at: 2013-03-28 05:27:09.190771000 Z
+  updated_at: 2013-03-28 05:27:09.190771000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2739,8 +2739,8 @@ mill_island:
   id: 77
   name: Mill Island
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.873436000 Z
-  updated_at: 2012-12-12 04:23:45.873436000 Z
+  created_at: 2013-03-28 05:27:09.192013000 Z
+  updated_at: 2013-03-28 05:27:09.192013000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2775,8 +2775,8 @@ manhattan_beach:
   id: 78
   name: Manhattan Beach
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.875789000 Z
-  updated_at: 2012-12-12 04:23:45.875789000 Z
+  created_at: 2013-03-28 05:27:09.193252000 Z
+  updated_at: 2013-03-28 05:27:09.193252000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2811,8 +2811,8 @@ coney_island:
   id: 79
   name: Coney Island
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.878064000 Z
-  updated_at: 2012-12-12 04:23:45.878064000 Z
+  created_at: 2013-03-28 05:27:09.194727000 Z
+  updated_at: 2013-03-28 05:27:09.194727000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2847,8 +2847,8 @@ bath_beach:
   id: 80
   name: Bath Beach
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.880357000 Z
-  updated_at: 2012-12-12 04:23:45.880357000 Z
+  created_at: 2013-03-28 05:27:09.196082000 Z
+  updated_at: 2013-03-28 05:27:09.196082000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2883,8 +2883,8 @@ borough_park:
   id: 81
   name: Borough Park
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.882932000 Z
-  updated_at: 2012-12-12 04:23:45.882932000 Z
+  created_at: 2013-03-28 05:27:09.198122000 Z
+  updated_at: 2013-03-28 05:27:09.198122000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2919,8 +2919,8 @@ dyker_heights:
   id: 82
   name: Dyker Heights
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.885381000 Z
-  updated_at: 2012-12-12 04:23:45.885381000 Z
+  created_at: 2013-03-28 05:27:09.199395000 Z
+  updated_at: 2013-03-28 05:27:09.199395000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2928,7 +2928,7 @@ dyker_heights:
       srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
-      wkt_generator: &70277683873000
+      wkt_generator:
         tag_format: wkt11
         emit_ewkt_srid: 
         square_brackets: false
@@ -2938,7 +2938,7 @@ dyker_heights:
         emit_ewkb_srid: 
         hex_format: false
         little_endian: false
-      wkt_parser: &70277683872520
+      wkt_parser:
         support_ewkt: false
         support_wkt12: false
         strict_wkt11: false
@@ -2955,8 +2955,8 @@ gerritsen_beach:
   id: 83
   name: Gerritsen Beach
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.887634000 Z
-  updated_at: 2012-12-12 04:23:45.887634000 Z
+  created_at: 2013-03-28 05:27:09.200717000 Z
+  updated_at: 2013-03-28 05:27:09.200717000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -2991,8 +2991,8 @@ marine_park:
   id: 84
   name: Marine Park
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.889929000 Z
-  updated_at: 2012-12-12 04:23:45.889929000 Z
+  created_at: 2013-03-28 05:27:09.202018000 Z
+  updated_at: 2013-03-28 05:27:09.202018000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3027,8 +3027,8 @@ clinton_hill:
   id: 85
   name: Clinton Hill
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.892241000 Z
-  updated_at: 2012-12-12 04:23:45.892241000 Z
+  created_at: 2013-03-28 05:27:09.203457000 Z
+  updated_at: 2013-03-28 05:27:09.203457000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3063,8 +3063,8 @@ sea_gate:
   id: 86
   name: Sea Gate
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.894569000 Z
-  updated_at: 2012-12-12 04:23:45.894569000 Z
+  created_at: 2013-03-28 05:27:09.205390000 Z
+  updated_at: 2013-03-28 05:27:09.205390000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3099,8 +3099,8 @@ downtown:
   id: 87
   name: Downtown
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.896786000 Z
-  updated_at: 2012-12-12 04:23:45.896786000 Z
+  created_at: 2013-03-28 05:27:09.206859000 Z
+  updated_at: 2013-03-28 05:27:09.206859000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3135,8 +3135,8 @@ boerum_hill:
   id: 88
   name: Boerum Hill
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.899011000 Z
-  updated_at: 2012-12-12 04:23:45.899011000 Z
+  created_at: 2013-03-28 05:27:09.208330000 Z
+  updated_at: 2013-03-28 05:27:09.208330000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3171,8 +3171,8 @@ prospect_lefferts_gardens:
   id: 89
   name: Prospect Lefferts Gardens
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.901400000 Z
-  updated_at: 2012-12-12 04:23:45.901400000 Z
+  created_at: 2013-03-28 05:27:09.209786000 Z
+  updated_at: 2013-03-28 05:27:09.209786000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3207,8 +3207,8 @@ ocean_hill:
   id: 90
   name: Ocean Hill
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.903739000 Z
-  updated_at: 2012-12-12 04:23:45.903739000 Z
+  created_at: 2013-03-28 05:27:09.211184000 Z
+  updated_at: 2013-03-28 05:27:09.211184000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3243,8 +3243,8 @@ city_line:
   id: 91
   name: City Line
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.905949000 Z
-  updated_at: 2012-12-12 04:23:45.905949000 Z
+  created_at: 2013-03-28 05:27:09.212555000 Z
+  updated_at: 2013-03-28 05:27:09.212555000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3279,8 +3279,8 @@ bergen_beach:
   id: 92
   name: Bergen Beach
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.908225000 Z
-  updated_at: 2012-12-12 04:23:45.908225000 Z
+  created_at: 2013-03-28 05:27:09.214036000 Z
+  updated_at: 2013-03-28 05:27:09.214036000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3315,8 +3315,8 @@ midwood:
   id: 93
   name: Midwood
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.910700000 Z
-  updated_at: 2012-12-12 04:23:45.910700000 Z
+  created_at: 2013-03-28 05:27:09.215806000 Z
+  updated_at: 2013-03-28 05:27:09.215806000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3351,8 +3351,8 @@ prospect_park_south:
   id: 94
   name: Prospect Park South
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.913400000 Z
-  updated_at: 2012-12-12 04:23:45.913400000 Z
+  created_at: 2013-03-28 05:27:09.217837000 Z
+  updated_at: 2013-03-28 05:27:09.217837000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3387,8 +3387,8 @@ georgetown:
   id: 95
   name: Georgetown
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.915733000 Z
-  updated_at: 2012-12-12 04:23:45.915733000 Z
+  created_at: 2013-03-28 05:27:09.219339000 Z
+  updated_at: 2013-03-28 05:27:09.219339000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3423,8 +3423,8 @@ spring_creek:
   id: 96
   name: Spring Creek
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.918153000 Z
-  updated_at: 2012-12-12 04:23:45.918153000 Z
+  created_at: 2013-03-28 05:27:09.220903000 Z
+  updated_at: 2013-03-28 05:27:09.220903000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3459,8 +3459,8 @@ east_williamsburg:
   id: 97
   name: East Williamsburg
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.920345000 Z
-  updated_at: 2012-12-12 04:23:45.920345000 Z
+  created_at: 2013-03-28 05:27:09.222675000 Z
+  updated_at: 2013-03-28 05:27:09.222675000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3495,8 +3495,8 @@ north_side:
   id: 98
   name: North Side
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.922672000 Z
-  updated_at: 2012-12-12 04:23:45.922672000 Z
+  created_at: 2013-03-28 05:27:09.224382000 Z
+  updated_at: 2013-03-28 05:27:09.224382000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3504,7 +3504,7 @@ north_side:
       srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
-      wkt_generator: &70277640386320
+      wkt_generator:
         tag_format: wkt11
         emit_ewkt_srid: 
         square_brackets: false
@@ -3531,8 +3531,8 @@ south_side:
   id: 99
   name: South Side
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.924895000 Z
-  updated_at: 2012-12-12 04:23:45.924895000 Z
+  created_at: 2013-03-28 05:27:09.225989000 Z
+  updated_at: 2013-03-28 05:27:09.225989000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3567,8 +3567,8 @@ navy_yard:
   id: 100
   name: Navy Yard
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.927196000 Z
-  updated_at: 2012-12-12 04:23:45.927196000 Z
+  created_at: 2013-03-28 05:27:09.227670000 Z
+  updated_at: 2013-03-28 05:27:09.227670000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3603,8 +3603,8 @@ ocean_parkway:
   id: 101
   name: Ocean Parkway
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.929439000 Z
-  updated_at: 2012-12-12 04:23:45.929439000 Z
+  created_at: 2013-03-28 05:27:09.229202000 Z
+  updated_at: 2013-03-28 05:27:09.229202000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3639,8 +3639,8 @@ fort_hamilton:
   id: 102
   name: Fort Hamilton
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:45.931915000 Z
-  updated_at: 2012-12-12 04:23:45.931915000 Z
+  created_at: 2013-03-28 05:27:09.230642000 Z
+  updated_at: 2013-03-28 05:27:09.230642000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3675,8 +3675,8 @@ chinatown:
   id: 103
   name: Chinatown
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.934651000 Z
-  updated_at: 2012-12-12 04:23:45.934651000 Z
+  created_at: 2013-03-28 05:27:09.232160000 Z
+  updated_at: 2013-03-28 05:27:09.232160000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3711,8 +3711,8 @@ washington_heights:
   id: 104
   name: Washington Heights
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.937140000 Z
-  updated_at: 2012-12-12 04:23:45.937140000 Z
+  created_at: 2013-03-28 05:27:09.233633000 Z
+  updated_at: 2013-03-28 05:27:09.233633000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3747,8 +3747,8 @@ inwood:
   id: 105
   name: Inwood
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.939565000 Z
-  updated_at: 2012-12-12 04:23:45.939565000 Z
+  created_at: 2013-03-28 05:27:09.235151000 Z
+  updated_at: 2013-03-28 05:27:09.235151000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3783,8 +3783,8 @@ hamilton_heights:
   id: 106
   name: Hamilton Heights
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.941976000 Z
-  updated_at: 2012-12-12 04:23:45.941976000 Z
+  created_at: 2013-03-28 05:27:09.236670000 Z
+  updated_at: 2013-03-28 05:27:09.236670000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3819,8 +3819,8 @@ manhattanville:
   id: 107
   name: Manhattanville
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.944378000 Z
-  updated_at: 2012-12-12 04:23:45.944378000 Z
+  created_at: 2013-03-28 05:27:09.238334000 Z
+  updated_at: 2013-03-28 05:27:09.238334000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3855,8 +3855,8 @@ central_harlem:
   id: 108
   name: Central Harlem
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.946784000 Z
-  updated_at: 2012-12-12 04:23:45.946784000 Z
+  created_at: 2013-03-28 05:27:09.240125000 Z
+  updated_at: 2013-03-28 05:27:09.240125000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3891,8 +3891,8 @@ east_harlem:
   id: 109
   name: East Harlem
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.949022000 Z
-  updated_at: 2012-12-12 04:23:45.949022000 Z
+  created_at: 2013-03-28 05:27:09.241592000 Z
+  updated_at: 2013-03-28 05:27:09.241592000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3927,8 +3927,8 @@ upper_east_side:
   id: 110
   name: Upper East Side
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.951373000 Z
-  updated_at: 2012-12-12 04:23:45.951373000 Z
+  created_at: 2013-03-28 05:27:09.243069000 Z
+  updated_at: 2013-03-28 05:27:09.243069000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3963,8 +3963,8 @@ yorkville:
   id: 111
   name: Yorkville
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.953711000 Z
-  updated_at: 2012-12-12 04:23:45.953711000 Z
+  created_at: 2013-03-28 05:27:09.244583000 Z
+  updated_at: 2013-03-28 05:27:09.244583000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -3999,8 +3999,8 @@ lenox_hill:
   id: 112
   name: Lenox Hill
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.956062000 Z
-  updated_at: 2012-12-12 04:23:45.956062000 Z
+  created_at: 2013-03-28 05:27:09.246103000 Z
+  updated_at: 2013-03-28 05:27:09.246103000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4035,8 +4035,8 @@ roosevelt_island:
   id: 113
   name: Roosevelt Island
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.958381000 Z
-  updated_at: 2012-12-12 04:23:45.958381000 Z
+  created_at: 2013-03-28 05:27:09.248120000 Z
+  updated_at: 2013-03-28 05:27:09.248120000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4071,8 +4071,8 @@ upper_west_side:
   id: 114
   name: Upper West Side
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.960694000 Z
-  updated_at: 2012-12-12 04:23:45.960694000 Z
+  created_at: 2013-03-28 05:27:09.249828000 Z
+  updated_at: 2013-03-28 05:27:09.249828000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4107,8 +4107,8 @@ lincoln_square:
   id: 115
   name: Lincoln Square
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.963060000 Z
-  updated_at: 2012-12-12 04:23:45.963060000 Z
+  created_at: 2013-03-28 05:27:09.251468000 Z
+  updated_at: 2013-03-28 05:27:09.251468000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4143,8 +4143,8 @@ clinton_1:
   id: 116
   name: Clinton
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.965700000 Z
-  updated_at: 2012-12-12 04:23:45.965700000 Z
+  created_at: 2013-03-28 05:27:09.252865000 Z
+  updated_at: 2013-03-28 05:27:09.252865000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4179,8 +4179,8 @@ midtown:
   id: 117
   name: Midtown
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.968359000 Z
-  updated_at: 2012-12-12 04:23:45.968359000 Z
+  created_at: 2013-03-28 05:27:09.254190000 Z
+  updated_at: 2013-03-28 05:27:09.254190000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4215,8 +4215,8 @@ murray_hill:
   id: 118
   name: Murray Hill
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.970945000 Z
-  updated_at: 2012-12-12 04:23:45.970945000 Z
+  created_at: 2013-03-28 05:27:09.255515000 Z
+  updated_at: 2013-03-28 05:27:09.255515000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4251,8 +4251,8 @@ chelsea:
   id: 119
   name: Chelsea
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.973320000 Z
-  updated_at: 2012-12-12 04:23:45.973320000 Z
+  created_at: 2013-03-28 05:27:09.256864000 Z
+  updated_at: 2013-03-28 05:27:09.256864000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4287,8 +4287,8 @@ greenwich_village:
   id: 120
   name: Greenwich Village
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.975641000 Z
-  updated_at: 2012-12-12 04:23:45.975641000 Z
+  created_at: 2013-03-28 05:27:09.258234000 Z
+  updated_at: 2013-03-28 05:27:09.258234000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4323,8 +4323,8 @@ east_village:
   id: 121
   name: East Village
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.978637000 Z
-  updated_at: 2012-12-12 04:23:45.978637000 Z
+  created_at: 2013-03-28 05:27:09.259579000 Z
+  updated_at: 2013-03-28 05:27:09.259579000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4359,8 +4359,8 @@ lower_east_side:
   id: 122
   name: Lower East Side
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.981407000 Z
-  updated_at: 2012-12-12 04:23:45.981407000 Z
+  created_at: 2013-03-28 05:27:09.260958000 Z
+  updated_at: 2013-03-28 05:27:09.260958000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4395,8 +4395,8 @@ tribeca:
   id: 123
   name: Tribeca
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.984090000 Z
-  updated_at: 2012-12-12 04:23:45.984090000 Z
+  created_at: 2013-03-28 05:27:09.262488000 Z
+  updated_at: 2013-03-28 05:27:09.262488000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4431,8 +4431,8 @@ little_italy:
   id: 124
   name: Little Italy
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.986524000 Z
-  updated_at: 2012-12-12 04:23:45.986524000 Z
+  created_at: 2013-03-28 05:27:09.263825000 Z
+  updated_at: 2013-03-28 05:27:09.263825000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4467,8 +4467,8 @@ soho:
   id: 125
   name: Soho
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.988966000 Z
-  updated_at: 2012-12-12 04:23:45.988966000 Z
+  created_at: 2013-03-28 05:27:09.265116000 Z
+  updated_at: 2013-03-28 05:27:09.265116000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4503,8 +4503,8 @@ west_village:
   id: 126
   name: West Village
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.991307000 Z
-  updated_at: 2012-12-12 04:23:45.991307000 Z
+  created_at: 2013-03-28 05:27:09.266702000 Z
+  updated_at: 2013-03-28 05:27:09.266702000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4539,8 +4539,8 @@ manhattan_valley:
   id: 127
   name: Manhattan Valley
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.993518000 Z
-  updated_at: 2012-12-12 04:23:45.993518000 Z
+  created_at: 2013-03-28 05:27:09.268109000 Z
+  updated_at: 2013-03-28 05:27:09.268109000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4575,8 +4575,8 @@ morningside_heights:
   id: 128
   name: Morningside Heights
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.995779000 Z
-  updated_at: 2012-12-12 04:23:45.995779000 Z
+  created_at: 2013-03-28 05:27:09.269522000 Z
+  updated_at: 2013-03-28 05:27:09.269522000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4611,8 +4611,8 @@ gramercy:
   id: 129
   name: Gramercy
   borough: Manhattan
-  created_at: 2012-12-12 04:23:45.998157000 Z
-  updated_at: 2012-12-12 04:23:45.998157000 Z
+  created_at: 2013-03-28 05:27:09.270884000 Z
+  updated_at: 2013-03-28 05:27:09.270884000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4647,8 +4647,8 @@ battery_park_city:
   id: 130
   name: Battery Park City
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.000987000 Z
-  updated_at: 2012-12-12 04:23:46.000987000 Z
+  created_at: 2013-03-28 05:27:09.272190000 Z
+  updated_at: 2013-03-28 05:27:09.272190000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4683,8 +4683,8 @@ financial_district:
   id: 131
   name: Financial District
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.003405000 Z
-  updated_at: 2012-12-12 04:23:46.003405000 Z
+  created_at: 2013-03-28 05:27:09.273820000 Z
+  updated_at: 2013-03-28 05:27:09.273820000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4719,8 +4719,8 @@ astoria:
   id: 132
   name: Astoria
   borough: Queens
-  created_at: 2012-12-12 04:23:46.005762000 Z
-  updated_at: 2012-12-12 04:23:46.005762000 Z
+  created_at: 2013-03-28 05:27:09.275157000 Z
+  updated_at: 2013-03-28 05:27:09.275157000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4755,8 +4755,8 @@ woodside:
   id: 133
   name: Woodside
   borough: Queens
-  created_at: 2012-12-12 04:23:46.008130000 Z
-  updated_at: 2012-12-12 04:23:46.008130000 Z
+  created_at: 2013-03-28 05:27:09.276635000 Z
+  updated_at: 2013-03-28 05:27:09.276635000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4791,8 +4791,8 @@ jackson_heights:
   id: 134
   name: Jackson Heights
   borough: Queens
-  created_at: 2012-12-12 04:23:46.010503000 Z
-  updated_at: 2012-12-12 04:23:46.010503000 Z
+  created_at: 2013-03-28 05:27:09.278147000 Z
+  updated_at: 2013-03-28 05:27:09.278147000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4827,8 +4827,8 @@ elmhurst:
   id: 135
   name: Elmhurst
   borough: Queens
-  created_at: 2012-12-12 04:23:46.012861000 Z
-  updated_at: 2012-12-12 04:23:46.012861000 Z
+  created_at: 2013-03-28 05:27:09.279684000 Z
+  updated_at: 2013-03-28 05:27:09.279684000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4863,8 +4863,8 @@ howard_beach:
   id: 136
   name: Howard Beach
   borough: Queens
-  created_at: 2012-12-12 04:23:46.015184000 Z
-  updated_at: 2012-12-12 04:23:46.015184000 Z
+  created_at: 2013-03-28 05:27:09.281131000 Z
+  updated_at: 2013-03-28 05:27:09.281131000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4899,8 +4899,8 @@ south_corona:
   id: 137
   name: South Corona
   borough: Queens
-  created_at: 2012-12-12 04:23:46.017610000 Z
-  updated_at: 2012-12-12 04:23:46.017610000 Z
+  created_at: 2013-03-28 05:27:09.282531000 Z
+  updated_at: 2013-03-28 05:27:09.282531000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4935,8 +4935,8 @@ forest_hills:
   id: 138
   name: Forest Hills
   borough: Queens
-  created_at: 2012-12-12 04:23:46.084999000 Z
-  updated_at: 2012-12-12 04:23:46.084999000 Z
+  created_at: 2013-03-28 05:27:09.284191000 Z
+  updated_at: 2013-03-28 05:27:09.284191000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -4971,8 +4971,8 @@ kew_gardens:
   id: 139
   name: Kew Gardens
   borough: Queens
-  created_at: 2012-12-12 04:23:46.088937000 Z
-  updated_at: 2012-12-12 04:23:46.088937000 Z
+  created_at: 2013-03-28 05:27:09.285721000 Z
+  updated_at: 2013-03-28 05:27:09.285721000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5007,8 +5007,8 @@ richmond_hill:
   id: 140
   name: Richmond Hill
   borough: Queens
-  created_at: 2012-12-12 04:23:46.091465000 Z
-  updated_at: 2012-12-12 04:23:46.091465000 Z
+  created_at: 2013-03-28 05:27:09.287311000 Z
+  updated_at: 2013-03-28 05:27:09.287311000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5043,8 +5043,8 @@ downtown_flushing:
   id: 141
   name: Downtown Flushing
   borough: Queens
-  created_at: 2012-12-12 04:23:46.093990000 Z
-  updated_at: 2012-12-12 04:23:46.093990000 Z
+  created_at: 2013-03-28 05:27:09.289050000 Z
+  updated_at: 2013-03-28 05:27:09.289050000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5079,8 +5079,8 @@ long_island_city:
   id: 142
   name: Long Island City
   borough: Queens
-  created_at: 2012-12-12 04:23:46.096303000 Z
-  updated_at: 2012-12-12 04:23:46.096303000 Z
+  created_at: 2013-03-28 05:27:09.290634000 Z
+  updated_at: 2013-03-28 05:27:09.290634000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5115,8 +5115,8 @@ sunnyside:
   id: 143
   name: Sunnyside
   borough: Queens
-  created_at: 2012-12-12 04:23:46.098998000 Z
-  updated_at: 2012-12-12 04:23:46.098998000 Z
+  created_at: 2013-03-28 05:27:09.292085000 Z
+  updated_at: 2013-03-28 05:27:09.292085000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5151,8 +5151,8 @@ east_elmhurst:
   id: 144
   name: East Elmhurst
   borough: Queens
-  created_at: 2012-12-12 04:23:46.101473000 Z
-  updated_at: 2012-12-12 04:23:46.101473000 Z
+  created_at: 2013-03-28 05:27:09.293403000 Z
+  updated_at: 2013-03-28 05:27:09.293403000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5187,8 +5187,8 @@ maspeth:
   id: 145
   name: Maspeth
   borough: Queens
-  created_at: 2012-12-12 04:23:46.103896000 Z
-  updated_at: 2012-12-12 04:23:46.103896000 Z
+  created_at: 2013-03-28 05:27:09.294788000 Z
+  updated_at: 2013-03-28 05:27:09.294788000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5223,8 +5223,8 @@ ridgewood:
   id: 146
   name: Ridgewood
   borough: Queens
-  created_at: 2012-12-12 04:23:46.106415000 Z
-  updated_at: 2012-12-12 04:23:46.106415000 Z
+  created_at: 2013-03-28 05:27:09.296155000 Z
+  updated_at: 2013-03-28 05:27:09.296155000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5259,8 +5259,8 @@ glendale:
   id: 147
   name: Glendale
   borough: Queens
-  created_at: 2012-12-12 04:23:46.108942000 Z
-  updated_at: 2012-12-12 04:23:46.108942000 Z
+  created_at: 2013-03-28 05:27:09.297427000 Z
+  updated_at: 2013-03-28 05:27:09.297427000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5295,8 +5295,8 @@ rego_park:
   id: 148
   name: Rego Park
   borough: Queens
-  created_at: 2012-12-12 04:23:46.111468000 Z
-  updated_at: 2012-12-12 04:23:46.111468000 Z
+  created_at: 2013-03-28 05:27:09.298724000 Z
+  updated_at: 2013-03-28 05:27:09.298724000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5331,8 +5331,8 @@ woodhaven:
   id: 149
   name: Woodhaven
   borough: Queens
-  created_at: 2012-12-12 04:23:46.113824000 Z
-  updated_at: 2012-12-12 04:23:46.113824000 Z
+  created_at: 2013-03-28 05:27:09.300114000 Z
+  updated_at: 2013-03-28 05:27:09.300114000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5367,8 +5367,8 @@ ozone_park:
   id: 150
   name: Ozone Park
   borough: Queens
-  created_at: 2012-12-12 04:23:46.116300000 Z
-  updated_at: 2012-12-12 04:23:46.116300000 Z
+  created_at: 2013-03-28 05:27:09.301575000 Z
+  updated_at: 2013-03-28 05:27:09.301575000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5403,8 +5403,8 @@ south_ozone_park:
   id: 151
   name: South Ozone Park
   borough: Queens
-  created_at: 2012-12-12 04:23:46.118657000 Z
-  updated_at: 2012-12-12 04:23:46.118657000 Z
+  created_at: 2013-03-28 05:27:09.303107000 Z
+  updated_at: 2013-03-28 05:27:09.303107000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5439,8 +5439,8 @@ college_point:
   id: 152
   name: College Point
   borough: Queens
-  created_at: 2012-12-12 04:23:46.120957000 Z
-  updated_at: 2012-12-12 04:23:46.120957000 Z
+  created_at: 2013-03-28 05:27:09.304516000 Z
+  updated_at: 2013-03-28 05:27:09.304516000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5475,8 +5475,8 @@ whitestone:
   id: 153
   name: Whitestone
   borough: Queens
-  created_at: 2012-12-12 04:23:46.123387000 Z
-  updated_at: 2012-12-12 04:23:46.123387000 Z
+  created_at: 2013-03-28 05:27:09.305929000 Z
+  updated_at: 2013-03-28 05:27:09.305929000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5511,8 +5511,8 @@ bayside:
   id: 154
   name: Bayside
   borough: Queens
-  created_at: 2012-12-12 04:23:46.125672000 Z
-  updated_at: 2012-12-12 04:23:46.125672000 Z
+  created_at: 2013-03-28 05:27:09.307357000 Z
+  updated_at: 2013-03-28 05:27:09.307357000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5547,8 +5547,8 @@ auburndale:
   id: 155
   name: Auburndale
   borough: Queens
-  created_at: 2012-12-12 04:23:46.127952000 Z
-  updated_at: 2012-12-12 04:23:46.127952000 Z
+  created_at: 2013-03-28 05:27:09.308893000 Z
+  updated_at: 2013-03-28 05:27:09.308893000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5583,8 +5583,8 @@ little_neck:
   id: 156
   name: Little Neck
   borough: Queens
-  created_at: 2012-12-12 04:23:46.130217000 Z
-  updated_at: 2012-12-12 04:23:46.130217000 Z
+  created_at: 2013-03-28 05:27:09.310461000 Z
+  updated_at: 2013-03-28 05:27:09.310461000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5619,8 +5619,8 @@ douglaston:
   id: 157
   name: Douglaston
   borough: Queens
-  created_at: 2012-12-12 04:23:46.134239000 Z
-  updated_at: 2012-12-12 04:23:46.134239000 Z
+  created_at: 2013-03-28 05:27:09.312194000 Z
+  updated_at: 2013-03-28 05:27:09.312194000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5655,8 +5655,8 @@ glen_oaks:
   id: 158
   name: Glen Oaks
   borough: Queens
-  created_at: 2012-12-12 04:23:46.136887000 Z
-  updated_at: 2012-12-12 04:23:46.136887000 Z
+  created_at: 2013-03-28 05:27:09.313796000 Z
+  updated_at: 2013-03-28 05:27:09.313796000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5691,8 +5691,8 @@ bellerose:
   id: 159
   name: Bellerose
   borough: Queens
-  created_at: 2012-12-12 04:23:46.139526000 Z
-  updated_at: 2012-12-12 04:23:46.139526000 Z
+  created_at: 2013-03-28 05:27:09.315390000 Z
+  updated_at: 2013-03-28 05:27:09.315390000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5727,8 +5727,8 @@ kew_gardens_hills:
   id: 160
   name: Kew Gardens Hills
   borough: Queens
-  created_at: 2012-12-12 04:23:46.142125000 Z
-  updated_at: 2012-12-12 04:23:46.142125000 Z
+  created_at: 2013-03-28 05:27:09.316968000 Z
+  updated_at: 2013-03-28 05:27:09.316968000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5763,8 +5763,8 @@ fresh_meadows:
   id: 161
   name: Fresh Meadows
   borough: Queens
-  created_at: 2012-12-12 04:23:46.144495000 Z
-  updated_at: 2012-12-12 04:23:46.144495000 Z
+  created_at: 2013-03-28 05:27:09.318401000 Z
+  updated_at: 2013-03-28 05:27:09.318401000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5799,8 +5799,8 @@ briarwood:
   id: 162
   name: Briarwood
   borough: Queens
-  created_at: 2012-12-12 04:23:46.147176000 Z
-  updated_at: 2012-12-12 04:23:46.147176000 Z
+  created_at: 2013-03-28 05:27:09.319865000 Z
+  updated_at: 2013-03-28 05:27:09.319865000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5835,8 +5835,8 @@ jamaica_center:
   id: 163
   name: Jamaica Center
   borough: Queens
-  created_at: 2012-12-12 04:23:46.149709000 Z
-  updated_at: 2012-12-12 04:23:46.149709000 Z
+  created_at: 2013-03-28 05:27:09.321241000 Z
+  updated_at: 2013-03-28 05:27:09.321241000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5871,8 +5871,8 @@ oakland_gardens:
   id: 164
   name: Oakland Gardens
   borough: Queens
-  created_at: 2012-12-12 04:23:46.152234000 Z
-  updated_at: 2012-12-12 04:23:46.152234000 Z
+  created_at: 2013-03-28 05:27:09.322754000 Z
+  updated_at: 2013-03-28 05:27:09.322754000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5907,8 +5907,8 @@ queens_village:
   id: 165
   name: Queens Village
   borough: Queens
-  created_at: 2012-12-12 04:23:46.154742000 Z
-  updated_at: 2012-12-12 04:23:46.154742000 Z
+  created_at: 2013-03-28 05:27:09.324198000 Z
+  updated_at: 2013-03-28 05:27:09.324198000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5943,8 +5943,8 @@ hollis:
   id: 166
   name: Hollis
   borough: Queens
-  created_at: 2012-12-12 04:23:46.157151000 Z
-  updated_at: 2012-12-12 04:23:46.157151000 Z
+  created_at: 2013-03-28 05:27:09.325631000 Z
+  updated_at: 2013-03-28 05:27:09.325631000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -5979,8 +5979,8 @@ south_jamaica:
   id: 167
   name: South Jamaica
   borough: Queens
-  created_at: 2012-12-12 04:23:46.159575000 Z
-  updated_at: 2012-12-12 04:23:46.159575000 Z
+  created_at: 2013-03-28 05:27:09.327078000 Z
+  updated_at: 2013-03-28 05:27:09.327078000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6015,8 +6015,8 @@ st_albans:
   id: 168
   name: St. Albans
   borough: Queens
-  created_at: 2012-12-12 04:23:46.162293000 Z
-  updated_at: 2012-12-12 04:23:46.162293000 Z
+  created_at: 2013-03-28 05:27:09.328466000 Z
+  updated_at: 2013-03-28 05:27:09.328466000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6051,8 +6051,8 @@ rochdale:
   id: 169
   name: Rochdale
   borough: Queens
-  created_at: 2012-12-12 04:23:46.164716000 Z
-  updated_at: 2012-12-12 04:23:46.164716000 Z
+  created_at: 2013-03-28 05:27:09.329857000 Z
+  updated_at: 2013-03-28 05:27:09.329857000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6087,8 +6087,8 @@ springfield_gardens:
   id: 170
   name: Springfield Gardens
   borough: Queens
-  created_at: 2012-12-12 04:23:46.167236000 Z
-  updated_at: 2012-12-12 04:23:46.167236000 Z
+  created_at: 2013-03-28 05:27:09.331458000 Z
+  updated_at: 2013-03-28 05:27:09.331458000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6123,8 +6123,8 @@ cambria_heights:
   id: 171
   name: Cambria Heights
   borough: Queens
-  created_at: 2012-12-12 04:23:46.169712000 Z
-  updated_at: 2012-12-12 04:23:46.169712000 Z
+  created_at: 2013-03-28 05:27:09.333146000 Z
+  updated_at: 2013-03-28 05:27:09.333146000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6159,8 +6159,8 @@ rosedale:
   id: 172
   name: Rosedale
   borough: Queens
-  created_at: 2012-12-12 04:23:46.172033000 Z
-  updated_at: 2012-12-12 04:23:46.172033000 Z
+  created_at: 2013-03-28 05:27:09.334740000 Z
+  updated_at: 2013-03-28 05:27:09.334740000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6195,8 +6195,8 @@ far_rockaway:
   id: 173
   name: Far Rockaway
   borough: Queens
-  created_at: 2012-12-12 04:23:46.174410000 Z
-  updated_at: 2012-12-12 04:23:46.174410000 Z
+  created_at: 2013-03-28 05:27:09.336219000 Z
+  updated_at: 2013-03-28 05:27:09.336219000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6231,8 +6231,8 @@ broad_channel:
   id: 174
   name: Broad Channel
   borough: Queens
-  created_at: 2012-12-12 04:23:46.176805000 Z
-  updated_at: 2012-12-12 04:23:46.176805000 Z
+  created_at: 2013-03-28 05:27:09.337765000 Z
+  updated_at: 2013-03-28 05:27:09.337765000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6267,8 +6267,8 @@ breezy_point:
   id: 175
   name: Breezy Point
   borough: Queens
-  created_at: 2012-12-12 04:23:46.179178000 Z
-  updated_at: 2012-12-12 04:23:46.179178000 Z
+  created_at: 2013-03-28 05:27:09.339208000 Z
+  updated_at: 2013-03-28 05:27:09.339208000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6303,8 +6303,8 @@ steinway:
   id: 176
   name: Steinway
   borough: Queens
-  created_at: 2012-12-12 04:23:46.181504000 Z
-  updated_at: 2012-12-12 04:23:46.181504000 Z
+  created_at: 2013-03-28 05:27:09.341154000 Z
+  updated_at: 2013-03-28 05:27:09.341154000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6339,8 +6339,8 @@ beechhurst:
   id: 177
   name: Beechhurst
   borough: Queens
-  created_at: 2012-12-12 04:23:46.183972000 Z
-  updated_at: 2012-12-12 04:23:46.183972000 Z
+  created_at: 2013-03-28 05:27:09.342673000 Z
+  updated_at: 2013-03-28 05:27:09.342673000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6375,8 +6375,8 @@ bay_terrace:
   id: 178
   name: Bay Terrace
   borough: Queens
-  created_at: 2012-12-12 04:23:46.186305000 Z
-  updated_at: 2012-12-12 04:23:46.186305000 Z
+  created_at: 2013-03-28 05:27:09.344203000 Z
+  updated_at: 2013-03-28 05:27:09.344203000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6411,8 +6411,8 @@ edgemere:
   id: 179
   name: Edgemere
   borough: Queens
-  created_at: 2012-12-12 04:23:46.188634000 Z
-  updated_at: 2012-12-12 04:23:46.188634000 Z
+  created_at: 2013-03-28 05:27:09.345657000 Z
+  updated_at: 2013-03-28 05:27:09.345657000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6447,8 +6447,8 @@ arverne:
   id: 180
   name: Arverne
   borough: Queens
-  created_at: 2012-12-12 04:23:46.190924000 Z
-  updated_at: 2012-12-12 04:23:46.190924000 Z
+  created_at: 2013-03-28 05:27:09.347109000 Z
+  updated_at: 2013-03-28 05:27:09.347109000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6483,8 +6483,8 @@ seaside:
   id: 181
   name: Seaside
   borough: Queens
-  created_at: 2012-12-12 04:23:46.193182000 Z
-  updated_at: 2012-12-12 04:23:46.193182000 Z
+  created_at: 2013-03-28 05:27:09.348561000 Z
+  updated_at: 2013-03-28 05:27:09.348561000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6519,8 +6519,8 @@ neponsit:
   id: 182
   name: Neponsit
   borough: Queens
-  created_at: 2012-12-12 04:23:46.195498000 Z
-  updated_at: 2012-12-12 04:23:46.195498000 Z
+  created_at: 2013-03-28 05:27:09.349942000 Z
+  updated_at: 2013-03-28 05:27:09.349942000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6555,8 +6555,8 @@ murray_hill_1:
   id: 183
   name: Murray Hill
   borough: Queens
-  created_at: 2012-12-12 04:23:46.197884000 Z
-  updated_at: 2012-12-12 04:23:46.197884000 Z
+  created_at: 2013-03-28 05:27:09.351340000 Z
+  updated_at: 2013-03-28 05:27:09.351340000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6591,8 +6591,8 @@ floral_park:
   id: 184
   name: Floral Park
   borough: Queens
-  created_at: 2012-12-12 04:23:46.200243000 Z
-  updated_at: 2012-12-12 04:23:46.200243000 Z
+  created_at: 2013-03-28 05:27:09.352692000 Z
+  updated_at: 2013-03-28 05:27:09.352692000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6627,8 +6627,8 @@ holliswood:
   id: 185
   name: Holliswood
   borough: Queens
-  created_at: 2012-12-12 04:23:46.202538000 Z
-  updated_at: 2012-12-12 04:23:46.202538000 Z
+  created_at: 2013-03-28 05:27:09.355108000 Z
+  updated_at: 2013-03-28 05:27:09.355108000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6663,8 +6663,8 @@ jamaica_estates:
   id: 186
   name: Jamaica Estates
   borough: Queens
-  created_at: 2012-12-12 04:23:46.204903000 Z
-  updated_at: 2012-12-12 04:23:46.204903000 Z
+  created_at: 2013-03-28 05:27:09.371908000 Z
+  updated_at: 2013-03-28 05:27:09.371908000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6699,8 +6699,8 @@ queensboro_hill:
   id: 187
   name: Queensboro Hill
   borough: Queens
-  created_at: 2012-12-12 04:23:46.207475000 Z
-  updated_at: 2012-12-12 04:23:46.207475000 Z
+  created_at: 2013-03-28 05:27:09.373740000 Z
+  updated_at: 2013-03-28 05:27:09.373740000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6735,8 +6735,8 @@ hillcrest:
   id: 188
   name: Hillcrest
   borough: Queens
-  created_at: 2012-12-12 04:23:46.209992000 Z
-  updated_at: 2012-12-12 04:23:46.209992000 Z
+  created_at: 2013-03-28 05:27:09.375473000 Z
+  updated_at: 2013-03-28 05:27:09.375473000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6771,8 +6771,8 @@ ravenswood:
   id: 189
   name: Ravenswood
   borough: Queens
-  created_at: 2012-12-12 04:23:46.212581000 Z
-  updated_at: 2012-12-12 04:23:46.212581000 Z
+  created_at: 2013-03-28 05:27:09.377191000 Z
+  updated_at: 2013-03-28 05:27:09.377191000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6807,8 +6807,8 @@ lindenwood:
   id: 190
   name: Lindenwood
   borough: Queens
-  created_at: 2012-12-12 04:23:46.214993000 Z
-  updated_at: 2012-12-12 04:23:46.214993000 Z
+  created_at: 2013-03-28 05:27:09.378784000 Z
+  updated_at: 2013-03-28 05:27:09.378784000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6843,8 +6843,8 @@ laurelton:
   id: 191
   name: Laurelton
   borough: Queens
-  created_at: 2012-12-12 04:23:46.217351000 Z
-  updated_at: 2012-12-12 04:23:46.217351000 Z
+  created_at: 2013-03-28 05:27:09.380257000 Z
+  updated_at: 2013-03-28 05:27:09.380257000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6879,8 +6879,8 @@ lefrak_city:
   id: 192
   name: Lefrak City
   borough: Queens
-  created_at: 2012-12-12 04:23:46.219861000 Z
-  updated_at: 2012-12-12 04:23:46.219861000 Z
+  created_at: 2013-03-28 05:27:09.381655000 Z
+  updated_at: 2013-03-28 05:27:09.381655000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6915,8 +6915,8 @@ belle_harbor:
   id: 193
   name: Belle Harbor
   borough: Queens
-  created_at: 2012-12-12 04:23:46.222637000 Z
-  updated_at: 2012-12-12 04:23:46.222637000 Z
+  created_at: 2013-03-28 05:27:09.383082000 Z
+  updated_at: 2013-03-28 05:27:09.383082000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6951,8 +6951,8 @@ rockaway_park:
   id: 194
   name: Rockaway Park
   borough: Queens
-  created_at: 2012-12-12 04:23:46.224824000 Z
-  updated_at: 2012-12-12 04:23:46.224824000 Z
+  created_at: 2013-03-28 05:27:09.384451000 Z
+  updated_at: 2013-03-28 05:27:09.384451000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -6987,8 +6987,8 @@ somerville:
   id: 195
   name: Somerville
   borough: Queens
-  created_at: 2012-12-12 04:23:46.227401000 Z
-  updated_at: 2012-12-12 04:23:46.227401000 Z
+  created_at: 2013-03-28 05:27:09.385860000 Z
+  updated_at: 2013-03-28 05:27:09.385860000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7023,8 +7023,8 @@ brookville:
   id: 196
   name: Brookville
   borough: Queens
-  created_at: 2012-12-12 04:23:46.230104000 Z
-  updated_at: 2012-12-12 04:23:46.230104000 Z
+  created_at: 2013-03-28 05:27:09.387252000 Z
+  updated_at: 2013-03-28 05:27:09.387252000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7059,8 +7059,8 @@ bellaire:
   id: 197
   name: Bellaire
   borough: Queens
-  created_at: 2012-12-12 04:23:46.232706000 Z
-  updated_at: 2012-12-12 04:23:46.232706000 Z
+  created_at: 2013-03-28 05:27:09.388627000 Z
+  updated_at: 2013-03-28 05:27:09.388627000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7095,8 +7095,8 @@ north_corona:
   id: 198
   name: North Corona
   borough: Queens
-  created_at: 2012-12-12 04:23:46.235206000 Z
-  updated_at: 2012-12-12 04:23:46.235206000 Z
+  created_at: 2013-03-28 05:27:09.389999000 Z
+  updated_at: 2013-03-28 05:27:09.389999000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7131,8 +7131,8 @@ forest_hills_gardens:
   id: 199
   name: Forest Hills Gardens
   borough: Queens
-  created_at: 2012-12-12 04:23:46.237445000 Z
-  updated_at: 2012-12-12 04:23:46.237445000 Z
+  created_at: 2013-03-28 05:27:09.391366000 Z
+  updated_at: 2013-03-28 05:27:09.391366000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7167,8 +7167,8 @@ st_george:
   id: 200
   name: St. George
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.239771000 Z
-  updated_at: 2012-12-12 04:23:46.239771000 Z
+  created_at: 2013-03-28 05:27:09.392757000 Z
+  updated_at: 2013-03-28 05:27:09.392757000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7203,8 +7203,8 @@ new_brighton:
   id: 201
   name: New Brighton
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.242206000 Z
-  updated_at: 2012-12-12 04:23:46.242206000 Z
+  created_at: 2013-03-28 05:27:09.394236000 Z
+  updated_at: 2013-03-28 05:27:09.394236000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7239,8 +7239,8 @@ stapleton:
   id: 202
   name: Stapleton
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.244723000 Z
-  updated_at: 2012-12-12 04:23:46.244723000 Z
+  created_at: 2013-03-28 05:27:09.396007000 Z
+  updated_at: 2013-03-28 05:27:09.396007000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7275,8 +7275,8 @@ rosebank:
   id: 203
   name: Rosebank
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.247155000 Z
-  updated_at: 2012-12-12 04:23:46.247155000 Z
+  created_at: 2013-03-28 05:27:09.397487000 Z
+  updated_at: 2013-03-28 05:27:09.397487000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7311,8 +7311,8 @@ west_brighton:
   id: 204
   name: West Brighton
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.249604000 Z
-  updated_at: 2012-12-12 04:23:46.249604000 Z
+  created_at: 2013-03-28 05:27:09.399056000 Z
+  updated_at: 2013-03-28 05:27:09.399056000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7347,8 +7347,8 @@ grymes_hill:
   id: 205
   name: Grymes Hill
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.318248000 Z
-  updated_at: 2012-12-12 04:23:46.318248000 Z
+  created_at: 2013-03-28 05:27:09.400679000 Z
+  updated_at: 2013-03-28 05:27:09.400679000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7383,8 +7383,8 @@ todt_hill:
   id: 206
   name: Todt Hill
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.321533000 Z
-  updated_at: 2012-12-12 04:23:46.321533000 Z
+  created_at: 2013-03-28 05:27:09.402111000 Z
+  updated_at: 2013-03-28 05:27:09.402111000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7419,8 +7419,8 @@ south_beach:
   id: 207
   name: South Beach
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.323928000 Z
-  updated_at: 2012-12-12 04:23:46.323928000 Z
+  created_at: 2013-03-28 05:27:09.403425000 Z
+  updated_at: 2013-03-28 05:27:09.403425000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7455,8 +7455,8 @@ port_richmond:
   id: 208
   name: Port Richmond
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.326301000 Z
-  updated_at: 2012-12-12 04:23:46.326301000 Z
+  created_at: 2013-03-28 05:27:09.404886000 Z
+  updated_at: 2013-03-28 05:27:09.404886000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7491,8 +7491,8 @@ mariner_s_harbor:
   id: 209
   name: Mariner's Harbor
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.328568000 Z
-  updated_at: 2012-12-12 04:23:46.328568000 Z
+  created_at: 2013-03-28 05:27:09.406568000 Z
+  updated_at: 2013-03-28 05:27:09.406568000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7527,8 +7527,8 @@ port_ivory:
   id: 210
   name: Port Ivory
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.330672000 Z
-  updated_at: 2012-12-12 04:23:46.330672000 Z
+  created_at: 2013-03-28 05:27:09.407949000 Z
+  updated_at: 2013-03-28 05:27:09.407949000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7563,8 +7563,8 @@ castleton_corners:
   id: 211
   name: Castleton Corners
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.332920000 Z
-  updated_at: 2012-12-12 04:23:46.332920000 Z
+  created_at: 2013-03-28 05:27:09.409232000 Z
+  updated_at: 2013-03-28 05:27:09.409232000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7599,8 +7599,8 @@ new_springville:
   id: 212
   name: New Springville
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.335233000 Z
-  updated_at: 2012-12-12 04:23:46.335233000 Z
+  created_at: 2013-03-28 05:27:09.410535000 Z
+  updated_at: 2013-03-28 05:27:09.410535000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7635,8 +7635,8 @@ travis:
   id: 213
   name: Travis
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.337637000 Z
-  updated_at: 2012-12-12 04:23:46.337637000 Z
+  created_at: 2013-03-28 05:27:09.411853000 Z
+  updated_at: 2013-03-28 05:27:09.411853000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7671,8 +7671,8 @@ new_dorp:
   id: 214
   name: New Dorp
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.340110000 Z
-  updated_at: 2012-12-12 04:23:46.340110000 Z
+  created_at: 2013-03-28 05:27:09.413147000 Z
+  updated_at: 2013-03-28 05:27:09.413147000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7707,8 +7707,8 @@ oakwood:
   id: 215
   name: Oakwood
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.342685000 Z
-  updated_at: 2012-12-12 04:23:46.342685000 Z
+  created_at: 2013-03-28 05:27:09.414456000 Z
+  updated_at: 2013-03-28 05:27:09.414456000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7743,8 +7743,8 @@ great_kills:
   id: 216
   name: Great Kills
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.345151000 Z
-  updated_at: 2012-12-12 04:23:46.345151000 Z
+  created_at: 2013-03-28 05:27:09.415817000 Z
+  updated_at: 2013-03-28 05:27:09.415817000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7779,8 +7779,8 @@ eltingville:
   id: 217
   name: Eltingville
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.347498000 Z
-  updated_at: 2012-12-12 04:23:46.347498000 Z
+  created_at: 2013-03-28 05:27:09.417101000 Z
+  updated_at: 2013-03-28 05:27:09.417101000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7815,8 +7815,8 @@ annadale:
   id: 218
   name: Annadale
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.349842000 Z
-  updated_at: 2012-12-12 04:23:46.349842000 Z
+  created_at: 2013-03-28 05:27:09.418392000 Z
+  updated_at: 2013-03-28 05:27:09.418392000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7851,8 +7851,8 @@ woodrow:
   id: 219
   name: Woodrow
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.352107000 Z
-  updated_at: 2012-12-12 04:23:46.352107000 Z
+  created_at: 2013-03-28 05:27:09.419678000 Z
+  updated_at: 2013-03-28 05:27:09.419678000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7887,8 +7887,8 @@ tottenville:
   id: 220
   name: Tottenville
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.354429000 Z
-  updated_at: 2012-12-12 04:23:46.354429000 Z
+  created_at: 2013-03-28 05:27:09.420980000 Z
+  updated_at: 2013-03-28 05:27:09.420980000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7923,8 +7923,8 @@ tompkinsville:
   id: 221
   name: Tompkinsville
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.356770000 Z
-  updated_at: 2012-12-12 04:23:46.356770000 Z
+  created_at: 2013-03-28 05:27:09.422494000 Z
+  updated_at: 2013-03-28 05:27:09.422494000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7959,8 +7959,8 @@ silver_lake:
   id: 222
   name: Silver Lake
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.359005000 Z
-  updated_at: 2012-12-12 04:23:46.359005000 Z
+  created_at: 2013-03-28 05:27:09.423998000 Z
+  updated_at: 2013-03-28 05:27:09.423998000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -7995,8 +7995,8 @@ sunnyside_1:
   id: 223
   name: Sunnyside
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.361362000 Z
-  updated_at: 2012-12-12 04:23:46.361362000 Z
+  created_at: 2013-03-28 05:27:09.425326000 Z
+  updated_at: 2013-03-28 05:27:09.425326000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8031,8 +8031,8 @@ ditmas_park:
   id: 224
   name: Ditmas Park
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.363593000 Z
-  updated_at: 2012-12-12 04:23:46.363593000 Z
+  created_at: 2013-03-28 05:27:09.426686000 Z
+  updated_at: 2013-03-28 05:27:09.426686000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8067,8 +8067,8 @@ wingate:
   id: 225
   name: Wingate
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.365892000 Z
-  updated_at: 2012-12-12 04:23:46.365892000 Z
+  created_at: 2013-03-28 05:27:09.428042000 Z
+  updated_at: 2013-03-28 05:27:09.428042000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8103,8 +8103,8 @@ rugby:
   id: 226
   name: Rugby
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.368124000 Z
-  updated_at: 2012-12-12 04:23:46.368124000 Z
+  created_at: 2013-03-28 05:27:09.429509000 Z
+  updated_at: 2013-03-28 05:27:09.429509000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8139,8 +8139,8 @@ park_hill:
   id: 227
   name: Park Hill
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.370559000 Z
-  updated_at: 2012-12-12 04:23:46.370559000 Z
+  created_at: 2013-03-28 05:27:09.430814000 Z
+  updated_at: 2013-03-28 05:27:09.430814000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8175,8 +8175,8 @@ westerleigh:
   id: 228
   name: Westerleigh
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.372975000 Z
-  updated_at: 2012-12-12 04:23:46.372975000 Z
+  created_at: 2013-03-28 05:27:09.432120000 Z
+  updated_at: 2013-03-28 05:27:09.432120000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8211,8 +8211,8 @@ graniteville:
   id: 229
   name: Graniteville
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.375360000 Z
-  updated_at: 2012-12-12 04:23:46.375360000 Z
+  created_at: 2013-03-28 05:27:09.433397000 Z
+  updated_at: 2013-03-28 05:27:09.433397000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8247,8 +8247,8 @@ arlington:
   id: 230
   name: Arlington
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.377639000 Z
-  updated_at: 2012-12-12 04:23:46.377639000 Z
+  created_at: 2013-03-28 05:27:09.434687000 Z
+  updated_at: 2013-03-28 05:27:09.434687000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8283,8 +8283,8 @@ arrochar:
   id: 231
   name: Arrochar
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.380166000 Z
-  updated_at: 2012-12-12 04:23:46.380166000 Z
+  created_at: 2013-03-28 05:27:09.435947000 Z
+  updated_at: 2013-03-28 05:27:09.435947000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8319,8 +8319,8 @@ grasmere:
   id: 232
   name: Grasmere
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.382524000 Z
-  updated_at: 2012-12-12 04:23:46.382524000 Z
+  created_at: 2013-03-28 05:27:09.437357000 Z
+  updated_at: 2013-03-28 05:27:09.437357000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8355,8 +8355,8 @@ old_town:
   id: 233
   name: Old Town
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.384780000 Z
-  updated_at: 2012-12-12 04:23:46.384780000 Z
+  created_at: 2013-03-28 05:27:09.439022000 Z
+  updated_at: 2013-03-28 05:27:09.439022000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8391,8 +8391,8 @@ dongan_hills:
   id: 234
   name: Dongan Hills
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.387164000 Z
-  updated_at: 2012-12-12 04:23:46.387164000 Z
+  created_at: 2013-03-28 05:27:09.440508000 Z
+  updated_at: 2013-03-28 05:27:09.440508000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8400,7 +8400,11 @@ dongan_hills:
       srid: 3785
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
-      wkt_generator: *70277712105900
+      wkt_generator:
+        tag_format: wkt11
+        emit_ewkt_srid: 
+        square_brackets: false
+        convert_case: upper
       wkb_generator:
         type_format: wkb11
         emit_ewkb_srid: 
@@ -8423,8 +8427,8 @@ midland_beach:
   id: 235
   name: Midland Beach
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.389459000 Z
-  updated_at: 2012-12-12 04:23:46.389459000 Z
+  created_at: 2013-03-28 05:27:09.441907000 Z
+  updated_at: 2013-03-28 05:27:09.441907000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8459,8 +8463,8 @@ grant_city:
   id: 236
   name: Grant City
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.391999000 Z
-  updated_at: 2012-12-12 04:23:46.391999000 Z
+  created_at: 2013-03-28 05:27:09.443346000 Z
+  updated_at: 2013-03-28 05:27:09.443346000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8495,8 +8499,8 @@ new_dorp_beach:
   id: 237
   name: New Dorp Beach
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.394474000 Z
-  updated_at: 2012-12-12 04:23:46.394474000 Z
+  created_at: 2013-03-28 05:27:09.444715000 Z
+  updated_at: 2013-03-28 05:27:09.444715000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8531,8 +8535,8 @@ bay_terrace_1:
   id: 238
   name: Bay Terrace
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.396626000 Z
-  updated_at: 2012-12-12 04:23:46.396626000 Z
+  created_at: 2013-03-28 05:27:09.446217000 Z
+  updated_at: 2013-03-28 05:27:09.446217000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8567,8 +8571,8 @@ huguenot:
   id: 239
   name: Huguenot
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.399099000 Z
-  updated_at: 2012-12-12 04:23:46.399099000 Z
+  created_at: 2013-03-28 05:27:09.447511000 Z
+  updated_at: 2013-03-28 05:27:09.447511000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8603,8 +8607,8 @@ pleasant_plains:
   id: 240
   name: Pleasant Plains
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.401545000 Z
-  updated_at: 2012-12-12 04:23:46.401545000 Z
+  created_at: 2013-03-28 05:27:09.448817000 Z
+  updated_at: 2013-03-28 05:27:09.448817000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8639,8 +8643,8 @@ butler_manor:
   id: 241
   name: Butler Manor
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.403951000 Z
-  updated_at: 2012-12-12 04:23:46.403951000 Z
+  created_at: 2013-03-28 05:27:09.450109000 Z
+  updated_at: 2013-03-28 05:27:09.450109000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8675,8 +8679,8 @@ charleston:
   id: 242
   name: Charleston
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.406194000 Z
-  updated_at: 2012-12-12 04:23:46.406194000 Z
+  created_at: 2013-03-28 05:27:09.451573000 Z
+  updated_at: 2013-03-28 05:27:09.451573000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8711,8 +8715,8 @@ rossville:
   id: 243
   name: Rossville
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.408503000 Z
-  updated_at: 2012-12-12 04:23:46.408503000 Z
+  created_at: 2013-03-28 05:27:09.452851000 Z
+  updated_at: 2013-03-28 05:27:09.452851000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8747,8 +8751,8 @@ arden_heights:
   id: 244
   name: Arden Heights
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.410707000 Z
-  updated_at: 2012-12-12 04:23:46.410707000 Z
+  created_at: 2013-03-28 05:27:09.454225000 Z
+  updated_at: 2013-03-28 05:27:09.454225000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8783,8 +8787,8 @@ greenridge:
   id: 245
   name: Greenridge
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.413015000 Z
-  updated_at: 2012-12-12 04:23:46.413015000 Z
+  created_at: 2013-03-28 05:27:09.455616000 Z
+  updated_at: 2013-03-28 05:27:09.455616000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8819,8 +8823,8 @@ heartland_village:
   id: 246
   name: Heartland Village
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.415326000 Z
-  updated_at: 2012-12-12 04:23:46.415326000 Z
+  created_at: 2013-03-28 05:27:09.456945000 Z
+  updated_at: 2013-03-28 05:27:09.456945000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8855,8 +8859,8 @@ chelsea_1:
   id: 247
   name: Chelsea
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.417565000 Z
-  updated_at: 2012-12-12 04:23:46.417565000 Z
+  created_at: 2013-03-28 05:27:09.458232000 Z
+  updated_at: 2013-03-28 05:27:09.458232000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8891,8 +8895,8 @@ bloomfield:
   id: 248
   name: Bloomfield
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.420070000 Z
-  updated_at: 2012-12-12 04:23:46.420070000 Z
+  created_at: 2013-03-28 05:27:09.459540000 Z
+  updated_at: 2013-03-28 05:27:09.459540000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8927,8 +8931,8 @@ bulls_head:
   id: 249
   name: Bulls Head
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.422435000 Z
-  updated_at: 2012-12-12 04:23:46.422435000 Z
+  created_at: 2013-03-28 05:27:09.460816000 Z
+  updated_at: 2013-03-28 05:27:09.460816000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8963,8 +8967,8 @@ carnegie_hill:
   id: 250
   name: Carnegie Hill
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.424730000 Z
-  updated_at: 2012-12-12 04:23:46.424730000 Z
+  created_at: 2013-03-28 05:27:09.462165000 Z
+  updated_at: 2013-03-28 05:27:09.462165000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -8999,8 +9003,8 @@ noho:
   id: 251
   name: Noho
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.427220000 Z
-  updated_at: 2012-12-12 04:23:46.427220000 Z
+  created_at: 2013-03-28 05:27:09.463478000 Z
+  updated_at: 2013-03-28 05:27:09.463478000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9035,8 +9039,8 @@ civic_center:
   id: 252
   name: Civic Center
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.429557000 Z
-  updated_at: 2012-12-12 04:23:46.429557000 Z
+  created_at: 2013-03-28 05:27:09.464756000 Z
+  updated_at: 2013-03-28 05:27:09.464756000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9054,7 +9058,12 @@ civic_center:
         emit_ewkb_srid: 
         hex_format: false
         little_endian: false
-      wkt_parser: *70277712393400
+      wkt_parser:
+        support_ewkt: false
+        support_wkt12: false
+        strict_wkt11: false
+        ignore_extra_tokens: false
+        default_srid: 
       wkb_parser:
         support_ewkb: false
         support_wkb12: false
@@ -9066,8 +9075,8 @@ midtown_south:
   id: 253
   name: Midtown South
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.431904000 Z
-  updated_at: 2012-12-12 04:23:46.431904000 Z
+  created_at: 2013-03-28 05:27:09.466186000 Z
+  updated_at: 2013-03-28 05:27:09.466186000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9102,8 +9111,8 @@ richmond_town:
   id: 254
   name: Richmond Town
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.434231000 Z
-  updated_at: 2012-12-12 04:23:46.434231000 Z
+  created_at: 2013-03-28 05:27:09.467626000 Z
+  updated_at: 2013-03-28 05:27:09.467626000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9138,8 +9147,8 @@ shore_acres:
   id: 255
   name: Shore Acres
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.436405000 Z
-  updated_at: 2012-12-12 04:23:46.436405000 Z
+  created_at: 2013-03-28 05:27:09.522889000 Z
+  updated_at: 2013-03-28 05:27:09.522889000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9174,8 +9183,8 @@ clifton:
   id: 256
   name: Clifton
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.438834000 Z
-  updated_at: 2012-12-12 04:23:46.438834000 Z
+  created_at: 2013-03-28 05:27:09.524674000 Z
+  updated_at: 2013-03-28 05:27:09.524674000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9210,8 +9219,8 @@ concord:
   id: 257
   name: Concord
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.441134000 Z
-  updated_at: 2012-12-12 04:23:46.441134000 Z
+  created_at: 2013-03-28 05:27:09.526097000 Z
+  updated_at: 2013-03-28 05:27:09.526097000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9246,8 +9255,8 @@ emerson_hill:
   id: 258
   name: Emerson Hill
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.443828000 Z
-  updated_at: 2012-12-12 04:23:46.443828000 Z
+  created_at: 2013-03-28 05:27:09.527584000 Z
+  updated_at: 2013-03-28 05:27:09.527584000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9282,8 +9291,8 @@ randall_manor:
   id: 259
   name: Randall Manor
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.446425000 Z
-  updated_at: 2012-12-12 04:23:46.446425000 Z
+  created_at: 2013-03-28 05:27:09.528984000 Z
+  updated_at: 2013-03-28 05:27:09.528984000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9303,14 +9312,14 @@ randall_manor:
         little_endian: false
       wkt_parser:
         support_ewkt: false
-        *70277674401200: false
+        support_wkt12: false
         strict_wkt11: false
         ignore_extra_tokens: false
         default_srid: 
       wkb_parser:
         support_ewkb: false
         support_wkb12: false
-        *70277674400720: false
+        ignore_extra_bytes: false
         default_srid: 
       auto_prepare: simple
     wkt: POINT (-8248557.2642088178545237 4930877.0375353777781129)
@@ -9318,8 +9327,8 @@ howland_hook:
   id: 260
   name: Howland Hook
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.448770000 Z
-  updated_at: 2012-12-12 04:23:46.448770000 Z
+  created_at: 2013-03-28 05:27:09.530422000 Z
+  updated_at: 2013-03-28 05:27:09.530422000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9354,8 +9363,8 @@ elm_park:
   id: 261
   name: Elm Park
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.451223000 Z
-  updated_at: 2012-12-12 04:23:46.451223000 Z
+  created_at: 2013-03-28 05:27:09.532073000 Z
+  updated_at: 2013-03-28 05:27:09.532073000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9390,8 +9399,8 @@ remsen_village:
   id: 262
   name: Remsen Village
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.453573000 Z
-  updated_at: 2012-12-12 04:23:46.453573000 Z
+  created_at: 2013-03-28 05:27:09.533719000 Z
+  updated_at: 2013-03-28 05:27:09.533719000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9426,8 +9435,8 @@ new_lots:
   id: 263
   name: New Lots
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.455863000 Z
-  updated_at: 2012-12-12 04:23:46.455863000 Z
+  created_at: 2013-03-28 05:27:09.535231000 Z
+  updated_at: 2013-03-28 05:27:09.535231000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9462,8 +9471,8 @@ paerdegat_basin:
   id: 264
   name: Paerdegat Basin
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.458181000 Z
-  updated_at: 2012-12-12 04:23:46.458181000 Z
+  created_at: 2013-03-28 05:27:09.536566000 Z
+  updated_at: 2013-03-28 05:27:09.536566000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9498,8 +9507,8 @@ mill_basin:
   id: 265
   name: Mill Basin
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.460490000 Z
-  updated_at: 2012-12-12 04:23:46.460490000 Z
+  created_at: 2013-03-28 05:27:09.537936000 Z
+  updated_at: 2013-03-28 05:27:09.537936000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9534,8 +9543,8 @@ jamaica_hills:
   id: 266
   name: Jamaica Hills
   borough: Queens
-  created_at: 2012-12-12 04:23:46.462885000 Z
-  updated_at: 2012-12-12 04:23:46.462885000 Z
+  created_at: 2013-03-28 05:27:09.539294000 Z
+  updated_at: 2013-03-28 05:27:09.539294000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9570,8 +9579,8 @@ utopia:
   id: 267
   name: Utopia
   borough: Queens
-  created_at: 2012-12-12 04:23:46.465170000 Z
-  updated_at: 2012-12-12 04:23:46.465170000 Z
+  created_at: 2013-03-28 05:27:09.540701000 Z
+  updated_at: 2013-03-28 05:27:09.540701000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9606,8 +9615,8 @@ pomonok:
   id: 268
   name: Pomonok
   borough: Queens
-  created_at: 2012-12-12 04:23:46.467366000 Z
-  updated_at: 2012-12-12 04:23:46.467366000 Z
+  created_at: 2013-03-28 05:27:09.542015000 Z
+  updated_at: 2013-03-28 05:27:09.542015000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9618,13 +9627,13 @@ pomonok:
       wkt_generator:
         tag_format: wkt11
         emit_ewkt_srid: 
-        *70277712950600: false
+        square_brackets: false
         convert_case: upper
       wkb_generator:
         type_format: wkb11
         emit_ewkb_srid: 
         hex_format: false
-        *70277712950040: false
+        little_endian: false
       wkt_parser:
         support_ewkt: false
         support_wkt12: false
@@ -9642,8 +9651,8 @@ astoria_heights:
   id: 269
   name: Astoria Heights
   borough: Queens
-  created_at: 2012-12-12 04:23:46.469682000 Z
-  updated_at: 2012-12-12 04:23:46.469682000 Z
+  created_at: 2013-03-28 05:27:09.543307000 Z
+  updated_at: 2013-03-28 05:27:09.543307000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9678,8 +9687,8 @@ claremont_village:
   id: 270
   name: Claremont Village
   borough: Bronx
-  created_at: 2012-12-12 04:23:46.472107000 Z
-  updated_at: 2012-12-12 04:23:46.472107000 Z
+  created_at: 2013-03-28 05:27:09.544667000 Z
+  updated_at: 2013-03-28 05:27:09.544667000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9714,8 +9723,8 @@ concourse_village:
   id: 271
   name: Concourse Village
   borough: Bronx
-  created_at: 2012-12-12 04:23:46.474623000 Z
-  updated_at: 2012-12-12 04:23:46.474623000 Z
+  created_at: 2013-03-28 05:27:09.545945000 Z
+  updated_at: 2013-03-28 05:27:09.545945000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9750,8 +9759,8 @@ mount_eden:
   id: 272
   name: Mount Eden
   borough: Bronx
-  created_at: 2012-12-12 04:23:46.476976000 Z
-  updated_at: 2012-12-12 04:23:46.476976000 Z
+  created_at: 2013-03-28 05:27:09.547412000 Z
+  updated_at: 2013-03-28 05:27:09.547412000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9786,8 +9795,8 @@ mount_hope:
   id: 273
   name: Mount Hope
   borough: Bronx
-  created_at: 2012-12-12 04:23:46.479182000 Z
-  updated_at: 2012-12-12 04:23:46.479182000 Z
+  created_at: 2013-03-28 05:27:09.549228000 Z
+  updated_at: 2013-03-28 05:27:09.549228000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9822,8 +9831,8 @@ sutton_place:
   id: 274
   name: Sutton Place
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.481484000 Z
-  updated_at: 2012-12-12 04:23:46.481484000 Z
+  created_at: 2013-03-28 05:27:09.551148000 Z
+  updated_at: 2013-03-28 05:27:09.551148000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9858,8 +9867,8 @@ hunters_point:
   id: 275
   name: Hunters Point
   borough: Queens
-  created_at: 2012-12-12 04:23:46.483781000 Z
-  updated_at: 2012-12-12 04:23:46.483781000 Z
+  created_at: 2013-03-28 05:27:09.552662000 Z
+  updated_at: 2013-03-28 05:27:09.552662000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9894,8 +9903,8 @@ turtle_bay:
   id: 276
   name: Turtle Bay
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.486097000 Z
-  updated_at: 2012-12-12 04:23:46.486097000 Z
+  created_at: 2013-03-28 05:27:09.554040000 Z
+  updated_at: 2013-03-28 05:27:09.554040000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9930,8 +9939,8 @@ tudor_city:
   id: 277
   name: Tudor City
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.488410000 Z
-  updated_at: 2012-12-12 04:23:46.488410000 Z
+  created_at: 2013-03-28 05:27:09.555396000 Z
+  updated_at: 2013-03-28 05:27:09.555396000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -9941,7 +9950,7 @@ tudor_city:
       lenient_multi_polygon_assertions: false
       wkt_generator:
         tag_format: wkt11
-        *70277713170420: 
+        emit_ewkt_srid: 
         square_brackets: false
         convert_case: upper
       wkb_generator:
@@ -9966,8 +9975,8 @@ stuyvesant_town:
   id: 278
   name: Stuyvesant Town
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.490666000 Z
-  updated_at: 2012-12-12 04:23:46.490666000 Z
+  created_at: 2013-03-28 05:27:09.556685000 Z
+  updated_at: 2013-03-28 05:27:09.556685000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10002,8 +10011,8 @@ flatiron:
   id: 279
   name: Flatiron
   borough: Manhattan
-  created_at: 2012-12-12 04:23:46.493231000 Z
-  updated_at: 2012-12-12 04:23:46.493231000 Z
+  created_at: 2013-03-28 05:27:09.558101000 Z
+  updated_at: 2013-03-28 05:27:09.558101000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10038,8 +10047,8 @@ sunnyside_gardens:
   id: 280
   name: Sunnyside Gardens
   borough: Queens
-  created_at: 2012-12-12 04:23:46.495814000 Z
-  updated_at: 2012-12-12 04:23:46.495814000 Z
+  created_at: 2013-03-28 05:27:09.559463000 Z
+  updated_at: 2013-03-28 05:27:09.559463000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10074,8 +10083,8 @@ blissville:
   id: 281
   name: Blissville
   borough: Queens
-  created_at: 2012-12-12 04:23:46.498249000 Z
-  updated_at: 2012-12-12 04:23:46.498249000 Z
+  created_at: 2013-03-28 05:27:09.560834000 Z
+  updated_at: 2013-03-28 05:27:09.560834000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10110,8 +10119,8 @@ fulton_ferry:
   id: 282
   name: Fulton Ferry
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.500602000 Z
-  updated_at: 2012-12-12 04:23:46.500602000 Z
+  created_at: 2013-03-28 05:27:09.562151000 Z
+  updated_at: 2013-03-28 05:27:09.562151000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10146,8 +10155,8 @@ vinegar_hill:
   id: 283
   name: Vinegar Hill
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.502899000 Z
-  updated_at: 2012-12-12 04:23:46.502899000 Z
+  created_at: 2013-03-28 05:27:09.563360000 Z
+  updated_at: 2013-03-28 05:27:09.563360000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10182,8 +10191,8 @@ weeksville:
   id: 284
   name: Weeksville
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.505291000 Z
-  updated_at: 2012-12-12 04:23:46.505291000 Z
+  created_at: 2013-03-28 05:27:09.564709000 Z
+  updated_at: 2013-03-28 05:27:09.564709000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10218,8 +10227,8 @@ broadway_junction:
   id: 285
   name: Broadway Junction
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.507650000 Z
-  updated_at: 2012-12-12 04:23:46.507650000 Z
+  created_at: 2013-03-28 05:27:09.566057000 Z
+  updated_at: 2013-03-28 05:27:09.566057000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10254,8 +10263,8 @@ dumbo:
   id: 286
   name: Dumbo
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.510124000 Z
-  updated_at: 2012-12-12 04:23:46.510124000 Z
+  created_at: 2013-03-28 05:27:09.567411000 Z
+  updated_at: 2013-03-28 05:27:09.567411000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10290,8 +10299,8 @@ manor_heights:
   id: 287
   name: Manor Heights
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.512688000 Z
-  updated_at: 2012-12-12 04:23:46.512688000 Z
+  created_at: 2013-03-28 05:27:09.568826000 Z
+  updated_at: 2013-03-28 05:27:09.568826000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10326,8 +10335,8 @@ willowbrook:
   id: 288
   name: Willowbrook
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.515038000 Z
-  updated_at: 2012-12-12 04:23:46.515038000 Z
+  created_at: 2013-03-28 05:27:09.570170000 Z
+  updated_at: 2013-03-28 05:27:09.570170000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10336,13 +10345,13 @@ willowbrook:
       buffer_resolution: 1
       lenient_multi_polygon_assertions: false
       wkt_generator:
-        *70277683873000: wkt11
+        tag_format: wkt11
         emit_ewkt_srid: 
         square_brackets: false
         convert_case: upper
       wkb_generator:
         type_format: wkb11
-        *70277683872520: 
+        emit_ewkb_srid: 
         hex_format: false
         little_endian: false
       wkt_parser:
@@ -10362,8 +10371,8 @@ sandy_ground:
   id: 289
   name: Sandy Ground
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.517440000 Z
-  updated_at: 2012-12-12 04:23:46.517440000 Z
+  created_at: 2013-03-28 05:27:09.571767000 Z
+  updated_at: 2013-03-28 05:27:09.571767000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10398,8 +10407,8 @@ egbertville:
   id: 290
   name: Egbertville
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.520108000 Z
-  updated_at: 2012-12-12 04:23:46.520108000 Z
+  created_at: 2013-03-28 05:27:09.573346000 Z
+  updated_at: 2013-03-28 05:27:09.573346000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10434,8 +10443,8 @@ roxbury:
   id: 291
   name: Roxbury
   borough: Queens
-  created_at: 2012-12-12 04:23:46.522472000 Z
-  updated_at: 2012-12-12 04:23:46.522472000 Z
+  created_at: 2013-03-28 05:27:09.574822000 Z
+  updated_at: 2013-03-28 05:27:09.574822000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10470,8 +10479,8 @@ homecrest:
   id: 292
   name: Homecrest
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.524900000 Z
-  updated_at: 2012-12-12 04:23:46.524900000 Z
+  created_at: 2013-03-28 05:27:09.576366000 Z
+  updated_at: 2013-03-28 05:27:09.576366000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10506,8 +10515,8 @@ middle_village:
   id: 293
   name: Middle Village
   borough: Queens
-  created_at: 2012-12-12 04:23:46.527198000 Z
-  updated_at: 2012-12-12 04:23:46.527198000 Z
+  created_at: 2013-03-28 05:27:09.577882000 Z
+  updated_at: 2013-03-28 05:27:09.577882000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10542,8 +10551,8 @@ prince_s_bay:
   id: 294
   name: Prince's Bay
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.529439000 Z
-  updated_at: 2012-12-12 04:23:46.529439000 Z
+  created_at: 2013-03-28 05:27:09.579309000 Z
+  updated_at: 2013-03-28 05:27:09.579309000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10578,8 +10587,8 @@ lighthouse_hill:
   id: 295
   name: Lighthouse Hill
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.531707000 Z
-  updated_at: 2012-12-12 04:23:46.531707000 Z
+  created_at: 2013-03-28 05:27:09.580716000 Z
+  updated_at: 2013-03-28 05:27:09.580716000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10614,8 +10623,8 @@ richmond_valley:
   id: 296
   name: Richmond Valley
   borough: Staten Island
-  created_at: 2012-12-12 04:23:46.534056000 Z
-  updated_at: 2012-12-12 04:23:46.534056000 Z
+  created_at: 2013-03-28 05:27:09.582095000 Z
+  updated_at: 2013-03-28 05:27:09.582095000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10650,8 +10659,8 @@ malba:
   id: 297
   name: Malba
   borough: Queens
-  created_at: 2012-12-12 04:23:46.536323000 Z
-  updated_at: 2012-12-12 04:23:46.536323000 Z
+  created_at: 2013-03-28 05:27:09.583410000 Z
+  updated_at: 2013-03-28 05:27:09.583410000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10686,8 +10695,8 @@ highland_park:
   id: 298
   name: Highland Park
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.538557000 Z
-  updated_at: 2012-12-12 04:23:46.538557000 Z
+  created_at: 2013-03-28 05:27:09.585524000 Z
+  updated_at: 2013-03-28 05:27:09.585524000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10722,8 +10731,8 @@ madison:
   id: 299
   name: Madison
   borough: Brooklyn
-  created_at: 2012-12-12 04:23:46.540885000 Z
-  updated_at: 2012-12-12 04:23:46.540885000 Z
+  created_at: 2013-03-28 05:27:09.586992000 Z
+  updated_at: 2013-03-28 05:27:09.586992000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
@@ -10745,7 +10754,7 @@ madison:
         support_ewkt: false
         support_wkt12: false
         strict_wkt11: false
-        *70277640386320: false
+        ignore_extra_tokens: false
         default_srid: 
       wkb_parser:
         support_ewkb: false
