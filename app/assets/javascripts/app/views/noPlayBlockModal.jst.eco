@@ -1,0 +1,4 @@
+<div id="playBlockModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  This block has no video ready for playback.
+</div>
+

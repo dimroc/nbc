@@ -6,5 +6,6 @@ class App.BlockObserver extends Spine.Module
 
   handleSelection: (selectedBlock) ->
     console.log "selected block:", selectedBlock
+    App.Controller.PlayBlockModal.instance().play(selectedBlock)
 
 singleton = new App.BlockObserver()
