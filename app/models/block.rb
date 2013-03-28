@@ -39,12 +39,18 @@ class Block < ActiveRecord::Base
     }
   end
 
+  def update_zip_code!
+    return unless self.point
+
+    zip_code = ZipCodeMap.intersects(self.point).first
+    update_column 'zip_code_map_id', zip_code.id if zip_code
+  end
+
   private
 
   def update_zip_code_callback
     if self.point_changed? && self.point?
-      zip_code = ZipCodeMap.intersects(self.point).first
-      update_column 'zip_code_map_id', zip_code.id if zip_code
+      self.update_zip_code!
     end
   end
 end
