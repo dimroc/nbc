@@ -31,11 +31,11 @@ class Block < ActiveRecord::Base
   def point_as_json
     pg = point_geographic
     {
-      point:
-      {
+      point: {
         mercator: [point.x, point.y],
         geographic: [pg.x, pg.y]
-      }
+      },
+      zip_code: zip
     }
   end
 

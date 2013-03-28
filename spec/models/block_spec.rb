@@ -33,10 +33,15 @@ describe Block do
 
   describe "#as_json" do
     subject { block.as_json }
-    let(:block) { FactoryGirl.create(:block) }
+    let(:point) { Mercator::FACTORY.projection_factory.point(5,5) }
+    let(:block) { stub_model(Block, point: point, zip_code_map: ZipCodeMap.first) }
 
     it "should only include relevant information" do
-      subject.keys.should == ["id", :point]
+      subject.keys.should == ["id", :point, :zip_code]
+    end
+
+    it "should have the zip code" do
+      subject[:zip_code].should == ZipCodeMap.first.zip
     end
   end
 end
