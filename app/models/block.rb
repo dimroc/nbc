@@ -35,7 +35,8 @@ class Block < ActiveRecord::Base
         mercator: [point.x, point.y],
         geographic: [pg.x, pg.y]
       },
-      zip_code: zip
+      zip_code: zip,
+      neighborhood: zip_code_map.po_name
     }
   end
 

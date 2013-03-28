@@ -6,10 +6,13 @@
   <thead>
     <tr>
       <th>Zip Code</th>
+      <th>Neighborhood</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><%= @zip_code %></td>
+      <td><%= @neighborhood %></td>
+    </tr>
   </tbody>
 </table>

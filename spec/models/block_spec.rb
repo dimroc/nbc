@@ -37,11 +37,15 @@ describe Block do
     let(:block) { stub_model(Block, point: point, zip_code_map: ZipCodeMap.first) }
 
     it "should only include relevant information" do
-      subject.keys.should == ["id", :point, :zip_code]
+      subject.keys.should == ["id", :point, :zip_code, :neighborhood]
     end
 
     it "should have the zip code" do
       subject[:zip_code].should == ZipCodeMap.first.zip
+    end
+
+    it "should have the neighborhood" do
+      subject[:neighborhood].should == ZipCodeMap.first.po_name
     end
   end
 end
