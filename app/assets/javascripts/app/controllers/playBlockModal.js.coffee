@@ -12,7 +12,7 @@ class App.Controller.PlayBlockModal extends Spine.Controller
     if block.video.url
       @html @view("playBlockModal")(block)
     else
-      @html @view("noPlayBlockModal")()
+      @html @view("noPlayBlockModal")(block)
 
   play: (block) ->
     @render(block)
