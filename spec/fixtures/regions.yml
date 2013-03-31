@@ -2,8 +2,8 @@
 staten_island:
   id: 1
   name: Staten Island
-  created_at: 2013-03-28 05:27:13.450940000 Z
-  updated_at: 2013-03-28 05:27:13.450940000 Z
+  created_at: 2013-03-31 17:00:23.734461000 Z
+  updated_at: 2013-03-31 17:00:23.734461000 Z
   slug: staten-island
   world_id: 1
   threejs:
@@ -7375,8 +7375,8 @@ staten_island:
 manhattan:
   id: 2
   name: Manhattan
-  created_at: 2013-03-28 05:27:13.664165000 Z
-  updated_at: 2013-03-28 05:27:13.664165000 Z
+  created_at: 2013-03-31 17:00:23.937571000 Z
+  updated_at: 2013-03-31 17:00:23.937571000 Z
   slug: manhattan
   world_id: 1
   threejs:
@@ -13207,8 +13207,8 @@ manhattan:
 bronx:
   id: 3
   name: Bronx
-  created_at: 2013-03-28 05:27:13.879383000 Z
-  updated_at: 2013-03-28 05:27:13.879383000 Z
+  created_at: 2013-03-31 17:00:24.073890000 Z
+  updated_at: 2013-03-31 17:00:24.073890000 Z
   slug: bronx
   world_id: 1
   threejs:
@@ -20872,8 +20872,8 @@ bronx:
 brooklyn:
   id: 4
   name: Brooklyn
-  created_at: 2013-03-28 05:27:14.128130000 Z
-  updated_at: 2013-03-28 05:27:14.128130000 Z
+  created_at: 2013-03-31 17:00:24.226769000 Z
+  updated_at: 2013-03-31 17:00:24.226769000 Z
   slug: brooklyn
   world_id: 1
   threejs:
@@ -36443,8 +36443,8 @@ brooklyn:
 queens:
   id: 5
   name: Queens
-  created_at: 2013-03-28 05:27:14.553091000 Z
-  updated_at: 2013-03-28 05:27:14.553091000 Z
+  created_at: 2013-03-31 17:00:24.660024000 Z
+  updated_at: 2013-03-31 17:00:24.660024000 Z
   slug: queens
   world_id: 1
   threejs:

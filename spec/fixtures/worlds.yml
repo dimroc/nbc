@@ -3,8 +3,8 @@ nyc:
   id: 1
   name: NYC
   slug: nyc
-  created_at: 2013-03-28 05:27:13.443885000 Z
-  updated_at: 2013-03-28 05:27:13.443885000 Z
+  created_at: 2013-03-31 17:00:23.730983000 Z
+  updated_at: 2013-03-31 17:00:23.730983000 Z
   mesh_scale: 0.000333333333333333
   mercator_bounding_box_geometry: !ruby/object:RGeo::Geos::CAPIPolygonImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory

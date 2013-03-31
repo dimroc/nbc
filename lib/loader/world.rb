@@ -50,7 +50,6 @@ class Loader::World
           region_name = record.attributes[region_name_key.to_s] if region_name_key
 
           region = world.regions.build(name: region_name, geometry: record.geometry)
-          populate_neighborhoods(region)
         end
       end
 
@@ -91,11 +90,6 @@ class Loader::World
         attributes[map] = v if map
       end
       attributes
-    end
-
-    def populate_neighborhoods(region)
-      return unless region.geometry
-      region.neighborhoods = Neighborhood.in_geometry(region.geometry)
     end
   end
 end

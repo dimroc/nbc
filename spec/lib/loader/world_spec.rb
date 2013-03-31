@@ -45,9 +45,6 @@ describe Loader::World do
         world.regions.map(&:name).should include "Manhattan"
         world.regions.map(&:name).should include "Brooklyn"
 
-        neighborhoods = world.regions.detect { |r| r.name == "Manhattan" }.neighborhoods
-        neighborhoods.size.should == Neighborhood.where(borough: "Manhattan").count
-
         world.name = "bogus"
         world.should be_valid
       end

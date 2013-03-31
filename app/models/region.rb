@@ -4,8 +4,6 @@ class Region < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   belongs_to :world
-  has_many :neighborhood_regions, dependent: :destroy
-  has_many :neighborhoods, through: :neighborhood_regions
 
   delegate :contains?, to: :geometry
 
@@ -18,13 +16,9 @@ class Region < ActiveRecord::Base
 
   def as_json(options={})
     exceptions = [:geometry, :created_at, :updated_at]
-    nested_inclusion = {
-      neighborhoods: { only: :name }
-    }
 
     final_options = {
-      except: exceptions,
-      include: nested_inclusion
+      except: exceptions
     }.merge(options)
 
     super(final_options)

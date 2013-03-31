@@ -36,7 +36,7 @@ class Block < ActiveRecord::Base
         geographic: [pg.x, pg.y]
       },
       zip_code: zip,
-      neighborhood: zip_code_map.po_name
+      neighborhood: zip_code_map.try(:po_name)
     }
   end
 

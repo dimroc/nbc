@@ -6,8 +6,8 @@ zip_code_maps_001:
   county: Queens
   shape_length: 20624.692316541
   shape_area: 20163283.8743202
-  created_at: 2013-03-28 05:27:15.279186000 Z
-  updated_at: 2013-03-28 05:27:15.279186000 Z
+  created_at: 2013-03-31 17:00:25.307038000 Z
+  updated_at: 2013-03-31 17:00:25.307038000 Z
   point: !ruby/object:RGeo::Geos::CAPIPointImpl
     factory: !ruby/object:RGeo::Geos::CAPIFactory
       has_z_coordinate: false
