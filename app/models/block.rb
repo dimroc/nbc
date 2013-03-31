@@ -7,7 +7,7 @@ class Block < ActiveRecord::Base
   belongs_to :neighborhood
 
   delegate :zip, to: :zip_code_map, allow_nil: true
-  delegate :name, to: :neighborhood, allow_nil: true, prefix: true
+  delegate :name, :borough, to: :neighborhood, allow_nil: true, prefix: true
 
   after_save :update_zip_code_callback, :update_neighborhood_callback
 
@@ -38,7 +38,8 @@ class Block < ActiveRecord::Base
         geographic: [pg.x, pg.y]
       },
       zip_code: zip,
-      neighborhood: zip_code_map.try(:po_name)
+      neighborhood: neighborhood_name,
+      borough: neighborhood_borough
     }
   end
 
