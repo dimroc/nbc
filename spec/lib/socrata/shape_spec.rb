@@ -17,8 +17,8 @@ describe Socrata::Shape do
   its(:needs_recoding) { should be_false }
 
   it "#geometry" do
-    subject.geometry.points.first.x.should == -73.86942583199993
-    subject.geometry.points.first.y.should == 40.74916512200008
+    subject.geometry.exterior_ring.points.first.x.should == -73.86942583199993
+    subject.geometry.exterior_ring.points.first.y.should == 40.74916512200008
   end
 
   it "#point" do

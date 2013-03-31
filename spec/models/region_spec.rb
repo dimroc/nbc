@@ -39,13 +39,6 @@ describe Region do
         ]]
       end
     end
-
-    context "with neighborhoods" do
-      it "should only render the neighborhood name" do
-        subject[:neighborhoods][0][:name].should == Neighborhood.first.name
-        subject[:neighborhoods][0][:borough].should be_nil
-      end
-    end
   end
 
   describe "#generate_bounding_box" do

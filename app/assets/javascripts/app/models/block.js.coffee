@@ -19,5 +19,11 @@ class App.Block extends App.Model
     mercatorPoint = new THREE.Vector2(@point.mercator[0], @point.mercator[1])
     world.transformMercatorToWorld(mercatorPoint)
 
+  contains: (pointOnSurface, world) ->
+    worldPosition = @worldPosition(world)
+    xdiff = Math.abs(pointOnSurface.x - worldPosition.x)
+    ydiff = Math.abs(pointOnSurface.y - worldPosition.y)
+    xdiff < App.Block.WIDTH/2 && ydiff < App.Block.HEIGHT/2
+
   mesh: (world) ->
     App.MeshFactory.generateBlock(world, @)

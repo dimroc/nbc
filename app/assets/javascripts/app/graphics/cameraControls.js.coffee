@@ -1,4 +1,8 @@
-class App.CameraControls
+# TODO: Break up class into two parts:
+# Camera and Mouse (I/O)
+class App.CameraControls extends Spine.Module
+  @extend Spine.Events
+
   constructor: (camera, domElement) ->
     THREE.EventTarget.call(@)
 
@@ -61,6 +65,10 @@ class App.CameraControls
     document.body.style.cursor = 'default'
     $(@domElement).unbind("mouseup", @mouseup)
     @panning = false
+
+    # TODO: Only raise event if the mouse hasn't moved significantly from mousedown
+    App.CameraControls.trigger('selectPoint', @mouseOnSurface)
+
     false
 
   mousewheel: (event) =>

@@ -9,6 +9,7 @@
 #= require_tree ./lib
 #= require_self
 
+#= require_tree ./services/
 #= require_tree ./graphics
 
 #= require ./models/model

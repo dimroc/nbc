@@ -8,10 +8,9 @@ class Loader::Neighborhood
         raise ArgumentError, "File contains no records" if file.num_records == 0
 
         file.each do |record|
-          Neighborhood.create!(id: record["OBJECTID"],
-                               name: record["Name"],
-                               borough: record["Borough"],
-                               point: record.geometry)
+          Neighborhood.create!(name: record["NTAName"],
+                               borough: record["BoroName"],
+                               geometry: record.geometry)
 
         end
       end

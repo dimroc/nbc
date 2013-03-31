@@ -6,10 +6,7 @@ class App.BlockPusherObserver
 
   createBlock: (data) =>
     console.debug "Server pushing block:", data
-    if App.Block.exists(data.id)
-      App.Block.refresh([data])
-    else
-      App.Block.create data
+    App.Block.refresh([data])
 
 class App.PusherObserver
   @subscribe: ->
