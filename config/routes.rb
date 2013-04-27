@@ -24,6 +24,12 @@ NewBlockCity::Application.routes.draw do
     resources :blocks, only: :create
   end
 
+  # For CORS (Cross Origin Resource Sharing)
+  match '/client/blocks',
+    :controller => 'client/blocks',
+    :action => 'options',
+    :constraints => {:method => 'OPTIONS'}
+
   resources :partials, only: :show
 
   # Explicitly mount Jasminerice above global match rule to prevent trumping of jasmine
