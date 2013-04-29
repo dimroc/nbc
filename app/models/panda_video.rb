@@ -9,6 +9,25 @@ class PandaVideo < ActiveRecord::Base
   scope :encoded, -> { where("panda_videos.url IS NOT NULL") }
 
   class << self
+    def create_from_source(source_url)
+      video = Panda::Video.create(source_url: source_url)
+      panda = Panda::Encoding.find_by({
+        :video_id => video.id,
+        :profile_name => "h264"
+      })
+
+      PandaVideo.create({
+        panda_id: video.id,
+        encoding_id: panda.id,
+        duration: panda.duration,
+        height: panda.height,
+        width: panda.width,
+        original_filename: panda.video.original_filename,
+        screenshot: panda.screenshots[0],
+        url: panda.url
+      })
+    end
+
     def find_or_create_from_panda(panda_id)
       panda = Panda::Encoding.find_by({
         :video_id => panda_id,

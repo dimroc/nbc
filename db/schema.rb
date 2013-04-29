@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130331171514) do
+ActiveRecord::Schema.define(:version => 20130429121214) do
 
   create_table "blocks", :force => true do |t|
     t.datetime "created_at",                                               :null => false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130331171514) do
     t.string   "type"
     t.integer  "zip_code_map_id"
     t.integer  "neighborhood_id"
+    t.float    "direction"
   end
 
   add_index "blocks", ["neighborhood_id"], :name => "index_blocks_on_neighborhood_id"
