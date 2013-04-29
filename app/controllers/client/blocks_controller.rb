@@ -4,7 +4,10 @@ class Client::BlocksController < ClientController
   def create
     raise StandardError, "Must have location to create block" unless @current_point
     panda_video = PandaVideo.create_from_source(params[:destinationUri])
-    block = Block::Video.create(point: @current_point, video: panda_video)
+    block = Block::Video.create(
+      point: @current_point,
+      direction: params[:direction],
+      video: panda_video)
 
     cors_set_access_control_headers
     render json: block.to_json
