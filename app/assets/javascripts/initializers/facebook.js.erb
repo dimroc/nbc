@@ -1,0 +1,54 @@
+window.fbAsyncInit = function() {
+  FB.init({
+    appId  : '<%= Rails.application.config.facebook[:APP_ID] %>', // App ID from the App Dashboard
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml  : true,  // parse XFBML
+    oauth  : true
+  });
+};
+
+(function(d) {
+  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+  js = d.createElement('script'); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js";
+  d.getElementsByTagName('head')[0].appendChild(js);
+}(document));
+
+$(function() {
+  var facebookConnect = function() {
+    $('#facebook-connect a').click(function(e) {
+      e.preventDefault();
+
+      var facebookLoginHandler = function(response) {
+        if (response.authResponse) {
+          $('#facebook-connect a').html('Connecting...');
+
+          var finalHandler = function(json) {
+            App.current_user = json;
+            $('#facebook-connect').html(json.name);
+            console.debug('connected:', JSON.stringify(json));
+          };
+
+          // since we have cookies enabled, this request will allow omniauth to parse
+          // out the auth code from the signed request in the fbsr_XXX cookie
+          $.getJSON('/users/auth/facebook/callback',
+                    { signed_request: response.authResponse.signedRequest,
+                      access_token: response.authResponse.accessToken },
+                    finalHandler);
+        }
+      };
+
+      console.debug("Logging in to facebook");
+      FB.getLoginStatus(function(response) {
+        if(response.status == "connected") {
+          facebookLoginHandler(response);
+        } else {
+          FB.login(facebookLoginHandler, {scope: 'email'});
+        }
+      });
+    });
+  };
+
+  Spine.one('ready', facebookConnect);
+});

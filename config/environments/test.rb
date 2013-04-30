@@ -1,6 +1,12 @@
 NewBlockCity::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Facebook Credentials
+  config.facebook = {
+    APP_ID: '457627890981356',
+    APP_SECRET: '0b4cd07b1fe77a5103b8a8fa53177892',
+  }
+
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
@@ -32,7 +38,7 @@ NewBlockCity::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
-  
+
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'example.com' }
 

@@ -1,6 +1,12 @@
 NewBlockCity::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Facebook Credentials
+  config.facebook = {
+    APP_ID: '506534642739264',
+    APP_SECRET: '85b133cf89bc20ff77e656647775918a'
+  }
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
