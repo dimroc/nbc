@@ -21,8 +21,8 @@ class App.CameraControls extends Spine.Module
     @minDistance = 5.0
     @maxDistance = 300.0
 
-    @eye = new THREE.Vector3(0, 0, 100)
-    @target = new THREE.Vector3()
+    @eye = @camera.position.clone()
+    @target = new THREE.Vector3(@eye.x, @eye.y, 0)
 
     @zoomStart = @zoomEnd = 0.0
     @panStart = new THREE.Vector2()
