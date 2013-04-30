@@ -1,50 +1,58 @@
-window.fbAsyncInit = function() {
-  FB.init({
-    appId  : '<%= Rails.application.config.facebook[:APP_ID] %>', // App ID from the App Dashboard
-    status : true, // check login status
-    cookie : true, // enable cookies to allow the server to access the session
-    xfbml  : true,  // parse XFBML
-    oauth  : true
-  });
-};
+(function() {
+  var facebookDfd = $.Deferred(),
+      spineDfd = $.Deferred();
 
-(function(d) {
-  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-  js = d.createElement('script'); js.id = id; js.async = true;
-  js.src = "//connect.facebook.net/en_US/all.js";
-  d.getElementsByTagName('head')[0].appendChild(js);
-}(document));
-
-$(function() {
-  var facebookConnect = function() {
-    $('#facebook-connect a').click(function(e) {
-      e.preventDefault();
-
-      var successfulLoginHandler = function(json) {
-        App.current_user = json;
-        $('#facebook-connect').html(json.name);
-        console.debug('connected:', JSON.stringify(json));
-      };
-
-      var facebookLoginHandler = function(response) {
-        if (response.authResponse) {
-          $('#facebook-connect a').html('Connecting...');
-          $.getJSON('/users/auth/facebook/callback',
-                    { signed_request: response.authResponse.signedRequest },
-                    successfulLoginHandler);
-        }
-      };
-
-      console.debug("Logging in to facebook");
-      FB.getLoginStatus(function(response) {
-        if(response.status == "connected") {
-          facebookLoginHandler(response);
-        } else {
-          FB.login(facebookLoginHandler, {scope: 'email'});
-        }
-      });
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId  : '<%= Rails.application.config.facebook[:APP_ID] %>', // App ID from the App Dashboard
+      status : true, // check login status
+      cookie : true, // enable cookies to allow the server to access the session
+      xfbml  : true,  // parse XFBML
+      oauth  : true
     });
+
+    Spine.trigger('fb:loaded');
+    facebookDfd.resolve();
   };
 
-  Spine.one('ready', facebookConnect);
-});
+  (function(d) {
+    var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_US/all.js";
+    d.getElementsByTagName('head')[0].appendChild(js);
+  }(document));
+
+  $(function() {
+    var successfulLoginHandler = function(json) {
+      App.current_user = json;
+      $('#facebook-connect').html(json.name);
+      console.debug('connected:', JSON.stringify(json));
+    };
+
+    var facebookSuccessHandler = function(response) {
+      if (response.authResponse) {
+        $('#facebook-connect a').html('Connecting to FB...');
+        $.getJSON('/users/auth/facebook/callback',
+                  { signed_request: response.authResponse.signedRequest },
+                  successfulLoginHandler);
+      }
+    };
+
+    var initializeFacebookConnection = function() {
+      $('#facebook-connect a').click(function(e) {
+        e.preventDefault();
+        FB.login(facebookSuccessHandler, {scope: 'email'});
+      });
+
+      FB.getLoginStatus(function(response) {
+        if(response.status == "connected") {
+          console.debug("Automatically logging in to facebook");
+          facebookSuccessHandler(response);
+        }
+      });
+    };
+
+    Spine.one('ready', function() { spineDfd.resolve(); });
+    $.when(facebookDfd, spineDfd).then(initializeFacebookConnection);
+  });
+})();
