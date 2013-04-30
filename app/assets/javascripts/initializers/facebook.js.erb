@@ -20,22 +20,18 @@ $(function() {
     $('#facebook-connect a').click(function(e) {
       e.preventDefault();
 
+      var successfulLoginHandler = function(json) {
+        App.current_user = json;
+        $('#facebook-connect').html(json.name);
+        console.debug('connected:', JSON.stringify(json));
+      };
+
       var facebookLoginHandler = function(response) {
         if (response.authResponse) {
           $('#facebook-connect a').html('Connecting...');
-
-          var finalHandler = function(json) {
-            App.current_user = json;
-            $('#facebook-connect').html(json.name);
-            console.debug('connected:', JSON.stringify(json));
-          };
-
-          // since we have cookies enabled, this request will allow omniauth to parse
-          // out the auth code from the signed request in the fbsr_XXX cookie
           $.getJSON('/users/auth/facebook/callback',
-                    { signed_request: response.authResponse.signedRequest,
-                      access_token: response.authResponse.accessToken },
-                    finalHandler);
+                    { signed_request: response.authResponse.signedRequest },
+                    successfulLoginHandler);
         }
       };
 
