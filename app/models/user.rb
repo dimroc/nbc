@@ -30,5 +30,13 @@ class User < ActiveRecord::Base
       user
     end
   end
+
+  def as_json(options)
+    userHash = super(options.merge({
+      only: [:id, :name, :email]
+    }))
+
+    userHash.merge(roles: roles.map(&:name))
+  end
 end
 

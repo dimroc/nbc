@@ -24,7 +24,7 @@
 
   $(function() {
     var successfulLoginHandler = function(json) {
-      App.current_user = json;
+      App.current_user = new App.User(json);
       $('#facebook-connect').html(json.name);
       console.debug('connected:', JSON.stringify(json));
     };

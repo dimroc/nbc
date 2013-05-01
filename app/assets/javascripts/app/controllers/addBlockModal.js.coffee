@@ -5,6 +5,7 @@ class App.Controller.AddBlockModal extends Spine.Controller
     @world = worldRenderer.world
 
     $(domElement).prepend @view("addBlockModal")
+    $(domElement).dblclick(@activate)
 
   render: ->
     $.ajax(method: 'get', url: '/partials/block_video_form').
@@ -24,9 +25,10 @@ class App.Controller.AddBlockModal extends Spine.Controller
       $("#addBlockModal input[name=longitude]").val("")
       $("#addBlockModal input[name=latitude]").val("")
 
-  activate: ->
-    @render()
-    $('#addBlockModal').modal('show')
+  activate: =>
+    if (App.current_user && App.current_user.isAdmin())
+      @render()
+      $('#addBlockModal').modal('show')
 
   deactivate: ->
     $('#addBlockModal').modal('hide')

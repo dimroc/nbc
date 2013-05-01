@@ -1,6 +1,8 @@
 class Api::BlocksController < ApiController
   before_filter :fetch_current_point
   before_filter :verify_valid_type, only: :create
+  before_filter :authenticate_admin!, only: :create
+
   load_resource :world
 
   def index

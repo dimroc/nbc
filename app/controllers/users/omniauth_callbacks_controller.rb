@@ -8,8 +8,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       render json: @user.errors, status: 400
     else
       authenticate_user!
+      sign_in(:user, @user)
       render json: @user
     end
   end
 end
-

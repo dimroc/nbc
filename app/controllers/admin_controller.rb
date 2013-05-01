@@ -1,3 +1,3 @@
 class AdminController < ApplicationController
-  # before_filter :authenticate_admin! # TODO
+  before_filter :authenticate_admin!
 end
