@@ -3,12 +3,14 @@
     <tr>
       <th>Zip Code</th>
       <th>Neighborhood</th>
+      <th>Director</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><%= @zip_code %></td>
       <td><%= @neighborhood %></td>
+      <td><%= @director() %></td>
     </tr>
   </tbody>
 </table>

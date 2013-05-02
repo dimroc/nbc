@@ -5,6 +5,7 @@ class Block < ActiveRecord::Base
 
   belongs_to :zip_code_map
   belongs_to :neighborhood
+  belongs_to :user
 
   delegate :zip, to: :zip_code_map, allow_nil: true
   delegate :name, :borough, to: :neighborhood, allow_nil: true, prefix: true
@@ -21,9 +22,16 @@ class Block < ActiveRecord::Base
   end
 
   def as_json(options={})
-    inclusion = { only: [:id] }
+    inclusion = { only: :id }
 
-    super(options.merge(inclusion)).merge(point_as_json)
+    hash = super(options.merge(inclusion))
+    hash.merge!(user: user.as_json({})) if user
+    hash.merge!(point_as_json)
+    hash.merge!({
+      zip_code: zip,
+      neighborhood: neighborhood_name,
+      borough: neighborhood_borough
+    })
   end
 
   def point_geographic
@@ -36,10 +44,7 @@ class Block < ActiveRecord::Base
       point: {
         mercator: [point.x, point.y],
         geographic: [pg.x, pg.y]
-      },
-      zip_code: zip,
-      neighborhood: neighborhood_name,
-      borough: neighborhood_borough
+      }
     }
   end
 
