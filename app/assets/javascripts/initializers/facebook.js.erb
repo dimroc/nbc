@@ -1,6 +1,5 @@
 (function() {
-  var facebookDfd = $.Deferred(),
-      spineDfd = $.Deferred();
+  window.facebookDfd = $.Deferred();
 
   window.fbAsyncInit = function() {
     FB.init({
@@ -21,38 +20,4 @@
     js.src = "//connect.facebook.net/en_US/all.js";
     d.getElementsByTagName('head')[0].appendChild(js);
   }(document));
-
-  $(function() {
-    var successfulLoginHandler = function(json) {
-      App.current_user = new App.User(json);
-      $('#facebook-connect').html(json.name);
-      console.debug('connected:', JSON.stringify(json));
-    };
-
-    var facebookSuccessHandler = function(response) {
-      if (response.authResponse) {
-        $('#facebook-connect a').html('Connecting to FB...');
-        $.getJSON('/users/auth/facebook/callback',
-                  { signed_request: response.authResponse.signedRequest },
-                  successfulLoginHandler);
-      }
-    };
-
-    var initializeFacebookConnection = function() {
-      $('#facebook-connect a').click(function(e) {
-        e.preventDefault();
-        FB.login(facebookSuccessHandler, {scope: 'email'});
-      });
-
-      FB.getLoginStatus(function(response) {
-        if(response.status == "connected") {
-          console.debug("Automatically logging in to facebook");
-          facebookSuccessHandler(response);
-        }
-      });
-    };
-
-    Spine.one('ready', function() { spineDfd.resolve(); });
-    $.when(facebookDfd, spineDfd).then(initializeFacebookConnection);
-  });
 })();

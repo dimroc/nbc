@@ -17,7 +17,6 @@
             <% end %>
             <td>
               <div id='facebook-connect'>
-                <a>Login with Facebook</a>
               </div>
             </td>
           </tr>
