@@ -1,6 +1,7 @@
 class App.Controller.UserPanel extends Spine.Controller
   events:
     'click a.login':   'login'
+    'click a.logout':  'logout'
 
   constructor: ->
     super
@@ -22,8 +23,24 @@ class App.Controller.UserPanel extends Spine.Controller
   login: (event) ->
     FB.login(@facebookSuccessHandler, scope: "email")
 
-  initialize: =>
+  logout: (event) ->
+    FB.getLoginStatus((response) =>
+      if(response.status == "connected")
+        FB.logout(@logoutApp)
+      else
+        @logoutApp()
+    , true)
+
+  logoutApp: =>
+    App.current_user = null
+    $.ajax(url: '/users/sign_out', type: 'DELETE')
+    @_renderLoggedOut()
+
+  _renderLoggedOut: ->
     @html(@view('userPanels/loggedOut')())
+
+  initialize: =>
+    @_renderLoggedOut()
 
     FB.getLoginStatus((response) =>
       if response.status is "connected"
@@ -33,3 +50,4 @@ class App.Controller.UserPanel extends Spine.Controller
 $ ->
   Spine.one "ready", ->
     handler = new App.Controller.UserPanel(el: $("#facebook-connect"))
+
