@@ -1,23 +1,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <table>
-        <tbody>
-          <tr>
-            <td class="nyc icon centered">
-              <a data-type="index"><img src="/assets/icons/nyc.png" alt="All"></a>
-            </td>
-
-            <% for region in @regions: %>
-              <td class="<%= region.slug %> icon centered">
-                <a data-type="show" data-slug="<%= region.slug %>">
-                  <img src="<%= region.iconPath() %>" alt="<%= region.name %>">
-                </a>
-              </td>
-            <% end %>
-          </tr>
-        </tbody>
-      </table>
+      <div id='facebook-connect'></div>
     </div>
   </div>
 </div>

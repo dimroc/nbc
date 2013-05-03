@@ -5,10 +5,12 @@ class Block < ActiveRecord::Base
 
   belongs_to :zip_code_map
   belongs_to :neighborhood
+  belongs_to :user
 
   delegate :zip, to: :zip_code_map, allow_nil: true
   delegate :name, :borough, to: :neighborhood, allow_nil: true, prefix: true
 
+  before_create :update_recorded_at
   after_save :update_zip_code_callback, :update_neighborhood_callback
 
   class << self
@@ -21,9 +23,16 @@ class Block < ActiveRecord::Base
   end
 
   def as_json(options={})
-    inclusion = { only: [:id] }
+    inclusion = { only: [:id, :recorded_at] }
 
-    super(options.merge(inclusion)).merge(point_as_json)
+    hash = super(options.merge(inclusion))
+    hash.merge!(user: user.as_json({})) if user
+    hash.merge!(point_as_json)
+    hash.merge!({
+      zip_code: zip,
+      neighborhood: neighborhood_name,
+      borough: neighborhood_borough
+    })
   end
 
   def point_geographic
@@ -36,10 +45,7 @@ class Block < ActiveRecord::Base
       point: {
         mercator: [point.x, point.y],
         geographic: [pg.x, pg.y]
-      },
-      zip_code: zip,
-      neighborhood: neighborhood_name,
-      borough: neighborhood_borough
+      }
     }
   end
 
@@ -58,6 +64,10 @@ class Block < ActiveRecord::Base
   end
 
   private
+
+  def update_recorded_at
+    self.recorded_at = DateTime.now if self.recorded_at.blank?
+  end
 
   def update_zip_code_callback
     if self.point_changed? && self.point?

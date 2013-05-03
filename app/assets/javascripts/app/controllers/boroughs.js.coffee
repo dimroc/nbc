@@ -44,7 +44,7 @@ class App.Controller.Boroughs extends Spine.Controller
 
     @debugController = new App.Controller.Debug(output)
     @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
-    $(output).dblclick(=> @addBlockModalController.activate())
+    Spine.trigger('ready')
 
   renderBlocks: =>
     console.debug "Rerendering all blocks..."

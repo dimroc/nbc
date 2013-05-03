@@ -13,7 +13,10 @@ class Block::Video < Block
   end
 
   def as_json(options={})
-    inclusion = { include: { "video" => { only: [:url, :screenshot, :duration] }}}
+    inclusion = {
+      include: { "video" => { only: [:url, :screenshot, :duration] }}
+    }
+
     super(options.merge(inclusion))
   end
 end

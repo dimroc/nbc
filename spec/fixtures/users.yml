@@ -11,3 +11,7 @@ standard_user:
   last_sign_in_at: 
   current_sign_in_ip: 
   last_sign_in_ip: 
+  provider: 
+  uid: 
+  name: 
+  access_token: 

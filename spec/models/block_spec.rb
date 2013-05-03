@@ -44,7 +44,14 @@ describe Block do
     end
 
     it "should only include relevant information" do
-      subject.keys.should == ["id", :point, :zip_code, :neighborhood, :borough]
+      subject.keys.should == [
+        "id",
+        "recorded_at",
+        :point,
+        :zip_code,
+        :neighborhood,
+        :borough
+      ]
     end
 
     it "should have the zip code" do

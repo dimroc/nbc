@@ -10,6 +10,7 @@ gem "haml", ">= 3.1.6"
 gem 'hashie'
 gem "sendgrid"
 gem "devise", ">= 2.1.0"
+gem 'omniauth-facebook', '1.4.0'
 gem "cancan", ">= 1.6.7"
 gem "rolify", ">= 3.1.0"
 gem "simple_form"
@@ -45,7 +46,7 @@ group :test, :development do
   gem "guard-rails", git: "git://github.com/johnbintz/guard-rails.git"
 
   gem "pry"
-  gem "pry-nav"
+  gem "pry-debugger"
 
   gem "fuubar"
   gem "ffaker"

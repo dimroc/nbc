@@ -8,6 +8,16 @@ class App.Block extends App.Model
   @extend Spine.Model.Ajax
   @url: "#{Constants.apiBasePath}/blocks"
 
+  constructor: (attributes = {}) ->
+    super(attributes)
+    @user = new App.User(attributes.user)
+
+  director: =>
+    @user.name if @user
+
+  recorded: =>
+    humaneDate(@recorded_at)
+
   validate: ->
     @errors = {}
     @appendErrors(point: "point is required") unless @point

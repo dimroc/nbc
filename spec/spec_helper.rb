@@ -19,3 +19,5 @@ RSpec.configure do |config|
   config.global_fixtures = :all
   config.infer_base_class_for_anonymous_controllers = false
 end
+
+Capybara.server_port = 3666

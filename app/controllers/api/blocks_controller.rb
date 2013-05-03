@@ -1,6 +1,8 @@
 class Api::BlocksController < ApiController
   before_filter :fetch_current_point
   before_filter :verify_valid_type, only: :create
+  before_filter :authenticate_admin!, only: :create
+
   load_resource :world
 
   def index
@@ -13,14 +15,18 @@ class Api::BlocksController < ApiController
 
   def create
     raise ActiveResource::BadRequest, "No location given" unless @current_point
+
     if params[:panda_video_id]
       block = Block::Video.create(point: @current_point,
-                                  video: PandaVideo.find(params[:panda_video_id]))
+                                  video: PandaVideo.find(params[:panda_video_id]),
+                                  user: current_user)
     elsif params[:panda_id]
       video = PandaVideo.find_or_create_from_panda(params["panda_id"])
-      block = Block::Video.create(point: @current_point, video: video)
+      block = Block::Video.create(point: @current_point,
+                                  video: video,
+                                  user: current_user)
     else
-      block = Block::Video.create(point: @current_point)
+      block = Block::Video.create(point: @current_point, user: current_user)
     end
 
     render json: block.to_json
