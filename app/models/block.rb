@@ -10,6 +10,7 @@ class Block < ActiveRecord::Base
   delegate :zip, to: :zip_code_map, allow_nil: true
   delegate :name, :borough, to: :neighborhood, allow_nil: true, prefix: true
 
+  before_create :update_recorded_at
   after_save :update_zip_code_callback, :update_neighborhood_callback
 
   class << self
@@ -22,7 +23,7 @@ class Block < ActiveRecord::Base
   end
 
   def as_json(options={})
-    inclusion = { only: :id }
+    inclusion = { only: [:id, :recorded_at] }
 
     hash = super(options.merge(inclusion))
     hash.merge!(user: user.as_json({})) if user
@@ -63,6 +64,10 @@ class Block < ActiveRecord::Base
   end
 
   private
+
+  def update_recorded_at
+    self.recorded_at = DateTime.now if self.recorded_at.blank?
+  end
 
   def update_zip_code_callback
     if self.point_changed? && self.point?

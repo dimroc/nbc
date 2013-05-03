@@ -4,6 +4,7 @@
       <th>Zip Code</th>
       <th>Neighborhood</th>
       <th>Director</th>
+      <th>Recorded</th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +12,7 @@
       <td><%= @zip_code %></td>
       <td><%= @neighborhood %></td>
       <td><%= @director() %></td>
+      <td><%= @recorded() %></td>
     </tr>
   </tbody>
 </table>

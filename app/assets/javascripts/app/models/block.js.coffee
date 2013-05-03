@@ -15,6 +15,9 @@ class App.Block extends App.Model
   director: =>
     @user.name if @user
 
+  recorded: =>
+    humaneDate(@recorded_at)
+
   validate: ->
     @errors = {}
     @appendErrors(point: "point is required") unless @point
