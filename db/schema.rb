@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(:version => 20130503114719) do
 
   create_table "neighborhoods", :force => true do |t|
     t.string   "name",                                                   :null => false
+    t.string   "borough",                                                :null => false
     t.datetime "created_at",                                             :null => false
     t.datetime "updated_at",                                             :null => false
     t.spatial  "geometry",   :limit => {:srid=>3785, :type=>"geometry"}
-    t.string   "borough",                                                :null => false
   end
 
   create_table "panda_videos", :force => true do |t|
