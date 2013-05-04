@@ -20,18 +20,7 @@ namespace :world do
       Loader::World.from_yml!("config/worlds.yml")
     end
 
-    Dir.glob("public/static/**/*.json") do |filename|
-      puts "Compressing #{filename} to gzip"
-
-      gzip_filename = "#{filename}.gz"
-      FileUtils.rm_r gzip_filename
-
-      Zlib::GzipWriter.open(gzip_filename) do |gz|
-        gz.mtime = File.mtime(filename)
-        gz.orig_name = filename
-        gz.write IO.binread(filename)
-      end
-    end
+    Gzipper.gzip_json
   end
 
   namespace :generate do
