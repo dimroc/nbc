@@ -18,3 +18,4 @@
 tags
 gems.tags
 .DS_Store
+/public/static
