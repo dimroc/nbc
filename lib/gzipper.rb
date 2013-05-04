@@ -5,7 +5,7 @@ class Gzipper
         puts "Compressing #{filename} to gzip"
 
         gzip_filename = "#{filename}.gz"
-        FileUtils.rm_r gzip_filename
+        FileUtils.rm_r(gzip_filename) if File.exists? gzip_filename
 
         Zlib::GzipWriter.open(gzip_filename) do |gz|
           gz.mtime = File.mtime(filename)
