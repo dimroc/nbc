@@ -1,4 +1,7 @@
 <ul class="nav">
+  <li>
+    <img class="profile" src='<%= @profilePhoto() %>' alt='<%=@name%>'></img>
+  </li>
   <li><a><%= @name %></a></li>
   <li><a class="logout">Log out</a></li>
 </ul>
