@@ -16,10 +16,16 @@ class App.Controller.PlayBlockModal extends Spine.Controller
 
   play: (block) ->
     @render(block)
-    @$el.modal('show').css(
+    @$el.
+      modal('show').
+      on('hidden', @_stopPlaying).
+      css(
        'width': -> '660px'
        'height': -> '600px'
        'margin-left': -> return -($(this).width() / 2))
+
+  _stopPlaying: (evt) =>
+    @$("video").each(-> @pause())
 
 singleton = new App.Controller.PlayBlockModal()
 
