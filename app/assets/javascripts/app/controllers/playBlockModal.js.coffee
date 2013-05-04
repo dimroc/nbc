@@ -18,7 +18,7 @@ class App.Controller.PlayBlockModal extends Spine.Controller
     @render(block)
     @$el.modal('show').css(
        'width': -> '660px'
-       'height': -> '570px'
+       'height': -> '600px'
        'margin-left': -> return -($(this).width() / 2))
 
 singleton = new App.Controller.PlayBlockModal()

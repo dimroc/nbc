@@ -12,8 +12,11 @@ class App.Block extends App.Model
     super(attributes)
     @user = new App.User(attributes.user)
 
-  director: =>
+  userName: =>
     @user.name if @user
+
+  userPhoto: =>
+    @user.profilePhoto() if @user
 
   recorded: =>
     humaneDate(@recorded_at)
