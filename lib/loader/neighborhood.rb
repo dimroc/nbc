@@ -15,5 +15,19 @@ class Loader::Neighborhood
         end
       end
     end
+
+    def write_building_perimeters_to_file
+      directory = "public/static/neighborhoods/"
+      FileUtils.mkdir_p directory
+
+      Neighborhood.find_each do |neighborhood|
+        output_file = "#{directory}#{neighborhood.slug}.json"
+        puts "Writing #{output_file}..."
+
+        File.open(output_file, "w") do |file|
+          file.write neighborhood.building_perimeters_json
+        end
+      end
+    end
   end
 end
