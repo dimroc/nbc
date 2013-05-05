@@ -352,7 +352,7 @@ DEPENDENCIES
   factory_girl_rails (>= 3.3.0)
   ffaker
   fixture_builder
-  friendly_id
+  friendly_id (~> 4.0.9)
   fuubar
   georuby
   growl
