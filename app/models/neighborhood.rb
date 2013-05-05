@@ -1,5 +1,9 @@
 class Neighborhood < ActiveRecord::Base
-  validates_presence_of :name, :borough, :geometry
+  extend FriendlyId
+
+  friendly_id :name, use: :slugged
+
+  validates_presence_of :name, :borough, :geometry, :slug
 
   class << self
     def intersects(geom)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503114719) do
+ActiveRecord::Schema.define(:version => 20130505134423) do
 
   create_table "blocks", :force => true do |t|
     t.datetime "created_at",                                               :null => false
@@ -38,7 +38,10 @@ ActiveRecord::Schema.define(:version => 20130503114719) do
     t.datetime "created_at",                                             :null => false
     t.datetime "updated_at",                                             :null => false
     t.spatial  "geometry",   :limit => {:srid=>3785, :type=>"geometry"}
+    t.string   "slug"
   end
+
+  add_index "neighborhoods", ["slug"], :name => "index_neighborhoods_on_slug", :unique => true
 
   create_table "panda_videos", :force => true do |t|
     t.string   "panda_id"
