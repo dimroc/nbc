@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(:version => 20130505134423) do
   add_index "blocks", ["type"], :name => "index_blocks_on_type"
   add_index "blocks", ["zip_code_map_id"], :name => "index_blocks_on_zip_code_map_id"
 
+  create_table "building_perimeters", :primary_key => "gid", :force => true do |t|
+    t.decimal "bin",                                                         :precision => 10, :scale => 0
+    t.decimal "shape_area"
+    t.decimal "shape_len"
+    t.spatial "geom",       :limit => {:srid=>3785, :type=>"multi_polygon"}
+  end
+
+  add_index "building_perimeters", ["geom"], :name => "building_perimeters_geom_gist", :spatial => true
+
   create_table "neighborhoods", :force => true do |t|
     t.string   "name",                                                   :null => false
     t.string   "borough",                                                :null => false
