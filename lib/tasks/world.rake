@@ -19,8 +19,6 @@ namespace :world do
     else
       Loader::World.from_yml!("config/worlds.yml")
     end
-
-    Gzipper.gzip_json
   end
 
   namespace :generate do

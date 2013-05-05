@@ -1,6 +1,6 @@
 class Gzipper
   class << self
-    def gzip_json
+    def static_json
       Dir.glob("public/static/**/*.json") do |filename|
         puts "Compressing #{filename} to gzip"
 
