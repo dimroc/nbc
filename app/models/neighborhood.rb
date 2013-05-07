@@ -35,4 +35,9 @@ class Neighborhood < ActiveRecord::Base
 
     rval.values[0][0]
   end
+
+  def as_json(opts = {})
+    opts.merge!(except: :geometry)
+    super(opts).merge(geometry: RGeo::GeoJSON.encode(geometry))
+  end
 end

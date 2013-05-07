@@ -23,6 +23,7 @@ gem 'simple_form'
 gem 'activerecord-postgis-adapter'
 gem 'rgeo'
 gem 'rgeo-shapefile'
+gem 'rgeo-geojson'
 gem 'georuby'
 gem 'rbpoly2tri'
 
