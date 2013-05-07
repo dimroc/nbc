@@ -36,45 +36,16 @@ class App.MeshFactory
   @generateBlock: (world, block) ->
     return null unless block
 
-    color = if block.encoded() then new THREE.Color(0x00FF00) else new THREE.Color(0xFF0000)
-    currentMaterial = new THREE.MeshBasicMaterial({color: color, opacity: 1})
+    if block.encoded()
+      texture = THREE.ImageUtils.loadTexture(block.userPhoto(), {})
+      currentMaterial = new THREE.MeshBasicMaterial({map: texture, opacity: 1})
+    else
+      currentMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(0xFF0000), opacity: 1})
+
     cubeGeom = new THREE.CubeGeometry(App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH)
     cubeMesh = new THREE.Mesh(cubeGeom, currentMaterial)
     cubeMesh.position = block.worldPosition(world)
     cubeMesh
-
-  @generateBlockBatch: (region) ->
-    opacity = 0.8
-    currentMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xAB1A25), opacity: opacity})
-    cubeMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0xFFFFFF), opacity: opacity})
-    regionMaterial = new THREE.MeshLambertMaterial({color: new THREE.Color(0x009959), opacity: opacity})
-
-    blockMaterialIndex = (block) ->
-      if block.id == block.region().current_block
-        0
-      else if block.region().current_block
-        1
-      else
-        2
-
-    # Create batched geometry
-    geometry = new THREE.Geometry()
-
-    _.each(region.blocks().all(), (block) ->
-      cubeGeom = new THREE.CubeGeometry(App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH)
-      assignMaterialIndexToFaces(cubeGeom, blockMaterialIndex(block))
-
-      cubeMesh = new THREE.Mesh(cubeGeom)
-      cubeMesh.position = block.worldPosition()
-      THREE.GeometryUtils.merge(geometry, cubeMesh)
-    )
-
-    geometry.mergeVertices()
-    faceMaterial = new THREE.MeshFaceMaterial([currentMaterial, regionMaterial, cubeMaterial])
-
-    batchedBlocks = new THREE.Mesh(geometry, faceMaterial)
-    batchedBlocks.name = "blocks-region-#{region.name}"
-    batchedBlocks
 
 assignMaterialIndexToFaces = (geometry, materialIndex) ->
   face.materialIndex = materialIndex for face in geometry.faces
