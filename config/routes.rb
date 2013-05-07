@@ -7,6 +7,7 @@ NewBlockCity::Application.routes.draw do
       resources :regions
     end
 
+    resources :neighborhoods, only: :index
     resources :blocks
     resources :panda_videos do
       collection do
