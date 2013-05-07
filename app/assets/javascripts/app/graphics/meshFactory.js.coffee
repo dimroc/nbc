@@ -17,7 +17,7 @@ class App.MeshFactory
   @loadRegionOutlines: (region) ->
     return null unless Object.keys(region.threejs).length > 0
 
-    material = new THREE.LineBasicMaterial({color: 0xffffff, linewidth: 2, opacity: 1})
+    material = new THREE.LineBasicMaterial({color: 0x0000FF, linewidth: 1, opacity: 1})
 
     lineMeshes = for outline in region.threejs.outlines then do (outline) ->
       lineGeometry = new THREE.Geometry()

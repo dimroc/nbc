@@ -20,7 +20,7 @@ class App.Controller.Boroughs extends Spine.Controller
     @boroughItems = []
     @active (params) -> @change(params.id)
 
-    Block.bind 'refresh change', @renderBlocks
+    Block.bind 'refresh change', @renderWorld
 
   change: (slug) ->
     @render()
@@ -46,7 +46,7 @@ class App.Controller.Boroughs extends Spine.Controller
     @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
     Spine.trigger('ready')
 
-  renderBlocks: =>
+  renderWorld: =>
     console.debug "Rerendering all blocks..."
     @worldRenderer.reloadBlocks(Block.all())
 

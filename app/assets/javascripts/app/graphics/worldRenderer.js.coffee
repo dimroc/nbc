@@ -98,7 +98,7 @@ class App.WorldRenderer extends Spine.Module
   reloadRegions: ->
     @regionScene = new THREE.Scene()
     _(@regions).each (region) =>
-      #@addRegionMeshes(region.outlineMeshes())
+      @addRegionMeshes(region.outlineMeshes())
       @addRegionMeshes(region.modelMesh())
 
   meshes: ->
