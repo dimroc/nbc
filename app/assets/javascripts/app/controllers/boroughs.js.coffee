@@ -2,6 +2,7 @@ $ = jQuery
 World = App.World
 Region = App.Region
 Block = App.Block
+Neighborhood = App.Neighborhood
 
 $.fn.regionViaSlug = ->
   elementID   = $(@).data('slug')
@@ -34,8 +35,12 @@ class App.Controller.Boroughs extends Spine.Controller
     world = World.first()
     output = @html @view('boroughs/index')(regions: world.regions().all())
 
+    # TODO: worldRenderer should be a singleton service and consumer should communicate
+    # with it via events
     @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
+    @neighborhoodController = new App.Controller.Neighborhoods()
     Block.fetch()
+    Neighborhood.fetch()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
