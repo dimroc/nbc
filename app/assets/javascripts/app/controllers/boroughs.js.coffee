@@ -38,7 +38,7 @@ class App.Controller.Boroughs extends Spine.Controller
     # TODO: worldRenderer should be a singleton service and consumer should communicate
     # with it via events
     @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
-    @neighborhoodController = new App.Controller.Neighborhoods()
+    @neighborhoodController = new App.Controller.Neighborhoods(@worldRenderer)
     Block.fetch()
     Neighborhood.fetch()
 

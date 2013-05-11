@@ -47,5 +47,26 @@ class App.MeshFactory
     cubeMesh.position = block.worldPosition(world)
     cubeMesh
 
-assignMaterialIndexToFaces = (geometry, materialIndex) ->
-  face.materialIndex = materialIndex for face in geometry.faces
+  @generateFromGeoJson: (geoJson) ->
+    switch geoJson.type
+      when "MultiPolygon" then MeshFactory.generateLinesFromMultiPolygon(geoJson.coordinates)
+      else throw "Cannot generate line from GeoJSON type #{geoJson.type}"
+
+  @generateLinesFromMultiPolygon: (coordinates) ->
+    # I'm assuming there's only one polygon for now...
+    for polygon in coordinates
+      App.MeshFactory.generateLineFromPolygon(polygon)
+
+  @generateLineFromPolygon: (polygon) ->
+    material = new THREE.LineBasicMaterial({color: 0x00FF00, linewidth: 1, opacity: 1})
+    for ring in polygon
+
+      lineGeometry = new THREE.Geometry()
+      for point in ring
+        lineGeometry.vertices.push(projectPoint(point))
+
+    new THREE.Line(lineGeometry, material)
+
+projectPoint = (coord) ->
+  point = { x: coord[0], y: coord[1] }
+  App.World.current().transformMercatorToWorld(point)

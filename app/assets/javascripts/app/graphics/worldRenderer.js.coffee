@@ -101,6 +101,11 @@ class App.WorldRenderer extends Spine.Module
       @addRegionMeshes(region.outlineMeshes())
       @addRegionMeshes(region.modelMesh())
 
+  reloadNeighborhoods: (meshes) ->
+    @neighborhoodScene = new THREE.Scene()
+    for mesh in meshes
+      @neighborhoodScene.add(mesh)
+
   meshes: ->
     @regionScene.children.concat @blockScene.children
 
