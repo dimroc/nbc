@@ -18,6 +18,9 @@ class App.Block extends App.Model
   userPhoto: =>
     @user.profilePhoto() if @user
 
+  userPhotoProxy: =>
+    @user.profilePhotoProxy() if @user
+
   recorded: =>
     humaneDate(@recorded_at)
 

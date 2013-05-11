@@ -37,7 +37,7 @@ class App.MeshFactory
     return null unless block
 
     if block.encoded()
-      texture = THREE.ImageUtils.loadTexture(block.userPhoto(), {})
+      texture = THREE.ImageUtils.loadTexture(block.userPhotoProxy())
       currentMaterial = new THREE.MeshBasicMaterial({map: texture, opacity: 1})
     else
       currentMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(0xFF0000), opacity: 1})

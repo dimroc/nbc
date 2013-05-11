@@ -8,3 +8,7 @@ class App.User extends Spine.Model
   profilePhoto: =>
     switch @provider
       when "facebook" then "https://graph.facebook.com/#{@uid}/picture"
+
+  profilePhotoProxy: =>
+    "/api/users/#{@id}/photo"
+

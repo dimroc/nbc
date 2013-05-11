@@ -7,6 +7,12 @@ NewBlockCity::Application.routes.draw do
       resources :regions
     end
 
+    resources :users, only: [] do
+      member do
+        get :photo
+      end
+    end
+
     resources :neighborhoods, only: :index
     resources :blocks
     resources :panda_videos do
