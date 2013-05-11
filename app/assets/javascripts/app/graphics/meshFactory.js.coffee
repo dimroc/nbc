@@ -54,18 +54,19 @@ class App.MeshFactory
 
   @generateLinesFromMultiPolygon: (coordinates) ->
     # I'm assuming there's only one polygon for now...
-    for polygon in coordinates
-      App.MeshFactory.generateLineFromPolygon(polygon)
+    lines = for polygon in coordinates
+      App.MeshFactory.generateLinesFromPolygon(polygon)
+    _(lines).flatten()
 
-  @generateLineFromPolygon: (polygon) ->
+  @generateLinesFromPolygon: (polygon) ->
     material = new THREE.LineBasicMaterial({color: 0x00FF00, linewidth: 1, opacity: 1})
-    for ring in polygon
 
+    for ring in polygon
       lineGeometry = new THREE.Geometry()
       for point in ring
         lineGeometry.vertices.push(projectPoint(point))
 
-    new THREE.Line(lineGeometry, material)
+      new THREE.Line(lineGeometry, material)
 
 projectPoint = (coord) ->
   point = { x: coord[0], y: coord[1] }
