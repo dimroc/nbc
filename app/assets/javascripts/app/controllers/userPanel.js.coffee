@@ -5,6 +5,10 @@ class App.Controller.UserPanel extends Spine.Controller
 
   constructor: ->
     super
+
+    @showLoadingCount = 0
+    $(document).ajaxStart(@showLoading)
+    $(document).ajaxStop(@hideLoading)
     $.when(window.facebookDfd).then(@initialize)
 
   successfulLoginHandler: (json) =>
@@ -14,7 +18,7 @@ class App.Controller.UserPanel extends Spine.Controller
 
   facebookSuccessHandler: (response) =>
     if(response.authResponse)
-      $("#facebook-connect a").html("Connecting to FB...")
+      $("#facebook-connect a.login").html("Connecting to FB...")
       $.getJSON(
         "/users/auth/facebook/callback",
         { signed_request: response.authResponse.signedRequest },
@@ -46,6 +50,16 @@ class App.Controller.UserPanel extends Spine.Controller
       if response.status is "connected"
         console.debug "Automatically logging in to facebook"
         @facebookSuccessHandler response)
+
+  showLoading: =>
+    @showLoadingCount++
+    @$(".loading").show()
+
+  hideLoading: =>
+    @showLoadingCount--
+    if @showLoadingCount <= 0
+      @$(".loading").hide()
+      @showLoadingCount = 0
 
 $ ->
   Spine.one "ready", ->

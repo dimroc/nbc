@@ -2,4 +2,5 @@
   <li>
     <a class="login">Login with Facebook</a>
   </li>
+  <li><a class="loading"><img src="/assets/loading.gif"/>Loading</a></li>
 </ul>

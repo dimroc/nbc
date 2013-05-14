@@ -4,4 +4,5 @@
   </li>
   <li><a><%= @name %></a></li>
   <li><a class="logout">Log out</a></li>
+  <li><a class="loading"><img src="/assets/loading.gif"/>Loading</a></li>
 </ul>
