@@ -9,4 +9,4 @@ class App.Controller.Neighborhoods extends Spine.Controller
     Neighborhood.bind 'refresh change', @addToWorldRenderer
 
   addToWorldRenderer: =>
-    @worldRenderer.reloadNeighborhoods()
+    @worldRenderer.loadNeighborhoods()

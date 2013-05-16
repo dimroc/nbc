@@ -23,13 +23,8 @@ class App.WorldRenderer extends Spine.Module
     @composer = createComposer(options, @)
     @camera = createPerspectiveCamera(options)
 
-    @ambientLight = createAmbientLight(options)
-    @directionalLight = createDirectionalLight(
-      _.extend({}, options, {position: @camera.position})
-    )
-
     @regionScene = new THREE.Scene()
-    @blockScene = createBlockScene()
+    @blockScene = createScene()
 
     @_attachToDom(domElement)
     @controls = new App.CameraControls(@camera, domElement)
@@ -86,7 +81,7 @@ class App.WorldRenderer extends Spine.Module
     @
 
   reloadBlocks: (blocks) ->
-    @blockScene = createBlockScene()
+    @blockScene = createScene()
     _.each(coerceIntoArray(blocks), (block) ->
       @blockScene.add(block.mesh(@world))
     , @)
@@ -99,17 +94,14 @@ class App.WorldRenderer extends Spine.Module
   reloadRegions: ->
     @regionScene = new THREE.Scene()
     _(@regions).each (region) =>
-      @addRegionMeshes(region.outlineMeshes())
+      #@addRegionMeshes(region.outlineMeshes())
       @addRegionMeshes(region.modelMesh())
 
-  reloadNeighborhoods: ->
+  loadNeighborhoods: ->
     console.debug "Rerendering neighborhoods..."
-    meshes = for neighborhood in App.Neighborhood.all()
-      neighborhood.meshes()
+    meshes = App.NeighborhoodMesh.all()
 
-    meshes = _(meshes).flatten()
-
-    @neighborhoodScene = new THREE.Scene()
+    @neighborhoodScene = createScene()
     for mesh in meshes
       @neighborhoodScene.add(mesh)
 
@@ -171,8 +163,8 @@ createRenderTarget = (options) ->
 createDirectionalLight = (options) ->
   # White directional light at half intensity shining from the top.
   directionalLight = new THREE.DirectionalLight( 0xffffff, 0.7 )
-  directionalLight.position.set(options.position.x, options.position.y, options.position.z)
-  directionalLight.lookAt(new THREE.Vector3(options.position.x, options.position.y, 0))
+  directionalLight.position.set(40, 40, 40)
+  directionalLight.lookAt(new THREE.Vector3(40, 40, 0))
   directionalLight
 
 createAmbientLight = (options) ->
@@ -185,8 +177,8 @@ calculate_options = ->
     height: window.innerHeight
   }
 
-createBlockScene = (ambientLight, directionalLight)->
+createScene = ->
   scene = new THREE.Scene()
-  scene.add(ambientLight)
-  scene.add(directionalLight)
+  scene.add(createAmbientLight())
+  scene.add(createDirectionalLight())
   scene
