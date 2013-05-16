@@ -3,7 +3,7 @@ class Api::NeighborhoodsController < ApiController
 
   def index
     if @current_point
-      respond_with Neighborhood.intersects(@current_point)
+      respond_with Neighborhood.intersects(@current_point).first
     else
       respond_with Neighborhood.all
     end

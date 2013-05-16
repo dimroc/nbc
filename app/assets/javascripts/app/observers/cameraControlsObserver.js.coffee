@@ -3,6 +3,7 @@ class App.CameraControlsObserver extends Spine.Module
 
   constructor: ->
     App.CameraControls.bind('selectPoint', @selectBlockFromPoint)
+    App.CameraControls.bind('selectPoint', @selectNeighborhoodFromPoint)
 
   selectBlockFromPoint: (pointOnSurface)=>
     selectedBlock = _(App.Block.all()).detect((block) ->
@@ -11,5 +12,17 @@ class App.CameraControlsObserver extends Spine.Module
     )
 
     selectedBlock.trigger('selected') if selectedBlock?
+
+  selectNeighborhoodFromPoint: (pointOnSurface) =>
+    lonlat = App.World.current().transformSurfaceToLonLat(pointOnSurface)
+
+    $.ajax(
+      url: "/api/neighborhoods",
+      data: { longitude: lonlat.lon, latitude: lonlat.lat }
+    ).done( (matchedNeighborhood) ->
+      return unless matchedNeighborhood
+      neighborhood = App.Neighborhood.find(matchedNeighborhood.id)
+      neighborhood.trigger('selected') if neighborhood?
+    )
 
 singleton = new App.CameraControlsObserver()
