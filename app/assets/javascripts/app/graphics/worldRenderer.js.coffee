@@ -5,6 +5,7 @@ class App.WorldRenderer extends Spine.Module
 
   @all: -> worldRenderers
   @first: -> worldRenderers[0]
+  @instance: -> worldRenderers[0]
   @create: () -> new WorldRenderer()
 
   constructor: (world, domElement) ->
@@ -101,7 +102,13 @@ class App.WorldRenderer extends Spine.Module
       @addRegionMeshes(region.outlineMeshes())
       @addRegionMeshes(region.modelMesh())
 
-  reloadNeighborhoods: (meshes) ->
+  reloadNeighborhoods: ->
+    console.debug "Rerendering neighborhoods..."
+    meshes = for neighborhood in App.Neighborhood.all()
+      neighborhood.meshes()
+
+    meshes = _(meshes).flatten()
+
     @neighborhoodScene = new THREE.Scene()
     for mesh in meshes
       @neighborhoodScene.add(mesh)
