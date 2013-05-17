@@ -38,8 +38,8 @@ class App.CameraControls extends Spine.Module
 
   mousedown: (event) =>
     return unless @enabled
+    @mouseIsDown = true
 
-    @panning = true
     @panStart = @panEnd = @_getMouseOnScreen(event.clientX, event.clientY)
     document.body.style.cursor = 'move'
     $(@domElement).bind("mouseup", @mouseup)
@@ -47,6 +47,7 @@ class App.CameraControls extends Spine.Module
 
   mousemove: (event) =>
     return unless @enabled
+    @panning = true if @mouseIsDown
 
     @mouseOnHtmlScreen = @_getMouseOnScreen(event.clientX, event.clientY)
     @panEnd = @mouseOnHtmlScreen.clone()
@@ -64,11 +65,12 @@ class App.CameraControls extends Spine.Module
     return unless @enabled
     document.body.style.cursor = 'default'
     $(@domElement).unbind("mouseup", @mouseup)
+
+    wasPanning = @panning
     @panning = false
+    @mouseIsDown = false
 
-    # TODO: Only raise event if the mouse hasn't moved significantly from mousedown
-    App.CameraControls.trigger('selectPoint', @mouseOnSurface)
-
+    App.CameraControls.trigger('selectPoint', @mouseOnSurface) unless wasPanning
     false
 
   mousewheel: (event) =>
