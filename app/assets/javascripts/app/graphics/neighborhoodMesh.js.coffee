@@ -21,9 +21,17 @@ class App.NeighborhoodMesh
   @resetSelected: ->
     _(App.NeighborhoodMesh.all()).each((mesh) ->
       mesh.material.color.setRGB(0,1,0)
+      mesh.material.wireframe = Env.neighborhoods == "wireframe"
     )
 
   @_generateMesh: (neighborhood) ->
-    App.MeshFactory.generateFromGeoJson(neighborhood.geometry)
+    rval = App.MeshFactory.generateFromGeoJson(neighborhood.geometry)
+
+    if Env.neighborhoods == "wireframe"
+      _(_(rval).flatten()).each((mesh) ->
+        mesh.material.wireframe = true)
+
+    rval
+
 
   @_cache: {}

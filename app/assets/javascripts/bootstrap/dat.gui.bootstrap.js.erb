@@ -12,22 +12,24 @@ $(function() {
     gui.add(options, "See Regions");
     var debugController = gui.add(Env, "debug");
     debugController.onChange(function(value) {
-      if(!value) {
-        $(".debug").fadeOut();
-      } else {
-        $(".debug").fadeIn();
-      }
+      if(!value) { $(".debug").fadeOut(); }
+      else { $(".debug").fadeIn(); }
     });
 
-    var wireframeController = gui.add(Env, "wireframe");
-    wireframeController.onChange(function(value) {
-      getHook().reloadRegions();
-    });
-
-    gui.add(Env, "boroughs");
-    gui.add(Env, "neighborhoods");
-    gui.add(Env, "buildings");
+    var layerOptions = ["normal", "wireframe", "off"]
+    var boroughController = gui.add(Env, "boroughs", layerOptions);
+    var neighborhoodController = gui.add(Env, "neighborhoods", layerOptions);
+    gui.add(Env, "buildings", layerOptions);
     gui.add(Env, "blocks");
+
+    boroughController.onChange(function(value) {
+      if(value != "off")
+        getHook().reloadRegions();
+    });
+
+    neighborhoodController.onChange(function(value) {
+      if(value != "off") App.NeighborhoodMesh.resetSelected();
+    });
 
     var customContainer = $('#datgui');
     customContainer.append(gui.domElement);

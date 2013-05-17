@@ -6,10 +6,11 @@
     "<%= Rails.env %>": true,
     debug: initialDebug, // true unless prod
     wireframe: false,
-    boroughs: true,
-    neighborhoods: true,
-    buildings: true,
+    boroughs: "normal",
+    neighborhoods: "wireframe",
+    buildings: "normal",
     blocks: true,
+    renderLayer: function(layerName) { return Env[layerName] != "off" },
     isChrome: checkIfChrome(),
     isChrome23: checkIfAtLeastChrome23()
   }
