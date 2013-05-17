@@ -24,6 +24,11 @@ $(function() {
       getHook().reloadRegions();
     });
 
+    gui.add(Env, "boroughs");
+    gui.add(Env, "neighborhoods");
+    gui.add(Env, "buildings");
+    gui.add(Env, "blocks");
+
     var customContainer = $('#datgui');
     customContainer.append(gui.domElement);
 
