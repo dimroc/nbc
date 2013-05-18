@@ -9,11 +9,7 @@ class App.DebugRenderer
     @mouseRayLine = @generateLineForMouseRay()
     @debugScene.add(@mouseRayLine)
 
-    @cameraHelper = new THREE.CameraHelper(@camera)
-    @debugScene.add(@cameraHelper)
-
   update: (delta) ->
-    @cameraHelper.update()
     @updateMouseRayLine()
     @updateDebugMouseGeographyView()
     @updateMouseCoordinatesView()
