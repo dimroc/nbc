@@ -16,11 +16,13 @@ class App.NeighborhoodMesh
     meshes = _(App.NeighborhoodMesh.find(neighborhoodId)).flatten()
     _(meshes).each((mesh) ->
       mesh.material.color.setRGB(1,0,0)
+      mesh.visible = false
     )
 
   @resetSelected: ->
     _(App.NeighborhoodMesh.all()).each((mesh) ->
       mesh.material.color.setRGB(0,1,0)
+      mesh.visible = true
       mesh.material.wireframe = Env.neighborhoods == "wireframe"
     )
 

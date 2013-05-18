@@ -19,7 +19,7 @@ $(function() {
     var layerOptions = ["normal", "wireframe", "off"]
     var boroughController = gui.add(Env, "boroughs", layerOptions);
     var neighborhoodController = gui.add(Env, "neighborhoods", layerOptions);
-    gui.add(Env, "buildings", layerOptions);
+    gui.add(Env, "buildings");
     gui.add(Env, "blocks");
 
     boroughController.onChange(function(value) {

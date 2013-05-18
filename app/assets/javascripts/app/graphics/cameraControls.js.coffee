@@ -18,7 +18,7 @@ class App.CameraControls extends Spine.Module
 
     @staticMoving = false
     @dynamicDampingFactor = 0.2
-    @minDistance = 5.0
+    @minDistance = 3.0
     @maxDistance = 300.0
 
     @eye = @camera.position.clone()

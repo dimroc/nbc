@@ -105,8 +105,12 @@ class App.WorldRenderer extends Spine.Module
     for mesh in meshes
       @neighborhoodScene.add(mesh)
 
-  meshes: ->
-    @regionScene.children.concat @blockScene.children
+  setBuildings: (buildingMeshes) ->
+    @buildingScene = @buildingScene || createScene()
+    resetScene(@buildingScene)
+
+    for mesh in buildingMeshes
+      @buildingScene.add(mesh)
 
 # privates
 
@@ -182,3 +186,7 @@ createScene = ->
   scene.add(createAmbientLight())
   scene.add(createDirectionalLight())
   scene
+
+resetScene = (scene) ->
+  _(scene.children).each((object) ->
+    scene.remove(object) if object.isNbcBuilding)

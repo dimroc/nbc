@@ -47,24 +47,27 @@ class App.MeshFactory
     cubeMesh.position = block.worldPosition(world)
     cubeMesh
 
-  @generateFromGeoJson: (geoJson) ->
+  @generateFromGeoJson: (geoJson, options) ->
     # http://stackoverflow.com/questions/13442153/errors-extruding-shapes-with-three-js
     switch geoJson.type
-      when "MultiPolygon" then MeshFactory.generateFromMultiPolygon(geoJson.coordinates)
+      when "MultiPolygon" then MeshFactory.generateFromMultiPolygon(geoJson.coordinates, options)
       else throw "Cannot generate line from GeoJSON type #{geoJson.type}"
 
-  @generateFromMultiPolygon: (coordinates) ->
+  @generateFromMultiPolygon: (coordinates, options) ->
     meshes = for polygon in coordinates
-      App.MeshFactory.generateFromPolygon(polygon)
+      App.MeshFactory.generateFromPolygon(polygon, options)
     _(meshes).flatten()
 
-  @generateFromPolygon: (polygon) ->
+  @generateFromPolygon: (polygon, options) ->
+    options = options || {}
+    _.defaults(options,{ extrude: 0.1, color: 0x00FF00 })
+
     shape = new THREE.Shape(projectRing(polygon[0]))
     shape.holes = for hole in polygon.slice(1)
       new THREE.Shape(projectRing(hole))
 
-    geom = new THREE.ExtrudeGeometry(shape, { amount: 1.5, bevelEnabled: false })
-    new THREE.Mesh(geom, new THREE.MeshLambertMaterial({color: 0x00FF00}) )
+    geom = new THREE.ExtrudeGeometry(shape, { amount: options.extrude, bevelEnabled: false })
+    new THREE.Mesh(geom, new THREE.MeshLambertMaterial({color: options.color}) )
 
 projectRing = (ring) ->
   _(ring).map(projectPoint)
