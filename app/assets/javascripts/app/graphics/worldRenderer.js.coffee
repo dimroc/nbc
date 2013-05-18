@@ -51,6 +51,7 @@ class App.WorldRenderer extends Spine.Module
 
   onWindowResize: ( event ) =>
     options = calculate_options()
+    @composer = createComposer(options, @)
     @renderer.setSize( options.width, options.height )
     @controls.handleResize()
 
@@ -145,11 +146,22 @@ createComposer = (options, worldRenderer) ->
   worldPass = new App.WorldPass ( worldRenderer )
   worldPass.renderToScreen = true
 
-  # pass = new THREE.ShaderPass( THREE.CopyShader )
-  # pass.renderToScreen = true
+  #pass = new THREE.ShaderPass( THREE.CopyShader )
+  #pass.renderToScreen = true
+
+  #pass = new THREE.FilmPass(1, 0.5, 4096 * 2, 0)
+  #pass.renderToScreen = true
+
+  #fxaaShader = _.extend({}, THREE.FXAAShader)
+  #fxaaShader.uniforms.resolution.value =
+    #new THREE.Vector2( 1 / options.width, 1 / options.height )
+
+  #fxaaPass = new THREE.ShaderPass(fxaaShader)
+  #fxaaPass.renderToScreen = true
 
   composer.addPass( worldPass )
-  # composer.addPass( pass )
+  #composer.addPass( pass )
+  #composer.addPass( fxaaPass )
   composer
 
 createRenderTarget = (options) ->
