@@ -30129,7 +30129,8 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	// Top and bottom faces
 
-	buildLidFaces();
+  if (!options.ignoreLidFaces)
+    buildLidFaces();
 
 	// Sides faces
 
