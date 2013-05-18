@@ -27,13 +27,12 @@ class App.NeighborhoodMesh
     )
 
   @_generateMesh: (neighborhood) ->
-    rval = App.MeshFactory.generateFromGeoJson(neighborhood.geometry)
+    rval = App.MeshFactory.generateFromGeoJson(neighborhood.geometry, {ignoreLidFaces: true})
 
     if Env.neighborhoods == "wireframe"
       _(_(rval).flatten()).each((mesh) ->
         mesh.material.wireframe = true)
 
     rval
-
 
   @_cache: {}

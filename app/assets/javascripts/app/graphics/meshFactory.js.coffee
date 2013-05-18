@@ -60,13 +60,14 @@ class App.MeshFactory
 
   @generateFromPolygon: (polygon, options) ->
     options = options || {}
-    _.defaults(options,{ extrude: 0.1, color: 0x00FF00 })
+    _.defaults(options,{ extrude: 0.1, color: 0x00FF00, ignoreLidFaces: false })
 
     shape = new THREE.Shape(projectRing(polygon[0]))
     shape.holes = for hole in polygon.slice(1)
       new THREE.Shape(projectRing(hole))
 
-    geom = new THREE.ExtrudeGeometry(shape, { amount: options.extrude, bevelEnabled: false })
+    extrudeOptions = { amount: options.extrude, bevelEnabled: false, ignoreLidFaces: options.ignoreLidFaces }
+    geom = new THREE.ExtrudeGeometry(shape, extrudeOptions)
     new THREE.Mesh(geom, new THREE.MeshLambertMaterial({color: options.color}) )
 
 projectRing = (ring) ->
