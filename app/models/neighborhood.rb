@@ -15,6 +15,10 @@ class Neighborhood < ActiveRecord::Base
     end
   end
 
+  def neighbors
+    Neighborhood.intersects(geometry).where('id != ?', id)
+  end
+
   def building_perimeters
     JSON.parse(building_perimeters_json)
   end
