@@ -4,8 +4,9 @@ class App.NeighborhoodObserver extends Spine.Module
   constructor: ->
     App.Neighborhood.bind('selected', @handleSelection)
 
-  handleSelection: (selectedNeighborhood) ->
+  handleSelection: (selectedNeighborhood) =>
     console.log("selected #{selectedNeighborhood.id}:#{selectedNeighborhood.name}")
+
     App.NeighborhoodMesh.select(selectedNeighborhood.id)
     App.BuildingMesh.show(selectedNeighborhood)
 

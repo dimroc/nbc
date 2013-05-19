@@ -6,3 +6,7 @@ class App.Neighborhood extends App.Model
   @fetchFromStatic: ->
     $.getJSON("#{Constants.staticBasePath}/neighborhoods.json").
       done((data) -> App.Neighborhood.refresh(data, {clear: true}))
+
+  neighbors: ->
+    for id in @neighborIds
+      App.Neighborhood.find(id)
