@@ -26,8 +26,10 @@ class App.BuildingMesh
     buildingMeshes = App.MeshFactory.generateFromGeoJson(
       data, {extrude: 0.3, color: 0xFF0000})
 
+    buildingMesh = App.MeshFactory.mergeMeshes(buildingMeshes)
+
     group = new THREE.Object3D()
-    _(buildingMeshes).each((mesh) -> group.add(mesh))
+    group.add(buildingMesh)
     group.isNbcBuilding = true
 
     @_cache[neighborhood.slug] = group

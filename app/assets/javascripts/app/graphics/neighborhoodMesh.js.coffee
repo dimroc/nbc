@@ -13,26 +13,19 @@ class App.NeighborhoodMesh
   @select: (neighborhoodId) ->
     App.NeighborhoodMesh.resetSelected()
 
-    meshes = _(App.NeighborhoodMesh.find(neighborhoodId)).flatten()
-    _(meshes).each((mesh) ->
-      mesh.material.color.setRGB(1,0,0)
-      mesh.visible = false
-    )
+    mesh = App.NeighborhoodMesh.find(neighborhoodId)
+    mesh.material.color.setRGB(1,0,0)
 
   @resetSelected: ->
     _(App.NeighborhoodMesh.all()).each((mesh) ->
       mesh.material.color.setRGB(0,1,0)
-      mesh.visible = true
       mesh.material.wireframe = Env.neighborhoods == "wireframe"
     )
 
   @_generateMesh: (neighborhood) ->
     rval = App.MeshFactory.generateFromGeoJson(neighborhood.geometry, {ignoreLidFaces: true})
-
-    if Env.neighborhoods == "wireframe"
-      _(_(rval).flatten()).each((mesh) ->
-        mesh.material.wireframe = true)
-
-    rval
+    mesh = App.MeshFactory.mergeMeshes(rval)
+    mesh.material.wireframe = true if Env.neighborhoods == "wireframe"
+    mesh
 
   @_cache: {}

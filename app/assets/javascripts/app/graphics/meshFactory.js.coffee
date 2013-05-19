@@ -70,6 +70,14 @@ class App.MeshFactory
     geom = new THREE.ExtrudeGeometry(shape, extrudeOptions)
     new THREE.Mesh(geom, new THREE.MeshLambertMaterial({color: options.color}) )
 
+  @mergeMeshes: (meshes) ->
+    material = meshes[0].material
+    geometry = new THREE.Geometry()
+    _(meshes).each((mesh) -> THREE.GeometryUtils.merge(geometry, mesh))
+
+    #geometry.mergeVertices()
+    new THREE.Mesh(geometry, material)
+
 projectRing = (ring) ->
   _(ring).map(projectPoint)
 
