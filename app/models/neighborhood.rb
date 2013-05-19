@@ -3,6 +3,11 @@ class Neighborhood < ActiveRecord::Base
 
   friendly_id :name, use: :slugged
 
+  has_and_belongs_to_many :neighbors,
+    class_name: "Neighborhood",
+    join_table: :neighborhood_neighbors,
+    association_foreign_key: :neighbor_id
+
   validates_presence_of :name, :borough, :geometry, :slug
 
   class << self
@@ -15,7 +20,7 @@ class Neighborhood < ActiveRecord::Base
     end
   end
 
-  def neighbors
+  def neighborhoods_with_intersecting_geometry
     Neighborhood.intersects(geometry).where('id != ?', id)
   end
 
@@ -41,7 +46,9 @@ class Neighborhood < ActiveRecord::Base
   end
 
   def as_json(opts = {})
-    opts.merge!(except: :geometry)
-    super(opts).merge(geometry: RGeo::GeoJSON.encode(geometry))
+    hash = super(opts)
+    hash.merge!('geometry' => RGeo::GeoJSON.encode(geometry)) if hash['geometry']
+    hash.merge!('neighborIds' => neighbors.map(&:id))
+    hash
   end
 end

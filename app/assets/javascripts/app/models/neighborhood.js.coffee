@@ -5,6 +5,4 @@ class App.Neighborhood extends App.Model
 
   @fetchFromStatic: ->
     $.getJSON("#{Constants.staticBasePath}/neighborhoods.json").
-      done((data) ->
-        App.Neighborhood.refresh(data, {clear: true})
-      )
+      done((data) -> App.Neighborhood.refresh(data, {clear: true}))

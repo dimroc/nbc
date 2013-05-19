@@ -13,7 +13,12 @@ NewBlockCity::Application.routes.draw do
       end
     end
 
-    resources :neighborhoods, only: :index
+    resources :neighborhoods, only: :index do
+      member do
+        get :neighbors
+      end
+    end
+
     resources :blocks
     resources :panda_videos do
       collection do

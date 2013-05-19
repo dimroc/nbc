@@ -1,5 +1,5 @@
 if ActiveRecord::Base.connection.table_exists? 'building_perimeters'
-  ActiveRecord::Base.connection.execute(<<-SQL) #postgres specific
+  ActiveRecord::Base.connection.execute(<<-SQL)
   DROP TABLE building_perimeters;
   SQL
 end

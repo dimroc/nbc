@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130505134423) do
+ActiveRecord::Schema.define(:version => 20130519185124) do
 
   create_table "blocks", :force => true do |t|
     t.datetime "created_at",                                               :null => false
@@ -40,6 +40,14 @@ ActiveRecord::Schema.define(:version => 20130505134423) do
   end
 
   add_index "building_perimeters", ["geom"], :name => "building_perimeters_geom_gist", :spatial => true
+
+  create_table "neighborhood_neighbors", :id => false, :force => true do |t|
+    t.integer "neighborhood_id"
+    t.integer "neighbor_id"
+  end
+
+  add_index "neighborhood_neighbors", ["neighborhood_id", "neighbor_id"], :name => "index_neighborhood_neighbors_on_neighborhood_id_and_neighbor_id", :unique => true
+  add_index "neighborhood_neighbors", ["neighborhood_id"], :name => "index_neighborhood_neighbors_on_neighborhood_id"
 
   create_table "neighborhoods", :force => true do |t|
     t.string   "name",                                                   :null => false
