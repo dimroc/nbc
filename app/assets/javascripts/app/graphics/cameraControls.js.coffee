@@ -18,8 +18,8 @@ class App.CameraControls extends Spine.Module
 
     @staticMoving = false
     @dynamicDampingFactor = 0.2
-    @minDistance = 3.0
-    @maxDistance = 300.0
+    @minDistance = 2.0
+    @maxDistance = 200.0
 
     @eye = @camera.position.clone()
     @target = new THREE.Vector3(@eye.x, @eye.y, 0)

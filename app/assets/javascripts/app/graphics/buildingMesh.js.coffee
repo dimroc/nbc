@@ -24,7 +24,7 @@ class App.BuildingMesh
 
   _updateCache: (neighborhood, data, dfd) =>
     buildingMeshes = App.MeshFactory.generateFromGeoJson(
-      data, {extrude: 0.3, color: 0xFF0000})
+      data, {extrude: 0.2, color: 0xFF0000})
 
     buildingMesh = App.MeshFactory.mergeMeshes(buildingMeshes)
 
