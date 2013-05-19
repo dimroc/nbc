@@ -23,8 +23,10 @@ class App.NeighborhoodMesh
     )
 
   @_generateMesh: (neighborhood) ->
-    rval = App.MeshFactory.generateFromGeoJson(neighborhood.geometry, {ignoreLidFaces: true})
-    mesh = App.MeshFactory.mergeMeshes(rval)
+    geometries = App.MeshFactory.generateFromGeoJson(neighborhood.geometry, {ignoreLidFaces: true})
+    geometry = App.MeshFactory.mergeMeshes(geometries)
+
+    mesh = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({color: 0x00FF00}) )
     mesh.material.wireframe = true if Env.neighborhoods == "wireframe"
     mesh
 

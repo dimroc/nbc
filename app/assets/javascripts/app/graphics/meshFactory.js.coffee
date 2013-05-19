@@ -54,29 +54,25 @@ class App.MeshFactory
       else throw "Cannot generate line from GeoJSON type #{geoJson.type}"
 
   @generateFromMultiPolygon: (coordinates, options) ->
-    meshes = for polygon in coordinates
+    geoms = for polygon in coordinates
       App.MeshFactory.generateFromPolygon(polygon, options)
-    _(meshes).flatten()
+    _(geoms).flatten()
 
   @generateFromPolygon: (polygon, options) ->
     options = options || {}
-    _.defaults(options,{ extrude: 0.1, color: 0x00FF00, ignoreLidFaces: false })
+    _.defaults(options,{ extrude: 0.1, ignoreLidFaces: false })
 
     shape = new THREE.Shape(projectRing(polygon[0]))
     shape.holes = for hole in polygon.slice(1)
       new THREE.Shape(projectRing(hole))
 
     extrudeOptions = { amount: options.extrude, bevelEnabled: false, ignoreLidFaces: options.ignoreLidFaces }
-    geom = new THREE.ExtrudeGeometry(shape, extrudeOptions)
-    new THREE.Mesh(geom, new THREE.MeshLambertMaterial({color: options.color}) )
+    new THREE.ExtrudeGeometry(shape, extrudeOptions)
 
-  @mergeMeshes: (meshes) ->
-    material = meshes[0].material
+  @mergeMeshes: (geoms) ->
     geometry = new THREE.Geometry()
-    _(meshes).each((mesh) -> THREE.GeometryUtils.merge(geometry, mesh))
-
-    #geometry.mergeVertices()
-    new THREE.Mesh(geometry, material)
+    _(geoms).each((geom) -> THREE.GeometryUtils.merge(geometry, geom))
+    geometry
 
 projectRing = (ring) ->
   _(ring).map(projectPoint)

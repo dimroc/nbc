@@ -3,13 +3,11 @@ class App.BuildingMesh
     singleton.show(neighborhood)
 
   constructor: ->
-    @_repo = new App.BuildingMeshRepo()
-
-  _groups: {}
+    @_repo = new App.BuildingGeometryRepo()
+    @_groups = {}
 
   show: (neighborhood) ->
     repository = @_groups
-    #repository = @_neighborhoodCache
 
     if repository[neighborhood.slug]
       @render(repository[neighborhood.slug])
@@ -36,9 +34,10 @@ class App.BuildingMesh
 
   _updateGroup: (slug, neighborhoods) =>
     group = new THREE.Object3D()
+    group.name = "buildingGroup: #{slug}"
     group.isNbcBuilding = true
     for n in neighborhoods
-      group.add(@_repo.find(n.slug))
+      group.add(@_repo.createMesh(n.slug))
 
     @_groups[slug] = group
     group
