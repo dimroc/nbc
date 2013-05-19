@@ -40,7 +40,7 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
     @neighborhoodController = new App.Controller.Neighborhoods(@worldRenderer)
     Block.fetch()
-    Neighborhood.fetch()
+    Neighborhood.fetchFromStatic()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))

@@ -50,7 +50,7 @@ class App.World extends App.Model
     "/assets/icons/#{_(@name).underscored()}.png"
 
   fetchRegions: (successCallback)->
-    url = "/static/#{@slug}/regions.json"
+    url = "#{Constants.staticBasePath}/#{@slug}/regions.json"
     $.ajax(
       type: "GET",
       url: url,
