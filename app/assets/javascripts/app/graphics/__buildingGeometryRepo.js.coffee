@@ -14,10 +14,12 @@ class App.BuildingGeometryRepo
 
     dfd
 
-  createMesh: (slug) ->
+  createMesh: (slug, selected) ->
     raise "#{slug} not in repository. load() first?" if !@_cache[slug]
     geometry = @_cache[slug]
-    buildingMesh = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({color: 0xFF0000}))
+    color = 0x00FF00
+    color = 0xFF0000 if selected
+    buildingMesh = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({color: color}))
 
     buildingMesh.name = "buildings: #{slug}"
     buildingMesh.isNbcBuilding = true

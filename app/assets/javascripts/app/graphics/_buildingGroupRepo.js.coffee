@@ -22,7 +22,8 @@ class App.BuildingGroupRepo
     group.name = "buildingGroup: #{slug}"
     group.isNbcBuilding = true
     for n in neighborhoods
-      group.add(@_geometryRepo.createMesh(n.slug))
+      selected = slug == n.slug
+      group.add(@_geometryRepo.createMesh(n.slug, selected))
 
     @_cache[slug] = group
     group
