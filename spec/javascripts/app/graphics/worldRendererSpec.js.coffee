@@ -13,9 +13,3 @@ describe "graphics.WorldRenderer", ->
 
     afterEach ->
       worldRenderer.destroy()
-
-    describe "#addRegionMeshes", ->
-      it "should add to its children", ->
-        mesh = new THREE.Mesh()
-        worldRenderer.addRegionMeshes(mesh)
-        expect(worldRenderer.meshes()).toInclude(mesh)
