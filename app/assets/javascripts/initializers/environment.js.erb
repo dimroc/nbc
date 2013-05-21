@@ -7,7 +7,7 @@
     debug: initialDebug, // true unless prod
     wireframe: false,
     boroughs: "normal",
-    neighborhoods: "normal",
+    neighborhoods: "wireframe",
     buildings: true,
     blocks: true,
     renderLayer: function(layerName) { return Env[layerName] != "off" },
@@ -38,7 +38,7 @@
       var chromePrefix = "chrome/";
       var chromeAgent = _.chain(userAgentString).
         words().
-        detect(function(agentPortion) { return agentPortion.startsWith(chromePrefix) }).
+        detect(function(agentPortion) { return _(agentPortion).startsWith(chromePrefix) }).
         value();
 
       if(chromeAgent) {

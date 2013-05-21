@@ -4,8 +4,6 @@ class App.CameraControls extends Spine.Module
   @extend Spine.Events
 
   constructor: (camera, domElement) ->
-    THREE.EventTarget.call(@)
-
     @camera = camera
     @domElement = (if (domElement isnt `undefined`) then domElement else document)
     @projector = new THREE.Projector()
@@ -58,7 +56,7 @@ class App.CameraControls extends Spine.Module
     @mouseOnScreen.y -= 1
     @mouseOnScreen.y *= -1
 
-    @mouseRay = @_getMouseRay()
+    @mouseRaycaster = @_getMouseRay()
     @mouseOnSurface = @_getMouseOnSurface()
 
   mouseup: (event) =>
@@ -101,14 +99,15 @@ class App.CameraControls extends Spine.Module
 
   _getMouseRay: ->
     if @mouseOnScreen?
-      # Convert mouse position into a ray pointing into world space
-      @projector.pickingRay(@mouseOnScreen.clone(), @camera)
+      # @mouseOnScreen.clone()Convert mouse position into a ray pointing into world space
+      mouse = new THREE.Vector3(@mouseOnScreen.x, @mouseOnScreen.y, 0)
+      @projector.pickingRay(mouse, @camera)
 
   _getMouseOnSurface: ->
-    if @mouseRay?
-      ray = @mouseRay
+    if @mouseRaycaster?
+      ray = @mouseRaycaster.ray
       magnitudeUntilSurface = -ray.origin.z / ray.direction.z
-      new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
+      new THREE.Vector3().addVectors(ray.origin, ray.direction.clone().multiplyScalar(magnitudeUntilSurface))
 
   mouseToMercator: (world) ->
     if @mouseOnSurface?
@@ -121,8 +120,8 @@ class App.CameraControls extends Spine.Module
   zoomCamera: ->
     factor = (@zoomEnd - @zoomStart) * -@zoomSpeed
     if factor > 0.001 or factor < -0.001
-      if @mouseRay?
-        ray = @mouseRay
+      if @mouseRaycaster?
+        ray = @mouseRaycaster.ray
       else
         ray = new THREE.Ray()
         ray.direction.z = -1
@@ -133,11 +132,11 @@ class App.CameraControls extends Spine.Module
 
       if @withinZoomDistances()
         # Handle X/Y Coordinate
-        pan = @eye.clone().crossSelf(@camera.up).setLength(-offset.x)
-        pan.addSelf @camera.up.clone().setLength(offset.y)
+        pan = @eye.clone().cross(@camera.up).setLength(-offset.x)
+        pan.add @camera.up.clone().setLength(offset.y)
         pan.z = 0
-        @camera.position.addSelf pan
-        @target.addSelf pan
+        @camera.position.add pan
+        @target.add pan
 
       if @staticMoving
         @zoomStart = @zoomEnd
@@ -145,17 +144,17 @@ class App.CameraControls extends Spine.Module
         @zoomStart += (@zoomEnd - @zoomStart) * @dynamicDampingFactor
 
   panCamera: ->
-    mouseChange = @panEnd.clone().subSelf(@panStart)
+    mouseChange = @panEnd.clone().sub(@panStart)
     if mouseChange.lengthSq()
       mouseChange.multiplyScalar @eye.length() * @panSpeed
-      pan = @eye.clone().crossSelf(@camera.up).setLength(mouseChange.x)
-      pan.addSelf @camera.up.clone().setLength(mouseChange.y)
-      @camera.position.addSelf pan
-      @target.addSelf pan
+      pan = @eye.clone().cross(@camera.up).setLength(mouseChange.x)
+      pan.add @camera.up.clone().setLength(mouseChange.y)
+      @camera.position.add pan
+      @target.add pan
       if @staticMoving
         @panStart = @panEnd
       else
-        @panStart.addSelf mouseChange.sub(@panEnd, @panStart).multiplyScalar(@dynamicDampingFactor)
+        @panStart.add mouseChange.subVectors(@panEnd, @panStart).multiplyScalar(@dynamicDampingFactor)
 
   withinZoomDistances: ->
     if @eye.z > @maxDistance
@@ -168,8 +167,8 @@ class App.CameraControls extends Spine.Module
       true
 
   update: ->
-    @eye.copy(@camera.position).subSelf @target
+    @eye.copy(@camera.position).sub @target
     @zoomCamera()
     @panCamera() if @panning
-    @camera.position.add @target, @eye
+    @camera.position.addVectors @target, @eye
     @camera.lookAt @target

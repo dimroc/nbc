@@ -134,7 +134,7 @@ createRenderer = (options) ->
   renderer = new THREE.WebGLRenderer({antialias: true})
 
   renderer.setSize( options.width, options.height )
-  renderer.setClearColorHex( 0xffffff, 1 )
+  renderer.setClearColor( 0xffffff, 1 )
   renderer.autoClear = false
   renderer.autoClearColor = false
   renderer.sortObjects = false

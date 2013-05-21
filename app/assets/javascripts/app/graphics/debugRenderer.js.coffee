@@ -37,7 +37,7 @@ class App.DebugRenderer
       ray = @controls.mouseRay
       @mouseRayLine.geometry.vertices[0].copy ray.origin
 
-      destination = new THREE.Vector3().add(ray.origin, ray.direction.clone().multiplyScalar(300))
+      destination = new THREE.Vector3().addVectors(ray.origin, ray.direction.clone().multiplyScalar(300))
       @mouseRayLine.geometry.vertices[1].copy destination
       @mouseRayLine.geometry.verticesNeedUpdate = true
 

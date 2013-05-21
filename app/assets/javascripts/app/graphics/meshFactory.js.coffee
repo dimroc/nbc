@@ -8,10 +8,9 @@ class App.MeshFactory
     material.wireframe = true if Env.boroughs == "wireframe"
 
     mesh = null
-    loader.createModel(region.threejs.model, (geometry) ->
-      mesh = new THREE.Mesh( geometry, material )
-      mesh.name = "region-#{region.name}"
-    )
+    parsed = loader.parse(region.threejs.model)
+    mesh = new THREE.Mesh( parsed.geometry, material )
+    mesh.name = "region-#{region.name}"
     mesh
 
   @loadRegionOutlines: (region) ->
