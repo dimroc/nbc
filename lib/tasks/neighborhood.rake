@@ -1,6 +1,7 @@
 namespace :neighborhood do
   desc "Generate json files for all neighborhoods"
   task :write => :environment do
+    Loader::Neighborhood.populate_neighbors
     Loader::Neighborhood.write_json
   end
 
