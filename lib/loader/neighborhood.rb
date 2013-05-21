@@ -20,7 +20,8 @@ class Loader::Neighborhood
       Neighborhood.find_each do |neighborhood|
         neighborhood.neighbors.clear
         if !neighborhood.name.include? "park-cemetery-etc"
-          neighborhood.neighbors << neighborhood.neighborhoods_with_intersecting_geometry
+          neighborhood.neighbors <<
+            neighborhood.neighborhoods_with_intersecting_geometry.first(5)
         end
       end
     end
