@@ -1,0 +1,19 @@
+{
+  "name": "nbc",
+  "version": "0.0.0",
+  "description": "new block city tools",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dimroc/nbc.git"
+  },
+  "keywords": [
+    "webgl"
+  ],
+  "author": "Dimitri Roche",
+  "license": "BSD",
+  "gitHead": "60498f50474d36819653e8569a988f711582d157",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "grunt": "~0.4.1"
+  }
+}

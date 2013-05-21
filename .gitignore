@@ -19,3 +19,4 @@ tags
 gems.tags
 .DS_Store
 /public/static
+/node_modules
