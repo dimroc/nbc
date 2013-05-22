@@ -7,3 +7,4 @@ Loader::Neighborhood.from_shapefile("lib/data/shapefiles/neighborhoods/region")
 Loader::Neighborhood.populate_neighbors
 Loader::Neighborhood.write_json
 Loader::Neighborhood.write_building_perimeters_json
+Loader::Neighborhood.write_building_perimeters_threejs

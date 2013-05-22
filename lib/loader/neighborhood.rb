@@ -51,5 +51,9 @@ class Loader::Neighborhood
         end
       end
     end
+
+    def write_building_perimeters_threejs
+      system("grunt exportBuildings", out: $stdout, err: :out)
+    end
   end
 end
