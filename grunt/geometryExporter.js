@@ -1,3 +1,5 @@
+var THREE = require('three');
+
 /**
  * @author mrdoob / http://mrdoob.com/
  */
@@ -14,7 +16,7 @@ THREE.GeometryExporter.prototype = {
 			metadata: {
 				version: 4.0,
 				type: 'geometry',
-				generator: 'GeometryExporter'
+				generator: 'GeometryExporter-NBC'
 			}
 		};
 
@@ -179,3 +181,5 @@ THREE.GeometryExporter.prototype = {
 	}
 
 };
+
+module.exports = THREE.GeometryExporter;

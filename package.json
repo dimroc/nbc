@@ -14,6 +14,8 @@
   "gitHead": "60498f50474d36819653e8569a988f711582d157",
   "readmeFilename": "README.md",
   "dependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "three": "~0.58.9",
+    "underscore": "~1.4.4"
   }
 }

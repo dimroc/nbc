@@ -79,3 +79,8 @@ projectRing = (ring) ->
 projectPoint = (coord) ->
   point = { x: coord[0], y: coord[1] }
   App.World.current().transformMercatorToWorld(point)
+
+fallbackMercatorToWorld = (point) ->
+  x = (point.x - -8266094.619172799) * 0.00142857142857143
+  y = (point.y - 4910511.427062279) * 0.00142857142857143
+  new THREE.Vector3(x, y, 0)
