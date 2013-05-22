@@ -6,7 +6,7 @@ class App.BuildingGeometryRepo
     dfd = $.Deferred()
 
     if !@_cache[neighborhood.slug]
-      $.getJSON("#{Constants.staticBasePath}/neighborhoods/#{neighborhood.slug}.json").
+      $.getJSON("#{Constants.staticBasePath}/threejs/#{neighborhood.slug}.json").
         done((data) => @_updateCache(neighborhood, data, dfd)).
         fail(-> console.log("Failed to retrieve #{neighborhood.slug} buildings", arguments))
     else
@@ -26,12 +26,8 @@ class App.BuildingGeometryRepo
     buildingMesh
 
   _updateCache: (neighborhood, data, dfd) ->
-    geometry = @_fetchGeometry(neighborhood, data)
-    dfd.resolve(geometry)
-
-  _fetchGeometry: (neighborhood, data) ->
     if !@_cache[neighborhood.slug]
-      geometries = App.MeshFactory.generateFromGeoJson(data, {extrude: 0.2})
-      @_cache[neighborhood.slug] = App.MeshFactory.mergeMeshes(geometries)
+      model = new THREE.JSONLoader().parse(data)
+      @_cache[neighborhood.slug] = model.geometry
 
-    @_cache[neighborhood.slug]
+    dfd.resolve(@_cache[neighborhood.slug])
