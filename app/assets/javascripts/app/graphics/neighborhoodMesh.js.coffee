@@ -1,4 +1,22 @@
-class App.NeighborhoodMesh
+class App.NeighborhoodMesh extends Spine.Module
+  @extend Spine.Events
+
+  @fetchBatch: ->
+    $.getJSON("#{Constants.staticBasePath}/threejs/neighborhoods.json").
+      done((data) =>
+        console.log("Retrieved batch neighborhood geometry")
+        @_batchGeometry = new THREE.JSONLoader().parse(data).geometry
+        material = new THREE.MeshLambertMaterial({color: 0x00FF00, wireframe: Env.neighborhoods == "wireframe"})
+        @_batchMesh = new THREE.Mesh(@_batchGeometry, material)
+        @trigger('loaded')
+      )
+
+  @batch: ->
+    @_batchMesh
+
+  @resetMaterial: ->
+    @_batchMesh.material.wireframe = Env.neighborhoods == "wireframe"
+
   @all: ->
     meshes = for neighborhood in App.Neighborhood.all()
       App.NeighborhoodMesh.find(neighborhood.id)
@@ -9,18 +27,6 @@ class App.NeighborhoodMesh
     if !@_cache[neighborhoodId]
       @_cache[neighborhoodId] = @_generateMesh(App.Neighborhood.find(neighborhoodId))
     @_cache[neighborhoodId]
-
-  @select: (neighborhoodId) ->
-    App.NeighborhoodMesh.resetSelected()
-
-    mesh = App.NeighborhoodMesh.find(neighborhoodId)
-    mesh.material.color.setRGB(1,0,0)
-
-  @resetSelected: ->
-    _(App.NeighborhoodMesh.all()).each((mesh) ->
-      mesh.material.color.setRGB(0,1,0)
-      mesh.material.wireframe = Env.neighborhoods == "wireframe"
-    )
 
   @_generateMesh: (neighborhood) ->
     geometries = App.MeshFactory.generateFromGeoJson(neighborhood.geometry, {ignoreLidFaces: true})

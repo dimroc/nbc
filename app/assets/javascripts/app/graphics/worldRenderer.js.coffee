@@ -100,11 +100,10 @@ class App.WorldRenderer extends Spine.Module
 
   loadNeighborhoods: ->
     console.debug "Rerendering neighborhoods..."
-    meshes = App.NeighborhoodMesh.all()
+    mesh = App.NeighborhoodMesh.batch()
 
     @neighborhoodScene = createScene()
-    for mesh in meshes
-      @neighborhoodScene.add(mesh)
+    @neighborhoodScene.add(mesh)
 
   setBuildings: (buildingMeshes) ->
     @buildingScene = @buildingScene || createScene()

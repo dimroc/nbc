@@ -41,7 +41,7 @@ _.extend(BuildingExporter.prototype, {
     console.log("* Exporting buildings at " + arg);
 
     var building = JSON.parse(fs.readFileSync(arg));
-    var geoms = MeshFactory.generateFromGeoJson(building, {ignoreLidFaces: true});
+    var geoms = MeshFactory.generateFromGeoJson(building);
     var mergedGeom = MeshFactory.mergeMeshes(geoms);
 
     var geomExporter = new GeometryExporter();

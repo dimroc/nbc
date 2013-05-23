@@ -3,6 +3,7 @@ World = App.World
 Region = App.Region
 Block = App.Block
 Neighborhood = App.Neighborhood
+NeighborhoodMesh = App.NeighborhoodMesh
 
 $.fn.regionViaSlug = ->
   elementID   = $(@).data('slug')
@@ -40,7 +41,8 @@ class App.Controller.Boroughs extends Spine.Controller
     @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
     @neighborhoodController = new App.Controller.Neighborhoods(@worldRenderer)
     Block.fetch()
-    Neighborhood.fetchFromStatic()
+    NeighborhoodMesh.fetchBatch()
+    Neighborhood.fetch()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
@@ -49,7 +51,7 @@ class App.Controller.Boroughs extends Spine.Controller
 
     @debugController = new App.Controller.Debug(output)
     @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
-    Spine.trigger('ready')
+    App.NeighborhoodMesh.bind("loaded", -> Spine.trigger('ready'))
 
   renderWorld: =>
     console.debug "Rerendering all blocks..."

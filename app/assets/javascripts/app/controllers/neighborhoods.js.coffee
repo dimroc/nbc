@@ -6,7 +6,7 @@ class App.Controller.Neighborhoods extends Spine.Controller
   constructor: (worldRenderer) ->
     super
     @worldRenderer = worldRenderer
-    Neighborhood.bind 'refresh change', @addToWorldRenderer
+    App.NeighborhoodMesh.bind 'loaded', @addToWorldRenderer
 
   addToWorldRenderer: =>
     @worldRenderer.loadNeighborhoods()
