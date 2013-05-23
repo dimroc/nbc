@@ -3,6 +3,7 @@ namespace :neighborhood do
   task :write => :environment do
     Loader::Neighborhood.populate_neighbors
     Loader::Neighborhood.write_json
+    Loader::Neighborhood.write_neighborhoods_threejs
   end
 
   desc "Generate json files of each neighborhood's building perimeters"
