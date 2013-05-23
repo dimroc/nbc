@@ -7,6 +7,44 @@ var fallbackMercatorToWorld, projectPoint, projectRing;
 var MeshFactory = (function() {
   function MeshFactory() {}
 
+  MeshFactory.shapesFromGeoJson = function(geoJson) {
+    if (geoJson.type != "MultiPolygon") throw "Not a MultiPolgyon"
+    var coordinates = geoJson.coordinates;
+    var geoms, polygon;
+
+    geoms = (function() {
+      var _i, _len, _results;
+
+      _results = [];
+      for (_i = 0, _len = coordinates.length; _i < _len; _i++) {
+        polygon = coordinates[_i];
+        _results.push(MeshFactory.shapeFromPolygon(polygon));
+      }
+      return _results;
+    })();
+
+    return _(geoms).flatten();
+  };
+
+  MeshFactory.shapeFromPolygon = function(polygon) {
+    var hole, shape;
+
+    shape = new THREE.Shape(projectRing(polygon[0]));
+    shape.holes = (function() {
+      var _i, _len, _ref, _results;
+
+      _ref = polygon.slice(1);
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        hole = _ref[_i];
+        _results.push(new THREE.Shape(projectRing(hole)));
+      }
+      return _results;
+    })();
+
+    return new THREE.ShapeGeometry(shape);
+  }
+
   MeshFactory.generateFromGeoJson = function(geoJson, options) {
     switch (geoJson.type) {
       case "MultiPolygon":

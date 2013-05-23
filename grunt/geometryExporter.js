@@ -16,7 +16,7 @@ THREE.GeometryExporter.prototype = {
 			metadata: {
 				version: 4.0,
 				type: 'geometry',
-				generator: 'GeometryExporter-NBC'
+				generator: 'NBC-grunt-GeometryExporter'
 			}
 		};
 

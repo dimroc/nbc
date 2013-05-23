@@ -11,20 +11,22 @@ var NeighborhoodExporter = function(options) {
   options = options || {};
   _.defaults(options, {
     inputPath: "./public/static/neighborhoods.json",
-    outputPath: "./public/static/threejs/neighborhoods.json"
+    batchOutputPath: "./public/static/threejs/neighborhoods.json",
+    shapeOutputPath: "./public/static/threejs/neighborhoodShapes.json"
   });
 
-  this.outputPath = options.outputPath;
+  this.batchOutputPath = options.batchOutputPath;
+  this.shapeOutputPath = options.shapeOutputPath;
   this.inputPath = options.inputPath;
 
-  var dir = PATH.dirname(this.outputPath);
+  var dir = PATH.dirname(this.batchOutputPath);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
 };
 
 _.extend(NeighborhoodExporter.prototype, {
-  perform: function() {
+  exportBatch: function() {
     var neighborhoods = JSON.parse(fs.readFileSync(this.inputPath));
 
     var geoms = _(neighborhoods).map(function(n) {
@@ -37,9 +39,35 @@ _.extend(NeighborhoodExporter.prototype, {
     var geomExporter = new GeometryExporter();
     var exported3js = geomExporter.parse(mergedGeom);
 
-    fs.writeFileSync(this.outputPath, JSON.stringify(exported3js));
+    fs.writeFileSync(this.batchOutputPath, JSON.stringify(exported3js));
+  },
+
+  exportShapes: function() {
+    var neighborhoods = JSON.parse(fs.readFileSync(this.inputPath));
+
+    var slugs = [];
+    console.log("Neighborhood.exportShapes: Creating shapes from GeoJSON.");
+    var geoms = _(neighborhoods).reduce(function(memo, n) {
+      slugs.push(n.slug);
+      memo[n.slug] = MeshFactory.shapesFromGeoJson(n.geometry);
+      return memo;
+    }, {});
+
+    var geomExporter = new GeometryExporter();
+
+    console.log("Neighborhood.exportShapes: Writing as THREE JS File Format.");
+    var exported3js = _(slugs).reduce(function(memo, slug) {
+      var shapes = _(geoms[slug]).flatten();
+      var exportedShapes = _(shapes).map(function(shape) { return geomExporter.parse(shape); });
+      memo[slug] = exportedShapes;
+      return memo;
+    }, {});
+
+    fs.writeFileSync(this.shapeOutputPath, JSON.stringify(exported3js));
   }
 });
 
-
 module.exports = NeighborhoodExporter;
+
+//var exporter = new NeighborhoodExporter();
+//exporter.exportShapes();

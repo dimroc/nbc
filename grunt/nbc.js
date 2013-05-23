@@ -9,6 +9,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('exportNeighborhoods', 'Converts Neighborhood outline GeoJSON to THREEjs', function() {
     var neighborhoodExporter = new NeighborhoodExporter();
-    neighborhoodExporter.perform();
+    neighborhoodExporter.exportBatch();
+    neighborhoodExporter.exportShapes();
   });
 };
