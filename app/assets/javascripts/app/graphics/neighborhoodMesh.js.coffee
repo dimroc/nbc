@@ -2,7 +2,7 @@ class App.NeighborhoodMesh extends Spine.Module
   @extend Spine.Events
 
   @fetchBatch: ->
-    $.getJSON("#{Constants.staticBasePath}/threejs/neighborhoods.json").
+    $.getJSON("#{Constants.staticBasePath}/threejs/neighborhoodsBatch.json").
       done((data) =>
         console.log("Retrieved batch neighborhood geometry")
         @_batchGeometry = new THREE.JSONLoader().parse(data).geometry

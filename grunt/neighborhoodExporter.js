@@ -11,7 +11,7 @@ var NeighborhoodExporter = function(options) {
   options = options || {};
   _.defaults(options, {
     inputPath: "./public/static/neighborhoods.json",
-    batchOutputPath: "./public/static/threejs/neighborhoods.json",
+    batchOutputPath: "./public/static/threejs/neighborhoodsBatch.json",
     shapeOutputPath: "./public/static/threejs/neighborhoodShapes.json"
   });
 
