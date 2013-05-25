@@ -42,7 +42,7 @@ class App.Controller.Boroughs extends Spine.Controller
     @neighborhoodController = new App.Controller.Neighborhoods(@worldRenderer)
     Block.fetch()
     NeighborhoodMesh.fetchBatch()
-    Neighborhood.fetch()
+    Neighborhood.fetchFromStatic()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
