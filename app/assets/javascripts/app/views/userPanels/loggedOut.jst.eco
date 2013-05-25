@@ -1,6 +1,5 @@
-<ul class="nav">
-  <li>
-    <a class="login">Login with Facebook</a>
-  </li>
-  <li><a class="loading"><img src="/assets/loading.gif"/>Loading</a></li>
-</ul>
+<div id='facebook-connect'>
+  <a class="login">Login with Facebook</a>
+  <a class="loading"><img src="/assets/loading.gif"/>Loading</a>
+</div>
+

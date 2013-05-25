@@ -1,21 +1,22 @@
 class App.Controller.SelectedNeighborhood extends Spine.Controller
+  el: ".selectedNeighborhood"
   className: "selectedNeighborhood"
 
-  constructor: (parentElement) ->
+  constructor: ->
     super
-    @parentElement = parentElement
+    @render()
     App.Neighborhood.bind('selected', @_selectNeighborhood)
-    @activate()
 
   _selectNeighborhood: (neighborhood) =>
     @render(neighborhood)
 
   render: (neighborhood) ->
-    @$el.html(@view('selectedNeighborhood')(neighborhood))
+    @$el.html(@view('selectedNeighborhood')(@_presenter(neighborhood)))
 
-  activate: ->
-    $(@parentElement).prepend(@$el)
-    @
+  _presenter: (neighborhood) ->
+    if neighborhood
+      text = "#{neighborhood.name}, #{neighborhood.borough}"
+    else
+      text = "Select a Neighborhood..."
 
-  deactivate: ->
-    @$el.remove()
+    label: text

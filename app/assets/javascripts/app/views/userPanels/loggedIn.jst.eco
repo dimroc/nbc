@@ -1,8 +1,9 @@
-<ul class="nav">
-  <li>
-    <img class="profile" src='<%= @profilePhoto() %>' alt='<%=@name%>'></img>
-  </li>
-  <li><a><%= @name %></a></li>
-  <li><a class="logout">Log out</a></li>
-  <li><a class="loading"><img src="/assets/loading.gif"/>Loading</a></li>
-</ul>
+<div id='facebook-connect'>
+  <img class="profile" src='<%= @profilePhoto() %>' alt='<%=@name%>'></img>
+  <div class="username">
+    <h4><%= @name %></h4>
+    <a class="logout">Log out</a>
+  </div>
+
+  <a class="loading"><img src="/assets/loading.gif"/>Loading</a>
+</div>

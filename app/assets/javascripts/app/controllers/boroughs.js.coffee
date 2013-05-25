@@ -51,7 +51,7 @@ class App.Controller.Boroughs extends Spine.Controller
 
     @debugController = new App.Controller.Debug(output)
     @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
-    @selectedNeighborhoodController = new App.Controller.SelectedNeighborhood(output)
+    @userPanelController = new App.Controller.UserPanel()
     App.NeighborhoodMesh.bind("loaded", -> Spine.trigger('ready'))
 
   renderWorld: =>

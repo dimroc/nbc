@@ -1,12 +1,12 @@
 .selectedNeighborhood {
-  position: fixed;
-  bottom: 10px;
-  left: 0;
-
+  position: absolute;
   width: 100%;
   padding-left: 20px;
-  overflow-x: hidden;
-  background-color: @translucent-white;
-  pointer-events: none;
-  .table-bordered;
+
+  h2 {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
+  }
 }
