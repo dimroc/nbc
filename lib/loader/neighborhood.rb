@@ -21,7 +21,7 @@ class Loader::Neighborhood
         neighborhood.neighbors.clear
         if !neighborhood.name.include? "park-cemetery-etc"
           neighborhood.neighbors <<
-            neighborhood.neighborhoods_with_intersecting_geometry.first(5)
+            neighborhood.neighborhoods_with_intersecting_geometry.first(10)
         end
       end
     end

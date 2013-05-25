@@ -112,6 +112,10 @@ class App.WorldRenderer extends Spine.Module
     for mesh in buildingMeshes
       @buildingScene.add(mesh)
 
+    # Intentionally clear cache so the process can GC
+    # Otherwise, we run out of memory as the user clicks on 'hoods
+    App.BuildingGeometryRepo.instance().trimCache()
+
 # privates
 
 coerceIntoArray = (meshParam) ->

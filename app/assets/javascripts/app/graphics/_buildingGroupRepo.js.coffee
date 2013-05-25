@@ -1,11 +1,14 @@
 class App.BuildingGroupRepo
+  @instance: ->
+    singleton
+
   constructor: ->
-    @_cache = {}
-    @_geometryRepo = new App.BuildingGeometryRepo()
+    @_geometryRepo = App.BuildingGeometryRepo.instance()
 
   load: (neighborhood) ->
     neighborhoods = neighborhood.neighbors()
     neighborhoods.unshift(neighborhood)
+    neighborhoods = neighborhoods.slice(0, Env.neighbors + 1)
 
     loadingPromises = for n in neighborhoods
       @_geometryRepo.load(n)
@@ -25,5 +28,6 @@ class App.BuildingGroupRepo
       selected = slug == n.slug
       group.add(@_geometryRepo.createMesh(n.slug, selected))
 
-    @_cache[slug] = group
     group
+
+singleton = new App.BuildingGroupRepo()

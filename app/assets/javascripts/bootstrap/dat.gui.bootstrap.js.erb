@@ -10,6 +10,7 @@ $(function() {
     var options = { "See Regions": navigateToRegions };
 
     gui.add(options, "See Regions");
+    gui.add(Env, "neighbors", 0, 5).step(1);
     var debugController = gui.add(Env, "debug");
     debugController.onChange(function(value) {
       if(!value) { $(".debug").fadeOut(); }

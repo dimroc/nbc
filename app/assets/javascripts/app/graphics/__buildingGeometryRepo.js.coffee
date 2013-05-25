@@ -1,4 +1,7 @@
 class App.BuildingGeometryRepo
+  @instance: ->
+    singleton
+
   constructor: ->
     @_cache = {}
 
@@ -15,7 +18,7 @@ class App.BuildingGeometryRepo
     dfd
 
   createMesh: (slug, selected) ->
-    raise "#{slug} not in repository. load() first?" if !@_cache[slug]
+    throw "#{slug} not in repository. load() first?" if !@_cache[slug]
     geometry = @_cache[slug]
     color = 0x00FF00
     color = 0xFF0000 if selected
@@ -25,9 +28,17 @@ class App.BuildingGeometryRepo
     buildingMesh.isNbcBuilding = true
     buildingMesh
 
+  trimCache: ->
+    @clearCache() if Object.keys(@_cache).length > 8
+
+  clearCache: ->
+    @_cache = {}
+
   _updateCache: (neighborhood, data, dfd) ->
     if !@_cache[neighborhood.slug]
       model = new THREE.JSONLoader().parse(data)
       @_cache[neighborhood.slug] = model.geometry
 
     dfd.resolve(@_cache[neighborhood.slug])
+
+singleton = new App.BuildingGeometryRepo()

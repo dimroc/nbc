@@ -3,7 +3,7 @@ class App.BuildingMesh
     singleton.show(neighborhood)
 
   constructor: ->
-    @_repo = new App.BuildingGroupRepo()
+    @_repo = App.BuildingGroupRepo.instance()
 
   show: (neighborhood) ->
     @_repo.load(neighborhood).done(@render)
