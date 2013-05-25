@@ -58,8 +58,8 @@ _.extend(NeighborhoodExporter.prototype, {
     console.log("Neighborhood.exportShapes: Writing as THREE JS File Format.");
     var exported3js = _(slugs).reduce(function(memo, slug) {
       var shapes = _(geoms[slug]).flatten();
-      var exportedShapes = _(shapes).map(function(shape) { return geomExporter.parse(shape); });
-      memo[slug] = exportedShapes;
+      var mergedGeom = MeshFactory.mergeMeshes(shapes);
+      memo[slug] = geomExporter.parse(mergedGeom);
       return memo;
     }, {});
 

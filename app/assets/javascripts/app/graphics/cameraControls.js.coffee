@@ -68,7 +68,7 @@ class App.CameraControls extends Spine.Module
     @panning = false
     @mouseIsDown = false
 
-    App.CameraControls.trigger('selectPoint', @mouseOnSurface) unless wasPanning
+    App.CameraControls.trigger('selectPoint', @mouseOnSurface, @mouseRaycaster) unless wasPanning
     false
 
   mousewheel: (event) =>

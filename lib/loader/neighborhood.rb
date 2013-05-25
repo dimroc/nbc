@@ -59,5 +59,12 @@ class Loader::Neighborhood
     def write_neighborhoods_threejs
       system("grunt exportNeighborhoods", out: $stdout, err: :out)
     end
+
+    def load_neighborhood_threejs_shapes
+      shapes = JSON.parse File.read("public/static/threejs/neighborhoodShapes.json")
+      shapes.each do |slug, shape|
+        Neighborhood.find_by_slug(slug).update_attributes(threejs: shape)
+      end
+    end
   end
 end

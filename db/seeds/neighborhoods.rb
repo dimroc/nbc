@@ -9,3 +9,5 @@ Loader::Neighborhood.write_json
 Loader::Neighborhood.write_building_perimeters_json
 Loader::Neighborhood.write_building_perimeters_threejs
 Loader::Neighborhood.write_neighborhoods_threejs
+Loader::Neighborhood.load_neighborhood_threejs_shapes
+Loader::Neighborhood.write_json

@@ -8,6 +8,8 @@ class Neighborhood < ActiveRecord::Base
     join_table: :neighborhood_neighbors,
     association_foreign_key: :neighbor_id
 
+  serialize :threejs, Hash
+
   validates_presence_of :name, :borough, :geometry, :slug
 
   class << self

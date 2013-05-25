@@ -13,16 +13,20 @@ class App.CameraControlsObserver extends Spine.Module
 
     selectedBlock.trigger('selected') if selectedBlock?
 
-  selectNeighborhoodFromPoint: (pointOnSurface) =>
+  selectNeighborhoodFromPoint: (pointOnSurface, raycaster) =>
+    @_selectNeighborhood(App.Neighborhood.at(pointOnSurface, raycaster))
+
+  selectNeighborhoodFromPointAjax: (pointOnSurface) =>
     lonlat = App.World.current().transformSurfaceToLonLat(pointOnSurface)
 
     $.ajax(
       url: "/api/neighborhoods",
       data: { longitude: lonlat.lon, latitude: lonlat.lat }
-    ).done( (matchedNeighborhood) ->
-      return unless matchedNeighborhood
-      neighborhood = App.Neighborhood.find(matchedNeighborhood.id)
-      neighborhood.trigger('selected') if neighborhood?
-    )
+    ).done(@_selectNeighborhood)
+
+  _selectNeighborhood: (neighborhood) ->
+    return unless neighborhood
+    neighborhood = App.Neighborhood.find(neighborhood.id)
+    neighborhood.trigger('selected') if neighborhood?
 
 singleton = new App.CameraControlsObserver()
