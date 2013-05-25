@@ -26,7 +26,7 @@ class Loader::Neighborhood
       end
     end
 
-    def write_json
+    def write_json(options = {})
       puts "Writing neighborhoods.json"
 
       directory = "public/static/"
@@ -34,7 +34,7 @@ class Loader::Neighborhood
       output_file = "#{directory}neighborhoods.json"
 
       File.open(output_file, "w") do |file|
-        file.write Neighborhood.all.to_json
+        file.write Neighborhood.all.to_json(options)
       end
     end
 
