@@ -1,1 +1,4 @@
-<h2><%= @label %></h2>
+<form class="form-search">
+  <i class="icon-search"></i>
+  <input class="input-large search-query" type="text" name="neighborhood" placeholder="Type to search for a neighborhood"/>
+</form>

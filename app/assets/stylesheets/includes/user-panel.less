@@ -1,38 +1,49 @@
 .userPanel {
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 0;
 
   width: 100%;
   margin: 0 0 10px 0;
   overflow-x: hidden;
-  background-color: @translucent-white;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  background-color: transparent;
 
   .contentHolder {
     position: relative;
-    height: 70px;
+    height: 80px;
   }
 
   #facebook-connect {
+    background-color: @translucent-white;
     position: absolute;
     right: 0px;
 
     width: 250px;
+    .border-radius(25px);
+    border: 1px solid #ddd;
 
     img {
       float: left;
-      padding: 10px;
+      padding: 0;
       display: inline-block;
     }
 
-    .username {
+    .info {
       float: left;
+      padding: 0 15px;
+    }
+
+    .name {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .logout {
     }
 
     .login {
-
+      padding: 20px;
+      line-height: 35px;
     }
   }
 }
