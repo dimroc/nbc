@@ -71,6 +71,18 @@ class Loader::World
       world.mesh_bounding_box_geometry = world.generate_mesh_bounding_box.to_geometry
     end
 
+    def write_json
+      puts "Writing worlds.json"
+
+      directory = "public/static/"
+      FileUtils.mkdir_p directory
+      output_file = "#{directory}worlds.json"
+
+      File.open(output_file, "w") do |file|
+        file.write World.all.to_json
+      end
+    end
+
     private
 
     def dump_to_file(world)

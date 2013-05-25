@@ -10,6 +10,10 @@ class App.World extends App.Model
   @current: ->
     App.World.first()
 
+  @fetchFromStatic: ->
+    $.getJSON("#{Constants.staticBasePath}/worlds.json").
+      done((data) -> App.World.refresh(data, {clear: true}))
+
   @findOrFetch: (slug, callback)->
     world = @findByAttribute("slug", slug)
     if world

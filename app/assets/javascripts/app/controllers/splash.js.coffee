@@ -8,7 +8,7 @@ class App.Controller.Splash extends Spine.Controller
   constructor: ->
     super
     World.bind 'refresh change', @render
-    World.fetch()
+    World.fetchFromStatic()
 
   render: =>
     world = World.first()
