@@ -8,7 +8,7 @@ class App.NeighborhoodMesh extends Spine.Module
         @_batchGeometry = new THREE.JSONLoader().parse(data).geometry
         material = new THREE.MeshLambertMaterial({color: 0x00FF00, wireframe: Env.neighborhoods == "wireframe"})
         @_batchMesh = new THREE.Mesh(@_batchGeometry, material)
-        @trigger('loaded')
+        @trigger('refresh')
       )
 
   @batch: ->

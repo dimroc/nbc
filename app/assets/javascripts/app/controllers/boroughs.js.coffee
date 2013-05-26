@@ -22,13 +22,10 @@ class App.Controller.Boroughs extends Spine.Controller
     @boroughItems = []
     @active (params) -> @change(params.id)
 
-    Block.bind 'refresh change', @renderWorld
-
   change: (slug) ->
     @render()
-    @currentBoroughItem = _(@boroughItems).detect((borough) -> borough.slug == slug)
-    selection = if @currentBoroughItem? then @currentBoroughItem.slug else "All NYC"
-    console.log("Selected #{selection}")
+    neighborhood = App.Neighborhood.findByAttribute("slug", slug)
+    neighborhood.trigger('selected') if neighborhood
 
   render: =>
     return if @worldRenderer?
@@ -40,23 +37,18 @@ class App.Controller.Boroughs extends Spine.Controller
     # with it via events
     @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
     @neighborhoodController = new App.Controller.Neighborhoods(@worldRenderer)
-    Block.fetch()
-    NeighborhoodMesh.fetchBatch()
-    Neighborhood.fetchFromStatic()
 
     _(world.regions().all()).each (region) =>
       @boroughItems.push(new App.Controller.BoroughItem(@worldRenderer, region))
 
     @worldRenderer.animate()
+    @worldRenderer.reloadBlocks(Block.all())
 
     @debugController = new App.Controller.Debug(output)
     @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
     @userPanelController = new App.Controller.UserPanel()
-    App.NeighborhoodMesh.bind("loaded", -> Spine.trigger('ready'))
 
-  renderWorld: =>
-    console.debug "Rerendering all blocks..."
-    @worldRenderer.reloadBlocks(Block.all())
+    Spine.trigger('ready')
 
   index: (e) ->
     @navigate '/boroughs'

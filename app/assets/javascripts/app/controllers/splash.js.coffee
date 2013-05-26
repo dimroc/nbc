@@ -1,14 +1,31 @@
 $ = jQuery
 World = App.World
 Block = App.Block
+NeighborhoodMesh = App.NeighborhoodMesh
+Neighborhood = App.Neighborhood
 
 class App.Controller.Splash extends Spine.Controller
   className: 'splash'
 
   constructor: ->
     super
-    World.bind 'refresh change', @render
+
+    worldDfd = $.Deferred()
+    blockDfd = $.Deferred()
+    nmeshDfd = $.Deferred()
+    neighborhoodDfd = $.Deferred()
+
+    World.bind 'refresh', -> worldDfd.resolve()
+    Block.bind 'refresh', -> blockDfd.resolve()
+    NeighborhoodMesh.bind 'refresh', -> nmeshDfd.resolve()
+    Neighborhood.bind 'refresh', -> neighborhoodDfd.resolve()
+
     World.fetchFromStatic()
+    Block.fetch()
+    NeighborhoodMesh.fetchBatch()
+    Neighborhood.fetchFromStatic()
+
+    $.when(worldDfd, blockDfd, nmeshDfd, neighborhoodDfd).then(@render)
 
   render: =>
     world = World.first()
