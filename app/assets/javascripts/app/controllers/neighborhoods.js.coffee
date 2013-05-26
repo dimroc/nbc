@@ -19,6 +19,9 @@ class App.Controller.Neighborhoods extends Spine.Controller
 
   constructor: ->
     super
+    @showLoadingCount = 0
+    $(document).ajaxStart(@_showLoading)
+    $(document).ajaxStop(@_hideLoading)
     @active (params) -> @change(params.id)
 
   change: (slug) ->
@@ -66,3 +69,13 @@ class App.Controller.Neighborhoods extends Spine.Controller
       @worldRenderer.destroy() if @worldRenderer?
       delete @worldRenderer
       @el.empty()
+
+  _showLoading: =>
+    @showLoadingCount++
+    $(".loading").show()
+
+  _hideLoading: =>
+    @showLoadingCount--
+    if @showLoadingCount <= 0
+      $(".loading").hide()
+      @showLoadingCount = 0

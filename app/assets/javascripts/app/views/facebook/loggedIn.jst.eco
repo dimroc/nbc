@@ -3,5 +3,3 @@
   <h4 class="name"><%= @name %></h4>
   <a class="logout">Log out</a>
 </div>
-
-<a class="loading"><img src="/assets/loading.gif"/>Loading</a>

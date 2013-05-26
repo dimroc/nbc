@@ -7,10 +7,6 @@ class App.Controller.Facebook extends Spine.Controller
 
   constructor: ->
     super
-
-    @showLoadingCount = 0
-    $(document).ajaxStart(@showLoading)
-    $(document).ajaxStop(@hideLoading)
     $.when(window.facebookDfd).then(@initialize)
 
   successfulLoginHandler: (json) =>
@@ -52,13 +48,3 @@ class App.Controller.Facebook extends Spine.Controller
       if response.status is "connected"
         console.debug "Automatically logging in to facebook"
         @facebookSuccessHandler response)
-
-  showLoading: =>
-    @showLoadingCount++
-    @$(".loading").show()
-
-  hideLoading: =>
-    @showLoadingCount--
-    if @showLoadingCount <= 0
-      @$(".loading").hide()
-      @showLoadingCount = 0
