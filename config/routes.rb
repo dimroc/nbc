@@ -27,7 +27,12 @@ NewBlockCity::Application.routes.draw do
     end
   end
 
-  resource :admin, controller: :admin, only: :show
+  resource :admin, controller: :admin, only: :show do
+    member do
+      get :test
+    end
+  end
+
   namespace :admin do
     resources :blocks
     resources :panda_videos
