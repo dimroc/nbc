@@ -13,6 +13,7 @@ class App.Controller.SelectedNeighborhood extends Spine.Controller
       "#{n.name}, #{n.borough}"
 
     @_searchInput().typeahead(
+      items: 16
       source: @_availableNeighborhoods
       updater: @_updater)
 
