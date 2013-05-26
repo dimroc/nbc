@@ -15,7 +15,7 @@ class App.Controller.Facebook extends Spine.Controller
 
   successfulLoginHandler: (json) =>
     App.current_user = new App.User(json)
-    @html(@view('userPanels/loggedIn')(App.current_user))
+    @html(@view('facebook/loggedIn')(App.current_user))
     console.debug "connected:", JSON.stringify(json)
 
   facebookSuccessHandler: (response) =>
@@ -43,7 +43,7 @@ class App.Controller.Facebook extends Spine.Controller
     @_renderLoggedOut()
 
   _renderLoggedOut: ->
-    @html(@view('userPanels/loggedOut')())
+    @html(@view('facebook/loggedOut')())
 
   initialize: =>
     @_renderLoggedOut()
