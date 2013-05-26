@@ -27,6 +27,7 @@ class App.CameraControlsObserver extends Spine.Module
   _selectNeighborhood: (neighborhood) ->
     return unless neighborhood
     neighborhood = App.Neighborhood.find(neighborhood.id)
-    neighborhood.trigger('selected') if neighborhood?
+
+    Spine.Route.navigate("/boroughs/#{neighborhood.slug}")
 
 singleton = new App.CameraControlsObserver()
