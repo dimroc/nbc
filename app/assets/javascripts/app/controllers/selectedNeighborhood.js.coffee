@@ -19,8 +19,7 @@ class App.Controller.SelectedNeighborhood extends Spine.Controller
 
   _updater: (entry) ->
     value = entry.substring(0, entry.indexOf(", ")).toLowerCase()
-    value = value.replace(new RegExp(' ', 'g'), '-')
-    App.Neighborhood.findByAttribute("slug", value).trigger('selected')
+    App.Neighborhood.findByAttribute("slug", Helpers.slugify(value)).trigger('selected')
     entry
 
   _selectNeighborhood: (neighborhood) =>
