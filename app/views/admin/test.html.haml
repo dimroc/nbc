@@ -3,7 +3,6 @@
 %label{:for => "autocomplete"} Select a programming language:
 %input#autocomplete/
 :javascript
-  $( "#autocomplete" ).autocomplete({
-    source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ],
-    autofocus: true
+  $( "#autocomplete" ).typeahead({
+    source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
   });

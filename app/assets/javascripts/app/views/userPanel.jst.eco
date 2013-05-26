@@ -1,4 +1,2 @@
-<div class="contentHolder">
-  <div class="selectedNeighborhood"></div>
-  <div id="facebook-connect"></div>
-</div>
+<div class="selectedNeighborhood"></div>
+<div id="facebook-connect"></div>

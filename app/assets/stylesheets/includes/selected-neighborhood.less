@@ -1,6 +1,9 @@
 .selectedNeighborhood {
-  position: absolute;
+  position: fixed;
+  top: 20px;
+  left: 0px;
   width: 100%;
+  background-color: transparent;
 
   i.icon-search {
     font-size: 35px;
@@ -19,15 +22,7 @@
       padding: 10px;
       font-size: 28px;
 
-      /*border: 0;*/
-      /*.box-shadow(inset 0 0 0);*/
       background-color: @translucent-white;
-
-      &:hover,
-      &:active,
-      &:focus {
-        /*.box-shadow(inset 0 0 0);*/
-      }
 
       &::-webkit-input-placeholder {
         padding-top: 5px;
@@ -53,24 +48,15 @@
   }
 }
 
-ul.ui-autocomplete {
+ul.typeahead {
   background: @translucent-white;
-  max-height: 80%;
-  width: 50%;
-  overflow-y: auto;
+  width: 60%;
 
   li {
-    list-style-type: none;
-    padding: 20px;
     font-size: 20px;
 
     a {
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: none;
-        /*.box-shadow(inset 0 0 0);*/
-      }
+      padding: 10px;
     }
   }
 }
