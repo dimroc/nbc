@@ -46,5 +46,31 @@
         padding-bottom: 5px;
       }
     }
+
+    span[role=status] {
+      display: none;
+    }
+  }
+}
+
+ul.ui-autocomplete {
+  background: @translucent-white;
+  max-height: 80%;
+  width: 50%;
+  overflow-y: auto;
+
+  li {
+    list-style-type: none;
+    padding: 20px;
+    font-size: 20px;
+
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        /*.box-shadow(inset 0 0 0);*/
+      }
+    }
   }
 }
