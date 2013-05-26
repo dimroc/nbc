@@ -8,7 +8,7 @@ class Controller.Root extends Spine.Stack
   controllers:
     test:           Controller.Test
     splash:         Controller.Splash
-    neighborhoods:   Controller.Boroughs
+    neighborhoods:   Controller.Neighborhoods
     regionsShow:     Controller.Regions.Show
     regionsIndex:    Controller.Regions.Index
 
