@@ -6,7 +6,7 @@ class App.Controller.SelectedNeighborhood extends Spine.Controller
     super
     @render()
     App.Neighborhood.bind('selected', @_selectNeighborhood)
-    App.Neighborhood.bind('refresh change', @_setAvailableNeighborhoods)
+    @_setAvailableNeighborhoods()
 
   _setAvailableNeighborhoods: =>
     @_availableNeighborhoods = for n in App.Neighborhood.all()
@@ -14,12 +14,12 @@ class App.Controller.SelectedNeighborhood extends Spine.Controller
 
     @_searchInput().typeahead(
       source: @_availableNeighborhoods
-      updater: @_updater
-    )
+      updater: @_updater)
 
   _updater: (entry) ->
     value = entry.substring(0, entry.indexOf(", ")).toLowerCase()
-    App.Neighborhood.findByAttribute("slug", Helpers.slugify(value)).trigger('selected')
+    neighborhood = App.Neighborhood.findByAttribute("slug", Helpers.slugify(value))
+    App.RoutingService.navigate(neighborhood)
     entry
 
   _selectNeighborhood: (neighborhood) =>

@@ -28,6 +28,6 @@ class App.CameraControlsObserver extends Spine.Module
     return unless neighborhood
     neighborhood = App.Neighborhood.find(neighborhood.id)
 
-    Spine.Route.navigate("/boroughs/#{neighborhood.slug}")
+    App.RoutingService.navigate neighborhood
 
 singleton = new App.CameraControlsObserver()
