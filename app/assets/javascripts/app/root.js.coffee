@@ -8,14 +8,14 @@ class Controller.Root extends Spine.Stack
   controllers:
     test:           Controller.Test
     splash:         Controller.Splash
-    boroughs:       Controller.Boroughs
+    neighborhoods:   Controller.Boroughs
     regionsShow:     Controller.Regions.Show
     regionsIndex:    Controller.Regions.Index
 
   routes:
     '/':                getDefaultController()
-    '/boroughs/:id':    'boroughs'
-    '/boroughs':        'boroughs'
+    '/neighborhoods/:id':    'neighborhoods'
+    '/neighborhoods':        'neighborhoods'
     '/regions':         'regionsIndex'
     '/regions/:id':     'regionsShow'
 

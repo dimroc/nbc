@@ -51,11 +51,11 @@ class App.Controller.Boroughs extends Spine.Controller
     Spine.trigger('ready')
 
   index: (e) ->
-    @navigate '/boroughs'
+    @navigate '/neighborhoods'
 
   show: (e) ->
     item = $(e.target).regionViaSlug()
-    @navigate '/boroughs', item.slug
+    @navigate '/neighborhoods', item.slug
 
   activate: =>
     @render()

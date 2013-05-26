@@ -1,3 +1,3 @@
 class App.RoutingService
   @navigate: (neighborhood) ->
-    Spine.Route.navigate("/boroughs/#{neighborhood.slug}")
+    Spine.Route.navigate("/neighborhoods/#{neighborhood.slug}")

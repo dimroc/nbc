@@ -23,4 +23,4 @@ class App.Controller.Regions.Index extends Spine.Controller
     @navigate '/regions', item.slug
 
   back: ->
-    @navigate '/boroughs'
+    @navigate '/neighborhoods'

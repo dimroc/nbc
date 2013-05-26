@@ -9,7 +9,7 @@ class App.Controller.BoroughItem extends Spine.Controller
   render: =>
 
   back: ->
-    @navigate '/boroughs'
+    @navigate '/neighborhoods'
 
   activate: ->
     @

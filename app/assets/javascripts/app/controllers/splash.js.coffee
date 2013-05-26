@@ -44,4 +44,4 @@ class App.Controller.Splash extends Spine.Controller
     @el.empty()
 
   _loadCallback: =>
-    @navigate '/boroughs' if location.pathname == "/"
+    @navigate '/neighborhoods' if location.pathname == "/"

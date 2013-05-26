@@ -53,6 +53,6 @@ NewBlockCity::Application.routes.draw do
   # Explicitly mount Jasminerice above global match rule to prevent trumping of jasmine
   mount Jasminerice::Engine => "/jasmine" if Rails.env.development? || Rails.env.test?
   match '/' => 'spine#index'
-  match '/boroughs/(*other)' => 'spine#index'
+  match '/neighborhoods/(*other)' => 'spine#index'
   match '/regions/(*other)' => 'spine#index'
 end
