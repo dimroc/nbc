@@ -3,6 +3,7 @@ window.Constants = {
   apiBasePath: '/api',
   staticBasePath: '/static',
   pandaAccessDetails: <%= Panda.signed_params('POST', '/videos.json').to_json.html_safe %>,
+  region_names: ["queens", "brooklyn", "bronx", "manhattan", "staten-island"],
   pusher: {
     key: '<%= Pusher.key %>'
   }

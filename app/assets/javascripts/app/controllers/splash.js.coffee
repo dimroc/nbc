@@ -4,17 +4,16 @@ class App.Controller.Splash extends Spine.Controller
   constructor: ->
     super
     console.log("In constructor")
-    App.PreloadingService.preload().done(@render)
+    @render()
 
   render: =>
     console.log("In SPLASH::Render")
-    world = App.World.first()
 
     if !Env.isChrome23
-      @html @view('splash/browserError')(regionNames: world.region_names)
+      @html @view('splash/browserError')(regionNames: Constants.region_names)
     else
-      @html @view('splash/index')(regionNames: world.region_names)
-      world.fetchRegions(@_loadCallback)
+      @html @view('splash/index')(regionNames: Constants.region_names)
+      App.PreloadingService.preload().done(@_loadCallback)
 
   activate: ->
     @el.fadeIn(=> @el.addClass("active"))

@@ -17,4 +17,8 @@ class App.PreloadingService extends Spine.Module
     App.NeighborhoodMesh.fetchBatch()
     App.Neighborhood.fetchFromStatic()
 
-    $.when(worldDfd, blockDfd, nmeshDfd, neighborhoodDfd)
+    completeDfd = $.Deferred()
+    $.when(worldDfd, blockDfd, nmeshDfd, neighborhoodDfd).
+      then( -> App.World.first().fetchRegions(-> completeDfd.resolve()))
+
+    completeDfd
