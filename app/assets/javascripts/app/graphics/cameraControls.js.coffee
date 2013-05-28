@@ -172,3 +172,8 @@ class App.CameraControls extends Spine.Module
     @panCamera() if @panning
     @camera.position.addVectors @target, @eye
     @camera.lookAt @target
+
+  navigate: (worldPosition) ->
+    @eye = new THREE.Vector3(worldPosition.x, worldPosition.y, 15)
+    @camera.position = @eye.clone()
+    @target = new THREE.Vector3(worldPosition.x, worldPosition.y, 0)

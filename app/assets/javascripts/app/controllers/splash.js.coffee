@@ -3,12 +3,9 @@ class App.Controller.Splash extends Spine.Controller
 
   constructor: ->
     super
-    console.log("In constructor")
     @render()
 
   render: =>
-    console.log("In SPLASH::Render")
-
     if !Env.isChrome23
       @html @view('splash/browserError')(regionNames: Constants.region_names)
     else

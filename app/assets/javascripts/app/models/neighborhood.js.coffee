@@ -30,4 +30,6 @@ class App.Neighborhood extends App.Model
     else
       hasPoint
 
-
+  worldCenter: ->
+    center = @shape.boundingBox.min.clone().add(@shape.boundingBox.max)
+    center.divideScalar(2)

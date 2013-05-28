@@ -4,7 +4,6 @@ class App.NeighborhoodMesh extends Spine.Module
   @fetchBatch: ->
     $.getJSON("#{Constants.staticBasePath}/threejs/neighborhoodsBatch.json").
       done((data) =>
-        console.log("Retrieved batch neighborhood geometry")
         @_batchGeometry = new THREE.JSONLoader().parse(data).geometry
         material = new THREE.MeshLambertMaterial({color: 0x00FF00, wireframe: Env.neighborhoods == "wireframe"})
         @_batchMesh = new THREE.Mesh(@_batchGeometry, material)
