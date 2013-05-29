@@ -6,8 +6,10 @@ class App.NeighborhoodObserver extends Spine.Module
 
   handleSelection: (selectedNeighborhood) =>
     App.BuildingMesh.show(selectedNeighborhood)
-    if (Env.autoNavigate)
-      App.WorldRenderer.instance().controls.navigate(
-        selectedNeighborhood.worldCenter())
+      .done(->
+        if (Env.autoNavigate)
+          App.WorldRenderer.instance().controls.navigate(
+            selectedNeighborhood.worldCenter())
+      )
 
 singleton = new App.NeighborhoodObserver()

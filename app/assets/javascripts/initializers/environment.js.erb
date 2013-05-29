@@ -5,13 +5,14 @@
   window.Env = {
     "<%= Rails.env %>": true,
     debug: initialDebug, // true unless prod
-    neighbors: 4,
+    neighbors: 0,
     boroughs: "normal",
     neighborhoods: "wireframe",
     buildings: true,
     autoNavigate: true,
     blocks: true,
     renderLayer: function(layerName) { return Env[layerName] != "off" },
+    tween: TWEEN.Easing.Quadratic.InOut,
     isChrome: checkIfChrome(),
     isChrome23: checkIfAtLeastChrome23()
   }

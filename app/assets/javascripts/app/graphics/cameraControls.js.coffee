@@ -174,6 +174,14 @@ class App.CameraControls extends Spine.Module
     @camera.lookAt @target
 
   navigate: (worldPosition) ->
-    @eye = new THREE.Vector3(worldPosition.x, worldPosition.y, 15)
+    that = @
+    tween = new TWEEN.Tween(x: @camera.position.x, y: @camera.position.y, z: @camera.position.z)
+      .to({x: worldPosition.x, y: worldPosition.y, z: 10}, 1000)
+      .easing( Env.tween )
+      .onUpdate(-> that._updatePosition(this))
+      .start()
+
+  _updatePosition: (position) =>
+    @eye = new THREE.Vector3(position.x, position.y, position.z)
     @camera.position = @eye.clone()
-    @target = new THREE.Vector3(worldPosition.x, worldPosition.y, 0)
+    @target = new THREE.Vector3(position.x, position.y, 0)

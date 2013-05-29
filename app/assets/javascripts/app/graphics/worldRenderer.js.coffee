@@ -68,6 +68,7 @@ class App.WorldRenderer extends Spine.Module
       @requestId = requestAnimationFrame(@animate)
 
   update: (delta) ->
+    TWEEN.update()
     @controls.update(delta)
     @debugRenderer.update(delta) if Env.debug
     @stats.update()
