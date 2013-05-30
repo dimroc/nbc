@@ -16,11 +16,11 @@ class App.CameraControls extends Spine.Module
 
     @staticMoving = false
     @dynamicDampingFactor = 0.2
-    @minDistance = 2.0
-    @maxDistance = 200.0
+    @minDistance = 9.0
+    @maxDistance = 140.0
 
     @eye = @camera.position.clone()
-    @target = new THREE.Vector3(@eye.x, @eye.y, 0)
+    @target = new THREE.Vector3(@eye.x, @eye.y + 5, -5)
 
     @zoomStart = @zoomEnd = 0.0
     @panStart = new THREE.Vector2()
@@ -176,7 +176,7 @@ class App.CameraControls extends Spine.Module
   navigate: (worldPosition) ->
     that = @
     tween = new TWEEN.Tween(x: @camera.position.x, y: @camera.position.y, z: @camera.position.z)
-      .to({x: worldPosition.x, y: worldPosition.y, z: 10}, 1000)
+      .to({x: worldPosition.x, y: worldPosition.y - 3, z: 11}, 1000)
       .easing( Env.tween )
       .onUpdate(-> that._updatePosition(this))
       .start()
@@ -184,4 +184,4 @@ class App.CameraControls extends Spine.Module
   _updatePosition: (position) =>
     @eye = new THREE.Vector3(position.x, position.y, position.z)
     @camera.position = @eye.clone()
-    @target = new THREE.Vector3(position.x, position.y, 0)
+    @target = new THREE.Vector3(position.x, position.y + 5, -5)

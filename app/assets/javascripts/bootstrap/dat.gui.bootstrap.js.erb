@@ -9,6 +9,7 @@ $(function() {
 
     var options = { "See Regions": navigateToRegions };
 
+    gui.add(Env, "autoNavigate");
     gui.add(options, "See Regions");
     gui.add(Env, "neighbors", 0, 5).step(1);
     var debugController = gui.add(Env, "debug");
@@ -21,7 +22,6 @@ $(function() {
     var boroughController = gui.add(Env, "boroughs", layerOptions);
     var neighborhoodController = gui.add(Env, "neighborhoods", layerOptions);
     gui.add(Env, "buildings");
-    gui.add(Env, "autoNavigate");
     gui.add(Env, "blocks");
 
     boroughController.onChange(function(value) {
