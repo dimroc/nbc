@@ -6,13 +6,6 @@ GIT
       guard (>= 0.2.2)
 
 GIT
-  remote: git://github.com/maccman/spine-rails.git
-  revision: c7b884484768caf1027a606f803653e8402f4b96
-  specs:
-    spine-rails (0.1.0)
-      rails (>= 3.1.0)
-
-GIT
   remote: git://github.com/pandastream/panda_gem.git
   revision: 32187421556de3008d8126eafae2c7a59467760d
   specs:
@@ -20,6 +13,14 @@ GIT
       excon (>= 0.19.0)
       multi_json (>= 1.3.2)
       ruby-hmac (>= 0.3.2)
+
+GIT
+  remote: git://github.com/spine/spine-rails.git
+  revision: c7b884484768caf1027a606f803653e8402f4b96
+  ref: c7b884484768caf1027a606f803653e8402f4b96
+  specs:
+    spine-rails (0.1.0)
+      rails (>= 3.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -169,6 +170,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    json2-rails (0.0.2)
     jwt (0.1.8)
       multi_json (>= 1.5)
     launchy (2.2.0)
@@ -368,6 +370,7 @@ DEPENDENCIES
   hashie
   jasminerice
   jquery-rails
+  json2-rails
   less-rails
   omniauth-facebook (= 1.4.0)
   panda!

@@ -15,7 +15,8 @@ gem "cancan", ">= 1.6.7"
 gem "rolify", ">= 3.1.0"
 gem "simple_form"
 gem "thin-rails"
-gem "spine-rails", git: "git://github.com/maccman/spine-rails.git"
+gem "json2-rails"
+gem "spine-rails", git: "git://github.com/spine/spine-rails.git", ref: 'c7b884484768caf1027a606f803653e8402f4b96'
 gem "eco"
 gem "friendly_id", "~> 4.0.9"
 gem 'simple_form'
