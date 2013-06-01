@@ -20,7 +20,6 @@ class Loader::World
         world = generate(config)
         World.find_by_slug(name.downcase.gsub(' ','-')).try(:destroy) # Destroy old
         world.save!
-        dump_to_file(world)
       end
     end
 
@@ -72,6 +71,8 @@ class Loader::World
     end
 
     def write_json
+      World.find_each { |world| dump_to_file(world) }
+
       puts "Writing worlds.json"
 
       directory = "public/static/"
@@ -88,6 +89,8 @@ class Loader::World
     def dump_to_file(world)
       directory = "public/static/#{world.slug}/"
       output_file = "#{directory}regions.json"
+
+      puts "Writing #{output_file}"
 
       FileUtils.mkdir_p directory
       File.open(output_file, "w") do |file|
