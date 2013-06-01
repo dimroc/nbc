@@ -9,4 +9,6 @@
   </div>
 </div>
 
-<div id="world"></div>
+<div id="world">
+  <canvas></canvas>
+</div>

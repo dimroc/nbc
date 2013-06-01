@@ -19,7 +19,7 @@ class App.WorldRenderer extends Spine.Module
     @stats = new App.StatsRenderer()
 
     options = calculate_options()
-    @renderer = createRenderer(options)
+    @renderer = createRenderer(options, domElement)
     @composer = createComposer(options, @)
     @camera = createPerspectiveCamera(options)
 
@@ -27,7 +27,7 @@ class App.WorldRenderer extends Spine.Module
     @blockScene = createScene()
 
     @_attachToDom(domElement)
-    @controls = new App.CameraControls(@camera, domElement)
+    @controls = new App.CameraControls(@camera, domElement, options)
     @debugRenderer = new App.DebugRenderer(@world, @camera, @controls)
 
     worldRenderers.push(@)
@@ -44,7 +44,7 @@ class App.WorldRenderer extends Spine.Module
 
   _attachToDom: (domElement)->
     @domElement = domElement
-    $(domElement).append(@renderer.domElement)
+    #$(domElement).append(@renderer.domElement)
     @stats.attachToDom(domElement)
     window.addEventListener( 'resize', @onWindowResize, false )
     @
@@ -53,7 +53,7 @@ class App.WorldRenderer extends Spine.Module
     options = calculate_options()
     @composer = createComposer(options, @)
     @renderer.setSize( options.width, options.height )
-    @controls.handleResize()
+    @controls.handleResize(options)
 
   animate: (elapsedTicks)=>
     delta = @clock.getDelta()
@@ -133,8 +133,8 @@ createPerspectiveCamera = (options) ->
   camera.position = new THREE.Vector3(50, 50, 120)
   camera
 
-createRenderer = (options) ->
-  renderer = new THREE.WebGLRenderer({antialias: true})
+createRenderer = (options, $domElement) ->
+  renderer = new THREE.WebGLRenderer({antialias: true, canvas: $domElement[0]})
 
   renderer.setSize( options.width, options.height )
   renderer.setClearColor( 0xffffff, 1 )
@@ -192,7 +192,7 @@ createAmbientLight = (options) ->
 calculate_options = ->
   {
     fov: 45
-    width: window.innerWidth
+    width: window.innerWidth / 2
     height: window.innerHeight
   }
 

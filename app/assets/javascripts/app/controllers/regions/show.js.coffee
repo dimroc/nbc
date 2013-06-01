@@ -16,7 +16,7 @@ class App.Controller.Regions.Show extends Spine.Controller
 
   render: ->
     output = @html @view('regions/show')(@item)
-    @worldRenderer = new App.WorldRenderer(World.first(), $(output).find("#world"))
+    @worldRenderer = new App.WorldRenderer(World.first(), $(output).find("#world canvas"))
     @worldRenderer.addRegions(@item)
     @worldRenderer.animate()
     @debugController = new App.Controller.Debug($(output))

@@ -1,5 +1,7 @@
 <div class="userPanel"></div>
-<div id="world"></div>
+<div id="world">
+  <canvas></canvas>
+</div>
 <div class="loading">
   <div class="relativeHolder">
     <div class="contentHolder">

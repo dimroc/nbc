@@ -3,7 +3,7 @@
 class App.CameraControls extends Spine.Module
   @extend Spine.Events
 
-  constructor: (camera, domElement) ->
+  constructor: (camera, domElement, options) ->
     @camera = camera
     @domElement = (if (domElement isnt `undefined`) then domElement else document)
     @projector = new THREE.Projector()
@@ -29,7 +29,7 @@ class App.CameraControls extends Spine.Module
     $(@domElement).bind("mousemove", @mousemove)
     $(@domElement).bind("mousedown", @mousedown)
     $(@domElement).bind("mousewheel", @mousewheel)
-    @handleResize()
+    @handleResize(options)
 
   destroy: ->
     $(@domElement).unbind()
@@ -83,11 +83,12 @@ class App.CameraControls extends Spine.Module
       @zoomStart -= 0.05
     false
 
-  handleResize: =>
-    @screen.width = window.innerWidth
-    @screen.height = window.innerHeight
+  handleResize: (options) =>
+    @options = options
+    @screen.width = @options.width
+    @screen.height = @options.height
 
-    @camera.aspect = window.innerWidth / window.innerHeight
+    @camera.aspect = @options.width / @options.height
     @camera.lookAt(@target)
     @camera.updateProjectionMatrix()
 

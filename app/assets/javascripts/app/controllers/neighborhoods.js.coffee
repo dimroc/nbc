@@ -37,7 +37,7 @@ class App.Controller.Neighborhoods extends Spine.Controller
 
     # TODO: worldRenderer should be a singleton service and consumer should communicate
     # with it via events
-    @worldRenderer = new App.WorldRenderer(world, $(output).find("#world"))
+    @worldRenderer = new App.WorldRenderer(world, $(output).find("#world canvas"))
     @worldRenderer.loadNeighborhoods()
 
     _(world.regions().all()).each (region) =>
