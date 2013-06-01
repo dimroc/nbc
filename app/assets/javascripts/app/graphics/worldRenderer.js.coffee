@@ -44,8 +44,7 @@ class App.WorldRenderer extends Spine.Module
 
   _attachToDom: (domElement)->
     @domElement = domElement
-    #$(domElement).append(@renderer.domElement)
-    @stats.attachToDom(domElement)
+    @stats.attachToDom($(domElement).parent())
     window.addEventListener( 'resize', @onWindowResize, false )
     @
 
@@ -192,7 +191,7 @@ createAmbientLight = (options) ->
 calculate_options = ->
   {
     fov: 45
-    width: window.innerWidth / 2
+    width: window.innerWidth * 0.5
     height: window.innerHeight
   }
 
