@@ -1,0 +1,20 @@
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <img src="<%=@userPhotoProxy()%>"></img>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#blocks" href="#collapse<%=@id%>">
+      <span><%= @userName() %></span>
+      <span><%= @recorded() %></span>
+      <span><%= @neighborhood %></span>
+      <span><%= @borough %></span>
+      <span>NY, <%= @zip_code %></span>
+    </a>
+  </div>
+  <div id="collapse<%=@id%>" class="accordion-body collapse">
+    <div class="accordion-inner">
+      <video width="640" height="480" controls>
+        <source src="<%= @video.url %>" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>

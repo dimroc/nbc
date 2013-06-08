@@ -22,6 +22,7 @@ class App.Controller.Neighborhoods extends Spine.Controller
     @showLoadingCount = 0
     $(document).ajaxStart(@_showLoading)
     $(document).ajaxStop(@_hideLoading)
+    App.Block.bind('refresh', @renderBlocks)
     @active (params) -> @change(params.id)
 
   change: (slug) ->
@@ -44,13 +45,17 @@ class App.Controller.Neighborhoods extends Spine.Controller
       @worldRenderer.addRegions(region)
 
     @worldRenderer.animate()
-    @worldRenderer.reloadBlocks(Block.all())
+    @renderBlocks()
 
     @debugController = new App.Controller.Debug(output)
     @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
     @userPanelController = new App.Controller.UserPanel()
+    @blocksController = new App.Controller.Blocks()
 
     Spine.trigger('ready')
+
+  renderBlocks: =>
+    @worldRenderer.reloadBlocks(Block.all()) if @worldRenderer
 
   index: (e) ->
     @navigate '/neighborhoods'

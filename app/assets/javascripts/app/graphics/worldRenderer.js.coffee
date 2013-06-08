@@ -192,7 +192,7 @@ calculate_options = ->
   {
     fov: 45
     width: window.innerWidth * 0.5
-    height: window.innerHeight
+    height: window.innerHeight - 1
   }
 
 createScene = ->
