@@ -35,16 +35,29 @@ class App.MeshFactory
   @generateBlock: (world, block) ->
     return null unless block
 
+    stemMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(0xcccccc), opacity: 1})
+
+    cubeGeom = new THREE.CubeGeometry(0.05, 0.05, 1)
+    cubeMesh = new THREE.Mesh(cubeGeom, stemMaterial)
+    cubeMesh.position = block.worldPosition(world)
+    cubeMesh.position.z += 0.5
+    window.testMesh = cubeMesh
+
     if block.encoded()
       texture = THREE.ImageUtils.loadTexture(block.userPhotoProxy())
-      currentMaterial = new THREE.MeshBasicMaterial({map: texture, opacity: 1})
+      headMaterial = new THREE.MeshBasicMaterial({map: texture, opacity: 1})
     else
-      currentMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(0xFF0000), opacity: 1})
+      headMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(0xFF0000), opacity: 1})
 
-    cubeGeom = new THREE.CubeGeometry(App.Block.WIDTH, App.Block.HEIGHT, App.Block.DEPTH)
-    cubeMesh = new THREE.Mesh(cubeGeom, currentMaterial)
-    cubeMesh.position = block.worldPosition(world)
-    cubeMesh
+    headGeom = new THREE.CubeGeometry(0.4, 0.4, 0.01)
+    headMesh = new THREE.Mesh(headGeom, headMaterial)
+    headMesh.position = block.worldPosition(world)
+    headMesh.position.z += 1
+
+    group = new THREE.Object3D()
+    group.add(cubeMesh)
+    group.add(headMesh)
+    group
 
   @generateFromGeoJson: (geoJson, options) ->
     # http://stackoverflow.com/questions/13442153/errors-extruding-shapes-with-three-js

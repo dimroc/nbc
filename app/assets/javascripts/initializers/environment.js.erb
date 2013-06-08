@@ -1,10 +1,9 @@
 (function() {
   var currentEnvironment = "<%= Rails.env %>"
-  var initialDebug = currentEnvironment == "production" ? false : true;
 
   window.Env = {
     "<%= Rails.env %>": true,
-    debug: initialDebug, // true unless prod
+    debug: false,
     neighbors: 0,
     boroughs: "normal",
     neighborhoods: "wireframe",
