@@ -11,11 +11,14 @@ class TwitterService
     path = "https://stream.twitter.com/1.1/statuses/filter.json"
     query = { locations: "-74,40,-73,41" }
 
+    # Yield instead of block.call for performance improvement
+    streamer = Proc.new { |chunk| yield JSON.parse(chunk) }
+
     Excon.get(
       path,
       headers: headers(path, query),
       query: URI.encode_www_form(query),
-      response_block: method(:streamer))
+      response_block: streamer)
   end
 
   private
@@ -36,9 +39,5 @@ class TwitterService
     }
 
     SimpleOAuth::Header.new(:get, path, query, options)
-  end
-
-  def streamer(chunk, remaining_bytes, total_bytes)
-    puts chunk
   end
 end
