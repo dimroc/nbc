@@ -300,6 +300,7 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    simple_oauth (0.2.0)
     slop (3.4.4)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -391,6 +392,7 @@ DEPENDENCIES
   sendgrid
   shoulda-matchers
   simple_form
+  simple_oauth
   spine-rails!
   therubyracer
   thin-rails
