@@ -11,7 +11,6 @@ class TwitterService
     path = "https://stream.twitter.com/1.1/statuses/filter.json"
     query = { locations: "-74,40,-73,41" }
 
-    # Yield instead of block.call for performance improvement
     streamer = Proc.new { |chunk| yield JSON.parse(chunk) }
 
     Excon.get(

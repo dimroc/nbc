@@ -6,6 +6,12 @@ class PusherService
       end
     end
 
+    def push_tweet(tweet)
+      with_error_handling do
+        Pusher.trigger('global', 'tweet', tweet)
+      end
+    end
+
     def initialized?
       Pusher.app_id && Pusher.key && Pusher.secret
     end
@@ -20,7 +26,7 @@ class PusherService
         Rails.logger.warn "Pusher is uninitialized!"
       end
     rescue Pusher::Error => e
-      Rails.logger.warn "Unable to push block to clients\n#{e.message}"
+      Rails.logger.warn "Unable to push to clients\n#{e.message}"
     end
   end
 end
