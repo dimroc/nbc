@@ -12,6 +12,12 @@ class PusherService
       end
     end
 
+    def push_tweets(tweets)
+      with_error_handling do
+        Pusher.trigger('global', 'tweets', tweets)
+      end
+    end
+
     def initialized?
       Pusher.app_id && Pusher.key && Pusher.secret
     end
