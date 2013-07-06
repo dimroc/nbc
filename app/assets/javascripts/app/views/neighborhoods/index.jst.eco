@@ -2,7 +2,7 @@
 <div id="world">
   <canvas></canvas>
 </div>
-<div id="blocks">
+<div id="tweets">
 </div>
 <div class="loading">
   <div class="relativeHolder">

@@ -191,7 +191,7 @@ createAmbientLight = (options) ->
 calculate_options = ->
   {
     fov: 45
-    width: window.innerWidth * 0.5
+    width: window.innerWidth * 0.7
     height: window.innerHeight - 1
   }
 

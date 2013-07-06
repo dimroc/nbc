@@ -1,12 +1,11 @@
-class App.Controller.Blocks extends Spine.Controller
-  el: "#blocks"
-  className: "accordion"
+class App.Controller.Tweets extends Spine.Controller
+  el: "#tweets"
 
   constructor: ->
     super
-    @render()
-    App.Block.bind('refresh', @render)
-    window.addEventListener( 'resize', @onWindowResize, false )
+    #@render()
+    #App.Tweet.bind('refresh', @render)
+    #window.addEventListener( 'resize', @onWindowResize, false )
     #App.Neighborhood.bind('selected', @_selectNeighborhood)
 
   render: =>

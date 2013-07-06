@@ -50,7 +50,7 @@ class App.Controller.Neighborhoods extends Spine.Controller
     @debugController = new App.Controller.Debug(output)
     @addBlockModalController = new App.Controller.AddBlockModal(output, @worldRenderer)
     @userPanelController = new App.Controller.UserPanel()
-    @blocksController = new App.Controller.Blocks()
+    @tweetsController = new App.Controller.Tweets()
 
     Spine.trigger('ready')
 
