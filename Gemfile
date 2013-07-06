@@ -30,6 +30,7 @@ gem 'rbpoly2tri'
 
 gem 'panda', git: 'git://github.com/pandastream/panda_gem.git'
 gem 'pusher'
+gem 'excon'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

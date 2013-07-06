@@ -353,6 +353,7 @@ DEPENDENCIES
   devise (>= 2.1.0)
   eco
   email_spec (>= 1.2.1)
+  excon
   factory_girl_rails (>= 3.3.0)
   ffaker
   fixture_builder
