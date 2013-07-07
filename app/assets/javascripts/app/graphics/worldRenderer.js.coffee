@@ -25,6 +25,7 @@ class App.WorldRenderer extends Spine.Module
 
     @regionScene = new THREE.Scene()
     @blockScene = createScene()
+    @twitterScene = createScene()
 
     @_attachToDom(domElement)
     @controls = new App.CameraControls(@camera, domElement, options)
@@ -114,6 +115,15 @@ class App.WorldRenderer extends Spine.Module
     # Intentionally clear cache so the process can GC
     # Otherwise, we run out of memory as the user clicks on 'hoods
     App.BuildingGeometryRepo.instance().trimCache()
+
+  setTweets: (tweetPositions) ->
+    geometry = new THREE.Geometry()
+    for tweet in tweetPositions
+      geometry.vertices.push(tweet)
+
+    material = new THREE.ParticleBasicMaterial( { size: 1, color: 0x0000ff } )
+    tweetParticles = new THREE.ParticleSystem(geometry, material)
+    @twitterScene.add(tweetParticles)
 
 # privates
 

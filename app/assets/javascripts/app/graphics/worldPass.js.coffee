@@ -15,6 +15,7 @@ class App.WorldPass
       renderer.render(@worldRenderer.neighborhoodScene, @worldRenderer.camera) if @worldRenderer.neighborhoodScene && Env.renderLayer("neighborhoods")
       renderer.render(@worldRenderer.buildingScene, @worldRenderer.camera) if @worldRenderer.buildingScene && Env.buildings
       renderer.render(@worldRenderer.blockScene, @worldRenderer.camera) if Env.blocks
+      renderer.render(@worldRenderer.twitterScene, @worldRenderer.camera)
       renderer.render(@worldRenderer.debugRenderer.debugScene, @worldRenderer.camera) if Env.debug
     else
       # Render to the ReadBuffer since this is the first pass and no swap is necessary.
@@ -22,4 +23,5 @@ class App.WorldPass
       renderer.render(@worldRenderer.neighborhoodScene, @worldRenderer.camera, readBuffer) if @worldRenderer.neighborhoodScene && Env.renderLayer("neighborhoods")
       renderer.render(@worldRenderer.buildingScene, @worldRenderer.camera, readBuffer) if @worldRenderer.buildingScene && Env.buildings
       renderer.render(@worldRenderer.blockScene, @worldRenderer.camera, readBuffer) if Env.blocks
+      renderer.render(@worldRenderer.twitterScene, @worldRenderer.camera)
       renderer.render(@worldRenderer.debugRenderer.debugScene, @worldRenderer.camera, readBuffer) if Env.debug

@@ -81,6 +81,10 @@ class App.World extends App.Model
       .compact()
       .value()
 
+  transformLonLatToWorld: (lonLatPoint) ->
+    mercatorPoint = MercatorConverter.ll2m(lonLatPoint.lon, lonLatPoint.lat)
+    @transformMercatorToWorld(mercatorPoint)
+
   transformMercatorToWorld: (mercatorPoint) ->
     x = (mercatorPoint.x - @mercator_bounding_box.min_x) * @mesh_scale
     y = (mercatorPoint.y - @mercator_bounding_box.min_y) * @mesh_scale

@@ -3,6 +3,11 @@ namespace :twitter do
   task :stream => :environment do
     batch = []
     TwitterService.new.stream_nyc do |tweet|
+      if !tweet["coordinates"]
+        print 'F'
+        next
+      end
+
       print '.'
 
       response = TweetPresenter.new(tweet)

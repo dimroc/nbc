@@ -9,7 +9,7 @@ class TwitterService
 
   def stream_nyc
     path = "https://stream.twitter.com/1.1/statuses/filter.json"
-    query = { locations: "-74,40,-73,41" }
+    query = { locations: "-74.3,40.462,-73.65,40.95" }
 
     streamer = Proc.new { |chunk| yield JSON.parse(chunk) }
 

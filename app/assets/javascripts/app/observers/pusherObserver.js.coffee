@@ -19,3 +19,12 @@ class App.PusherObserver
 
   createTweets: (tweets) =>
     console.debug "Server pushed tweets:", tweets
+    worldPositions = for tweet in tweets
+      ll =
+        lon: tweet.coordinates.coordinates[0],
+        lat: tweet.coordinates.coordinates[1]
+
+      App.World.current().transformLonLatToWorld(ll)
+
+    console.debug "World locations:", worldPositions
+    App.WorldRenderer.instance().setTweets(worldPositions)
